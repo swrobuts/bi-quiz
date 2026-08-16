@@ -1,0 +1,700 @@
+[
+  {
+    "id": "Q01",
+    "topic": "Stevens' Potenzgesetz & Kreisdiagramme",
+    "difficulty": "Schwer",
+    "question": "Warum sind Kreisdiagramme laut Stevens' Potenzgesetz (1957) mathematisch-psychologisch ungeeignet für quantitative Vergleiche?",
+    "options": [
+      "Weil Winkel vom menschlichen Gehirn nur im Uhrzeigersinn fehlerfrei decodiert werden können.",
+      "Weil Reizgröße und Empfindung nichtlinear zusammenhängen und das Auge Flächen/Winkel mit einem Potenz-Exponenten von etwa 0,7 systematisch falsch schätzt (große Flächen werden unterschätzt, kleine überschätzt).",
+      "Weil Kreissegmente zwingend eine farbliche Codierung erfordern, die das Auge kognitiv überlastet.",
+      "Weil der Stevens-Exponent für Längenschätzungen bei 1,4 liegt, was zu einer massiven systematischen Überschätzung von Balkendiagrammen führt."
+    ],
+    "correctIndex": 1,
+    "explanation": "Nach Stevens' Potenzgesetz stehen die physikalische Reizgröße (R) und die subjektive Empfindung (E) in einem nichtlinearen Verhältnis (E = k * R^beta). Für Flächen- und Winkelschätzungen liegt der Exponent beta bei etwa 0,7. Das bedeutet, dass das Auge größere Flächen und Winkel im Verhältnis systematisch unterschätzt und kleinere überschätzt. Im Gegensatz dazu liegt der Exponent für Längenschätzungen (wie bei Balkendiagrammen auf einer gemeinsamen Achse) bei nahezu 1,0, was eine präzise, proportionale Wahrnehmung erlaubt."
+  },
+  {
+    "id": "Q02",
+    "topic": "Simpson-Paradoxon",
+    "difficulty": "Schwer",
+    "question": "Welche methodische Prüfung muss vor jeder Aggregation ('Verdichtung') von Daten zwingend durchgeführt werden, um fehlerhafte Schlussfolgerungen durch das Simpson-Paradoxon zu verhindern?",
+    "options": [
+      "Es muss bewiesen werden, dass alle beteiligten Variablen auf einem absoluten Skalenniveau vorliegen.",
+      "Es muss geprüft werden, ob der statistische Trend innerhalb der einzelnen Teilgruppen in dieselbe Richtung weist wie der geplante aggregierte Gesamttrend.",
+      "Die Stichprobenzahl (n) der einzelnen Teilgruppen muss mathematisch exakt identisch sein.",
+      "Die Daten müssen vorab mittels einer logarithmischen Transformation normalverteilt werden, um Scheinkorrelationen auszuschließen."
+    ],
+    "correctIndex": 1,
+    "explanation": "Das Simpson-Paradoxon beschreibt das statistische Phänomen, bei dem sich ein Zusammenhang zwischen zwei Merkmalen umkehrt oder aufhebt, sobald Daten aggregiert (zusammengefasst) werden. Die Ursache liegt meist in einer unberücksichtigten Hintergrundvariable (Confounder), die die Teilgruppen beeinflusst. Die goldene BI-Regel lautet daher: Vor jeder Aggregation muss geprüft werden, ob die Teilgruppen in dieselbe Richtung weisen. Ist dies nicht der Fall, darf die Aggregation nicht durchgeführt werden, da sie die Realität verzerren würde."
+  },
+  {
+    "id": "Q03",
+    "topic": "IBCS-Notation (Szenariencodierung)",
+    "difficulty": "Schwer",
+    "question": "Wie werden nach den International Business Communication Standards (IBCS) die Datenszenarien 'Ist-Wert' (Actual) und 'Soll-Wert' (Plan/Budget) visuell codiert, um Berichte ohne Legendenpflicht lesbar zu machen?",
+    "options": [
+      "Ist-Werte werden vollflächig grün dargestellt; Plan-Werte werden vollflächig rot gefüllt.",
+      "Ist-Werte werden vollflächig dunkel gefüllt; Plan-Werte werden als Outline (leerer Rahmen ohne Füllung) dargestellt.",
+      "Ist-Werte werden hellgrau gefüllt; Plan-Werte werden diagonal schraffiert dargestellt.",
+      "Ist-Werte werden mit durchgezogenen Linien gezeichnet; Plan-Werte werden mit gestrichelten Linien dargestellt."
+    ],
+    "correctIndex": 1,
+    "explanation": "Die IBCS-Notation standardisiert die visuelle Codierung von Datenarten (Szenarien) über Texturen und Füllungen statt über Farben: Ist-Werte (Actual/AC) werden immer dunkel und vollflächig gefüllt dargestellt. Plan-Werte (Budget/PL) werden als leerer Rahmen (Outline) dargestellt, um den 'noch zu füllenden' bzw. hypothetischen Charakter zu symbolisieren. Vorjahreswerte (Previous Year/PY) sind hellgrau gefüllt, und Prognosen (Forecast/FC) werden diagonal schraffiert. Dadurch entfällt das ständige Suchen in Legenden."
+  },
+  {
+    "id": "Q04",
+    "topic": "Edward Tufte's Lie Factor (Lügenfaktor)",
+    "difficulty": "Schwer",
+    "question": "Ein Diagramm vergleicht zwei Umsatzzahlen: Wert A = 100 Mio. EUR und Wert B = 102 Mio. EUR. In der Visualisierung wird der Balken für B jedoch viermal so lang dargestellt wie der Balken für A, da die y-Achse bei 95,5 Mio. EUR abgeschnitten wurde. Wie hoch ist der Lie Factor (Lügenfaktor) nach Tufte (1983) und welche fundamentale Designregel wurde verletzt?",
+    "options": [
+      "Der Lie Factor beträgt 1,0. Es liegt keine Verletzung vor, da die Achse klar beschriftet ist (sog. 'Zoom-Zulässigkeit').",
+      "Der Lie Factor beträgt ca. 22. Es wurde die Regel verletzt, dass Balkendiagramme (die Verhältnisse codieren) zwingend eine Nulllinie besitzen müssen, da abgeschnittene Achsen die visuelle Effektgröße massiv verzerren.",
+      "Der Lie Factor beträgt ca. 4,0. Die Darstellung ist bei Zeitreihen zulässig, da der absolute Trend im Vordergrund steht.",
+      "Der Lie Factor beträgt -22, da der Skalierungseffekt invers zur realen Datenentwicklung verläuft."
+    ],
+    "correctIndex": 1,
+    "explanation": "Der Lie Factor ist definiert als: (Effektgröße in der Grafik) / (Effektgröße in den Daten). In den Daten beträgt die reale Steigerung (102 - 100) / 100 = 2%. In der Grafik verhält sich die Länge von A (100 - 95,5 = 4,5 Einheiten) zu B (102 - 95,5 = 6,5 Einheiten) wie 4,5 zu 6,5. Die grafische Steigerung beträgt somit (6,5 - 4,5) / 4,5 = 44,4%. Der Lie Factor berechnet sich als 44,4% / 2% = 22,2. Ein Lie Factor weit über 1,05 zeigt eine massive visuelle Verzerrung an. Die goldene Regel lautet: Balkendiagramme müssen immer bei Null beginnen!"
+  },
+  {
+    "id": "Q05",
+    "topic": "Stephen Few's Dashboard-Gestaltungsfehler",
+    "difficulty": "Schwer",
+    "question": "Stephen Few listet in seinem Standardwerk 'Information Dashboard Design' 13 typische Gestaltungsfehler auf. Welcher der folgenden Aspekte stellt laut Few den kritischsten Fehler dar, welcher den fundamentalen 'Auf-einen-Blick'-Überwachungscharakter eines Dashboards zerstört?",
+    "options": [
+      "Die ausschließliche Verwendung von Graustufen und gedeckten Farben im gesamten Layout.",
+      "Das Hinausgehen über die physische Grenze eines einzigen Bildschirms, was den Nutzer zum Scrollen zwingt.",
+      "Die Integration von interaktiven Filtermöglichkeiten (Slices & Dices) für tiefergehende Analysen.",
+      "Die Abbildung von Sparklines direkt neben aktuellen Leistungskennzahlen."
+    ],
+    "correctIndex": 1,
+    "explanation": "Der allererste und kritischste Fehler auf Stephen Fews Liste ist: 'Über die Grenze eines Bildschirms hinausgehen'. Ein Dashboard ist per Definition ein Instrumentenbrett zur Überwachung auf einen Blick. Sobald Informationen auf mehrere Seiten verteilt werden oder Scrollen erforderlich ist, verlässt man den Bereich der präattentiven, sofortigen Wahrnehmung. Der Nutzer muss Informationen im Kurzzeitgedächtnis behalten, um sie zu vergleichen, was die kognitive Belastung massiv erhöht und den Zweck des Dashboards untergräbt."
+  },
+  {
+    "id": "Q06",
+    "topic": "Bissantz' Numbers",
+    "difficulty": "Schwer",
+    "question": "Die 'Bissantz' Numbers' (Patent im Jahr 2020) stellen eine radikale Alternative zu klassischen Geschäftsdiagrammen dar. Welches Prinzip liegt dieser Visualisierung zugrunde und wie steuert sie die visuelle Aufmerksamkeit?",
+    "options": [
+      "Sie nutzen eine dreidimensionale Farbverschiebung, bei der negative Zahlen physikalisch tiefer in den Bildschirm geprägt erscheinen.",
+      "Sie skalieren die Schriftgröße von tabellierten Zahlenwerten direkt in Abhängigkeit zu ihrem relativen Wertbeitrag, wodurch bei größeren Werten der Weißraum abnimmt und Ausreißer präattentiv sofort ins Auge springen.",
+      "Sie ersetzen alle Zahlenwerte durch abstrakte Icons (z. B. lachende/traurige Gesichter), um emotionale BI-Entscheidungen zu beschleunigen.",
+      "Sie verändern die Schriftart dynamisch basierend auf der Standardabweichung, um statistisches Rauschen visuell auszublenden."
+    ],
+    "correctIndex": 1,
+    "explanation": "Bissantz' Numbers basieren auf dem Prinzip der typografischen Skalierung. Die Schriftgröße einer Zahl in einer Tabelle oder Zeitreihe wird direkt proportional zu ihrer Größenordnung bzw. ihrem Wertbeitrag skaliert. Der entscheidende wahrnehmungspsychologische Effekt: Durch die Vergrößerung der Zahlen schrumpft die leere Fläche (der 'Weißraum') zwischen den Ziffern. Diese Verringerung des Weißraums wird vom menschlichen Gehirn sofort als Signal wahrgenommen, wodurch das Auge ohne aktives Suchen direkt auf die auffälligen Ausreißer gelenkt wird."
+  },
+  {
+    "id": "Q07",
+    "topic": "Anscombe's Quartett & Datasaurus Dozen",
+    "difficulty": "Mittel",
+    "question": "Welche methodische Konsequenz für die Datenanalyse und Business Intelligence ergibt sich zwingend aus Anscombe's Quartett (1973)?",
+    "options": [
+      "Man sollte Daten stets zuerst mathematisch aggregieren und runden, um statistisches Rauschen und Messfehler vor der Analyse zu eliminieren.",
+      "Man darf Verteilungen nicht blind aggregieren und sich nur auf rein statistische Kennzahlen verlassen; man muss die Rohbilder/Punktwolken visuell betrachten, bevor man Daten verdichtet.",
+      "Liniendiagramme sind Punktwolken grundsätzlich vorzuziehen, da sie statistische Zusammenhänge mathematisch glätten.",
+      "Die lineare Regressionsgerade (y = 3,00 + 0,50 * x) liefert bei beliebigen Datensätzen stets eine fehlerfreie Beschreibung des Zusammenhangs."
+    ],
+    "correctIndex": 1,
+    "explanation": "Francis Anscombe bewies mit seinem Quartett, dass vier Datensätze mit völlig identischen statistischen Standard-Kennzahlen (Mittelwert, Varianz, Korrelation und Regressionsgerade) bei der grafischen Darstellung (Scatterplot) vollkommen unterschiedliche Strukturen zeigen. Die fundamentale Konsequenz für BI lautet: Schauen Sie sich immer erst den Plot der Verteilung an, bevor Sie Daten aggregieren, da Aggregation strukturzerstörend wirkt."
+  },
+  {
+    "id": "Q08",
+    "topic": "IBCS Abweichungsdarstellung & Signalfarben",
+    "difficulty": "Schwer",
+    "question": "In der IBCS-Notation ist die Verwendung der Ampelfarben Rot und Grün extrem streng reglementiert. Welche der folgenden Regeln entspricht dem IBCS-Standard?",
+    "options": [
+      "Rot kennzeichnet alle negativen Datenreihen (z. B. Umsatzrückgänge) direkt im Hauptdiagramm; Grün kennzeichnet positive Ist-Werte.",
+      "Rot und Grün werden im eigentlichen Geschäftsdiagramm gar nicht verwendet; sie sind exklusiv für eine separate Abweichungszeile/-spalte unter oder neben dem Diagramm reserviert, um visuelles Rauschen zu minimieren.",
+      "Grün wird ausschließlich für Plan-Werte (Soll) verwendet, während Rot ausschließlich für Ist-Werte (Actual) genutzt wird.",
+      "Die Farben Rot und Grün dürfen aus Gründen der Barrierefreiheit gar nicht im selben Bericht auftauchen und müssen standardmäßig durch Blau und Orange ersetzt werden."
+    ],
+    "correctIndex": 1,
+    "explanation": "Nach den IBCS-Standards (International Business Communication Standards) dürfen die Signalfarben Rot und Grün niemals zur reinen Dekoration oder Unterscheidung von normalen Datenreihen im Hauptdiagramm eingesetzt werden. Sie sind streng für die Darstellung von Abweichungen (Variances) reserviert. Meist werden diese Abweichungen in einer separaten Zeile direkt unter dem Diagramm visualisiert. Nur dort signalisiert Rot eine negative (schlechte) Abweichung und Grün eine positive (gute) Abweichung. Dies verhindert eine visuelle Überladung und lenkt den Fokus gezielt auf Handlungsbedarf."
+  },
+  {
+    "id": "Q09",
+    "topic": "Gestaltgesetze der Wahrnehmung",
+    "difficulty": "Mittel",
+    "question": "Das visuelle System des Menschen zerlegt Flächen in Gruppen, noch bevor kognitive Prozesse wie das Lesen von Überschriften einsetzen. Welches der folgenden Gestaltgesetze wird im BI-Design am häufigsten verletzt, wenn Tabellen mit dicken Linien und Rahmen überfrachtet werden?",
+    "options": [
+      "Das Gesetz der Ähnlichkeit, da alle Linien die gleiche Farbe besitzen.",
+      "Das Gesetz der Nähe, da Abstände und Freiräume (Weißraum) zur visuellen Gruppierung ausreichen und Rahmenlinien meist überflüssigen 'Chart-Junk' darstellen, der die Wahrnehmung blockiert.",
+      "Das Gesetz der guten Fortsetzung, da Linien das Auge aus dem Diagramm herausleiten.",
+      "Das Gesetz des gemeinsamen Schicksals, da sich statische Linien nicht bewegen."
+    ],
+    "correctIndex": 1,
+    "explanation": "Das Gesetz der Nähe (Gestaltpsychologie nach Max Wertheimer) besagt, dass nah beieinander liegende Elemente als zusammengehörig wahrgenommen werden. Im modernen Dashboard- und Tabellendesign nutzt man bewusst den Abstand (Weißraum), um Gruppen zu bilden. Das Ziehen von Gitternetzen, Rahmen und Trennlinien ist meist überflüssig (Tufte's Chart-Junk), da das visuelle System die Struktur allein durch die räumliche Nähe der Zahlen erfasst. Rahmen stören diesen präattentiven Prozess."
+  },
+  {
+    "id": "Q10",
+    "topic": "Edward Tufte's Data-Ink-Ratio",
+    "difficulty": "Mittel",
+    "question": "Wie lautet die mathematische Formulierung der 'Data-Ink-Ratio' nach Edward Tufte (1983) und welche praktische Konsequenz ergibt sich daraus für das Diagrammdesign?",
+    "options": [
+      "Data-Ink-Ratio = Tinte für Textbeschriftungen / Tinte für Grafikelemente; Konsequenz: Textanteil im Diagramm minimieren.",
+      "Data-Ink-Ratio = Tinte für Daten / Tinte insgesamt; Konsequenz: Jedes Pixel/jeder Tropfen Tinte, der keine Daten repräsentiert (z. B. Rahmen, Gitter, Schatten, 3D), muss minimiert oder gelöscht werden.",
+      "Data-Ink-Ratio = Anzahl der Datenpunkte / Gesamtpixel der Grafik; Konsequenz: Die Informationsdichte muss künstlich maximiert werden.",
+      "Data-Ink-Ratio = Farbige Tinte / Schwarz-Weiß-Tinte; Konsequenz: Farbige Diagramme sind Schwarz-Weiß-Diagrammen stets vorzuziehen."
+    ],
+    "correctIndex": 1,
+    "explanation": "Die Data-Ink-Ratio ist definiert als der Anteil der 'Datentinte' (Tinte, die für die Darstellung der eigentlichen Daten unverzichtbar ist) an der Gesamttinte des Diagramms. Ein gutes Design maximiert diese Ratio, indem es allen 'Chart-Junk' (Gitternetze, dekorative Rahmen, 3D-Effekte, unnötige Hintergründe, redundante Beschriftungen) rigoros entfernt. Nur so wird sichergestellt, dass die Aufmerksamkeit des Betrachters ungestört auf den Daten liegt."
+  },
+  {
+    "id": "Q11",
+    "topic": "Skalenniveaus von Merkmalen",
+    "difficulty": "Mittel",
+    "question": "Warum is die Unterscheidung zwischen nominalskalierten und ordinalskalierten Merkmalen für die visuelle Anordnung in einem Balkendiagramm absolut kritisch?",
+    "options": [
+      "Nominalskalierte Daten haben eine natürliche Reihenfolge und müssen zwingend chronologisch geordnet werden; ordinale Daten dürfen nur alphabetisch sortiert sein.",
+      "Nominalskalierte Daten besitzen keine inhärente Rangordnung (z. B. Länder) und sollten zur besseren Vergleichbarkeit nach der Wertgröße sortiert werden; ordinale Daten (z. B. Kundenzufriedenheit) besitzen eine natürliche Rangordnung, die bei der Visualisierung zwingend beibehalten werden muss.",
+      "Nominale Daten dürfen nur als Kreisdiagramm dargestellt werden; ordinale Daten nur als Bullet Graph.",
+      "Ordinale Daten erfordern zwingend eine logarithmische Achsenskalierung, während nominale Daten linear dargestellt werden müssen."
+    ],
+    "correctIndex": 1,
+    "explanation": "Nominale Merkmale (z. B. Branchen, Länder) besitzen keine inhärente Reihenfolge. Um dem Auge den Vergleich zu erleichtern, sortiert man die Balken standardmäßig absteigend nach der Wertgröße. Ordinale Merkmale (z. B. Schulnoten, Altersklassen, Zufriedenheitsskalen) haben eine logische, natürliche Rangordnung. Würde man diese Balken nach ihrer Wertgröße sortieren, wäre die logische Abfolge zerstört und das Diagramm extrem verwirrend."
+  },
+  {
+    "id": "Q12",
+    "topic": "Stephen Few's Cockpit-Falle",
+    "difficulty": "Schwer",
+    "question": "Was versteht Stephen Few unter dem Begriff der 'Cockpit-Falle' beim Dashboard-Design und warum kritisiert er diesen Ansatz scharf?",
+    "options": [
+      "Das Platzieren von zu vielen Sparklines auf engstem Raum, was zu visuellem Flimmern führt.",
+      "Das Entlehnen von visuellen Elementen wie runden Tachometern, Ampeln und Warnleuchten aus echten Fahrzeug-Cockpits, da sie extrem viel Bildschirmfläche für einen einzigen Wert verschwenden, keinen historischen Verlauf zeigen und keinen präzisen Vergleich ermöglichen.",
+      "Das Erstellen von Dashboards, die ausschließlich für Luftfahrtexperten oder hochspezialisierte Ingenieure lesbar sind.",
+      "Die Beschränkung des Dashboards auf eine rein textbasierte Tabellenform ohne jegliche Grafiken."
+    ],
+    "correctIndex": 1,
+    "explanation": "Die 'Cockpit-Falle' beschreibt das Phänomen, dass BI-Entwickler Dashboards so gestalten, dass sie wie ein physisches Auto-Cockpit aussehen (mit runden Tachonadeln und bunten Ampeln). Few kritisiert dies, weil der Blick im Auto nur für eine Sekunde auf dem Tacho verweilt. Am Computerbildschirm benötigt man jedoch Informationsdichte und Kontext. Ein Tachometer verbraucht riesige Flächen für eine einzige Kennzahl und liefert weder den zeitlichen Verlauf noch detaillierte Vergleiche."
+  },
+  {
+    "id": "Q13",
+    "topic": "Bullet Graph nach Stephen Few",
+    "difficulty": "Schwer",
+    "question": "Welche visuellen Komponenten kombiniert der von Stephen Few entwickelte 'Bullet Graph' in einer einzigen Zeile, um Tachometer effizient zu ersetzen?",
+    "options": [
+      "Einen rotierenden Zeiger, eine Farbskala von Rot nach Grün und eine blinkende Alarm-LED.",
+      "Einen dicken horizontalen Balken (Ist-Wert), eine feine vertikale Querlinie (Soll-/Zielwert) und im Hintergrund abgestufte Grautöne (qualitative Leistungsbereiche wie schlecht, mittel, gut) auf minimaler Fläche.",
+      "Eine dreidimensionale Pyramide, die je nach Zielerreichung ihre Neigung und Farbintensität verändert.",
+      "Ein Kreisdiagramm mit integrierter Trendlinie und dynamischer Textbeschriftung der Abweichung."
+    ],
+    "correctIndex": 1,
+    "explanation": "Der Bullet Graph wurde von Stephen Few als kompakter Ersatz für den Tachometer entworfen. Er kodiert alle relevanten Informationen in einer schmalen, linearen Zeile: Ist-Wert (dunkler, dicker Balken), Zielwert (dünner Querstrich) und qualitative Performance-Bereiche (Graustufen im Hintergrund wie hellgrau für 'gut', mittelgrau für 'mittel', dunkelgrau für 'schlecht'). Dadurch benötigt er nur einen Bruchteil der Fläche eines Tachometers."
+  },
+  {
+    "id": "Q14",
+    "topic": "Fehlerbilder bei Generativer KI (LLMs) in BI",
+    "difficulty": "Schwer",
+    "question": "Welches spezifische Fehlerbild tritt häufig auf, wenn man generative KI-Modelle (LLMs) unkontrolliert zur automatisierten Erstellung von BI-Diagrammen und Dashboards einsetzt?",
+    "options": [
+      "Die 'Skalen-Inversion', bei der das Modell die Achsen standardmäßig verkehrt herum zeichnet.",
+      "Die 'Beschriftung ohne Datendeckung', bei der das LLM im Begleittext oder Diagrammtitel plausible Werte behauptet, während die nachgelagerte Chart-Bibliothek die Grafik mit abweichenden Standardwerten zeichnet.",
+      "Der 'Data-Ink-Überlauf', bei dem das Modell unendlich viele dekorative Clipart-Grafiken in den Hintergrund einfügt.",
+      "Die 'Farb-Halluzination', bei der das Modell ungültige Hex-Codes generiert, die den Browser zum Absturz bringen."
+    ],
+    "correctIndex": 1,
+    "explanation": "Das Fehlerbild 'Beschriftung ohne Datendeckung' ist eine typische Schwachstelle im Zusammenspiel von Sprachmodellen und Visualisierungs-Bibliotheken. Da das LLM den Text (Titel, Erklärung) und den Code für das Diagramm oft getrennt voneinander generiert bzw. interpoliert, stimmen die behaupteten Textaussagen häufig nicht mit den tatsächlich gezeichneten Datenpunkten überein. Abhilfe schafft nur die strikt automatische Ableitung aller dynamischen Texte aus den berechneten Rohdaten."
+  },
+  {
+    "id": "Q15",
+    "topic": "Tukey's Explorative Datenanalyse",
+    "difficulty": "Mittel",
+    "question": "Welche grundlegende Philosophie der Datenvisualisierung beschreibt das berühmte Zitat von John W. Tukey (1977): 'The greatest value of a picture is when it forces us to notice what we never expected to see'?",
+    "options": [
+      "Diagramme dienen primär dazu, bereits bekannte Erkenntnisse für das Management ästhetisch ansprechend aufzubereiten.",
+      "Der eigentliche Wert der Visualisierung liegt in der Exploration, da sie uns zwingt, unerwartete Muster, Strukturen und Anomalien in den Rohdaten zu entdecken, die in reinen statistischen Tabellen unsichtbar bleiben.",
+      "Visuelle Darstellungen sollten so stark vereinfacht werden, dass keinerlei unerwartete Abweichungen mehr sichtbar sind.",
+      "Datenbilder sind nur dann wertvoll, wenn sie die vorab formulierten Hypothesen des Analysten exakt bestätigen."
+    ],
+    "correctIndex": 1,
+    "explanation": "John W. Tukey gilt als Vater der explorativen Datenanalyse (EDA). Sein Zitat bringt auf den Punkt, dass Visualisierung weit mehr ist als die bloße 'Präsentation' von bereits bekannten Fakten. Ihr wichtigster Zweck ist die 'Erkenntnisgewinnung' (Exploration) – das Sichtbarmachen von Mustern, Ausreißern oder Verteilungen, mit denen man vorab nicht gerechnet hat."
+  },
+  {
+    "id": "Q16",
+    "topic": "Wahrnehmungsgenauigkeit nach Cleveland & McGill",
+    "difficulty": "Mittel",
+    "question": "Welche der folgenden visuellen Variablen ist laut der empirisch bewiesenen Genauigkeitshierarchie von Cleveland & McGill (1984) am besten für den präzisen quantitativen Vergleich von Werten geeignet?",
+    "options": [
+      "Farbton und Farbsättigung",
+      "Winkel und Neigung",
+      "Position auf einer gemeinsamen Skala",
+      "Fläche und Volumen"
+    ],
+    "correctIndex": 2,
+    "explanation": "Cleveland und McGill stellten eine Rangfolge der visuellen Variablen nach ihrer Ablesegenauigkeit auf. Am genauesten ist die 'Position auf einer gemeinsamen Skala' (wie bei einfachen Balken- oder Punktdiagrammen). Es folgen Position auf unaligned Skalen, Länge, Winkel, Fläche, Volumen und schließlich Farbsättigung/Helligkeit (am ungenauesten). Für präzise quantitative Analysen sollten daher Positionen oder Längen bevorzugt werden."
+  },
+  {
+    "id": "Q17",
+    "topic": "Barrierefreiheit & Farbfehlsichtigkeit",
+    "difficulty": "Mittel",
+    "question": "Wie hoch ist der ungefähre Anteil der männlichen Bevölkerung mit einer Rot-Grün-Sehschwäche und welche Design-Konsequenz ergibt sich daraus zwingend für geschäftliche Dashboards?",
+    "options": [
+      "Ca. 1% der Männer; die Farben Rot und Grün sollten im gesamten Bericht durch dicke Rahmenlinien ersetzt werden.",
+      "Ca. 8% der Männer; Farben dürfen niemals der einzige Träger einer Information sein. Ampelsignale müssen zusätzlich über Helligkeit, Symbole, Position oder Beschriftung codiert werden.",
+      "Ca. 25% der Männer; Berichte sollten grundsätzlich nur noch in Graustufen gedruckt werden, um Diskriminierung auszuschließen.",
+      "Ca. 15% der Männer; Rot-Grün-Sehschwäche tritt nur bei Dunkelheit auf, weshalb Dashboards immer einen hellen Hintergrund besitzen müssen."
+    ],
+    "correctIndex": 1,
+    "explanation": "Rund 8% der Männer (aber nur ca. 0,5% der Frauen) haben eine Rot-Grün-Sehschwäche. Da Geschäftsberichte oft über Beamer, Ausdrucke oder in hellen Räumen betrachtet werden, die Kontraste zusätzlich schwächen, muss das Prinzip 'Zweiter Kanal ist Pflicht' angewendet werden. Farben dürfen nie das einzige Informationsmerkmal sein; Abweichungen oder Warnungen müssen zwingend durch textliche Beschriftung, Formate, Positionen oder Symbole unterstützt werden."
+  },
+  {
+    "id": "Q18",
+    "topic": "Farbskalen-Typen im BI-Design",
+    "difficulty": "Mittel",
+    "question": "Wann ist laut dem Vorlesungsskript die Verwendung einer 'divergierenden' Farbskala einer 'sequenziellen' Farbskala zwingend vorzuziehen?",
+    "options": [
+      "Wenn eine ungeordnete Liste kategorialer Variablen (z. B. Produktgruppen oder Regionen) farblich unterschieden werden soll.",
+      "Wenn zeitliche Trends in einem klassischen Liniendiagramm monoton steigend dargestellt werden.",
+      "Wenn Abweichungen von einem zentralen Bezugswert (z. B. Plan-Ist-Abweichungen, Gewinn/Verlust, Budgetüberschreitungen) visualisiert werden.",
+      "Wenn sehr große Datenmengen in einem Histogramm nach Klassenbreiten sortiert werden müssen."
+    ],
+    "correctIndex": 2,
+    "explanation": "Eine sequenzielle Farbskala codiert geordnete Werte von niedrig nach hoch durch monotone Helligkeitsverläufe. Eine divergierende Farbskala hingegen weicht in zwei entgegengesetzte Richtungen von einem neutralen, zentralen Mittelwert (Bezugswert) ab. Dies ist ideal für Gewinn/Verlust oder Plan-Ist-Abweichungen. Der neutrale Mittelwert muss dem inhaltlichen Nullpunkt entsprechen."
+  },
+  {
+    "id": "Q19",
+    "topic": "Kategoriale Farben & Kognitive Belastung",
+    "difficulty": "Mittel",
+    "question": "Wie viele unterschiedliche Farben sollten laut Standardvorgaben der Visualisierungslehre in einer kategorialen Darstellung (z. B. zur Unterscheidung von Produktlinien oder Regionen) maximal verwendet werden, bevor eine Überlastung des Kurzzeitgedächtnisses eintritt?",
+    "options": [
+      "Maximal 2 Farben, da das Auge sonst keine Kontraste mehr wahrnehmen kann.",
+      "Höchstens 5 Farben; darüber muss der Betrachter ständig in der Legende nachschlagen, was den präattentiven Lesefluss blockiert.",
+      "Genau 12 Farben, entsprechend den Standard-Farbpaletten moderner Tabellenkalkulationen.",
+      "Es gibt keine Obergrenze, solange die Farben hell genug gewählt sind."
+    ],
+    "correctIndex": 1,
+    "explanation": "Für kategoriale Daten (Zugehörigkeit ohne Rangfolge) gilt die Faustregel: Höchstens 5 verschiedene Farben pro Grafik einsetzen. Verwenden wir mehr Farben, kann das Gehirn die Kategorien nicht mehr sofort (präattentiv) zuordnen. Der Betrachter wird gezwungen, kognitiv anstrengend zwischen Diagramm und Legende hin- und herzuwechseln."
+  },
+  {
+    "id": "Q20",
+    "topic": "Theorie: The Grammar of Graphics",
+    "difficulty": "Schwer",
+    "question": "Auf welchem theoretischen Standardwerk baut die moderne programmatische Erstellung von Datenvisualisierungen in Werkzeugen wie ggplot2 (R), Vega-Lite oder Tableau auf?",
+    "options": [
+      "Edward Tufte: 'Beautiful Evidence' (2006)",
+      "Leland Wilkinson: 'The Grammar of Graphics' (1999/2005)",
+      "Stephen Few: 'Show Me the Numbers' (2012)",
+      "Rolf Hichert: 'SUCCESS' (2019)"
+    ],
+    "correctIndex": 1,
+    "explanation": "Leland Wilkinsons 'The Grammar of Graphics' (Grammatik der Grafiken) beschreibt eine systematische, deklarative Struktur, wie visuelle Darstellungen aus Daten, geometrischen Objekten (Geoms), statistischen Transformationen und ästhetischen Mappings (Aesthetics wie Position, Farbe, Größe) aufgebaut werden. Wer diese formale Grammatik versteht, kann problemlos zwischen modernen BI- und Programmierwerkzeugen wechseln."
+  },
+  {
+    "id": "Q21",
+    "topic": "Histogramm vs. Säulendiagramm",
+    "difficulty": "Mittel",
+    "question": "Obwohl sich Histogramme und Säulendiagramme visuell stark ähneln, gibt es einen fundamentalen methodischen Unterschied. Welcher ist das?",
+    "options": [
+      "Das Säulendiagramm dient nur der Darstellung von Finanzdaten, während das Histogramm für physikalische Größen reserviert ist.",
+      "Das Histogramm stellt die Verteilung stetiger (metrischer) Daten dar und ist eine flächenproportionale Darstellung, bei der die Säulen ohne Lücken aneinandergrenzen. Das Säulendiagramm vergleicht diskrete Kategorien, weshalb die Säulen durch Abstände getrennt sein müssen.",
+      "Ein Histogramm wird grundsätzlich horizontal gezeichnet, ein Säulendiagramm vertikal.",
+      "Säulendiagramme verwenden ausschließlich relative Prozentangaben, Histogramme dagegen absolute Häufigkeiten."
+    ],
+    "correctIndex": 1,
+    "explanation": "Ein Säulendiagramm vergleicht diskrete Kategorien (z. B. Länder, Monate) mit Abständen zwischen den Säulen, da keine kontinuierliche Achse vorliegt. Ein Histogramm stellt die Häufigkeitsverteilung einer kontinuierlichen, metrischen Variablen dar. Die Breite der Säulen entspricht den Klassenintervallen (Bins) auf einer stetigen Achse. Da die Daten stetig sind, berühren sich die Säulen direkt, und die Säulenfläche ist proportional zur Häufigkeit."
+  },
+  {
+    "id": "Q22",
+    "topic": "Box Plot Whisker-Definition",
+    "difficulty": "Mittel",
+    "question": "Wie wird die maximale Länge der sogenannten 'Whisker' in einer Standard-Kastengrafik (Box Plot) nach John Tukey üblicherweise berechnet, um Ausreißer mathematisch zu definieren?",
+    "options": [
+      "Die Whisker reichen immer bis zum absoluten Minimum und Maximum aller gemessenen Werte des Datensatzes.",
+      "Die Whisker haben eine feste Länge von genau 10% der Breite der Box.",
+      "Die Whisker erstrecken sich maximal bis zum 1,5-fachen des Interquartilsabstands (IQR) von den Rändern der Box (Q1 bzw. Q3). Werte außerhalb dieser Grenze werden als Ausreißer einzeln gezeichnet.",
+      "Die Whisker repräsentieren standardmäßig die dreifache Standardabweichung (3-Sigma) vom arithmetischen Mittelwert."
+    ],
+    "correctIndex": 2,
+    "explanation": "In Tukeys Standard-Boxplot erstrecken sich die Whisker (Antennen) bis zum extremsten Datenpunkt, der noch innerhalb des 1,5-fachen Interquartilsabstands (IQR = Q3 - Q1) liegt. IQR ist die Höhe der Box. Alle Datenpunkte, die weiter als 1,5 * IQR vom oberen oder unteren Quartil entfernt sind, gelten als Ausreißer und werden als separate Punkte eingezeichnet."
+  },
+  {
+    "id": "Q23",
+    "topic": "Spezialvisualisierung: Sankey-Diagramm",
+    "difficulty": "Mittel",
+    "question": "Was visualisiert ein Sankey-Diagramm primär und wie werden die mengenmäßigen Verhältnisse dargestellt?",
+    "options": [
+      "Es zeigt die Verteilung von Kundenzufriedenheitswerten über qualitative Graustufen.",
+      "Es visualisiert Ströme und Flussmengen (z. B. Material-, Energie- oder Handelsströme). Die Breite der Verbindungspfade (Flusslinien) ist direkt proportional zur jeweiligen Flussmenge zwischen den Systemknoten.",
+      "Es vergleicht Zielerreichungsgrade durch ineinander geschachtelte Kreise.",
+      "Es stellt hierarchische Unternehmensstrukturen über vertikale Verästelungen dar."
+    ],
+    "correctIndex": 1,
+    "explanation": "Sankey-Diagramme dienen der Darstellung von Flüssen. Die Knotenpunkte repräsentieren Zustände, Stationen oder Quellen/Senken, während die Verbindungsbänder den Transfer darstellen. Die visuelle Breite der Transferbänder ist direkt proportional zur Flussmenge. Dadurch lässt sich auf einen Blick erkennen, wo Hauptströme fließen und wo Verzweigungen oder Engpässe vorliegen."
+  },
+  {
+    "id": "Q24",
+    "topic": "Tufte's Sparklines",
+    "difficulty": "Mittel",
+    "question": "Wie definierte Edward Tufte (2006) seine 'Sparklines' und wie sollten sie idealerweise in Dokumente integriert werden?",
+    "options": [
+      "Als farbige, blinkende Alarmsymbole in Dashboards zur sofortigen Aufmerksamkeit.",
+      "Als kleine, hochverdichtete, wortgroße Grafiken mit typografischer Auflösung, die sich direkt in Sätze, Tabellen oder Karten einbetten lassen und ihren quantitativen Kontext oft aus dem umgebenden Text erhalten.",
+      "Als großformatige, interaktive Liniendiagramme, die zwingend eine eigene Bildschirmseite beanspruchen.",
+      "Als animierte Liniengrafiken auf Wearables zur Darstellung von Echtzeitdaten."
+    ],
+    "correctIndex": 1,
+    "explanation": "Edward Tufte erfand Sparklines als 'wortgroße, hochaufgelöste Grafiken' ('word-sized, intense, graphics'). Da sie keine Achsen oder Beschriftungen im klassischen Sinne besitzen, werden sie direkt inline im Textfluss oder in Tabellenzellen verwendet. Sie liefern dem Leser eine kompakte visuelle Historie (z. B. Aktienverlauf oder Vitalwerte) direkt neben dem aktuellen Zahlenwert."
+  },
+  {
+    "id": "Q25",
+    "topic": "Wann ist die Tabelle besser als eine Grafik?",
+    "options": [
+      "Niemals; eine Grafik ist laut Few und Tufte einer Tabelle in absolut jedem Fall vorzuziehen, da Bilder präattentiv schneller verarbeitet werden.",
+      "Wenn es um das präzise Nachschlagen einzelner exakter Werte geht, unterschiedliche Maßeinheiten nebeneinander dargestellt werden müssen oder sowohl Detailwerte als auch Summenzeilen gleichzeitig abgelesen werden sollen.",
+      "Nur bei Datensätzen mit weniger als drei Datenpunkten, da Grafiken dort zu viel Platz beanspruchen.",
+      "Ausschließlich bei nominalskalierten Daten im Marketingbereich."
+    ],
+    "correctIndex": 1,
+    "explanation": "Tabellen sind keine Notlösungen, sondern hochgradig effiziente Visualisierungsinstrumente. Sie spielen ihre Stärken aus, wenn der Nutzer exakte Zahlen ablesen muss (z. B. Finanzberichte), wenn unterschiedliche Einheiten (z. B. EUR, Stückzahlen und %-Sätze) in einer Übersicht stehen oder wenn eine tabellarische Struktur (Zeilen/Spalten) das strukturierte Nachschlagen erleichtert."
+  },
+  {
+    "id": "Q26",
+    "topic": "Gestaltgesetz der Ähnlichkeit vs. Nähe",
+    "difficulty": "Mittel",
+    "question": "Was passiert laut dem Vorlesungsskript, wenn sich das Gesetz der Nähe und das Gesetz der Ähnlichkeit (Farbcodierung) in einer Darstellung widersprechen, und wie lautet die Gestaltungsregel?",
+    "options": [
+      "Ähnlichkeit setzt sich immer durch, weshalb Farben stets als erstes Gestaltungsmerkmal gewählt werden sollten.",
+      "Nähe wird im menschlichen Gehirn früher verarbeitet und setzt sich meist durch; starke Farbähnlichkeit kann sie jedoch überschreiben. Die Regel lautet: Erst durch Abstand/Weißraum gruppieren, dann Farbe vergeben, um die Gruppierung zu bestätigen.",
+      "Beide Gesetze heben sich gegenseitig auf, was zu einer vollständigen visuellen Blindheit führt.",
+      "Die Gesetze widersprechen sich nie, da sie neurologisch auf denselben Netzhautzellen verarbeitet werden."
+    ],
+    "correctIndex": 1,
+    "explanation": "Unser Wahrnehmungssystem verarbeitet räumliche Nähe (Abstand) schneller als Ähnlichkeiten (Farbe/Form). Wenn sich beide widersprechen, entsteht visuelle Verwirrung. Die goldene Designregel lautet daher: Erzeuge eine saubere visuelle Struktur zuerst über die Anordnung (Weißraum, Spalten, Abstände) und setze Farben erst danach ein, um diese bestehende Struktur harmonisch zu bestätigen."
+  },
+  {
+    "id": "Q27",
+    "topic": "Tufte's Small Multiples",
+    "difficulty": "Mittel",
+    "question": "Was versteht Edward Tufte unter dem gestalterischen Konzept der 'Small Multiples' (kleine Mehrfachdiagramme) und warum ist dieses Prinzip so wirkungsvoll?",
+    "options": [
+      "Das Verkleinern von Diagrammen auf dem Smartphone-Bildschirm, um Ladezeit zu sparen.",
+      "Das Nebeneinanderreihen einer Serie von kleinen, identisch aufgebauten Diagrammen mit demselben Maßstab, die jeweils unterschiedliche Teilausschnitte der Daten (z. B. verschiedene Regionen) zeigen. Dies erlaubt ein schnelles, fehlerfreies Vergleichen von Mustern über Augenrollen statt über Umblättern.",
+      "Das wiederholte Einfügen von Firmenlogos im Hintergrund von Dashboards zur Markenbildung.",
+      "Die Verwendung von mindestens zehn verschiedenen Diagrammtypen auf einer einzigen Dashboard-Seite."
+    ],
+    "correctIndex": 1,
+    "explanation": "Small Multiples (auch Trellis-Grafiken genannt) nutzen die Fähigkeit unseres Gehirns, Muster in strukturell identischen Darstellungen blitzschnell zu vergleichen. Da Achsen, Diagrammtyp, Farben und Skalierung bei allen Kacheln absolut identisch sind, muss sich der Betrachter nur einmal in das Diagramm einlesen. Jede weitere Kachel wird sofort verstanden, und Vergleiche gelingen mühelos."
+  },
+  {
+    "id": "Q28",
+    "topic": "Historische Visualisierungen: Charles Minard's Karte",
+    "difficulty": "Mittel",
+    "question": "Charles Minards Karte von Napoleons Russlandfeldzug (1812) wird von Edward Tufte als eine der besten statistischen Grafiken aller Zeiten bezeichnet. Warum?",
+    "options": [
+      "Weil sie mit extrem leuchtenden, modernen Primärfarben gezeichnet wurde, die im 19. Jahrhundert revolutionär waren.",
+      "Weil sie sechs unterschiedliche Variablen (Truppenstärke, geografische Koordinaten, Marschrichtung, Temperatur, Datum und Flussüberquerungen) in einer einzigen, klaren, zweidimensionalen Darstellung integriert, ohne den Betrachter visuell zu überlasten.",
+      "Weil sie den ersten dokumentierten Einsatz eines 3D-Balkendiagramms auf Pergamentpapier darstellt.",
+      "Weil sie vollständig automatisiert mithilfe der ersten mechanischen Webmaschinen berechnet und gedruckt wurde."
+    ],
+    "correctIndex": 1,
+    "explanation": "Minards Karte ist ein Meisterwerk des Informationsdesigns, da sie ein hochkomplexes, mehrdimensionales Drama völlig ohne dekorativen Ballast ('Chart-Junk') erzählt. Die schrumpfende Breite des Truppenbandes visualisiert den Verlust von über 400.000 Soldaten im Verhältnis zur Zeit und eisigen Temperatur im russischen Winter. Sie vereint Geografie, Zeitreihen und Mengen perfekt."
+  },
+  {
+    "id": "Q29",
+    "topic": "Pfeiler der Datenkompetenz (Data Literacy)",
+    "difficulty": "Mittel",
+    "question": "Das Vorlesungsskript definiert 'Data Literacy' (Datenkompetenz) als eine der wichtigsten Schlüsselqualifikationen im modernen Informationszeitalter. Welche vier Kernfähigkeiten umfasst dieser Begriff laut Definition?",
+    "options": [
+      "Daten programmieren, Daten verschlüsseln, Daten löschen und Daten im Cloud-Speicher ablegen.",
+      "Daten sammeln, Daten in Excel eintragen, Grafiken ausdrucken und Präsentationen halten.",
+      "Daten lesen, mit Daten arbeiten (analysieren), Daten kommunizieren (argumentieren) und Daten kritisch hinterfragen (bewerten).",
+      "Daten erfassen, Daten komprimieren, SQL-Abfragen schreiben und KI-Prompts eingeben."
+    ],
+    "correctIndex": 2,
+    "explanation": "Data Literacy umfasst die ganzheitliche Kompetenz im Umgang mit Daten. Es geht nicht nur um technische Skills wie das Programmieren. Die vier Säulen sind: 1. Lesen (Daten verstehen), 2. Arbeiten (Sammeln, Bereinigen, Modellieren), 3. Kommunizieren (Ergebnisse visualisieren und argumentieren) und 4. Bewerten (Ergebnisse und Quellen kritisch prüfen und hinterfragen)."
+  },
+  {
+    "id": "Q30",
+    "topic": "Rolf Hichert's SUCCESS-Formel",
+    "difficulty": "Schwer",
+    "question": "Rolf Hichert hat die SUCCESS-Formel als Leitfaden für einheitliche und klare Berichte im Business-Bereich etabliert. Wofür steht das 'S' im Akronym SUCCESS in Bezug auf die inhaltliche Gestaltung von Berichtsseiten?",
+    "options": [
+      "Success (Erfolg) - Berichte sollten immer mit einer positiven Erfolgsmeldung beginnen.",
+      "Say (Sagen) - Eine Botschaft vermitteln. Jede Berichtsseite, jedes Dashboard und jedes Diagramm benötigt eine klare, schriftlich formulierte Kernbotschaft im Titel, statt nur ein statisches Thema zu benennen.",
+      "Structure (Strukturieren) - Alle Daten müssen zwingend in einer streng hierarchischen Baumstruktur angeordnet sein.",
+      "Simplify (Vereinfachen) - Das Löschen aller Datenpunkte, die vom Durchschnitt abweichen, um das Bild sauber zu halten."
+    ],
+    "correctIndex": 1,
+    "explanation": "Das 'S' steht für 'Say' (Sagen/Botschaft vermitteln). Hichert kritisiert, dass Diagramme oft neutrale Titel tragen wie 'Umsatz 2026'. Ein guter Berichtsempfänger möchte jedoch sofort die Botschaft verstehen. Der Titel sollte lauten: 'Umsatz sinkt im September um 12% aufgrund von Lieferengpässen'. Ein Diagramm ohne explizite Aussage ist stumm."
+  },
+  {
+    "id": "Q31",
+    "topic": "Tufte's Chart-Junk Kategorien",
+    "difficulty": "Mittel",
+    "question": "Welche der folgenden Komponenten in einem Diagramm wird von Edward Tufte (1983) explizit als schädlicher 'Chart-Junk' (grafischer Müll) eingestuft und sollte konsequent entfernt werden?",
+    "options": [
+      "Die Nulllinie in einem Balkendiagramm.",
+      "Die Achsenbeschriftungen und Maßeinheiten.",
+      "Künstliche 3D-Effekte, dekorative Hintergrundbilder, dicke dunkle Gitternetzlinien und Moiré-Vibrationen (durch eng schraffierte Flächen).",
+      "Die farbige Hervorhebung eines einzelnen, kritischen Ausreißers."
+    ],
+    "correctIndex": 2,
+    "explanation": "Tufte definiert 'Chart-Junk' als visuelle Elemente, die Tinte verbrauchen, aber keinen Informationsgewinn bringen, sondern das Auge ablenken und kognitiv ermüden. Dazu gehören Pseudo-3D (das Werte verzerrt), gemusterte Schraffuren (Moiré-Flimmern), schwere schwarze Rahmen und dicke Gitterlinien. Diese Elemente senken die Data-Ink-Ratio drastisch."
+  },
+  {
+    "id": "Q32",
+    "topic": "Stevens' Potenzgesetz: Länge vs. Fläche",
+    "difficulty": "Schwer",
+    "question": "Welche mathematische Gesetzmäßigkeit nach Stevens' Potenzgesetz erklärt, warum Balkendiagramme (Länge) für Vergleiche weitaus zuverlässiger sind als Kreis- oder Blasendiagramme (Fläche)?",
+    "options": [
+      "Der Wahrnehmungs-Exponent für Längen liegt bei beta = 1,0 (nahezu verzerrungsfreie lineare Schätzung), während er für Flächen bei beta = 0,7 liegt. Große Flächen werden vom Gehirn daher systematisch unterschätzt.",
+      "Längen werden logarithmisch wahrgenommen, Flächen dagegen exponentiell.",
+      "Balken stimulieren das Auge in horizontaler Richtung, was biologisch bevorzugt wird.",
+      "Der Exponent für Längen liegt bei beta = 0,5, was eine automatische Verdopplung der visuellen Genauigkeit bedeutet."
+    ],
+    "correctIndex": 0,
+    "explanation": "Stevens' Potenzgesetz beschreibt den Zusammenhang zwischen physikalischem Reiz (S) und subjektiver Empfindung (P): P = k * S^beta. Nur wenn beta = 1,0 ist, nehmen wir Größenverhältnisse exakt linear wahr – dies ist bei Längenschätzungen auf einer Achse der Fall. Bei Flächen (beta = 0,7) nimmt die wahrgenommene Intensität langsamer zu als die reale Fläche. Ein Kreis, der doppelt so groß ist wie ein anderer, wirkt auf uns nur etwa 1,6-mal so groß."
+  },
+  {
+    "id": "Q33",
+    "topic": "Referenzpunkt divergierender Farbskalen",
+    "difficulty": "Mittel",
+    "question": "Welche visuelle und inhaltliche Anforderung stellt das Vorlesungsskript an den neutralen Mittelpunkt einer divergierenden Farbskala?",
+    "options": [
+      "Er muss immer die leuchtendste Farbe der gesamten Palette aufweisen (z. B. grelles Gelb).",
+      "Er muss farblich neutral (z. B. Weiß oder Hellgrau) gestaltet sein und exakt dem inhaltlichen Nullpunkt bzw. dem definierten Referenzwert (z. B. Planwert oder Vorjahreswert) entsprechen.",
+      "Er muss standardmäßig dunkelgrün codiert sein, um einen stabilen Zustand anzuzeigen.",
+      "Er sollte weggelassen werden, sodass die Skala einen harten Farbsprung von Rot nach Blau ohne Übergang vollzieht."
+    ],
+    "correctIndex": 1,
+    "explanation": "Bei divergierenden Skalen (z. B. für Plan-Ist-Abweichungen oder Gewinn/Verlust) ist der Wendepunkt der kritischste Wert. Er stellt die Neutralität dar (keine Abweichung, ausgeglichenes Ergebnis). Dieser Punkt muss visuell völlig unaufdringlich sein (Weiß oder ein sehr helles Grau). Zu den Rändern hin nimmt die Farbsättigung in zwei kontrastierende Richtungen (z. B. Rot für negativ, Blau/Grün für positiv) monoton zu."
+  },
+  {
+    "id": "Q34",
+    "topic": "Box Plot mathematische Aufteilung",
+    "difficulty": "Mittel",
+    "question": "Welcher Prozentsatz aller Datenpunkte eines Datensatzes befindet sich mathematisch exakt innerhalb des gezeichneten 'Kastens' (Box) eines Standard-Box-Plots?",
+    "options": [
+      "Genau 95% aller Datenpunkte, entsprechend dem zweiseitigen Konfidenzintervall.",
+      "Exakt 50% aller Datenpunkte; die Box wird unten durch das erste Quartil (Q1) und oben durch das dritte Quartil (Q3) begrenzt.",
+      "Immer 100% der Daten, da Ausreißer nicht zur Verteilung gehören.",
+      "Das hängt von der Standardabweichung ab und variiert zwischen 10% und 90%."
+    ],
+    "correctIndex": 1,
+    "explanation": "Die Box eines Box-Plots visualisiert den Interquartilsabstand (IQR). Der untere Rand ist das 25%-Quartil (Q1) und der obere Rand das 75%-Quartil (Q3). In diesem Bereich liegen definitionsgemäß exakt die mittleren 50% der Datenpunkte des geordneten Datensatzes. Die dicke Linie innerhalb der Box teilt diese beim Median (50%-Quartil, Q2)."
+  },
+  {
+    "id": "Q35",
+    "topic": "Stephen Few's Skalierungsregel für Sparklines",
+    "difficulty": "Schwer",
+    "question": "Wenn mehrere Sparklines untereinander in einer Tabelle abgebildet werden, welche fundamentale Skalierungsregel nach Stephen Few muss beachtet werden, um Fehlinterpretationen zu vermeiden?",
+    "options": [
+      "Jede Sparkline muss für sich einzeln auf das jeweilige Maximum skaliert werden (sog. 'lokales Autoscale'), um die Amplituden maximal hervorzuheben.",
+      "Die Sparklines müssen zwingend eine gemeinsame, einheitliche Skalierung der y-Achse besitzen, wenn die dargestellten Werte direkt miteinander vergleichbar sein sollen. Andernfalls wirken kleine Schwankungen bei geringen Werten optisch genauso dramatisch wie riesige Schwankungen bei großen Werten.",
+      "Sparklines dürfen überhaupt keine y-Skalierung besitzen; sie müssen als perfekte mathematische Kreise gezeichnet werden.",
+      "Die y-Achse jeder Sparkline muss logarithmisch auf der Basis 2 skaliert werden, um Ausreißer visuell zu glätten."
+    ],
+    "correctIndex": 1,
+    "explanation": "Das Problem beim Standard-Autoscale in Tabellenzellen ist, dass jede Zeile eine andere Skala nutzt. Eine Umsatzschwankung von 100 EUR in Produkt A sieht optisch exakt genauso aus wie eine Schwankung von 1.000.000 EUR in Produkt B. Für echte Vergleichbarkeit müssen Sparklines, die dieselbe Metrik vergleichen, dieselbe Achsenskalierung teilen."
+  },
+  {
+    "id": "Q36",
+    "topic": "Kontrastverhältnisse nach WCAG 2.2",
+    "difficulty": "Schwer",
+    "question": "Welches minimale Kontrastverhältnis (Verhältnis der Leuchtdichten) wird von den Web Content Accessibility Guidelines (WCAG 2.2, Erfolgskriterium 1.4.11) für grafische Objekte wie Balken, Linien oder KPI-Kacheln gefordert, damit diese auch bei Sehschwächen oder schlechten Lichtverhältnissen erkennbar sind?",
+    "options": [
+      "Ein Kontrastverhältnis von mindestens 1,5:1",
+      "Ein Kontrastverhältnis von mindestens 3:1 zum direkt angrenzenden Hintergrund.",
+      "Ein Kontrastverhältnis von genau 10:1, entsprechend einem reinen Schwarz-Weiß-Druck.",
+      "Für grafische Objekte gibt es keine Kontrastvorgaben, diese gelten nur für Fließtext."
+    ],
+    "correctIndex": 1,
+    "explanation": "Während für normalen Text ein Kontrastverhältnis von 4,5:1 gefordert ist (WCAG SC 1.4.3), verlangt das Kriterium 1.4.11 ('Non-Text Contrast') für grafische Elemente, die zur Identifikation von Informationen oder Zuständen notwendig sind (z. B. Balken in Diagrammen, Formularränder, Icons), ein Kontrastverhältnis von mindestens 3:1 zum Hintergrund."
+  },
+  {
+    "id": "Q37",
+    "topic": "Edward Tufte's Lie Factor Grenzwerte",
+    "difficulty": "Mittel",
+    "question": "In welchem Wertebereich muss sich der Lie Factor (Lügenfaktor) eines Diagramms nach Tufte (1983) idealerweise bewegen, damit die Darstellung als wissenschaftlich integer und unverzerrt gilt?",
+    "options": [
+      "Genau bei 0,0; jeder positive Wert deutet auf eine unzulässige Glättung der Daten hin.",
+      "Zwischen 0,95 und 1,05. Weicht der Lie Factor um mehr als 5% von 1,0 ab (also < 0,95 oder > 1,05), liegt eine signifikante und unzulässige visuelle Verzerrung der Daten vor.",
+      "Zwischen 1,5 und 2,5, da Diagramme im Business-Bereich die Trends immer leicht übertreiben müssen.",
+      "Der Lie Factor darf beliebig hoch sein, solange im Fußnotenbereich die genaue Datenquelle im APA-Format angegeben ist."
+    ],
+    "correctIndex": 1,
+    "explanation": "Der Lie Factor misst das Verhältnis zwischen der in der Grafik dargestellten Effektgröße und der realen statistischen Effektgröße. Ein perfektes, unverzerrtes Diagramm hat einen Lie Factor von exakt 1,0. Tufte erlaubt eine kleine Toleranzgrenze von 5% (0,95 bis 1,05) für Rundungs- oder Zeichenungenauigkeiten. Alles außerhalb dieses Bereichs ist eine manipulative Verzerrung."
+  },
+  {
+    "id": "Q38",
+    "topic": "Das Problem der Regenbogen-Farbskala (Rainbow Colormap)",
+    "difficulty": "Schwer",
+    "question": "Warum wird die klassische Regenbogen-Farbskala (Rainbow / Jet Colormap) in der professionellen Datenvisualisierung scharf kritisiert und oft verboten?",
+    "options": [
+      "Weil sie im Druck mehr Tinte verbraucht als jede andere Farbskala und dadurch die Data-Ink-Ratio verschlechtert.",
+      "Weil der menschliche Geist die Spektralfarben nicht als natürliche kontinuierliche Reihe wahrnimmt und die abrupten Helligkeitssprünge (z. B. Gelb als extrem helles Band) künstliche Grenzen und nicht existierende Strukturen suggerieren.",
+      "Weil sie aus urheberrechtlichen Gründen nur in Microsoft-Produkten lizenzfrei genutzt werden darf.",
+      "Weil sie ausschließlich bei nominalskalierten Daten verwendet werden darf, in der Praxis aber nur für Zeitreihen eingesetzt wird."
+    ],
+    "correctIndex": 1,
+    "explanation": "Regenbogen-Skalen sind wahrnehmungspsychologisch hochgradig problematisch. Unser visuelles System ordnet Farben nicht automatisch linear (ist Rot größer als Grün?). Zudem verläuft die Helligkeit nicht monoton. Gelb und Cyan wirken visuell extrem hell und dominieren das Bild, während physikalisch dazwischen liegende Werte untergehen. Dies führt zu Scheinkonturen (künstlichen Mustern) in den Daten."
+  },
+  {
+    "id": "Q39",
+    "topic": "Spezialdiagramm: Slope Chart",
+    "difficulty": "Mittel",
+    "question": "Wann ist der Einsatz eines 'Slope Charts' (Steigungsdiagramms) laut Abela (2009) besonders effizient und zielführend?",
+    "options": [
+      "Wenn die Verteilung von mehr als 10.000 Datenpunkten gleichzeitig exploriert werden soll.",
+      "Wenn die relative Veränderung von Werten zwischen genau zwei diskreten Zeitpunkten oder Kategorien für eine Vielzahl von Einheiten verglichen werden soll. Die Neigung der Linien zeigt Richtung und Intensität der Veränderung sofort an.",
+      "Wenn eine kontinuierliche Abweichung vom Mittelwert als kategoriale Heatmap dargestellt werden muss.",
+      "Ausschließlich bei der geografischen Darstellung von Höhenprofilen."
+    ],
+    "correctIndex": 1,
+    "explanation": "Ein Slope Chart ist ein vereinfachtes Liniendiagramm, das nur zwei Datenpunkte pro Linie besitzt (z. B. Vorjahr vs. Aktuelles Jahr). Durch das Nebeneinanderstellen der beiden Achsen und das Verbinden der Punkte sieht der Betrachter sofort an der Steigung (Slope), welche Einheiten gewachsen sind (steigende Linie), welche geschrumpft sind (fallende Linie) und wer die stärkste Dynamik aufweist."
+  },
+  {
+    "id": "Q40",
+    "topic": "Spezialdiagramm: Wasserfalldiagramm (Waterfall Chart)",
+    "difficulty": "Mittel",
+    "question": "Welchen spezifischen Zweck erfüllt ein Wasserfalldiagramm (Waterfall Chart) in der betriebswirtschaftlichen Praxis?",
+    "options": [
+      "Es zeigt die Fließgeschwindigkeit von Datenströmen in Echtzeit-Datenbanken.",
+      "Es visualisiert die Überleitung (Brücke) von einem Startwert zu einem Endwert durch die kumulative Darstellung von sequenziellen positiven und negativen Beiträgen (z. B. die Überleitung vom Bruttoumsatz zum Nettoertrag / EBITDA-Bridge).",
+      "Es dient der flächenproportionalen Darstellung von dreidimensionalen Wahrscheinlichkeitsdichten.",
+      "Es wird primär für die chronologische Projektplanung (Gantt-Ersatz) im agilen Umfeld eingesetzt."
+    ],
+    "correctIndex": 1,
+    "explanation": "Wasserfalldiagramme sind Standardwerkzeuge im Finanz- und Controllingbereich. Sie zeigen Schritt für Schritt, wie sich ein Ausgangswert (z. B. Umsatz des Vorjahres) durch verschiedene Einzeleffekte (z. B. Preissteigerungen, Mengenverluste, Wechselkurseffekte) zum aktuellen Endwert entwickelt. Die 'schwebenden' Säulen verdeutlichen die Einzeleinflüsse visuell hervorragend."
+  },
+  {
+    "id": "Q41",
+    "topic": "Sunburst Chart vs. Treemap",
+    "difficulty": "Schwer",
+    "question": "Warum ist bei der Visualisierung hochkomplexer, tiefer hierarchischer Strukturen (z. B. Produktkataloge mit hunderten Unterkategorien) eine Treemap einem Sunburst Chart meist vorzuziehen?",
+    "options": [
+      "Weil Sunburst Charts keine prozentualen Werte darstellen können, Treemaps dagegen schon.",
+      "Weil das Sunburst-Diagramm mit konzentrischen Ringen arbeitet, bei denen die äußeren Ringe aufgrund des größeren Radius visuell überproportional viel Fläche einnehmen, während die Treemap den rechteckigen Bildschirmplatz maximiert und verschachtelte Größenverhältnisse präziser codiert.",
+      "Weil Treemaps ausschließlich in Graustufen gezeichnet werden müssen, was die kognitive Belastung senkt.",
+      "Weil Sunburst-Diagramme mathematisch nicht mit nominalskalierten Variablen kompatibel sind."
+    ],
+    "correctIndex": 1,
+    "explanation": "Ein Sunburst Chart ist im Grunde ein mehrschichtiges, hierarchisches Kreisdiagramm. Da sich der Kreis nach außen hin weitet, wird die Fläche der Segmente in den äußeren Ringen rein geometrisch viel größer gezeichnet, selbst wenn ihr relativer Wertbeitrag gering ist. Dies verzerrt die Wahrnehmung. Die Treemap nutzt den verfügbaren rechteckigen Platz flächenproportional und verzerrungsfrei aus."
+  },
+  {
+    "id": "Q42",
+    "topic": "Visualisierungsfehler: Dual-Axis Charts (Zwei y-Achsen)",
+    "difficulty": "Schwer",
+    "question": "Warum warnen Stephen Few und Edward Tufte eindringlich vor dem Einsatz von Diagrammen mit zwei unterschiedlichen y-Achsen (Dual-Axis Charts) auf derselben Grafikfläche?",
+    "options": [
+      "Weil sie die Dateigröße beim Exportieren als PNG- oder PDF-Datei unzulässig verdoppeln.",
+      "Weil die Skalierung der beiden Achsen willkürlich gewählt werden kann, was es extrem einfach macht, Trends künstlich zu manipulieren, Scheinkorrelationen zu erzeugen oder reale Unterschiede visuell komplett auszublenden, da es keine gemeinsame Nulllinie oder Skala gibt.",
+      "Weil sie nur auf Touchscreens funktionsfähig sind und auf statischen Ausdrucken nicht decodiert werden können.",
+      "Weil sie zwingend eine dreidimensionale Brille erfordern, um die Tiefenwirkung der beiden Achsen zu trennen."
+    ],
+    "correctIndex": 1,
+    "explanation": "Zwei y-Achsen in einem Diagramm erlauben es dem Ersteller, die Skalenbereiche so zurechtzubiegen, dass zwei völlig unzusammenhängende Kurven exakt übereinanderliegen oder sich schneiden. Da das Gehirn instinktiv nach visuellen Mustern sucht, wird eine Korrelation vermutet, wo keine ist. Alternativen sind zwei untereinander liegende Einzeldiagramme mit einheitlicher x-Achse (Small Multiples)."
+  },
+  {
+    "id": "Q43",
+    "topic": "Wahrnehmung von Weißraum bei Bissantz Numbers",
+    "difficulty": "Schwer",
+    "question": "Auf welchem wahrnehmungspsychologischen Effekt beruhen Bissantz' Numbers, wenn es um das schnelle Erkennen von Ausreißern geht?",
+    "options": [
+      "Auf dem Gesetz der Ähnlichkeit; das Auge gruppiert Zahlen nach ihrer Quersumme.",
+      "Auf dem Prinzip, dass durch die proportionale Vergrößerung der Ziffern der umgebende Weißraum (die freie Fläche) schrumpft. Das menschliche Auge reagiert präattentiv extrem empfindlich auf Unregelmäßigkeiten im Weißraumraster einer Tabelle.",
+      "Auf dem stroboskopischen Effekt, bei dem große Zahlen auf dem Bildschirm leicht flimmern.",
+      "Auf einer künstlichen Unschärfe, die um kleine Zahlenwerte gelegt wird."
+    ],
+    "correctIndex": 1,
+    "explanation": "Bissantz Numbers nutzen geschickt die Gestalttheorie des Weißraums. In einer gleichmäßigen Tabelle ist der Anteil an weißer Hintergrundfläche konstant. Wird eine Zahl stark vergrößert, verdrängt sie den Weißraum um sich herum. Das visuelle System detektiert diese 'Verdichtung' (Störung des Hintergrundmusters) sofort im Bruchteil einer Sekunde – noch bevor die Zahl kognitiv gelesen wird."
+  },
+  {
+    "id": "Q44",
+    "topic": "Stephen Few's Dashboard-Definition",
+    "difficulty": "Mittel",
+    "question": "Wie lautet die präzise Definition eines Dashboards nach Stephen Few (2006) hinsichtlich seiner Dimensionierung und Platzierung?",
+    "options": [
+      "Ein Dashboard ist eine interaktive Präsentation mit mindestens 15 Folien, die automatisiert nacheinander ablaufen.",
+      "Ein Dashboard ist eine visuelle Darstellung der wichtigsten Informationen, die zur Erreichung eines oder mehrerer Ziele benötigt werden; konsolidiert und angeordnet auf einem einzigen Bildschirm, sodass die Informationen auf einen Blick erfasst und überwacht werden können.",
+      "Ein Dashboard ist eine tabellarische Großübersicht, die beliebig weit nach unten gescrollt werden kann, um alle historischen Rohdaten lückenlos anzuzeigen.",
+      "Ein Dashboard ist ein gedruckter Report im DIN-A4-Querformat mit mindestens drei Falzseiten."
+    ],
+    "correctIndex": 1,
+    "explanation": "Few betont das Kriterium des 'einzigen Bildschirms' ('single screen'). Ein echtes Dashboard darf nicht scrollbar sein. Es muss alle für die aktuelle Aufgabe kritischen Kennzahlen so kompakt und visuell optimiert darstellen, dass der Entscheider innerhalb von Sekunden Abweichungen, Gefahren oder Trends erkennt. Scrollen zerstört diese synoptische Wahrnehmung."
+  },
+  {
+    "id": "Q45",
+    "topic": "Kategoriale Variablen & Visuelle Kanäle",
+    "difficulty": "Mittel",
+    "question": "Welcher visuelle Kanal ist laut der Semiotik der Grafik (Bertin, Mackinlay) am besten geeignet, um rein kategoriale (qualitative) Variablen ohne inhärente Rangfolge visuell voneinander zu trennen?",
+    "options": [
+      "Die Helligkeit (Sättigung)",
+      "Der Farbton (Hue)",
+      "Die Größe (Länge/Fläche)",
+      "Die Neigung (Winkel)"
+    ],
+    "correctIndex": 1,
+    "explanation": "Der Farbton (z. B. Rot vs. Blau vs. Gelb) ist der effektivste kategoriale Selektor. Er vermittelt dem Auge sofort den Unterschied der Kategorien, ohne eine Wertigkeit (wie 'größer' oder 'besser') zu suggerieren. Helligkeit oder Größe hingegen implizieren für unser Gehirn immer eine Ordnung oder Menge (heller = mehr, größer = wichtiger) und sind daher für nominale Daten ungeeignet."
+  },
+  {
+    "id": "Q46",
+    "topic": "Quantitative Variablen & Visuelle Kanäle",
+    "difficulty": "Mittel",
+    "question": "Welcher visuelle Kanal ist laut den wahrnehmungspsychologischen Grundlagen der Visualisierung am besten geeignet, um quantitative (metrische) Variablen präzise darzustellen?",
+    "options": [
+      "Der Farbton",
+      "Die Position auf einer gemeinsamen Achse",
+      "Die Textur (Musterung)",
+      "Die geometrische Form (z. B. Kreis vs. Quadrat)"
+    ],
+    "correctIndex": 1,
+    "explanation": "Für quantitative Variablen (Zahlenwerte, Mengen) ist die Position auf einer gemeinsamen Achse (wie beim klassischen Balkendiagramm oder Scatterplot) der stärkste und präziseste visuelle Kanal. Er ermöglicht dem Betrachter ein exaktes, proportionales Ablesen und Vergleichen von Differenzen, wohingegen Farbton oder Form keinerlei quantitative Skalierung erlauben."
+  },
+  {
+    "id": "Q47",
+    "topic": "Gestaltgesetz des gemeinsamen Schicksals (Common Fate)",
+    "difficulty": "Mittel",
+    "question": "Wie wird das 'Gestaltgesetz des gemeinsamen Schicksals' im modernen, interaktiven Dashboard-Design praktisch angewendet?",
+    "options": [
+      "Indem alle Diagramme bei einem Fehler in der Datenbank gleichzeitig ausgeblendet werden.",
+      "Indem sich Elemente, die inhaltlich zusammengehören, bei Interaktionen (z. B. beim Filtern oder Animieren) synchron in dieselbe Richtung oder im selben Rhythmus bewegen. Das Gehirn nimmt diese Bewegung als Einheit wahr.",
+      "Indem alle Dashboards eines Unternehmens dasselbe Schicksal teilen und nach genau drei Jahren gelöscht werden müssen.",
+      "Indem negative Werte in allen Charts ausnahmslos in derselben roten Farbe blinken."
+    ],
+    "correctIndex": 1,
+    "explanation": "Das Gesetz des gemeinsamen Schicksals besagt, dass sich bewegende Elemente, die dieselbe Richtung und Geschwindigkeit aufweisen, als zusammengehörige Gruppe wahrgenommen werden. Im UX/UI-Design nutzt man dies bei Übergangsanimationen: Wenn beim Klick auf ein Segment mehrere abhängige Diagramme fließend mitskalieren, erkennt der Nutzer sofort die kausale und logische Verknüpfung."
+  },
+  {
+    "id": "Q48",
+    "topic": "Stem-and-Leaf Plot (Stamm-Blatt-Diagramm)",
+    "difficulty": "Mittel",
+    "question": "Welchen spezifischen Vorteil bietet ein Stamm-Blatt-Diagramm (Stem-and-Leaf Plot) gegenüber einem klassischen Histogramm bei der Analyse von Verteilungen?",
+    "options": [
+      "Es kann im Gegensatz zum Histogramm auch qualitative nominale Daten darstellen.",
+      "Es zeigt die Form der Verteilung visuell an und bewahrt gleichzeitig die exakten numerischen Rohdatenwerte im Diagramm selbst, anstatt sie hinter anonymen Säulenbalken zu verbergen.",
+      "Es benötigt für die Darstellung zwingend eine dreidimensionale Achse.",
+      "Es glättet die Verteilung automatisch mithilfe einer Gauß'schen Glockenkurve."
+    ],
+    "correctIndex": 1,
+    "explanation": "Ein Stem-and-Leaf Plot ist eine textbasierte Visualisierung einer Verteilung. Die führenden Ziffern (Stamm) stehen links von einer Linie, die Endziffern (Blätter) rechts davon. Das Diagramm sieht aus wie ein horizontales Histogramm (Säulenform), besteht aber aus den echten Zahlenwerten. Der Analyst sieht also die exakte Verteilung und kann gleichzeitig jeden einzelnen Originalwert direkt ablesen."
+  },
+  {
+    "id": "Q49",
+    "topic": "Qualitative Bereiche im Bullet Graph",
+    "difficulty": "Mittel",
+    "question": "Was bedeuten die abgestuften Grautöne im Hintergrund des von Stephen Few entwickelten 'Bullet Graphs'?",
+    "options": [
+      "Sie stellen die historische Entwicklung des Vorjahres dar.",
+      "Sie definieren qualitative Leistungsbereiche (z. B. dunkelgrau für 'schlecht', mittelgrau für 'befriedigend' und hellgrau für 'gut') zur sofortigen Kontextualisierung des aktuellen Werts.",
+      "Sie dienen der Dekoration des Dashboards, um den leeren Raum ansprechend zu füllen.",
+      "Sie markieren die Standardabweichung und Varianz des Datensatzes."
+    ],
+    "correctIndex": 1,
+    "explanation": "Die Graustufensegmente im Hintergrund des Bullet Graphs liefern den sofortigen Interpretationsrahmen. Ohne Kontext ist eine Zahl wie 'Umsatz = 82k' wertlos. Durch die Graustufen sieht der Betrachter sofort, ob sich dieser Wert im ungenügenden, durchschnittlichen oder hervorragenden Bereich befindet, ohne dass ein separates Rundinstrument nötig ist."
+  },
+  {
+    "id": "Q50",
+    "topic": "Hichert SUCCESS: CONDENSE (Verdichten)",
+    "difficulty": "Schwer",
+    "question": "Was fordert die SUCCESS-Regel 'CONDENSE' (Verdichten) von Hichert für die Gestaltung von BI-Berichten und Dashboards?",
+    "options": [
+      "Das Komprimieren der PDF-Dateien vor dem E-Mail-Versand, um Serverplatz zu sparen.",
+      "Die Erhöhung der Informationsdichte durch das enge, strukturierte Platzieren von komprimierten Tabellen, Grafiken und Texten auf einer Seite, um synoptisches Vergleichen (auf einen Blick) zu ermöglichen, statt Daten über viele Seiten zu verteilen.",
+      "Das ausschließliche Anzeigen von aggregierten Gesamtsummen und das Löschen aller Detailwerte.",
+      "Die Reduktion aller Diagramme auf maximal einen einzigen Datenpunkt pro Berichtsseite."
+    ],
+    "correctIndex": 1,
+    "explanation": "Hichert fordert im Regelpunkt 'CONDENSE' eine hohe Informationsdichte. Oft sind Berichte extrem luftig gestaltet und zeigen pro Seite nur ein einziges großes Kuchendiagramm. Dies zwingt den Leser zum Blättern und erschwert Vergleiche. Ein hochverdichteter, professioneller Bericht zeigt stattdessen tabellarische Kennzahlen, Trends (Sparklines) und Abweichungen übersichtlich auf einer einzigen Seite."
+  }
+]

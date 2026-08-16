@@ -1,0 +1,103 @@
+{
+  "schema": 1,
+  "kurs": "Business Intelligence (BINT)",
+  "einheiten": [
+    {
+      "key": "E01",
+      "nummer": 1,
+      "titel": "Kickoff",
+      "kurz": "Kickoff",
+      "datei": "data/Quizfragen_Kickoff.json",
+      "anzahl": 50,
+      "stufen": {
+        "Mittel": 25,
+        "Schwer": 25
+      }
+    },
+    {
+      "key": "E02",
+      "nummer": 2,
+      "titel": "Datenvisualisierung",
+      "kurz": "Visualisierung",
+      "datei": "data/Quizfragen_Visualisierung.json",
+      "anzahl": 50,
+      "stufen": {
+        "Mittel": 30,
+        "Schwer": 20
+      }
+    },
+    {
+      "key": "E03",
+      "nummer": 3,
+      "titel": "Erster Bericht",
+      "kurz": "Erster Bericht",
+      "datei": "data/Quizfragen_ErsterBericht.json",
+      "anzahl": 50,
+      "stufen": {
+        "Leicht": 1,
+        "Mittel": 31,
+        "Schwer": 18
+      }
+    },
+    {
+      "key": "E05",
+      "nummer": 5,
+      "titel": "Verbesserter Bericht",
+      "kurz": "Verb. Bericht",
+      "datei": "data/Quizfragen_ErsterVerbesserterBericht.json",
+      "anzahl": 50,
+      "stufen": {
+        "Mittel": 33,
+        "Schwer": 17
+      }
+    },
+    {
+      "key": "E06",
+      "nummer": 6,
+      "titel": "Architekturen",
+      "kurz": "Architekturen",
+      "datei": "data/Quizfragen_Architekturen.json",
+      "anzahl": 50,
+      "stufen": {
+        "Mittel": 24,
+        "Schwer": 26
+      }
+    },
+    {
+      "key": "E07",
+      "nummer": 7,
+      "titel": "Datenbanken & SQL",
+      "kurz": "Datenbanken",
+      "datei": "data/Quizfragen_Datenbanken.json",
+      "anzahl": 50,
+      "stufen": {
+        "Mittel": 24,
+        "Schwer": 26
+      }
+    },
+    {
+      "key": "E08",
+      "nummer": 8,
+      "titel": "Python & FastHTML",
+      "kurz": "Python",
+      "datei": "data/Quizfragen_PythonFastHTML.json",
+      "anzahl": 50,
+      "stufen": {
+        "Mittel": 24,
+        "Schwer": 26
+      }
+    },
+    {
+      "key": "E09",
+      "nummer": 9,
+      "titel": "Deployment & Betrieb",
+      "kurz": "Deployment",
+      "datei": "data/Quizfragen_Deployment.json",
+      "anzahl": 50,
+      "stufen": {
+        "Mittel": 28,
+        "Schwer": 22
+      }
+    }
+  ]
+}

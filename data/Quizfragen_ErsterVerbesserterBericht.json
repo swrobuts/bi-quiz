@@ -1,0 +1,702 @@
+[
+  {
+    "id": "EB01",
+    "topic": "Bissantz-Gestaltungsansatz (Zahlenbilder)",
+    "difficulty": "Mittel",
+    "question": "Welche grundlegende Design-Philosophie verfolgt der Gestaltungsansatz von Nicolas Bissantz für Dashboards und Tabellen?",
+    "options": [
+      "Er ersetzt alle numerischen Tabellenwerte durch flächige 3D-Balkendiagramme, um optische Tiefe zu erzeugen.",
+      "Er verzichtet weitgehend auf separate Diagramme und arbeitet direkt in der Tabelle selbst, sodass die Zahl lesbar bleibt, aber im selben Feld ein kleines Bild (Balken oder Sparkline) als Kontext erhält ('Die Zahl bleibt das Interface').",
+      "Er ordnet alle Kennzahlen in bunten Tachometern und Ampelsystemen an, um eine schnelle kognitive Erfassung zu erzwingen.",
+      "Er blendet alle genauen Zahlenwerte aus und zeigt ausschließlich farbige Kreissegmente zur Trenddarstellung."
+    ],
+    "correctIndex": 1,
+    "explanation": "Der Bissantz-Ansatz setzt auf 'Grafische Tabellen', bei denen Sparklines und Balken direkt in der Zelle stehen. Die Zahl und das Bild bleiben zusammen ('die Zahl bleibt das Interface'), wodurch eine extrem hohe Informationsdichte ohne visuelle Überladung erreicht wird."
+  },
+  {
+    "id": "EB02",
+    "topic": "Farbwahl bei Abweichungen nach Bissantz",
+    "difficulty": "Schwer",
+    "question": "Welche Signalfarben werden im Bissantz-Ansatz für die Darstellung von Abweichungen genutzt und welcher barrierefreie Vorteil ergibt sich daraus?",
+    "options": [
+      "Rot und Grün; sie entsprechen dem gängigen Standard und sind für alle Menschen sofort verständlich.",
+      "Gelb und Violett; sie minimieren das psychologische Stresslevel bei negativen Abweichungen.",
+      "Rot und Blau; Rot signalisiert eine negative und Blau eine positive Abweichung. Diese Farbkombination bleibt auch bei einer Rot-Grün-Sehschwäche ohne Suchen sofort unterscheidbar.",
+      "Ausschließlich Schwarz und Weiß mit variierender Schraffur, um Druckkosten bei Berichten zu sparen."
+    ],
+    "correctIndex": 2,
+    "explanation": "Im Bissantz-Design wird Grau als neutrale Grundfarbe verwendet. Abweichungen werden exklusiv durch Rot und Blau markiert. Dies bietet den großen Vorteil, dass Menschen mit einer weit verbreiteten Rot-Grün-Schwäche (etwa 8 % aller Männer) die Signale mühelos und ohne Suchaufwand decodieren können."
+  },
+  {
+    "id": "EB03",
+    "topic": "Bissantz Numbers & Typografische Skalierung",
+    "difficulty": "Schwer",
+    "question": "Wie steuern die 'Bissantz' Numbers' (typografisch skalierte Werte) die visuelle Aufmerksamkeit des Betrachters bei der Analyse großer Zahlentabellen?",
+    "options": [
+      "Sie blinken in vordefinierten Intervallen, um die Aufmerksamkeit auf sich zu ziehen.",
+      "Sie skalieren die Schriftgröße der Zahlenwerte proportional zu ihrem relativen Wertbeitrag. Dadurch schrumpft bei großen Zahlen der Weißraum, und außergewöhnliche Werte treten für das Auge präattentiv in den Vordergrund.",
+      "Sie verwenden unterschiedliche Schriftarten (z. B. Kursiv oder Fett) je nach statistischer Signifikanz.",
+      "Sie fügen automatisch dreidimensionale Schatten hinter den größten Zahlenwerten ein."
+    ],
+    "correctIndex": 1,
+    "explanation": "Bissantz' Numbers nutzen die Abnahme des Weißraums bei größer skalierten Ziffern. Je enger die Ziffern beieinanderstehen (weniger Weißraum), desto dunkler und massiver wirkt die Fläche auf das menschliche Auge. Das Gehirn nimmt diese Ausreißer oder großen Werte präattentiv sofort wahr, ohne dass der Nutzer jede Zelle einzeln lesen muss."
+  },
+  {
+    "id": "EB04",
+    "topic": "Bissantz DeltaApp (Mobile BI)",
+    "difficulty": "Mittel",
+    "question": "Welches spezifische Interaktionskonzept zeichnet die mobile Anwendung 'Bissantz DeltaApp' bei der Exploration multidimensionaler Daten aus?",
+    "options": [
+      "Sie erfordert die Eingabe komplexer SQL-Abfragen über eine virtuelle Tastatur.",
+      "Anwender navigieren ausschließlich per Gestensteuerung ('per Daumen durch die Daten') interaktiv durch die Dimensionen und Hierarchien, um Abweichungen mobil zu explorieren.",
+      "Sie stellt Berichte nur als statische, nicht-interaktive PDF-Snapshots zur Verfügung.",
+      "Sie nutzt eine Eye-Tracking-Kamera zur berührungslosen Steuerung des Dashboards."
+    ],
+    "correctIndex": 1,
+    "explanation": "Die DeltaApp (inzwischen auch als DeltaApp Web im Browser verfügbar) ist speziell für die mobile Einhandbedienung optimiert. Anwender explorieren multidimensionale Berichte quasi 'per Daumen', um schnell und unkompliziert die Ursachen von Abweichungen zu analysieren."
+  },
+  {
+    "id": "EB05",
+    "topic": "Automatisierte Treiberanalyse (PowerSearch)",
+    "difficulty": "Schwer",
+    "question": "Wie funktioniert die automatisierte Abweichungsrecherche (Treiberanalyse) im BI-Werkzeug DeltaMaster und wie ist die Rollenverteilung zwischen Mensch und Maschine?",
+    "options": [
+      "Der Algorithmus bewertet und entscheidet vollautomatisch über Korrekturmaßnahmen, ohne dass der Anwender eingreifen kann.",
+      "Der Algorithmus durchsucht (fahndet nach) allen Dimensionen und Teilmengen, um die größten Abweichungstreiber mathematisch zu ranken; die fachliche Bewertung und Interpretation der Ursachen bleibt jedoch beim Menschen.",
+      "Das System erstellt eigenständig neue Datenquellen und verknüpft diese ohne Rücksprache mit dem DWH.",
+      "Die Treiberanalyse schlägt basierend auf KI-Modellen neue Farbschemata für die Berichtsgestaltung vor."
+    ],
+    "correctIndex": 1,
+    "explanation": "Die Treiberanalyse (z. B. via PowerSearch) nimmt dem Analysten die mühsame Klick-Arbeit ab: Das System berechnet die Abweichungen über alle Hierarchien hinweg und rankt die stärksten Treiber (z. B. 'Machines' im September 2016). Der Mensch bewertet anschließend, ob der gefundene Treiber die betriebswirtschaftliche Erklärung für das Phänomen liefert."
+  },
+  {
+    "id": "EB06",
+    "topic": "Zellbalken als Vergleichsmaßstab",
+    "difficulty": "Mittel",
+    "question": "Welchen Zweck erfüllt der horizontale Balken, der in einer grafischen Tabelle direkt hinter dem aktuellen Wert des Berichtsmonats gezeichnet wird?",
+    "options": [
+      "Er dient lediglich als dekoratives Gestaltungselement ohne mathematischen Bezug.",
+      "Er markiert das Erreichen eines statischen, im System fest hinterlegten Budget-Ziels.",
+      "Er repräsentiert den Wert des Berichtsmonats und dient als visueller Vergleichsmaßstab für den Ersteindruck, um Ausreißer oder besonders niedrige Werte sofort zu erkennen.",
+      "Er zeigt die durchschnittliche Wachstumsrate der letzten zehn Jahre an."
+    ],
+    "correctIndex": 2,
+    "explanation": "In grafischen Tabellen dient der Zellbalken des aktuellen Berichtsmonats als unmittelbare Referenzgröße. Beim Überfliegen der Zeilen erfasst das Auge sofort das Längenverhältnis des Balkens im Vergleich zu den anderen Zeilen oder den Sparklines im Hintergrund."
+  },
+  {
+    "id": "EB07",
+    "topic": "Bissantz' Numbers Excel Add-in",
+    "difficulty": "Mittel",
+    "question": "Welche Aussage bezüglich des Excel Add-ins für Bissantz' Numbers ist korrekt?",
+    "options": [
+      "Es handelt sich um ein kostenpflichtiges Enterprise-Tool, das ausschließlich im Paket mit DeltaMaster lizenziert werden kann.",
+      "Es ist ein kostenfreies Add-in, das nach Registrierung auf den Seiten von Bissantz & Company heruntergeladen und direkt in MS Excel genutzt werden kann.",
+      "Es erfordert eine permanente Verbindung zu einer PostgreSQL-Datenbank, um Schriftgrößen zu berechnen.",
+      "Es funktioniert ausschließlich auf macOS-Betriebssystemen und unterstützt kein Windows-Excel."
+    ],
+    "correctIndex": 1,
+    "explanation": "Wie im Skript beschrieben, stellt Bissantz & Company ein kostenfreies Add-in für Microsoft Excel zur Verfügung, mit dem Anwender typografisch skalierte Tabellen (Bissantz' Numbers) direkt in ihren Tabellenblättern erstellen können."
+  },
+  {
+    "id": "EB08",
+    "topic": "Konzept 'Zahl als Interface'",
+    "difficulty": "Mittel",
+    "question": "Was wird unter dem Gestaltungsleitsatz 'Dichte statt Dekoration — die Zahl bleibt das Interface' verstanden?",
+    "options": [
+      "Dass Tabellen komplett durch Liniendiagramme ersetzt werden sollten, da Bilder leichter zu interpretieren sind.",
+      "Dass Berichte so dicht mit Cliparts und dekorativen Rahmen gefüllt werden, dass kein Weißraum mehr übrig bleibt.",
+      "Dass der konkrete, präzise Zahlenwert im Vordergrund steht und lesbar bleibt, jedoch im exakt selben Feld visuelle Indikatoren (wie integrierte Balken) den nötigen Kontext liefern, ohne separaten Platz zu rauben.",
+      "Dass Dashboards nur noch aus einer einzigen, riesigen Gesamtkennzahl bestehen dürfen."
+    ],
+    "correctIndex": 2,
+    "explanation": "Nicolas Bissantz postuliert, dass Daten und Grafik nicht getrennt werden sollten. Indem die Zahl selbst das grafische Interface bildet (durch Überlagerung mit Zellgrafiken oder typografische Skalierung), bleiben die Präzision der Tabelle und die Mustererkennung eines Diagramms in einer extrem dichten Darstellung vereint."
+  },
+  {
+    "id": "EB09",
+    "topic": "Vorteil grafischer Tabellen",
+    "difficulty": "Mittel",
+    "question": "Welcher kognitive Vorteil ergibt sich daraus, dass Sparklines und Balken direkt in die Tabellenzellen eingebettet werden?",
+    "options": [
+      "Das Auge muss nicht mehr permanent zwischen einer separaten Legende, einem Diagramm und einer Datentabelle hin- und herspringen, da Wert und visueller Verlauf im selben Blickfeld liegen.",
+      "Die Ladezeit der SQL-Datenbank verringert sich um die Hälfte.",
+      "Die Daten werden automatisch verschlüsselt und sind vor unbefugtem Zugriff geschützt.",
+      "Es können beliebig viele dreidimensionale Effekte ohne Wahrnehmungsverzerrung dargestellt werden."
+    ],
+    "correctIndex": 0,
+    "explanation": "Klassische Berichte trennen oft Text, Tabelle und Diagramm. Grafische Tabellen lösen dieses Problem, indem sie den Verlauf (Sparkline) und die Größenordnung (Balken) direkt am Datenpunkt visualisieren. Das spart Suchzeit und senkt die kognitive Belastung (Split-Attention-Effekt)."
+  },
+  {
+    "id": "EB10",
+    "topic": "Wissenschaftliches Fundament der Berichtsgestaltung",
+    "difficulty": "Mittel",
+    "question": "Welche beiden theoretischen Säulen bilden das wissenschaftliche Fundament für die von Robert Butscher vermittelten Gestaltungsregeln?",
+    "options": [
+      "Die Farbpsychologie nach Goethe und die Typografie-Lehre von Gutenberg.",
+      "Die Informationstheorie von Shannon-Weaver und das relationale Modell von Codd.",
+      "Edward Tuftes Visualisierungstheorie (1983) und die Standardisierungs-Normen der IBCS (Hichert).",
+      "Die kognitive Lasttheorie nach Sweller und das ISO-9001-Qualitätsmanagement."
+    ],
+    "correctIndex": 2,
+    "explanation": "Butschers Gestaltungslehre verknüpft die theoretischen Ansätze von Edward Tufte (Data-Ink-Ratio, Lie Factor, Sparklines) mit den pragmatischen, überprüfbaren Notationsregeln von Rolf Hichert bzw. der IBCS-Association (SUCCESS-Formel)."
+  },
+  {
+    "id": "EB11",
+    "topic": "Sparklines Definition nach Tufte",
+    "difficulty": "Mittel",
+    "question": "Wie definierte Edward Tufte (2006) in seinem Werk 'Beautiful Evidence' den Begriff 'Sparkline'?",
+    "options": [
+      "Als animierte Liniengrafiken, die bei Mausberührung Funken sprühen.",
+      "Als hochaufgelöste, wortgroße Verlaufsgrafiken ohne Achsen, Gitter und Legenden, die sich nahtlos in Tabellen oder Fließtext integrieren lassen.",
+      "Als dreidimensionale Kreisdiagramme zur Darstellung von Marktanteilen.",
+      "Als spezielle SQL-Abfragen zur Echtzeit-Aggregationsanalyse."
+    ],
+    "correctIndex": 1,
+    "explanation": "Sparklines sind extrem kompakte Verlaufskurven ('word-sized graphics'). Sie verzichten bewusst auf Achsen, Gitterlinien und Beschriftungen, um ein Maximum an Datendichte auf minimalem Raum (oft nur wenige Pixel hoch und breit) zu realisieren."
+  },
+  {
+    "id": "EB12",
+    "topic": "Fehlende Achsen und Legenden bei Sparklines",
+    "difficulty": "Mittel",
+    "question": "Warum verzichten Sparklines nach Tuftes Definition konsequent auf Achsenbeschriftungen, Skalenstriche und Legenden?",
+    "options": [
+      "Weil Tufte diese Elemente für mathematisch fehlerhaft hielt.",
+      "Weil Sparklines nicht dazu dienen, exakte Einzelwerte abzulesen, sondern dem Betrachter auf einen Blick Trends, Schwankungsbreiten und Muster einer Zeitreihe zu vermitteln.",
+      "Weil moderne Webbrowser keine Achsen in so kleinen Grafiken rendern können.",
+      "Weil dadurch die Datenübertragungsrate vom Server zum Client massiv optimiert wird."
+    ],
+    "correctIndex": 1,
+    "explanation": "Sparklines sind keine Werkzeuge zum punktgenauen Ablesen von Werten (dafür steht die Zahl daneben). Sie zeigen die 'Richtung' und das 'Muster' einer Entwicklung. Achsen oder Gitter würden in dieser kompakten Größe nur als störendes Rauschen ('Chart-Junk') wirken."
+  },
+  {
+    "id": "EB13",
+    "topic": "Sparkline-Skalierungsproblem (Lokal vs. Global)",
+    "difficulty": "Schwer",
+    "question": "Welches schwerwiegende visuelle Missverständnis droht, wenn Sparklines in verschiedenen Zeilen einer Tabelle jeweils individuell ('lokal') skaliert werden?",
+    "options": [
+      "Die Sparklines fangen im Webbrowser an zu flimmern.",
+      "Die Datenwerte der Zeilen vermischen sich in der Datenbank.",
+      "Gleiche visuelle Höhen oder Steigungen repräsentieren in unterschiedlichen Zeilen völlig unterschiedliche reale Werte, was einen fairen Zeilenvergleich unmöglich macht.",
+      "Die Ladezeit der Tabelle erhöht sich exponentiell."
+    ],
+    "correctIndex": 2,
+    "explanation": "Bei einer lokalen Skalierung wird jede Sparkline separat auf ihr eigenes Minimum und Maximum gedehnt. Hat Zeile A Werte zwischen 1 und 10 und Zeile B Werte zwischen 1000 und 10000, sehen die Kurven visuell identisch aus. Nur eine einheitliche, globale Skalierung sichert die korrekte Vergleichbarkeit der Zeilen untereinander."
+  },
+  {
+    "id": "EB14",
+    "topic": "Nullpunkt bei Sparklines",
+    "difficulty": "Schwer",
+    "question": "Gehört ein fester Nullpunkt (Nulllinie) zwingend zur Kurvendarstellung einer Sparkline nach Edward Tufte?",
+    "options": [
+      "Ja, jede grafische Kurve muss zwingend bei Null beginnen, da sonst der Lie Factor unendlich hoch wird.",
+      "Nein, ein Nullpunkt gehört nicht zwingend dazu. Der Wertebereich wird auf die verfügbare Höhe abgebildet; die exakte Kurvenform hängt von der gewählten Skalierung ab, während die Einordnung durch wenige feste Punkte (z. B. Extremwerte) erfolgt.",
+      "Ja, aber nur bei nominalskalierten Datenreihen.",
+      "Nein, Sparklines dürfen nur positive Werte darstellen, weshalb eine Nulllinie mathematisch redundant ist."
+    ],
+    "correctIndex": 1,
+    "explanation": "Da Sparklines extrem flach sind (wortgroß), würde ein erzwungener Nullpunkt bei weit vom Nullpunkt entfernten Zeitreihen (z. B. Aktienkurse von 1000 bis 1050) jegliche Sichtbarkeit von Mustern und Schwankungen komplett nivellieren. Die Kurve darf daher auf den tatsächlichen Wertebereich gezoomt werden."
+  },
+  {
+    "id": "EB15",
+    "topic": "Säulen-Sparklines (Säulendiagramme in Zellen)",
+    "difficulty": "Mittel",
+    "question": "In welcher Form können Sparklines neben der klassischen kontinuierlichen Linie noch dargestellt werden, um beispielsweise diskrete Monatsumsätze zu visualisieren?",
+    "options": [
+      "Als dreidimensionale Zylinder-Diagramme.",
+      "Als miniaturisierte Säulendiagramme (Säulen-Sparklines), bei denen jeder Balken einen Zeitraum repräsentiert und der letzte Balken den aktuellen Wert abbildet.",
+      "Als verschachtelte Donut-Ringe innerhalb der Tabellenzelle.",
+      "Ausschließlich als Kreisdiagramme mit maximal zwei Segmenten."
+    ],
+    "correctIndex": 1,
+    "explanation": "Säulen-Sparklines sind hervorragend geeignet, um diskrete Zeiträume (wie Monate) darzustellen. Der Betrachter erkennt sofort an der Höhe der einzelnen Mini-Säulen, wie sich der aktuelle Monatswert (repräsentiert durch die letzte, ganz rechte Säule) im Vergleich zu den Vorperioden schlägt."
+  },
+  {
+    "id": "EB16",
+    "topic": "Anordnung von Sparklines",
+    "difficulty": "Mittel",
+    "question": "Wie lassen sich Sparklines im Layout anordnen, um sie flexibel an den Platzbedarf in Dashboards oder Printmedien anzupassen?",
+    "options": [
+      "Sie müssen zwingend diagonal über den Bildschirm verlaufen.",
+      "Je nach Bedarf und Datenstruktur lassen sie sich horizontal (z. B. im Fließtext oder in einer Tabellenzeile) oder vertikal untereinander anordnen.",
+      "Sie dürfen ausschließlich in der Kopfzeile eines Berichts platziert werden.",
+      "Sie müssen als Pop-up-Fenster beim Laden der Seite erscheinen."
+    ],
+    "correctIndex": 1,
+    "explanation": "Dank ihrer extremen Kompaktform (nur wenige Pixel hoch/breit) sind Sparklines hochgradig flexibel. Sie können wie ein Wort im Fließtext mitlaufen oder als strukturierte Spalte in einer dichten Datentabelle angeordnet werden."
+  },
+  {
+    "id": "EB17",
+    "topic": "Referenzierung des Berichtsmonats bei Sparklines",
+    "difficulty": "Schwer",
+    "question": "Warum ist es bei der Verwendung von Sparklines in Berichts-Tabellen zwingend erforderlich, den exakten Berichtsmonat (z. B. in der Überschrift oder Spalte) explizit auszuweisen?",
+    "options": [
+      "Weil Sparklines ohne diese Information im Webbrowser nicht gerendert werden.",
+      "Damit der Leser weiß, zu welchem konkreten Zeitpunkt der letzte (ganz rechte) Datenpunkt der Sparkline gehört, um die Logik des Periodenvergleichs korrekt zu interpretieren.",
+      "Weil das Datenmodell (Tabular Model) sonst einen Syntaxfehler ausgibt.",
+      "Um die Anforderungen der Datenschutz-Grundverordnung (DSGVO) zu erfüllen."
+    ],
+    "correctIndex": 1,
+    "explanation": "Eine Sparkline zeigt eine relative Entwicklung (z. B. 12 Monate rückwirkend). Ohne die Angabe des Bezugspunkts (z. B. 'Dezember 2016') weiß der Betrachter nicht, ob der letzte Balken für den Dezember, den November oder ein ganz anderes Jahr steht. Erst die zeitliche Verankerung macht den Vergleich interpretierbar."
+  },
+  {
+    "id": "EB18",
+    "topic": "Sparklines in Microsoft Excel",
+    "difficulty": "Schwer",
+    "question": "Welche wesentlichen Einschränkungen nennt das Vorlesungsskript bezüglich der nativen Sparkline-Implementierung in Microsoft Excel?",
+    "options": [
+      "Excel unterstützt grundsätzlich keine Liniendarstellung bei Sparklines.",
+      "Die Werte lassen sich derzeit nicht interaktiv per Mouse-over abrufen, und es gibt oft einen leichten, unschönen Versatz (die Säulen schließen unten nicht bündig mit dem Text ab), was die Excel-Lösung zu einer eher behelfsmäßigen macht.",
+      "Excel-Sparklines verdoppeln automatisch die Dateigröße des Arbeitsblatts.",
+      "Sie können nicht zusammen mit normalen Zellformeln verwendet werden."
+    ],
+    "correctIndex": 1,
+    "explanation": "Obwohl Excel Sparklines nativ anbietet, kritisiert das Skript Detailmängel: Der leichte Versatz zum Zellrand stört das saubere visuelle Alignement, und das Fehlen von interaktivem Mouse-over schränkt die Detailanalyse im Vergleich zu BI-Spezialwerkzeugen wie DeltaMaster ein."
+  },
+  {
+    "id": "EB19",
+    "topic": "Einordnungshilfen bei Sparklines",
+    "difficulty": "Mittel",
+    "question": "Welche minimalen Designelemente übernehmen bei einer klassischen Tufte-Sparkline die schnelle visuelle Einordnung, da Achsen und Skalen fehlen?",
+    "options": [
+      "Fette, blinkende Warnsymbole an jeder Richtungsänderung.",
+      "Ein farbiger Hintergrund und ein separates Rastergitter.",
+      "Wenige feste Elemente, wie der letzte Wert als markierter Punkt mit einer Zahl daneben, oder farblich dezent hervorgehobene Extremwerte (Minimum/Maximum).",
+      "Eine detaillierte Fußnote unter der Tabelle mit allen Rohwerten."
+    ],
+    "correctIndex": 2,
+    "explanation": "Um die Übersichtlichkeit nicht zu gefährden, werden bei Sparklines nur die neuralgischen Punkte hervorgehoben: Der Endpunkt (aktueller Status) und eventuell die historischen Höchst- und Tiefstpunkte (Extremwerte) der Zeitreihe."
+  },
+  {
+    "id": "EB20",
+    "topic": "Small Multiples (Trellis Charts)",
+    "difficulty": "Mittel",
+    "question": "Auf welchen Vordenker geht der Begriff 'Small Multiples' (oft auch als Trellis Charts bezeichnet) zurück und welches Konstruktionsprinzip liegt ihm zugrunde?",
+    "options": [
+      "Nicolas Bissantz; das dynamische Sortieren von Tabellenspalten.",
+      "Rolf Hichert; die strikte Einhaltung der Ampelfarben.",
+      "Edward Tufte; die Aufteilung einer komplexen Datenreihe in mehrere kleine, identisch aufgebaute Diagramme mit identischer Skalierung nebeneinander, um Vergleiche über die Position statt über Farben zu ermöglichen.",
+      "Nathan Marz; die strikte Trennung von Batch- und Speed-Layer."
+    ],
+    "correctIndex": 2,
+    "explanation": "Small Multiples verhindern das gefürchtete 'Spaghetti-Diagramm' (viele überlagerte Linien in einem Bild). Durch die Zerlegung in kleine, gleichartig skalierte Einzelgrafiken kann das Auge Trends über Regionen oder Jahre hinweg blitzschnell und verzerrungsfrei vergleichen."
+  },
+  {
+    "id": "EB21",
+    "topic": "Informationsdichte von Sparklines",
+    "difficulty": "Mittel",
+    "question": "Warum eignen sich Sparklines besonders hervorragend für moderne Mobile BI-Anwendungen und Dashboards?",
+    "options": [
+      "Weil sie dank ihrer extremen Kompaktheit von nur wenigen Millimetern Größe enorme Datenmengen auf engstem Raum darstellen können, ohne das Layout zu überladen.",
+      "Weil sie die Rechenleistung mobiler CPUs um bis zu 40% entlasten.",
+      "Weil sie automatisch eine Internetverbindung im Offline-Modus simulieren können.",
+      "Weil sie keine Sicherheitsberechtigungen im DWH erfordern."
+    ],
+    "correctIndex": 0,
+    "explanation": "Auf Smartphone-Bildschirmen ist Platz Mangelware. Sparklines ermöglichen es, historische Verläufe von Dutzenden Kennzahlen direkt neben ihren aktuellen Werten abzubilden, ohne dass der Anwender scrollen oder Seiten wechseln muss."
+  },
+  {
+    "id": "EB22",
+    "topic": "Global vs. Lokal skaliert in DeltaMaster",
+    "difficulty": "Schwer",
+    "question": "In einer DeltaMaster-Tabelle steht unter der Grafik die Beschriftung: 'Balken, global skaliert, Sparklines... skaliert bis 0 je Zelle'. Was bedeutet dies für die Interpretation der Balken im Vergleich zu den Sparklines?",
+    "options": [
+      "Sowohl Balken als auch Sparklines sind zeilenübergreifend direkt miteinander vergleichbar.",
+      "Die Balkenlängen dürfen zeilenübergreifend direkt verglichen werden (globale Skala); die Sparklines hingegen zeigen den relativen Verlauf je Zelle bezogen auf den Nullpunkt und sind zeilenübergreifend nicht absolut in der Höhe vergleichbar.",
+      "Die Tabelle ist fehlerhaft konfiguriert und darf nicht interpretiert werden.",
+      "Die Skalierung ändert sich dynamisch bei jeder Mausbewegung."
+    ],
+    "correctIndex": 1,
+    "explanation": "Hier liegt eine bewusste Kombination vor: Die Balken nutzen eine globale Skalierung (faire Längenvergleiche über alle Zeilen hinweg). Die Sparklines sind 'bis 0 je Zelle' skaliert, was bedeutet, dass jede Zelle ihre eigene relative Kurvenform basierend auf einer Nulllinie zeichnet, um den internen Trend anzuzeigen."
+  },
+  {
+    "id": "EB23",
+    "topic": "Beautiful Evidence Veröffentlichungsjahr",
+    "difficulty": "Mittel",
+    "question": "In welchem Jahr veröffentlichte Edward Tufte sein einflussreiches Buch 'Beautiful Evidence', in welchem er das Konzept der Sparklines detailliert beschrieb?",
+    "options": [
+      "1983",
+      "1998",
+      "2006",
+      "2020"
+    ],
+    "correctIndex": 2,
+    "explanation": "Während Edward Tufte seine grundlegende Visualisierungstheorie (Data-Ink-Ratio etc.) bereits 1983 in 'The Visual Display of Quantitative Information' veröffentlichte, stellte er das Konzept der Sparklines im Jahr 2006 in seinem Werk 'Beautiful Evidence' (S. 46-63) vor."
+  },
+  {
+    "id": "EB24",
+    "topic": "Sparklines vs. klassische Diagramme",
+    "difficulty": "Mittel",
+    "question": "Welche prinzipielle gestalterische Regel verletzen Sparklines im Vergleich zu klassischen Dashboard-Diagrammen ganz bewusst, um ihre extreme Kompaktheit zu erreichen?",
+    "options": [
+      "Die Regel, dass Daten immer in einer relationalen Datenbank liegen müssen.",
+      "Das Prinzip, dass jede Visualisierung Achsenbeschriftungen, Koordinatennetze und eine erklärende Legende im Bild besitzen muss.",
+      "Die Verwendung der Farben Rot und Blau zur Visualisierung von Abweichungen.",
+      "Das Verbot von geometrischen Formen wie Linien und Punkten."
+    ],
+    "correctIndex": 1,
+    "explanation": "Klassische Diagramme beanspruchen viel Platz für 'Metadaten' (Achsen, Ticks, Legenden). Sparklines lassen all dies radikal weg. Sie vertrauen darauf, dass der Kontext (die Tabellenbeschriftung und die Zahl daneben) ausreicht, um das gezeigte Muster zu verstehen."
+  },
+  {
+    "id": "EB25",
+    "topic": "Datengrundlage der Power BI Fallstudie im Skript",
+    "difficulty": "Mittel",
+    "question": "Welche Excel-Datei dient im Skript als einheitliche Datengrundlage für die Visualisierungs-Beispiele in Microsoft Power BI?",
+    "options": [
+      "train.csv",
+      "Cars_data.xlsx",
+      "Megastore_Raw.csv",
+      "BINT_Fakten.xlsx"
+    ],
+    "correctIndex": 1,
+    "explanation": "Wie im Skript explizit ausgewiesen, bildet die Excel-Datei 'Cars_data.xlsx' die einheitliche Datengrundlage für die beispielhaften Nachbauten und Gegenüberstellungen in MS Power BI."
+  },
+  {
+    "id": "EB26",
+    "topic": "Das Abweichungsszenario ab August 2016",
+    "difficulty": "Mittel",
+    "question": "Welches auffällige betriebswirtschaftliche Phänomen zeigt sich ab August 2016 in den fiktiven Daten der Fallstudie im Vorlesungsskript?",
+    "options": [
+      "Ein rasanter, unerwarteter Umsatzanstieg in allen Produktkategorien.",
+      "Größere negative Abweichungen bei den Umsatz-Werten (Sales) im Vergleich zur Vorjahresperiode 2015, wobei insbesondere die Produkt-Kategorie 'Technology' schwächelt.",
+      "Ein totaler Systemausfall der ERP-Vorsysteme mit anschließendem Datenverlust.",
+      "Eine signifikante Reduzierung der Lieferzeiten im europäischen Raum."
+    ],
+    "correctIndex": 1,
+    "explanation": "Die Analyse der Daten zeigt ab August 2016 einen spürbaren Einbruch der Umsätze im Vorjahresvergleich. Als Hauptproblemzone kristallisiert sich die Kategorie 'Technology' heraus, deren Untersuchung den Ausgangspunkt der detaillierten Abweichungsanalyse bildet."
+  },
+  {
+    "id": "EB27",
+    "topic": "Der genaue Abweichungsmonat",
+    "difficulty": "Mittel",
+    "question": "Welcher konkrete Monat des Jahres 2016 rückt im Zuge des Drill-downs in die Abweichungsspalte ΔVJ (Abweichung zum Vorjahr) als absoluter Ausreißer in den Fokus?",
+    "options": [
+      "Januar 2016",
+      "Juni 2016",
+      "September 2016",
+      "Dezember 2016"
+    ],
+    "correctIndex": 2,
+    "explanation": "Beim Blick auf die Jahresübersicht der Abweichungen sticht der September 2016 extrem hervor. Hier verzeichnet das Unternehmen den massivsten Umsatzeinbruch im Vergleich zum Vorjahresmonat (September 2015)."
+  },
+  {
+    "id": "EB28",
+    "topic": "Der mathematische Wert des Einbruchs",
+    "difficulty": "Schwer",
+    "question": "Wie hoch ist die absolute Umsatzabweichung zum Vorjahr (ΔVJ) im September 2016 im Vergleich zum September 2015 laut den Kontrollzahlen des Skripts?",
+    "options": [
+      "Anstieg um +20,3 Mio. $",
+      "Rückgang um -1,6 Mio. $",
+      "Rückgang um -18,7 Mio. $ (Umsatz bricht von 40,8 Mio. $ auf 22,1 Mio. $ ein)",
+      "Es gab keine Abweichung; die Werte waren exakt identisch."
+    ],
+    "correctIndex": 2,
+    "explanation": "Die Kontrollzahlen im Anhang A1 weisen für den September 2016 einen dramatischen Einbruch aus: Der Umsatz sank von 40,8 Mio. $ (Sep 2015) auf nur noch 22,1 Mio. $ (Sep 2016), was einer negativen Abweichung von genau -18,7 Mio. $ entspricht."
+  },
+  {
+    "id": "EB29",
+    "topic": "Der Haupttreiber des Umsatzeinbruchs",
+    "difficulty": "Schwer",
+    "question": "Welcher spezifische Abweichungstreiber (Produkt-Unterkategorie) wird durch die Treiberanalyse für den drastischen Umsatzeinbruch im September 2016 verantwortlich gemacht?",
+    "options": [
+      "Bookcases",
+      "Phones",
+      "Machines (mit einem Einbruch von -16,9 Mio. $)",
+      "Tables"
+    ],
+    "correctIndex": 2,
+    "explanation": "Der Drill-down und die automatisierte Treiberanalyse offenbaren, dass fast der gesamte Einbruch der Kategorie 'Technology' auf eine einzige Unterkategorie zurückzuführen ist: 'Machines' brach im September 2016 im Vergleich zum Vorjahr um -16,9 Mio. $ ein."
+  },
+  {
+    "id": "EB30",
+    "topic": "Das Phänomen der Kompensation",
+    "difficulty": "Schwer",
+    "question": "Warum ist es im BI-Berichtwesen möglich, dass eine einzelne Unterkategorie (wie 'Machines') eine größere negative Abweichung aufweist als die übergeordnete Gesamtkategorie ('Technology')?",
+    "options": [
+      "Das deutet auf einen mathematischen Rundungsfehler im Datenmodell hin.",
+      "Weil andere Unterkategorien innerhalb derselben Hauptkategorie positive Abweichungen erzielen konnten und somit den extremen Einbruch der Problem-Unterkategorie teilweise kompensiert haben.",
+      "Weil Unterkategorien eine andere Währungseinheit nutzen als Hauptkategorien.",
+      "Weil die Daten der Hauptkategorie aus einem anderen Geschäftsjahr stammen."
+    ],
+    "correctIndex": 1,
+    "explanation": "Dies ist ein klassischer Aggrationseffekt (Kompensation): Während 'Machines' um -16,9 Mio. $ einbrach, konnten 'Copiers' (+2,1 Mio. $), 'Phones' (+1,2 Mio. $) und 'Accessories' (+243 Tsd. $) positive Ergebnisse erzielen. Dadurch fiel der Gesamteinbruch der Kategorie 'Technology' mit -13,4 Mio. $ etwas milder aus."
+  },
+  {
+    "id": "EB31",
+    "topic": "Hierarchie-Drill-down bis auf Produktebene",
+    "difficulty": "Mittel",
+    "question": "Bis zu welcher tiefsten Hierarchiestufe wird die Produkt-Dimension im Fallbeispiel des Skripts aufgebrochen, um die genauen Verursacher des September-Einbruchs zu identifizieren?",
+    "options": [
+      "Product Category (Kategorie)",
+      "Product Sub-Category (Unterkategorie)",
+      "Product Name (Konkreter Produktname)",
+      "SKU (Lagerhaltungsnummer)"
+    ],
+    "correctIndex": 2,
+    "explanation": "Um die Abweichung restlos aufzuklären, wird die Produkthierarchie im BI-Werkzeug bis auf die unterste Blattebene, den 'Product Name', hinabgebrochen. Erst auf dieser Stufe wird sichtbar, welche konkreten Produkte den Einbruch im September 2016 verursacht haben."
+  },
+  {
+    "id": "EB32",
+    "topic": "Bedeutung von Abweichungen in der Analyse",
+    "difficulty": "Mittel",
+    "question": "Wie sollten Abweichungen (Varianzen) im Berichtswesen aus betriebswirtschaftlicher Sicht grundsätzlich bewertet werden?",
+    "options": [
+      "Sie sind immer ein sofortiger Beweis für Management-Fehler und müssen bestraft werden.",
+      "Sie bedürfen besonderer Beachtung und bilden den idealen Ausgangspunkt für detaillierte Analysen, stellen aber nicht automatisch ein Problem dar.",
+      "Sie sollten im Bericht ausgeblendet werden, um den Empfänger nicht zu verunsichern.",
+      "Sie sind ein rein technisches Artefakt von ETL-Fehlern ohne geschäftliche Relevanz."
+    ],
+    "correctIndex": 1,
+    "explanation": "Abweichungen (Soll/Ist oder Ist/Vorjahr) lenken den Fokus des Managements auf ungewöhnliche Entwicklungen. Sie sind ein Frühwarnsystem und der Startpunkt, um mittels Drill-down gezielte Fragen an die Daten zu stellen."
+  },
+  {
+    "id": "EB33",
+    "topic": "Daten- und Modellqualität vs. BI-Werkzeug",
+    "difficulty": "Schwer",
+    "question": "Welche fundamentale Erkenntnis vermittelt das Skript bezüglich des Erfolgsfaktors 'Daten- und Modellqualität' im Vergleich zur Wahl des eigentlichen BI-Visualisierungswerkzeugs?",
+    "options": [
+      "Die Wahl des BI-Werkzeugs (z. B. Tableau oder Power BI) ist zu 90% entscheidend für den Projekterfolg; Datenfehler lassen sich im Frontend leicht korrigieren.",
+      "Ein schickes Dashboard kann mangelhafte Datenqualität im DWH vollständig kompensieren.",
+      "Die Daten- und Modellqualität ist das absolute Fundament. Gibt es hier Mängel, lassen sich diese im Nachgang entlang des Projekts nur mit extrem hohem Aufwand korrigieren — die Frontend-Werkzeuge liegen in ihrer Bedeutung weit dahinter.",
+      "Datenmodellierung ist im Zeitalter generativer KI überflüssig geworden."
+    ],
+    "correctIndex": 2,
+    "explanation": "Prof. Dr. Robert Butscher betont nachdrücklich: Die Qualität des zugrundeliegenden Datenmodells und der Rohdaten entscheidet über Sekt oder Selters. Fehler im Fundament (DWH/Semantikschicht) ziehen sich durch alle Berichte und sind nachträglich im Frontend kaum noch zu reparieren."
+  },
+  {
+    "id": "EB34",
+    "topic": "Gegenprüfung über verschiedene BI-Systeme",
+    "difficulty": "Mittel",
+    "question": "Warum müssen die Kennzahlenwerte (z. B. Sales) in DeltaMaster, Power BI und einer direkten SQL-Datenbankabfrage exakt übereinstimmen, obwohl die Architekturen völlig verschieden sind?",
+    "options": [
+      "Weil die Tools im Hintergrund heimlich Daten miteinander synchronisieren.",
+      "Weil sie alle auf dieselbe identische Datengrundlage und dasselbe logische Datenmodell zugreifen.",
+      "Weil moderne Browser die Zahlenwerte automatisch auf einen Standard-Mittelwert runden.",
+      "Das ist ein Trugschluss; die Werte stimmen in der Praxis niemals überein."
+    ],
+    "correctIndex": 1,
+    "explanation": "Die 'Single Source of Truth' garantiert Werkzeug-Unabhängigkeit. Wenn die Business-Logik und das Datenmodell sauber im DWH/Semantischen Layer definiert sind, liefert jedes Frontend exakt dieselben validen Kennzahlen."
+  },
+  {
+    "id": "EB35",
+    "topic": "Gegenstück zum Umsatzeinbruch (Januar 2016)",
+    "difficulty": "Schwer",
+    "question": "Welches positive Gegenstück zum September-Umsatzeinbruch verzeichnen die Kontrollzahlen des Skripts für das Jahr 2016?",
+    "options": [
+      "Einen massiven Anstieg im Dezember 2016 von +35,2 Mio. $",
+      "Einen Umsatzsprung im Januar 2016 um +20,3 Mio. $ (unter Nutzung derselben Abweichungsmechanik nach oben)",
+      "Eine Verdoppelung der Margen im gesamten ersten Quartal.",
+      "Es gab im gesamten Jahr 2016 keine positive Abweichung."
+    ],
+    "correctIndex": 1,
+    "explanation": "Wie im SQL-Kapitel (Anhang/Kontrollzahlen) erwähnt, gab es neben dem September-Tief im Januar 2016 einen extremen Ausreißer nach oben: Eine positive Abweichung von +20,3 Mio. $ zum Vorjahr, die mit exakt derselben analytischen Mechanik untersucht werden kann."
+  },
+  {
+    "id": "EB36",
+    "topic": "Filterkontext 'Dez 2016' vs. 'Sep 2016'",
+    "difficulty": "Schwer",
+    "question": "Was passiert mit den Werten und Sparklines in einer grafischen Tabelle, wenn Sie den globalen Berichtsfilter von 'Dez 2016' auf 'Sep 2016' umstellen?",
+    "options": [
+      "Es werden überhaupt keine Daten mehr angezeigt, da der Filter ungültig ist.",
+      "Alle Werte in der Tabelle beziehen sich nun auf die Periode September 2016, und die Sparklines zeigen rückwirkend die 12 Monatswerte beginnend von September 2016 bis September 2015.",
+      "Die Tabelle springt automatisch in das Jahr 2015 zurück.",
+      "Die Werte bleiben identisch, nur die Farbe der Abweichungsbalken wechselt von Rot zu Blau."
+    ],
+    "correctIndex": 1,
+    "explanation": "Der Filter steuert den Kontext (Slice) der gesamten multidimensionalen Abfrage. Durch das Setzen auf 'Sep 2016' wird der Berichtsmonat verschoben. Die Sparklines passen sich dynamisch an und zeigen die 12 Monate rückwirkend ab dem neuen Stichtag."
+  },
+  {
+    "id": "EB37",
+    "topic": "Das 'PowerSearch'-Konzept",
+    "difficulty": "Mittel",
+    "question": "Welche Bezeichnung nutzt das BI-Werkzeug DeltaMaster für seine automatisierte, datenbankgestützte Suchfunktion nach auffälligen Abweichungen?",
+    "options": [
+      "Auto-Query",
+      "SQL-Finder",
+      "PowerSearch",
+      "Delta-Check"
+    ],
+    "correctIndex": 2,
+    "explanation": "PowerSearch ist das DeltaMaster-Modul für automatisierte Datenanalysen. Es fahndet selbstständig nach signifikanten Mustern, Strukturbrüchen und Abweichungen, ohne dass der Anwender manuell Berichte durchklicken muss."
+  },
+  {
+    "id": "EB38",
+    "topic": "Die Rolle von Info-Kacheln (KPI Cards)",
+    "difficulty": "Mittel",
+    "question": "Warum bilden Info-Kacheln (KPI Cards) laut Vorlesungsskript meist den idealen Einstieg in eine betriebswirtschaftliche Abweichungsanalyse?",
+    "options": [
+      "Weil sie den gesamten SQL-Quellcode der Anwendung anzeigen.",
+      "Weil sie dem Management einen extrem schnellen, aggregierten Überblick über die wichtigsten Schlüsselkennzahlen und deren grobe Tendenz liefern, bevor man in tiefergehende Tabellen einsteigt.",
+      "Weil sie sich automatisch dreidimensional im Raum drehen können.",
+      "Weil sie keine Verbindung zur Datenquelle benötigen."
+    ],
+    "correctIndex": 1,
+    "explanation": "KPI-Kacheln dienen als 'Einflugschneise': Sie zeigen auf einen Blick die wichtigsten Zahlen (z. B. Umsatz, Marge) und signalisieren durch einfache Trendlinien (Sparklines) oder Farb-Indikatoren, wo Handlungsbedarf besteht."
+  },
+  {
+    "id": "EB39",
+    "topic": "Umsatz-Kontrollzahl 2015–2018",
+    "difficulty": "Schwer",
+    "question": "Wie hoch ist der Gesamtsummenwert für das Measure 'Sales' über den gesamten Zeitraum 2015–2018 in den Kontrollzahlen des Skripts (Datenwelt 'train_mod/orders')?",
+    "options": [
+      "1.114.764.799 $",
+      "242.700.000 $",
+      "100.000.000 $",
+      "9.800 $"
+    ],
+    "correctIndex": 0,
+    "explanation": "Die offizielle Kontrollzahl für die Gesamt-Sales im Zeitraum 2015–2018 (Datenwelt train_mod/orders) beträgt laut Anhang A1 exakt 1.114.764.799 $. Weicht eine Abfrage von diesem Wert ab, ist sie fachlich oder syntaktisch falsch."
+  },
+  {
+    "id": "EB40",
+    "topic": "Zeilenanzahl der Übungsdatenwelt",
+    "difficulty": "Mittel",
+    "question": "Wie viele Zeilen (Bestellpositionen) umfasst die im Skript genutzte Übungsdatenbank 'train_mod/orders' laut Kontrollzahlen-Kanon?",
+    "options": [
+      "4.922",
+      "9.800",
+      "793",
+      "1.000"
+    ],
+    "correctIndex": 1,
+    "explanation": "Der Kontrollzahlen-Kanon weist für die Tabelle 'orders' exakt 9.800 Zeilen (Bestellpositionen) aus, die sich auf 4.922 eigenständige Bestellungen von insgesamt 793 Kunden verteilen."
+  },
+  {
+    "id": "EB41",
+    "topic": "Vorteil von Small Multiples gegenüber Spaghetti-Charts",
+    "difficulty": "Mittel",
+    "question": "Warum ist die Verwendung von Small Multiples (Trellis Charts) beim Vergleich mehrerer Regionen einem klassischen Liniendiagramm mit mehreren farbigen Linien überlegen?",
+    "options": [
+      "Weil Small Multiples weniger Arbeitsspeicher im Webbrowser verbrauchen.",
+      "Weil überlagerte Linien ('Spaghetti-Charts') das Auge zwingen, den Vergleich mühsam über wechselnde Farben und Legenden zu decodieren, während Small Multiples Vergleiche intuitiv über die räumliche Position und eine einheitliche Skalierung ermöglichen.",
+      "Weil Liniendiagramme grundsätzlich keine negativen Werte darstellen können.",
+      "Weil Small Multiples automatisch alle Ausreißer mathematisch herausfiltern."
+    ],
+    "correctIndex": 1,
+    "explanation": "Spaghetti-Diagramme überfordern unsere visuelle Wahrnehmung schnell. Small Multiples nutzen die hervorragende Fähigkeit unseres Gehirns, Muster auf einer identisch skalierten Achse nebeneinander (Position) sofort und fehlerfrei zu vergleichen."
+  },
+  {
+    "id": "EB42",
+    "topic": "Slopegraphs (Steigungsdiagramme) Definition",
+    "difficulty": "Mittel",
+    "question": "Was charakterisiert ein 'Slopegraph' (Steigungsdiagramm) und wofür wird es bevorzugt eingesetzt?",
+    "options": [
+      "Es ist ein spezielles 3D-Balkendiagramm zur Darstellung geografischer Höhenlagen.",
+      "Es vergleicht Werte (z. B. von Kategorien) zwischen genau zwei definierten Zeitpunkten (z. B. Vorjahr und Ist-Jahr) über eine einfache Steigungslinie, wodurch relative Veränderungen auf einen Blick erkennbar werden.",
+      "Es visualisiert kontinuierliche Datenströme in einer kreisförmigen Struktur.",
+      "Es dient der Darstellung hierarchischer Ordnerstrukturen auf Servern."
+    ],
+    "correctIndex": 1,
+    "explanation": "Slopegraphs sind ideal für den Vorher/Nachher- oder Zweijahresvergleich. Sie reduzieren die Zeitreihe auf zwei Datenpunkte je Kategorie. Anhand der Steigung (Neigungswinkel) der Verbindungslinie erfasst der Betrachter sofort die Dynamik der Veränderung."
+  },
+  {
+    "id": "EB43",
+    "topic": "Slopegraph-Stellschraube für Lesbarkeit",
+    "difficulty": "Schwer",
+    "question": "Welcher Zielkonflikt (Stellschraube) ergibt sich laut Skript bei der Gestaltung eines Slopegraphs bezüglich der Anzahl der x-Achsen-Werte?",
+    "options": [
+      "Je mehr Farben verwendet werden, desto schneller stürzt das Rendering ab.",
+      "Je weniger Jahre/Zeitpunkte an der x-Achse angetragen sind, desto deutlicher und leichter ist das Slopegraph zu interpretieren. Allerdings sinkt parallel die Erkenntnistiefe, da weniger Muster zwischen den Monatswerten sichtbar werden.",
+      "Slopegraphs dürfen grundsätzlich nur ein einziges Jahr auf der x-Achse abbilden.",
+      "Die Achsenskalierung muss bei mehr als drei Linien zwingend exponentiell werden."
+    ],
+    "correctIndex": 1,
+    "explanation": "Ein Slopegraph lebt von der Reduktion. Zeigt man zu viele Zwischenschritte, kreuzen sich die Linien wild und das Diagramm wird unlesbar. Beschränkt man sich auf den reinen Start- und Endpunkt, ist es extrem klar, aber man verliert die Information über den Verlauf dazwischen."
+  },
+  {
+    "id": "EB44",
+    "topic": "Slopegraph-Interaktionsmöglichkeiten",
+    "difficulty": "Mittel",
+    "question": "Mit welchem BI-Frontend-Feature lässt sich die Lesbarkeit komplexer Slopegraphs mit vielen überlagerten Linien in der Praxis drastisch verbessern?",
+    "options": [
+      "Durch das automatische Abspielen einer Hintergrundmusik bei der Auswahl von Linien.",
+      "Durch interaktive Elemente wie Hover-Effekte (Klick oder Mouse-over), die die ausgewählte Kategorie/Linie visuell hervorheben (highlighten) und andere Linien dezent ausgrauen.",
+      "Durch das Konvertieren des Slopegraphs in ein statisches Kreisdiagramm per Doppelklick.",
+      "Durch das automatische Löschen aller negativen Steigungen."
+    ],
+    "correctIndex": 1,
+    "explanation": "Interaktion löst das Problem der visuellen Überladung: Durch das gezielte Highlighten einer einzelnen Linie beim Überfahren mit der Maus (Hover) treten alle störenden Hintergrundlinien visuell zurück, und der ausgewählte Pfad wird sofort glasklar lesbar."
+  },
+  {
+    "id": "EB45",
+    "topic": "Spezielle Kennzeichnung für Printmedien",
+    "difficulty": "Mittel",
+    "question": "Welche gestalterische Anpassung empfiehlt das Skript für Berichte, die für den physischen Ausdruck (Print) optimiert werden, da dort kein interaktives Mouse-over möglich ist?",
+    "options": [
+      "Die Verwendung von fluoreszierenden Neonfarben für alle Texte.",
+      "Dass markante Datenpunkte (wie absolute Minima oder Maxima) zwingend mit statischen Datenlabels direkt im Diagramm ausgezeichnet werden, um dem Leser eine feste Orientierung zu geben.",
+      "Das vollständige Ersetzen aller Diagramme durch reinen Fließtext.",
+      "Das automatische Verdoppeln der Schriftgröße aller Spaltenüberschriften."
+    ],
+    "correctIndex": 1,
+    "explanation": "Im Print entfällt die explorative Interaktion. Damit der Leser wichtige Extremwerte dennoch sofort präzise erfassen kann, müssen diese Schlüsselpunkte im statischen Layout fest beschriftet (gelabelt) sein."
+  },
+  {
+    "id": "EB46",
+    "topic": "Platzierung von Erklärungen (Annotationen)",
+    "difficulty": "Mittel",
+    "question": "Wo sollten inhaltliche Erklärungen oder Kommentare zu auffälligen Datenpunkten in einem professionellen BI-Bericht idealerweise platziert werden?",
+    "options": [
+      "In einer separaten, mehrseitigen Anlage am Ende des Berichtsordners.",
+      "Als winzig geschriebene Fußnoten am unteren Rand der Berichtsseite.",
+      "Als präzise Annotationen (Kurzhinweise) direkt am betroffenen Datenpunkt im Diagramm selbst, da ein kurzer visueller Hinweis vor Ort oft einen ganzen Absatz Text ersetzt.",
+      "Ausschließlich im mündlichen Vortrag, um das visuelle Design nicht zu stören."
+    ],
+    "correctIndex": 2,
+    "explanation": "Nach den Gestaltungsregeln gehört die Information dorthin, wo das Auge sie benötigt. Annotationen direkt am Datenpunkt (z. B. 'Maschinenausfall in Werk 2') verhindern das ständige Suchen und kognitive Zuordnen von Fußnoten-Ziffern."
+  },
+  {
+    "id": "EB47",
+    "topic": "Struktur einer Datenstory",
+    "difficulty": "Schwer",
+    "question": "Aus welchen drei logischen Schritten baut sich die ideale Struktur einer 'Datenstory' (Data Storytelling) für Präsentationen und Berichte laut Vorlesungsskript auf?",
+    "options": [
+      "1. Wer hat die Daten geladen? -> 2. Wie viel hat das BI-Tool gekostet? -> 3. Wann ist Feierabend?",
+      "1. Was ist passiert? (Situationsbeschreibung) -> 2. Warum ist es passiert? (Ursachenanalyse/Treiber) -> 3. Was können/sollten wir tun? (Handlungsempfehlung).",
+      "1. Syntaxprüfung -> 2. Code-Optimierung -> 3. Deployment.",
+      "1. Rohdatenimport -> 2. Tabellenverknüpfung -> 3. Dashboardschmuck."
+    ],
+    "correctIndex": 1,
+    "explanation": "Eine gute Präsentation folgt der klassischen kognitiven Kette: Zuerst wird der Status Quo/das Problem aufgezeigt (Was ist passiert?, z. B. Umsatzeinbruch im September). Dann folgt die logische Ursachensuche (Warum?, z. B. Einbruch bei Machines). Den krönenden Abschluss bilden konkrete Business-Aktionen (Was tun?)."
+  },
+  {
+    "id": "EB48",
+    "topic": "Zielgruppenorientierte Informationstiefe",
+    "difficulty": "Mittel",
+    "question": "Wie sollte die Informationstiefe eines BI-Berichts in Bezug auf die Zielgruppen 'Vorstand', 'Fachabteilung' und 'Öffentlichkeit' gestaltet werden?",
+    "options": [
+      "Alle Zielgruppen erhalten exakt denselben, 100-seitigen Detailbericht, um die Konsistenz zu wahren.",
+      "Die Informationstiefe muss präzise auf das jeweilige Publikum abgestimmt sein (z. B. aggregierter High-Level-Überblick für den Vorstand, detaillierte Treiberlisten für die Fachabteilung).",
+      "Der Vorstand erhält den detailliertesten Code-Bericht, während die Fachabteilung nur KPI-Kacheln sieht.",
+      "Berichte für die Öffentlichkeit sollten grundsätzlich keine Zahlen enthalten."
+    ],
+    "correctIndex": 1,
+    "explanation": "Ein schwerer Fehler im Reporting ist das 'One-Size-Fits-All'-Prinzip. Ein Vorstand benötigt schnelle Entscheidungsdaten auf einen Blick; die Fachabteilung braucht operative Details bis auf Produktebene, um die Treiber im Tagesgeschäft steuern zu können."
+  },
+  {
+    "id": "EB49",
+    "topic": "SUCCESS-Formel: 'U' (Unify)",
+    "difficulty": "Mittel",
+    "question": "Was fordert die Regel 'UNIFY' (Vereinheitlichen) aus der SUCCESS-Formel von Hichert/IBCS für das Berichtswesen?",
+    "options": [
+      "Dass alle Berichte in einer einzigen PDF-Datei zusammengefasst werden müssen.",
+      "Dass gleiche Dinge im gesamten Berichtssystem visuell exakt gleich aussehen müssen (einheitliche Notation für Ist, Plan, Vorjahr), damit der Empfänger sie ohne ständiges Umdenken sofort wiederkennt.",
+      "Dass im gesamten Unternehmen nur noch eine einzige Software-Lizenz genutzt werden darf.",
+      "Dass alle Datenreihen mit derselben Hintergrundfarbe hinterlegt werden müssen."
+    ],
+    "correctIndex": 1,
+    "explanation": "UNIFY bedeutet Standardisierung. Wenn Ist-Werte in Bericht A schwarz gefüllt sind, müssen sie auch in Bericht B schwarz gefüllt sein. Das schafft eine gemeinsame visuelle Sprache und beschleunigt das Lesen von Berichten dramatisch."
+  },
+  {
+    "id": "EB50",
+    "topic": "SUCCESS-Formel: 'S' (Simplify)",
+    "difficulty": "Mittel",
+    "question": "Welche konkrete Konsequenz fordert die Regel 'SIMPLIFY' (Vereinfachen) aus der SUCCESS-Formel im Sinne von Edward Tuftes Philosophie?",
+    "options": [
+      "Dass komplexe mathematische Berechnungen im DWH verboten sind.",
+      "Das radikale Eliminieren von visuellem Rauschen und unnötigem Ballast ('Chart-Junk' wie 3D-Effekte, dicke Rahmen, unnötige Farben, Schatten und Gitternetze), um den Fokus komplett auf die Datentinte zu lenken.",
+      "Dass alle Berichte nur noch aus einer einzigen Spalte bestehen dürfen.",
+      "Dass Diagramme grundsätzlich durch handgezeichnete Skizzen ersetzt werden sollten."
+    ],
+    "correctIndex": 1,
+    "explanation": "SIMPLIFY ist das visuelle Entrümpeln. Jedes Pixel, das keine Information trägt (z. B. dekorative Rahmen oder Farbverläufe), lenkt das Gehirn von den eigentlichen Daten ab. Ein vereinfachtes, sauberes Design erhöht die Lesegeschwindigkeit und senkt die Fehlerquote."
+  }
+]

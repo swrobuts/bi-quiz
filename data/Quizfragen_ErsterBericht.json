@@ -1,0 +1,702 @@
+[
+  {
+    "id": "EB01",
+    "topic": "CRISP-DM Entstehung & Konsortium",
+    "difficulty": "Mittel",
+    "question": "Wann und durch welches Konsortium wurde das weit verbreitete Vorgehensmodell CRISP-DM in der Version 1.0 veröffentlicht?",
+    "options": [
+      "Im Jahr 1995 durch die Microsoft Corporation und die Stanford University.",
+      "Im Jahr 2000 durch ein Konsortium bestehend aus DaimlerChrysler, SPSS (damals ISL), NCR und dem Versicherer OHRA.",
+      "Im Jahr 2012 durch die Data Management Association (DAMA) International.",
+      "Im Jahr 1989 durch John Tukey im Rahmen der explorativen Datenanalyse."
+    ],
+    "correctIndex": 1,
+    "explanation": "Der CRISP-DM (CRoss Industry Standard Process for Data Mining) Leitfaden in der Version 1.0 wurde im Jahr 2000 veröffentlicht. Das dahinterstehende Konsortium bestand aus führenden Unternehmen wie DaimlerChrysler, SPSS, NCR und OHRA, die bereits frühzeitig Data-Mining und Analytics-Lösungen operativ einsetzten."
+  },
+  {
+    "id": "EB02",
+    "topic": "CRISP-DM Phasen",
+    "difficulty": "Mittel",
+    "question": "Wie viele Phasen umfasst das klassische Kreislaufmodell des CRISP-DM-Referenzmodells und was symbolisiert der äußere Kreis?",
+    "options": [
+      "5 Phasen; der äußere Kreis symbolisiert das starre sequentielle Vorgehen ohne Rücksprünge.",
+      "6 Phasen; der äußere Kreis versinnbildlicht die fortlaufende Iteration des gesamten Prozesses, da jede Durchführung neue Fragen aufwerfen und Verbesserungen anstoßen kann.",
+      "8 Phasen; der äußere Kreis steht für die strikte Trennung von IT- und Business-Zuständigkeiten.",
+      "4 Phasen; der äußere Kreis symbolisiert den unumkehrbaren Weg von der Datenbeschaffung zur Visualisierung."
+    ],
+    "correctIndex": 1,
+    "explanation": "CRISP-DM unterteilt sich in sechs iterative Phasen: Business Understanding, Data Understanding, Data Preparation, Modeling, Evaluation und Deployment. Der ikonische äußere Kreis im Diagramm symbolisiert, dass Datenprojekte zyklisch und fortlaufend sind; eine Iteration baut auf den Erkenntnissen der vorhergehenden auf."
+  },
+  {
+    "id": "EB03",
+    "topic": "Abhängigkeiten im CRISP-DM",
+    "difficulty": "Anspruchsvoll",
+    "question": "Im CRISP-DM-Modell existieren innere Pfeile zwischen den Teilschritten. Welche fundamentale methodische Eigenschaft von Datenprojekten verdeutlichen diese Pfeile?",
+    "options": [
+      "Dass Datenprojekte streng deterministisch sind und niemals zu einer vorherigen Phase zurückgegangen werden darf.",
+      "Dass die Phasen rein parallel ablaufen und keinerlei zeitliche Abhängigkeiten besitzen.",
+      "Die Notwendigkeit von Rückkopplungen und zyklischen Rücksprüngen, wenn neue Erkenntnisse oder Probleme in einem Teilschritt eine Anpassung des vorherigen Schritts erfordern.",
+      "Dass das Deployment (Bereitstellung) vor dem Business Understanding abgeschlossen sein kann."
+    ],
+    "correctIndex": 2,
+    "explanation": "Die inneren Pfeile verdeutlichen die engen Wechselwirkungen und Rückkopplungen im Prozess. Beispielsweise kann das Modeling (Modellierung) Schwachstellen aufdecken, die einen Rücksprung zur Data Preparation (Datenaufbereitung) erzwingen. CRISP-DM ist explizit als iterativer, nicht als linearer Wasserfallprozess konzipiert."
+  },
+  {
+    "id": "EB04",
+    "topic": "CRISP-ML(Q) vs. CRISP-DM",
+    "difficulty": "Schwer",
+    "question": "Das neuere Modell CRISP-ML(Q) (Studer et al. 2021) erweitert das klassische CRISP-DM. Welches wesentliche Defizit von CRISP-DM wird durch CRISP-ML(Q) adressiert und wie wird dies gelöst?",
+    "options": [
+      "CRISP-DM ignoriert die Datenaufbereitung; CRISP-ML(Q) führt hierfür SQL-Standards ein.",
+      "CRISP-DM beschreibt primär den Weg bis zum fertigen Modell, vernachlässigt aber dessen kontinuierlichen operativen Betrieb. CRISP-ML(Q) führt dafür 'Monitoring & Maintenance' als Phase 6 ein und legt Qualitätssicherung (Q) als Querschnittsaufgabe über alle Phasen.",
+      "CRISP-DM ist proprietär; CRISP-ML(Q) ist ein Open-Source-HTML-Standard für Visualisierungen.",
+      "CRISP-ML(Q) ersetzt alle sechs Phasen durch ein rein agiles Scrum-Framework ohne feste Prozessschritte."
+    ],
+    "correctIndex": 1,
+    "explanation": "CRISP-DM endet im Wesentlichen mit dem einmaligen Deployment eines Modells. CRISP-ML(Q) reagiert auf die Anforderungen moderner Machine-Learning-Systeme, indem es den fortlaufenden Betrieb ('Monitoring & Maintenance') explizit einplant und Qualitätssicherungs-Gates (das 'Q') als permanenten Begleiter über alle Phasen etabliert."
+  },
+  {
+    "id": "EB05",
+    "topic": "Phase 'Business & Data Understanding' in CRISP-ML(Q)",
+    "difficulty": "Anspruchsvoll",
+    "question": "Warum ziehen die Autoren von CRISP-ML(Q) die CRISP-DM-Phasen 'Business Understanding' und 'Data Understanding' zu einer einzigen gemeinsamen Phase zusammen?",
+    "options": [
+      "Um Zeit im Projektmanagement einzusparen und die Anzahl der Besprechungen zu halbieren.",
+      "Weil eine fundierte geschäftliche Fragestellung in der Praxis erst an den tatsächlich verfügbaren Daten geschärft, validiert und präzisiert werden kann, anstatt sie rein theoretisch losgelöst zu betrachten.",
+      "Weil moderne Cloud-Datenbanken wie Snowflake den Unterschied zwischen fachlicher Logik und physikalischen Daten aufheben.",
+      "Weil generative KI-Systeme das fachliche Verständnis vollautomatisch aus den Rohdaten generieren können."
+    ],
+    "correctIndex": 1,
+    "explanation": "In echten BI- und Analytics-Projekten lässt sich das fachliche Verständnis (Business Understanding) nicht sauber vom Datenverständnis (Data Understanding) trennen. Erst beim Sichten der tatsächlichen Datenbestände (Verfügbarkeit, Lücken, Datenqualität) wird klar, ob und wie die betriebswirtschaftlichen Fragen überhaupt beantwortet werden können."
+  },
+  {
+    "id": "EB06",
+    "topic": "Datenanalyse-Rolle der Exploration",
+    "difficulty": "Mittel",
+    "question": "CRISP-DM sieht für die Phase 'Data Understanding' eine statistische Exploration vor. Wie wird diese Exploration im modernen BI-Projektalltag üblicherweise im Werkzeug selbst durchgeführt?",
+    "options": [
+      "Durch manuelles Programmieren von Machine-Learning-Algorithmen in C++.",
+      "Durch automatisiertes 'Profiling' direkt im BI-Tool (z.B. Power BI oder OpenRefine) zur Analyse von Spaltenverteilungen, Nullwerten (Missing Values) und Kardinalitäten.",
+      "Ausschließlich durch das Zeichnen von Kreisdiagrammen auf Basis nicht-bereinigter Daten.",
+      "Gar nicht, da die Exploration erst nach dem finalen Deployment stattfindet."
+    ],
+    "correctIndex": 1,
+    "explanation": "Im BI-Umfeld wird die datenseitige Exploration meist durch visuelle Profiling-Funktionen der ETL- und BI-Tools unterstützt. Diese zeigen dem Analysten auf einen Blick die Datenverteilung, Ausreißer, das Vorhandensein von Nullwerten und die Kardinalität (Anzahl eindeutiger Werte) einer Spalte an, um die Datenqualität einzuschätzen."
+  },
+  {
+    "id": "EB07",
+    "topic": "BI-Dokumentation vs. CRISP-DM",
+    "difficulty": "Schwer",
+    "question": "Was fordert die Business Intelligence für die Praxis, was das klassische CRISP-DM-Referenzmodell als expliziten Projektschritt *nicht* explizit vorsieht?",
+    "options": [
+      "Den vollständigen Verzicht auf jegliche Dokumentation, um die Projektschwindigkeit zu maximieren.",
+      "Die dauerhafte Dokumentation des Gefundenen (Datenkataloge, fachliche Metadaten, Feldbeschreibungen) als betriebsrelevantes 'Betriebsmittel' statt als bloßes, einmaliges Projektartefakt.",
+      "Die Speicherung aller Daten in flachen, unstrukturierten CSV-Dateien ohne Primärschlüssel.",
+      "Das Verbot von Datenbereinigungen vor der Modellierung."
+    ],
+    "correctIndex": 1,
+    "explanation": "Während CRISP-DM ein temporäres Projekt beschreibt, ist ein BI-System ein dauerhaftes Betriebssystem eines Unternehmens. Gefundene Erkenntnisse, Datenquellen-Beschreibungen und KPI-Definitionen müssen zwingend in Datenkatalogen und Repositories nachhaltig gepflegt werden, damit das System wartbar bleibt."
+  },
+  {
+    "id": "EB08",
+    "topic": "Data Understanding: Profiling-Kriterien",
+    "difficulty": "Mittel",
+    "question": "Welche drei Metriken stehen beim Daten-Profiling im Rahmen des Data Understandings im Vordergrund, um die Struktur einer neuen Tabelle schnell zu erfassen?",
+    "options": [
+      "Schriftgröße, Hintergrundfarbe und Diagrammtyp.",
+      "Spaltenverteilung (Häufigkeiten), Anzahl von Nullwerten (Datenlücken) und die Kardinalität (Unique-Werte).",
+      "Anzahl der Joins, Normalisierungsgrad und Festplattenspeicher in Terabyte.",
+      "Umsatzvolumen, Gewinnmarge und Kundenzufriedenheit."
+    ],
+    "correctIndex": 1,
+    "explanation": "Das technische Profiling einer Datenquelle analysiert die Verteilung der Werte (gibt es schiefe Verteilungen?), die Vollständigkeit (wie viele Nullwerte/Lücken liegen vor?) und die Kardinalität (wie viele diskrete Werte existieren?). Dies ist die Voraussetzung für die Entscheidung, wie die Daten bereinigt und verknüpft werden müssen."
+  },
+  {
+    "id": "EB09",
+    "topic": "Phase 'Evaluation' im CRISP-DM",
+    "difficulty": "Mittel",
+    "question": "Was ist das Hauptziel der Phase 'Evaluation' im CRISP-DM-Prozess, bevor das Modell in das Deployment übergeht?",
+    "options": [
+      "Die rein technische Prüfung des Quellcodes auf Syntaxfehler.",
+      "Die Bewertung des Modells aus betriebswirtschaftlicher Sicht: Prüfen, ob die erarbeitete Lösung die zu Projektbeginn definierten geschäftlichen Ziele erreicht und ob alle geschäftlichen Aspekte ausreichend berücksichtigt wurden.",
+      "Das ungesehene Veröffentlichen des Berichts auf GitHub Pages zur Beschleunigung des Prozesses.",
+      "Die Migration der Daten von einer relationalen in eine NoSQL-Datenbank."
+    ],
+    "correctIndex": 1,
+    "explanation": "In der Evaluationsphase geht es nicht mehr um die mathematische oder technische Genauigkeit, sondern um die geschäftliche Validierung. Es wird geprüft, ob die visualisierten Erkenntnisse oder das ML-Modell die Kernfrage des 'Business Understanding' beantworten und echten geschäftlichen Nutzen stiften."
+  },
+  {
+    "id": "EB10",
+    "topic": "Phase 'Deployment' im CRISP-DM",
+    "difficulty": "Mittel",
+    "question": "Welche Aktivitäten gehören typischerweise zur Phase 'Deployment' im Rahmen eines umfassenden BI-Projekts nach CRISP-DM?",
+    "options": [
+      "Das bloße Kopieren von Rohdaten von einem Ordner in einen anderen.",
+      "Das Bereitstellen der Berichte/Modelle für die Nutzerschaft, die Schulung der Anwender, das Aufstellen von Plänen zur regelmäßigen Wartung (Maintenance) und die retrospektive Beurteilung des Projekts (Review).",
+      "Das Schreiben von SQL-Queries zur Normalisierung von Tabellen auf der Staging-Area.",
+      "Die Erhebung fachlicher Anforderungen auf einem Miro-Board."
+    ],
+    "correctIndex": 1,
+    "explanation": "Deployment bedeutet im professionellen Kontext weit mehr als das technische Bereitstellen (Release). Es umfasst die organisatorische Einführung (Change Management, Schulung), die Definition von Überwachungsroutinen (Monitoring, Aktualität der Daten) sowie die Projektretrospetive (Review), um zukünftige Iterationen zu optimieren."
+  },
+  {
+    "id": "EB11",
+    "topic": "Fallstudie 'Global Superstore' Kontext",
+    "difficulty": "Mittel",
+    "question": "Welches Szenario beschreibt die Ausgangslage der Fallstudie 'Global Superstore' im Skript?",
+    "options": [
+      "Ein reiner Online-Händler für Softwareprodukte möchte seine Server-Infrastruktur optimieren.",
+      "Ein Handelsunternehmen vertreibt Produkte (z.B. Möbel, Bürobedarf, Technologie) über den stationären Handel und einen Online-Shop. Eine interdisziplinäre Projektgruppe soll die Servicequalität und die Beliebtheit von Produkten analysieren.",
+      "Eine Bank möchte betrügerische Kreditkartentransaktionen mittels Neuronaler Netze in Echtzeit blockieren.",
+      "Ein produzierendes Industrieunternehmen sucht nach Fehlern in seiner physischen Lieferkette mittels IoT-Sensordaten."
+    ],
+    "correctIndex": 1,
+    "explanation": "Der Global Superstore ist ein fiktives, internationales Einzelhandelsunternehmen (Retail), das typische Konsumgüter (Möbel, Office Supplies, Technology) verkauft. Die Fallstudie dient dazu, den gesamten Weg vom Rohdatensatz bis zum interaktiven Power BI / DeltaMaster-Bericht praxisnah aufzuzeigen."
+  },
+  {
+    "id": "EB12",
+    "topic": "Interdisziplinäre Zusammenarbeit",
+    "difficulty": "Mittel",
+    "question": "Welche Fachdisziplinen arbeiten laut Skript in der Projektgruppe der Fallstudie 'Global Superstore' zusammen, um ein erfolgreiches BI-Projekt zu realisieren?",
+    "options": [
+      "Ausschließlich Software-Entwickler und System-Administratoren.",
+      "Experten aus dem Marketing, der IT-Abteilung, dem Produktionsbereich (Logistik/Einkauf) und Analysten aus dem Controlling.",
+      "Externe Berater und die Geschäftsführung ohne Einbindung der Fachbereiche.",
+      "Grafikdesigner und PR-Spezialisten für das äußere Erscheinungsbild der Folien."
+    ],
+    "correctIndex": 1,
+    "explanation": "Ein BI-Projekt erfordert zwingend Interdisziplinarität. Nur wenn Fachdomänen (Marketing, Logistik) ihr Domänenwissen einbringen, die IT die Daten anbindet und Analysten (Controlling) die logische Modellierung steuern, entsteht ein fachlich korrektes und nützliches Berichtssystem."
+  },
+  {
+    "id": "EB13",
+    "topic": "Grenzen von CRISP-DM in agilen BI-Projekten",
+    "difficulty": "Anspruchsvoll",
+    "question": "Warum wird CRISP-DM in der modernen BI-Projektpraxis oft durch agilere Vorgehensmodelle wie BEAM (Business Event Analysis & Modeling) ergänzt?",
+    "options": [
+      "Weil CRISP-DM die Verwendung von relationalen Datenbanken verbietet.",
+      "Weil CRISP-DM sehr stark daten- und modellfokussiert ist, aber konkrete, kollaborative Methoden zur agilen Erhebung von detaillierten Anforderungen direkt mit den fachlichen Stakeholdern vermissen lässt.",
+      "Weil BEAM ein reines Programmierwerkzeug in Python ist, das CRISP-DM-Code automatisch übersetzt.",
+      "Weil CRISP-DM nur für Großkonzerne lizenziert ist und kleine Teams BEAM kostenlos nutzen können."
+    ],
+    "correctIndex": 1,
+    "explanation": "CRISP-DM beschreibt hervorragend die Phasen eines Data-Mining-Projekts auf einer Metaebene, bietet aber keine konkreten Methoden zur systematischen Anforderungserhebung an. Hier schließt BEAM die Lücke, indem es über strukturierte Whiteboard-Sitzungen (7 Ws: Who, What, When, Where, Why, How Many, How) Anforderungen direkt in dimensionale Modelle übersetzt."
+  },
+  {
+    "id": "EB14",
+    "topic": "Business Understanding: Miro-Board",
+    "difficulty": "Mittel",
+    "question": "Welches kollaborative Werkzeug wird im Skript verwendet, um die Phase 'Business Understanding' im Team interaktiv zu bearbeiten und festzuhalten?",
+    "options": [
+      "Ein Jupyter Notebook auf einem zentralen Server.",
+      "Ein digitales Miro-Board, auf dem die Projektgruppe Stakeholder, Ziele, Fragestellungen und Risiken gemeinsam mappt.",
+      "Eine Microsoft Access Datenbank zur Eingabe strukturierter Texte.",
+      "Ein Git-Repository mit Markdown-Dokumenten."
+    ],
+    "correctIndex": 1,
+    "explanation": "Im Skript wird das Miro-Board als zentrales Werkzeug für die interaktive, visuelle Zusammenarbeit und Anforderungserhebung genutzt. Hier werden Post-Its und Strukturen verwendet, um das gemeinsame Verständnis (Business Understanding) kollaborativ zu erarbeiten."
+  },
+  {
+    "id": "EB15",
+    "topic": "Das 'September-Problem' im Global Superstore",
+    "difficulty": "Mittel",
+    "question": "Welche auffällige Anomalie in den Verkaufsdaten des Global Superstore im Jahr 2016 bildet den Ausgangspunkt für detaillierte betriebswirtschaftliche Analysen im Skript?",
+    "options": [
+      "Ein plötzlicher Anstieg der Retourenquote im Dezember 2016 auf über 90%.",
+      "Größere Abweichungen bei den Umsatzwerten ab August 2016 im Vergleich zum Vorjahr, insbesondere ein massiver Umsatzeinbruch in der Produkt-Kategorie 'Technology' im September 2016.",
+      "Die vollständige Einstellung des Online-Shops im gesamten europäischen Markt im Sommer 2016.",
+      "Ein systematischer Preisausfall bei allen Möbelstücken im Frühjahr 2016."
+    ],
+    "correctIndex": 1,
+    "explanation": "Ab August 2016 zeigen sich in den Verkaufsdaten deutliche negative Abweichungen zum Vorjahr. Der dramatische Höhepunkt ist der September 2016, in dem vor allem die Schlüsselkategorie 'Technology' extrem schwächelt. Dies triggert den Drill-down und die Ursachenanalyse im BI-System."
+  },
+  {
+    "id": "EB16",
+    "topic": "Analyse dezentraler vs. zentraler Daten",
+    "difficulty": "Schwer",
+    "question": "Welche Gefahr droht einem Unternehmen laut Skript, wenn es 'Self-Service-BI' (SSBI) ohne jegliche zentrale Governance einführt?",
+    "options": [
+      "Dass die Rechner der Anwender überhitzen, da BI-Tools extrem viel Rechenleistung benötigen.",
+      "Dass dezentral in den Fachabteilungen isolierte Insellösungen entstehen, Definitionen von Kennzahlen auseinanderdriften und ein unkontrollierter 'Datenwildwuchs' (Chaos) das Vertrauen in die Zahlen zerstört.",
+      "Dass die IT-Abteilung vollständig überflüssig wird und aufgelöst werden muss.",
+      "Dass keine Berichte mehr erstellt werden können, da SSBI-Tools zu kompliziert zu bedienen sind."
+    ],
+    "correctIndex": 1,
+    "explanation": "Ohne Governance führt Self-Service-BI zu dem Phänomen, dass jede Abteilung ihre eigenen Daten importiert, eigene Berechnungsregeln für vermeintlich gleiche Kennzahlen (wie 'Umsatz') definiert und am Ende im Meeting über die Korrektheit der Zahlen gestritten wird, statt Entscheidungen zu treffen."
+  },
+  {
+    "id": "EB17",
+    "topic": "Die drei Zuständigkeiten im BI-Betrieb",
+    "difficulty": "Schwer",
+    "question": "Das Skript stellt klar: 'Zentral oder dezentral' ist keine Glaubensfrage, sondern die Verteilung von drei konkreten Zuständigkeiten. Wie heißen diese drei Zuständigkeiten?",
+    "options": [
+      "Datenbeschaffung, Datenbereinigung und Datenspeicherung.",
+      "Kennzahlhoheit (Definitionen), Datenmodellierung (Verknüpfung) und Berichtsbau (Visualisierung).",
+      "Server-Administration, Lizenz-Management und Benutzersupport.",
+      "SQL-Entwicklung, Python-Scripting und HTML-Design."
+    ],
+    "correctIndex": 1,
+    "explanation": "Der Erfolg eines BI-Betriebsmodells hängt davon ab, wer die Hoheit über die Kennzahl-Definitionen (Kennzahlhoheit) hat, wer die Datenstrukturen logisch verknüpft (Modellierung) und wer am Ende die Berichte und Dashboards gestaltet (Berichtsbau)."
+  },
+  {
+    "id": "EB18",
+    "topic": "Das rein zentrale BI-Betriebsmodell",
+    "difficulty": "Mittel",
+    "question": "Welche Konsequenz und welchen typischen Engpass hat es, wenn ein Unternehmen alle drei BI-Zuständigkeiten (Kennzahlhoheit, Modellierung, Berichtsbau) ausschließlich zentral in der IT/BI-Abteilung ansiedelt?",
+    "options": [
+      "Die Berichte werden extrem fehlerhaft und inkonsistent, aber sehr schnell geliefert.",
+      "Die Kennzahlen bleiben hochgradig konsistent und korrekt, jedoch wird das zentrale BI-Team zum extremen Flaschenhals (Queue/Warteschlange) für die Fachbereiche und kennt deren fachspezifische Domänenfragen oft zu wenig.",
+      "Die Fachbereiche können ihre Berichte im Sekundentakt selbst anpassen.",
+      "Es wird überhaupt keine IT-Infrastruktur mehr benötigt."
+    ],
+    "correctIndex": 1,
+    "explanation": "Bei einer rein zentralen IT-Steuerung ist die Konsistenz und Datensicherheit maximal. Da jedoch jede kleine Änderung (z. B. eine neue Spalte oder ein neuer Filter) über ein IT-Ticket angefordert werden muss, entsteht eine lange Warteschlange. Die Business-Agilität leidet massiv."
+  },
+  {
+    "id": "EB19",
+    "topic": "Das rein dezentrale BI-Betriebsmodell",
+    "difficulty": "Mittel",
+    "question": "Welches Problem beschreibt das Skript für ein rein dezentrales BI-Betriebsmodell, bei dem die Fachabteilungen alle drei Zuständigkeiten autark verwalten?",
+    "options": [
+      "Die Erstellung von Berichten dauert Monate, da die IT-Abteilung blockiert.",
+      "Es entstehen extrem schnell maßgeschneiderte Berichte, aber Kennzahlendefinitionen driften auseinander, Berechnungsfehler bleiben unbemerkt und es entsteht redundanter, widersprüchlicher 'Datenwildwuchs'.",
+      "Die Ladezeiten der Berichte im Webbrowser verlängern sich dramatisch.",
+      "Die Datensätze können nicht mehr auf mobilen Endgeräten angezeigt werden."
+    ],
+    "correctIndex": 1,
+    "explanation": "Dezentrale Ansätze bieten maximale Agilität und Geschwindigkeit. Der Preis dafür ist jedoch hoch: Ohne zentrale Leitplanken baut sich jede Abteilung ihr eigenes Wahrheitssystem. Kennzahlen wie 'Marge' oder 'Umsatz' werden abteilungsspezifisch unterschiedlich berechnet, was eine unternehmensweite Steuerung unmöglich macht."
+  },
+  {
+    "id": "EB20",
+    "topic": "Das hybride Modell: Governed Self-Service-BI",
+    "difficulty": "Schwer",
+    "question": "Wie löst das hybride Betriebsmodell ('Governed Self-Service-BI') den klassischen BI-Konflikt zwischen Konsistenz und Agilität auf?",
+    "options": [
+      "Indem die IT-Abteilung den Fachbereichen jegliche Nutzung von Power BI verbietet.",
+      "Indem die Zuständigkeiten aufgeteilt werden: Die IT/BI-Abteilung behält die Kennzahlhoheit und baut das zentrale, zertifizierte analytische Datenmodell (semantische Schicht); die Fachabteilungen greifen auf dieses Modell zu und bauen ihre Berichte agil und eigenständig selbst.",
+      "Indem alle Berichte vollautomatisch durch ein Large Language Model (LLM) ohne menschliche Kontrolle generiert werden.",
+      "Durch das wöchentliche manuelle Abgleichen aller Excel-Dateien in großen Abstimmungsmeetings."
+    ],
+    "correctIndex": 1,
+    "explanation": "Governed Self-Service ist der moderne Königsweg: Die IT stellt ein stabiles, qualitätsgeprüftes und mathematisch definiertes Datenmodell (die 'Single Source of Truth') bereit. Der Fachbereich muss sich nicht um Datenimporte oder Joins kümmern, sondern baut seine Berichte per Drag-and-Drop auf dieser sicheren, konsistenten Basis auf."
+  },
+  {
+    "id": "EB21",
+    "topic": "Die drei Level des Self-Service-BI",
+    "difficulty": "Schwer",
+    "question": "Das Skript unterscheidet drei Stufen (Level) der Self-Service-BI-Nutzung im Fachbereich. Was kennzeichnet 'Level 3' im Vergleich zu Level 1?",
+    "options": [
+      "Level 3 erlaubt nur das statische Drucken von PDF-Berichten, während Level 1 interaktiv ist.",
+      "Level 1 beschränkt sich auf das reine Modifizieren bestehender Berichte (z.B. Filtern); Level 3 hingegen bedeutet die eigenständige Exploration, Datenaufbereitung und Datenmodellierung (Data Preparation & Modeling) dezentral im Fachbereich auf Basis von Rohdaten.",
+      "Level 3 ist der rein KI-gestützte Chatbot-Zugriff, während Level 1 das Schreiben von SQL-Code erfordert.",
+      "Es gibt keinen Unterschied; die Level beschreiben lediglich die Lizenzkosten des BI-Werkzeugs."
+    ],
+    "correctIndex": 1,
+    "explanation": "Die SSBI-Reifegrade steigen mit der Komplexität der Aufgaben: Level 1 ist das bloße Konsumieren und leichte Anpassen (Filtern, Sortieren). Level 2 erlaubt das Erstellen neuer Visualisierungen auf bestehenden Modellen. Level 3 greift tief in die Datenvorbereitung (ETL/ELT) und Datenmodellierung ein, was maximale Freiheit, aber auch die höchsten Qualitätsrisiken birgt."
+  },
+  {
+    "id": "EB22",
+    "topic": "Vom Konsumenten zum Prosumenten",
+    "difficulty": "Mittel",
+    "question": "Welche begriffliche und funktionale Transformation vollzieht der Anwender im Fachbereich durch die Einführung von Self-Service-BI laut Skript?",
+    "options": [
+      "Er wird vom 'Analysten' zum reinen 'Programmierer' in Python.",
+      "Er wandelt sich von einem passiven Informationsempfänger ('Konsumenten') zu einem aktiven Mitgestalter und Erzeuger von Berichten und Analysen ('Prosumenten' / Prosumer).",
+      "Er verliert jegliche Interaktionsmöglichkeiten und wird zum reinen PDF-Betrachter.",
+      "Er benötigt keinerlei Schulungen mehr, da SSBI-Tools selbsterklärend sind."
+    ],
+    "correctIndex": 1,
+    "explanation": "Der Begriff 'Prosument' (Kombination aus Produzent und Konsument) beschreibt perfekt die neue Rolle des Fachbereichs. Dank moderner SSBI-Tools konsumieren Anwender nicht mehr nur fertige IT-Berichte, sondern produzieren ihre ad-hoc benötigten Auswertungen direkt selbst auf Basis bereitgestellter Datenmodelle."
+  },
+  {
+    "id": "EB23",
+    "topic": "Power BI Hands-on: Erster Bericht",
+    "difficulty": "Mittel",
+    "question": "Was wurde im praktischen 'Hands-on'-Teil von Einheit 3 in MS Power BI Desktop konkret getan, um die Daten des Global Superstore auszuwerten?",
+    "options": [
+      "Es wurde eine komplexe relationale SQL-Datenbank in der Cloud aufgesetzt.",
+      "Die modifizierten Retail-Daten wurden aus einer Excel-Datei importiert, Tabellen verknüpft, einfache Kennzahlen (Measures) angelegt und ein erster Prototyp-Bericht erstellt.",
+      "Es wurde ein neuronales Netz zur Absatzprognose in Python programmiert.",
+      "Es wurde ein FastHTML-Webserver gestartet, um Plotly-Diagramme im Browser anzuzeigen."
+    ],
+    "correctIndex": 1,
+    "explanation": "Das Hands-on in Einheit 3 dient als pragmatischer Einstieg: Die Studierenden laden eine Excel-Datei, die modifizierte Daten des Global Superstores enthält, verknüpfen die Tabellen (z.B. Orders und Users), legen grundlegende Kennzahlen (Measures) an und bauen erste Diagramme in Power BI Desktop."
+  },
+  {
+    "id": "EB24",
+    "topic": "Grenzen des ersten Power BI Berichts",
+    "difficulty": "Anspruchsvoll",
+    "question": "Warum bezeichnet das Skript den in Einheit 3 erstellten ersten Power BI Bericht explizit als einen 'Prototyp mit engen Grenzen'?",
+    "options": [
+      "Weil Power BI keine großen Datenmengen von mehr als 1.000 Zeilen verarbeiten kann.",
+      "Weil der Bericht ohne echtes, tiefgehendes analytisches Datenmodell erstellt wurde. Fachliche Bedeutungen (z.B. was genau in 'Sales' steckt) bleiben undokumentiert und im Kopf des Erstellers, anstatt im Modell verankert zu sein.",
+      "Weil der Bericht nur auf Apple Macs und nicht auf Windows-PCs läuft.",
+      "Weil die Benutzeroberfläche von Power BI im Jahr 2026 grundlegend abgeschafft wurde."
+    ],
+    "correctIndex": 1,
+    "explanation": "Ein lauffähiges Dashboard zu bauen ist einfach. Doch ohne ein echtes analytisches Datenmodell, das Metadaten, exakte betriebswirtschaftliche Berechnungsregeln und Datenqualitätsprüfungen (Data Contracts) enthält, ist der Bericht fragil, schwer zu warten und für Außenstehende oder KI-Systeme intransparent."
+  },
+  {
+    "id": "EB25",
+    "topic": "Das Problem 'Wissen bleibt im Kopf'",
+    "difficulty": "Mittel",
+    "question": "Welcher typische BI-Fallstrick wird im Skript mit dem Satz 'Wissen bleibt im Kopf' für die Spalte 'Sales' beschrieben?",
+    "options": [
+      "Dass die y-Achsenskalierung im Kopf des Betrachters berechnet werden muss.",
+      "Dass im Bericht eine Spalte 'Sales' existiert, aber nirgends dokumentiert ist, ob es sich um Brutto- oder Nettowerte, mit oder ohne Rabatt, oder in welcher Währung die Werte vorliegen. Nur der Ersteller weiß es, andere müssen raten.",
+      "Dass Power BI Passwörter im RAM des Computers speichert.",
+      "Dass der Umsatzwert sich stündlich im Kopf des Abteilungsleiters ändert."
+    ],
+    "correctIndex": 1,
+    "explanation": "Dies ist ein klassisches Dokumentationsdefizit. Eine Zahl wie '10.000' in der Spalte 'Sales' ist nutzlos und gefährlich, wenn nicht systemisch hinterlegt ist, ob Retouren bereits abgezogen wurden, ob Steuern enthalten sind oder welche Währungsumrechnung gilt. Sobald der Ersteller das Team verlässt, geht dieses Wissen verloren."
+  },
+  {
+    "id": "EB26",
+    "topic": "KI-Unterstützung im BI-Projektverlauf",
+    "difficulty": "Mittel",
+    "question": "Welche Rolle spielt generative KI (z. B. LLMs) laut Agenda von Einheit 3 im modernen Projektverlauf von BI-Projekten?",
+    "options": [
+      "Sie ersetzt alle menschlichen Analysten und Programmierer vollständig ab 2026.",
+      "Sie dient als wertvolle Assistenz (Sprach- und Codeassistenz) quer über alle CRISP-DM-Phasen, stößt jedoch bei unvollständigen Datenmodellen schnell an ihre Grenzen.",
+      "Sie wird ausschließlich zum automatischen Generieren von gefälschten Umsatzzahlen verwendet.",
+      "Sie übernimmt die physische Verkabelung der Server im Rechenzentrum."
+    ],
+    "correctIndex": 1,
+    "explanation": "Generative KI wird als starker Katalysator und Assistent verstanden. Sie kann beim Schreiben von DAX-Formeln, SQL-Queries oder beim Erstellen fachlicher Konzepte unterstützen, benötigt aber für korrekte Ergebnisse zwingend eine präzise, sauber dokumentierte Datenbasis."
+  },
+  {
+    "id": "EB27",
+    "topic": "Text-to-SQL Performance & Modellqualität",
+    "difficulty": "Schwer",
+    "question": "Das Skript zitiert ein wichtiges Experiment zur KI-Unterstützung: Wie verändert sich die Erfolgsquote (Genauigkeit) von LLMs bei der Generierung von SQL-Abfragen, wenn das Datenmodell fachlich präzise erklärt wird (mit Semantikschicht)?",
+    "options": [
+      "Sie sinkt von 80% auf fast 0%, da die KI durch zu viele Informationen verwirrt wird.",
+      "Sie steigt von mageren 16,7 % richtigen Antworten ohne erklärtes Modell auf signifikante 54,2 % richtige Antworten mit erklärtem Modell.",
+      "Sie bleibt exakt identisch bei 100%, da moderne LLMs keine Erklärungen benötigen.",
+      "Sie steigt sprunghaft auf 99,9%, macht jedoch bei Datumsfunktionen weiterhin systematische Fehler."
+    ],
+    "correctIndex": 1,
+    "explanation": "Dieses Messergebnis zeigt eindrucksvoll: Eine KI ist nur so klug wie das Modell, das man ihr füttert. Ohne Metadaten sieht die KI nur kryptische Spaltennamen und rät falsch (16,7% Genauigkeit). Erst mit einer sauberen semantischen Schicht und fachlichen Definitionen kann die KI korrekte Abfragen generieren (54,2%)."
+  },
+  {
+    "id": "EB28",
+    "topic": "Der BIRD-Benchmark für Text-to-SQL",
+    "difficulty": "Schwer",
+    "question": "Was misst der im Skript erwähnte BIRD-Benchmark und wo liegen derzeit (Stand 2026) die Grenzen von LLMs im Vergleich zu menschlichen SQL-Experten?",
+    "options": [
+      "Er misst die Rendering-Geschwindigkeit von HTML5-Seiten; KI ist hierbei 10-mal schneller als der Mensch.",
+      "Er evaluiert die Genauigkeit von Text-to-SQL-Modellen auf großen, komplexen Datenbanken. Moderne LLMs erreichen hierbei ca. 55-65 % Genauigkeit, während menschliche Experten bei über 92 % liegen. Dies beweist die unverzichtbare Rolle menschlicher Qualitätskontrolle.",
+      "Er misst den Stromverbrauch von Servern bei Machine-Learning-Abfragen.",
+      "Er ist ein Benchmark für die physische Übertragungsgeschwindigkeit von Glasfaserkabeln."
+    ],
+    "correctIndex": 1,
+    "explanation": "Der BIRD (Big Bench for Large-Scale Database Grounded Text-to-SQL) Benchmark zeigt, dass Text-to-SQL auf echten, komplexen relationalen Datenbankschemata extrem schwer für KIs ist. Der deutliche Abstand zur menschlichen Experten-Performance unterstreicht, dass KI-generierter SQL-Code zwingend durch qualifizierte Menschen geprüft werden muss."
+  },
+  {
+    "id": "EB29",
+    "topic": "Power BI Datenimport-Modifikationen",
+    "difficulty": "Mittel",
+    "question": "Im Hands-on-Teil wird erwähnt, dass die Daten aus Kaggle für das Kurs-Beispiel modifiziert wurden (z. B. wurde aus '33.6' der Wert '336' gemacht). Welchen didaktischen Zweck verfolgt diese Modifikation im Kurs?",
+    "options": [
+      "Um die Datenmenge künstlich zu verkleinern, damit Excel die Datei schneller öffnet.",
+      "Damit im Bericht möglichst hohe Werte entstehen, die typische Skalierungs- und Visualisierungseffekte im Dashboard deutlicher und praxisnäher hervortreten lassen.",
+      "Um absichtlich Softwarefehler in Power BI zu provozieren.",
+      "Um die Einhaltung europäischer Datenschutz-Richtlinien (DSGVO) zu garantieren."
+    ],
+    "correctIndex": 1,
+    "explanation": "Durch das Verschieben des Dezimalpunkts werden die Umsatz- und Gewinnzahlen künstlich vergrößert. Größere Werte (Mio. statt Tsd.) verdeutlichen im Dashboard typische visuelle Herausforderungen wie Zahlenüberläufe, die Notwendigkeit kompakter Formatierungen und Skalierungseffekte."
+  },
+  {
+    "id": "EB30",
+    "topic": "Datenlücken und ETL-Fehler",
+    "difficulty": "Mittel",
+    "question": "Das Skript weist darauf hin, dass BI-Berichte auch eine 'Warnfunktion' für Datenqualität besitzen. Wie äußert sich dies konkret im Prototyp-Bericht?",
+    "options": [
+      "Der Monitor des Anwenders beginnt rot zu blinken, wenn ein Fehler auftritt.",
+      "Der Bericht macht auf Datenlücken aufmerksam (z.B. leere Zeilen oder fehlende Werte), die durch Fehler bei den ETL-Prozessen oder durch fehlende Daten aus den operativen Vorsystemen bedingt sein können.",
+      "Power BI verweigert automatisch den Start, wenn ein Datensatz unvollständig ist.",
+      "Das Tool löscht fehlerhafte Zeilen stillschweigend, ohne den Anwender zu informieren."
+    ],
+    "correctIndex": 1,
+    "explanation": "Ein gut gestaltetes Dashboard visualisiert nicht nur Erfolge, sondern legt Schwachstellen offen. Wenn beispielsweise Sparklines abrupt abbrechen oder in grafischen Tabellen plötzlich 'Null'-Werte oder unplausible Ausreißer auftauchen, ist dies für das Controlling der direkte Hinweis auf Fehler in der vorgelagerten ETL-Strecke."
+  },
+  {
+    "id": "EB31",
+    "topic": "Self-Service-BI: Vom Klicken zum Fragen",
+    "difficulty": "Schwer",
+    "question": "Wie verändert sich laut Skript der Charakter der Self-Service-BI durch den Einsatz moderner generativer KI-Assistenten (Verschiebung der Tätigkeiten)?",
+    "options": [
+      "Der Anwender muss nun selbst komplexen Python-Code schreiben, anstatt im Tool zu klicken.",
+      "Die Tätigkeit verschiebt sich von der manuellen Erstellung von Visualisierungen durch Klicken ('Klick-Akt') hin zum Formulieren präziser Fragen in natürlicher Alltagssprache ('Vom Klicken zum Fragen'), wobei der KI-Assistent die Grafik generiert.",
+      "Der Anwender muss überhaupt keine fachlichen Fragen mehr formulieren, da die KI eigenständig Entscheidungen trifft.",
+      "Es gibt keine Veränderung; generative KI wird im Bereich SSBI nicht eingesetzt."
+    ],
+    "correctIndex": 1,
+    "explanation": "Der Paradigmenwechsel im Self-Service lautet: 'Natural Language Querying'. Anstatt mühsam Achsen, Farben und Filter per Maus in einer GUI zusammenzuklicken, beschreibt der Anwender sein Informationsbedürfnis einfach im Chat (z.B. 'Zeige mir den Umsatzverlauf der Region West für 2026 als Liniendiagramm')."
+  },
+  {
+    "id": "EB32",
+    "topic": "Der wandernde Engpass bei KI-gestützter BI",
+    "difficulty": "Schwer",
+    "question": "Das Skript betont, dass durch den Einsatz von KI-Assistenten im BI-System der Engpass nicht verschwindet, sondern wandert. Wohin verschiebt sich der Engpass?",
+    "options": [
+      "Vom Arbeitsspeicher (RAM) der Server hin zu den Grafikkarten der Client-Rechner.",
+      "Vom eigentlichen 'Klicken und Visualisieren' hin zur präzisen Formulierung der Frage (Prompting) und der zwingenden Notwendigkeit einer exzellenten Daten- und Modellqualität (Semantikschicht), da die KI sonst falsche Zusammenhänge halluziniert.",
+      "Vom Controlling hin zur Marketingabteilung.",
+      "Vom Datenimport hin zur Archivierung historischer Berichte."
+    ],
+    "correctIndex": 1,
+    "explanation": "Wenn das Erstellen einer Grafik nur noch eine Sekunde dauert, weil die KI das Zeichnen übernimmt, wird die Datenqualität zum alles entscheidenden Nadelöhr. Ist das zugrundeliegende Datenmodell fehlerhaft, unvollständig oder schlecht dokumentiert, liefert die KI mit maximaler Geschwindigkeit hochprofessionell aussehende, aber inhaltlich völlig falsche Berichte."
+  },
+  {
+    "id": "EB33",
+    "topic": "Zusammenarbeit und Agilität: Die Miro-Board-Aufgabe",
+    "difficulty": "Mittel",
+    "question": "Welche konkrete Aufgabe bearbeiten die Studierenden im Rahmen der Fallstudie auf dem Miro-Board, um das 'Business Understanding' praktisch anzuwenden?",
+    "options": [
+      "Das eigenständige Programmieren einer REST-API für den Global Superstore.",
+      "Die methodische Ausarbeitung des 'Business Understandings' für das Fallbeispiel: Identifizieren von Projektzielen, Stakeholdern, zentralen Fragestellungen und potenziellen Risiken.",
+      "Das Zeichnen eines physischen Netzwerkplans für das BI-Rechenzentrum.",
+      "Das Erstellen einer Kosten-Nutzen-Rechnung für Power BI Premium-Lizenzen."
+    ],
+    "correctIndex": 1,
+    "explanation": "Die Studierenden wenden die CRISP-DM-Theorie direkt praktisch an. Sie erarbeiten im Team auf dem Miro-Board die fachlichen Grundlagen für den Global Superstore: Wer ist die Zielgruppe des Berichts? Welche konkreten Fragen müssen beantwortet werden (z. B. Umsatzentwicklung, Service-Qualität)? Welche Risiken (z. B. Datenqualität) gibt es?"
+  },
+  {
+    "id": "EB34",
+    "topic": "Power BI: Measures anlegen",
+    "difficulty": "Mittel",
+    "question": "Was ist in Power BI ein 'Measure' und wie unterscheidet es sich von einer berechneten Spalte (Calculated Column)?",
+    "options": [
+      "Ein Measure ist eine rein dekorative Formatierungsvorschrift für Tabellenzellen.",
+      "Ein Measure ist eine dynamische Berechnungsformel (geschrieben in DAX), die zur Laufzeit des Berichts abhängig vom gesetzten Filterkontext berechnet wird; eine berechnete Spalte hingegen wird statisch Zeile für Zeile beim Laden der Daten berechnet und verbraucht dauerhaft Speicherplatz.",
+      "Measures können nur Textwerte enthalten, berechnete Spalten nur Zahlen.",
+      "Measures werden ausschließlich in SQL geschrieben, berechnete Spalten in Python."
+    ],
+    "correctIndex": 1,
+    "explanation": "Measures sind das Herzstück der Power BI-Berechnungslogik. Da sie dynamisch auf den Filterkontext reagieren (z. B. filtert der Anwender auf 'September 2016', rechnet das Measure SUM(Sales) nur für diesen Monat), sind sie extrem performant und flexibel. Berechnete Spalten hingegen blähen das Datenmodell im RAM unnötig auf."
+  },
+  {
+    "id": "EB35",
+    "topic": "Power BI: Tabellen verknüpfen (Beziehungen)",
+    "difficulty": "Mittel",
+    "question": "Warum ist das korrekte Verknüpfen von Tabellen über Primär- und Fremdschlüssel im Power BI Datenmodell so wichtig?",
+    "options": [
+      "Damit die Dateigröße des Berichts beim Speichern komprimiert wird.",
+      "Damit Filterauswirkungen in den Dimensionstabellen (z. B. Land oder Produktkategorie) automatisch und mathematisch korrekt auf die Faktentabelle (z. B. Bestellungen) übertragen und berechnet werden können.",
+      "Weil Power BI den Import von mehr als einer Tabelle ohne Beziehungen verweigert.",
+      "Um die Schriftart im gesamten Bericht einheitlich zu standardisieren."
+    ],
+    "correctIndex": 1,
+    "explanation": "Beziehungen steuern den Filterfluss im dimensionalen Modell. Wenn Sie beispielsweise die Kundentabelle mit der Faktentabelle über die 'Customer ID' verknüpfen, weiß Power BI, dass beim Klick auf den Kunden 'Peter Fuller' im Bericht alle Umsatzdiagramme automatisch auf die Käufe dieses spezifischen Kunden gefiltert werden müssen."
+  },
+  {
+    "id": "EB36",
+    "topic": "Das 'Klischee' Fachabteilung vs. IT",
+    "difficulty": "Mittel",
+    "question": "Welchen soziotechnischen Konflikt (das 'Klischee') zwischen Fachabteilung und zentraler IT im Berichtswesen greift das Skript in Einheit 3 auf?",
+    "options": [
+      "Dass die IT-Abteilung modernere Laptops verwendet als die Fachabteilung.",
+      "Die IT sieht den Fachbereich oft als 'unstrukturierte Datensammler, die inkonsistente Excel-Tabellen bauen'; der Fachbereich wiederum sieht die IT als 'trägen Flaschenhals, der Monate braucht, um einfache Berichte bereitzustellen'.",
+      "Dass beide Abteilungen unterschiedliche Programmiersprachen bevorzugen.",
+      "Es gibt keinen Konflikt; beide Abteilungen arbeiten historisch immer völlig reibungsfrei zusammen."
+    ],
+    "correctIndex": 1,
+    "explanation": "Dieser klassische Konflikt ist der Haupttreiber für moderne BI-Architekturen. Governed Self-Service-BI versucht genau diese Brücke zu schlagen: Der IT die Kontrolle über die Datenqualität und Konsistenz zu geben (Sicherheit) und dem Fachbereich die Freiheit zu geben, Berichte selbst zu bauen (Geschwindigkeit)."
+  },
+  {
+    "id": "EB37",
+    "topic": "BINT und DABA Berührungspunkte",
+    "difficulty": "Mittel",
+    "question": "Welche Kernbereiche verbinden die Universitätsveranstaltungen BINT (Business Intelligence) und DABA (Datenbanken) laut dem im Skript dargestellten Ordnungsrahmen?",
+    "options": [
+      "Ausschließlich die hardwareseitige Serverkühlung.",
+      "Die Kette von den relationalen Datenbankschemata (DABA/RDBMS/SQL) über die analytischen Datenmodelle und BI-Architekturen (BINT) hin zu datengetriebenen Entscheidungen im Management.",
+      "Die rein theoretische Erörterung von NoSQL-Datenbanken ohne praktischen BI-Bezug.",
+      "Das gemeinsame Designen von Webseiten mit HTML und CSS."
+    ],
+    "correctIndex": 1,
+    "explanation": "Die beiden Vorlesungen greifen perfekt ineinander: In DABA lernen die Studierenden, wie Daten operativ und konsistent in relationalen Datenbanken (OLTP) gespeichert und per SQL abgefragt werden. In BINT lernen sie, wie diese Daten für Analysezwecke (OLAP) modelliert, architektonisch aufbereitet und für das Management visualisiert werden."
+  },
+  {
+    "id": "EB38",
+    "topic": "Didaktischer Ansatz der Fallstudien",
+    "difficulty": "Mittel",
+    "question": "Welchen didaktischen Leitgedanken verfolgt Prof. Dr. Robert Butscher laut Skript mit den praxisnahen Hands-on-Fallbeispielen?",
+    "options": [
+      "Die Studierenden sollen die Klicks im BI-Werkzeug blind auswendig lernen.",
+      "Die Studierenden sollen durch aktives Ausprobieren, kritisches Hinterfragen und das Nachstellen der Schritte mit den echten Datensätzen ein tiefes, kausales Verständnis für Datenzusammenhänge und BI-Werkzeuge entwickeln.",
+      "Die Fallstudien dienen nur als Unterhaltung und haben keine Prüfungsrelevanz.",
+      "Das Ziel ist es, möglichst komplizierten Code in Python zu schreiben, den niemand versteht."
+    ],
+    "correctIndex": 1,
+    "explanation": "Der didaktische Ansatz setzt auf aktives Lernen ('Inquiry-based Learning'). Das bloße passive Lesen eines Skripts reicht nicht aus, um ein Verständnis für die Fallstricke der Datenmodellierung zu entwickeln. Erst das eigene Arbeiten mit unvollständigen Daten im Tool schafft das nötige Problembewusstsein."
+  },
+  {
+    "id": "EB39",
+    "topic": "Definition 'Berichtswesen' nach Weber & Blohm",
+    "difficulty": "Anspruchsvoll",
+    "question": "Wie wird das 'Berichtswesen' in der betriebswirtschaftlichen Literatur (Weber; Blohm) im Vergleich zur Erstellung einzelner Reports definiert?",
+    "options": [
+      "Berichtswesen ist die rein zufällige Verteilung von PDF-Dokumenten im Unternehmen.",
+      "Es bezeichnet die Gesamtheit aller systematisch erstellten Berichte mit entscheidungs- und führungsrelevanten Informationen — einschließlich aller dafür notwendigen organisatorischen Einrichtungen und Abläufe im Hintergrund.",
+      "Es beschreibt ausschließlich den automatischen E-Mail-Versand von Excel-Dateien am Monatsende.",
+      "Das Berichtswesen ist eine reine IT-Infrastrukturaufgabe ohne betriebswirtschaftlichen Nutzen."
+    ],
+    "correctIndex": 1,
+    "explanation": "Berichtswesen (Reporting) ist ein ganzheitliches System. Es umfasst die Definition von Berichtszyklen, die Zuweisung von Verantwortlichkeiten, den Aufbau von Datenpipelines und die Bereitstellung der Infrastruktur, um sicherzustellen, dass Entscheider zum richtigen Zeitpunkt verlässliche Informationen erhalten."
+  },
+  {
+    "id": "EB40",
+    "topic": "Power BI Desktop Systemanforderung",
+    "difficulty": "Einfach",
+    "question": "Welches Betriebssystem wird für die Ausführung von MS Power BI Desktop nativ vorausgesetzt (Stand Kursunterlagen)?",
+    "options": [
+      "Apple macOS",
+      "Microsoft Windows",
+      "Linux (Ubuntu/Debian)",
+      "Google Android"
+    ],
+    "correctIndex": 1,
+    "explanation": "MS Power BI Desktop ist eine native Windows-Anwendung. Auf anderen Betriebssystemen wie macOS oder Linux kann es nur über Umwege (z. B. virtuelle Maschinen oder Emulatoren) ausgeführt werden."
+  },
+  {
+    "id": "EB41",
+    "topic": "CRISP-DM Phase 3: Data Preparation",
+    "difficulty": "Mittel",
+    "question": "Welche konkreten Tätigkeiten fallen im CRISP-DM-Prozess unter die Phase 'Data Preparation' (Datenaufbereitung)?",
+    "options": [
+      "Das reine Zeichnen der finalen Diagramme im Dashboard.",
+      "Das Auswählen der relevanten Tabellen und Spalten, das Bereinigen der Daten (Säubern von Fehlern/Lücken), das Transformieren (z. B. Datentypen anpassen) und das Zusammenführen verschiedener Datensätze.",
+      "Das Verfassen des betriebswirtschaftlichen Projekt-Projektauftrags.",
+      "Das Deployment der fertigen Berichte auf dem Webserver."
+    ],
+    "correctIndex": 1,
+    "explanation": "Die Datenaufbereitung (oft als ETL-Prozess bezeichnet) ist die zeitaufwendigste Phase in Datenprojekten (ca. 70-80% des Aufwands). Hier werden die Rohdaten so bereinigt, strukturiert und verknüpft, dass sie im nächsten Schritt fehlerfrei modelliert und analysiert werden können."
+  },
+  {
+    "id": "EB42",
+    "topic": "CRISP-DM Phase 4: Modeling",
+    "difficulty": "Mittel",
+    "question": "Was geschieht in der Phase 'Modeling' (Modellierung) des CRISP-DM-Prozesses?",
+    "options": [
+      "Es werden primär die Farbpaletten für die Benutzeroberfläche festgelegt.",
+      "Es werden verschiedene mathematische oder analytische Modellierungstechniken ausgewählt und angewendet sowie deren Parameter auf den aufbereiteten Daten optimiert.",
+      "Es werden Interviews mit den Endanwendern über deren Zufriedenheit geführt.",
+      "Die Daten werden wieder in das operative ERP-Vorsystem zurückgeschrieben."
+    ],
+    "correctIndex": 1,
+    "explanation": "In der Modellierungsphase kommen die eigentlichen Analyse-Algorithmen (im Data Mining z.B. Regressionen, Entscheidungsbäume; im BI-Bereich der Aufbau des Sternschemas und das Schreiben komplexer Kennzahlen-Logiken) zum Einsatz, um Muster und Strukturen in den Daten abzubilden."
+  },
+  {
+    "id": "EB43",
+    "topic": "CRISP-DM Phase 2: Data Understanding",
+    "difficulty": "Mittel",
+    "question": "Welches Risiko minimiert eine sorgfältige Durchführung der Phase 'Data Understanding' (Datenverständnis) zu Beginn eines Projekts?",
+    "options": [
+      "Dass die Lizenzgebühren des BI-Tools am Projektende das Budget überschreiten.",
+      "Dass man im weiteren Verlauf (z. B. beim Modeling) feststellt, dass die Daten unvollständig, fehlerhaft oder schlicht ungeeignet sind, um die geschäftliche Fragestellung überhaupt zu beantworten.",
+      "Dass die Festplattenkapazität des Datenbankservers erschöpft wird.",
+      "Dass die Grafiken im Dashboard zu wenige Farben enthalten."
+    ],
+    "correctIndex": 1,
+    "explanation": "Data Understanding schützt vor dem gefürchteten 'Garbage In, Garbage Out'-Effekt. Wer die Datenqualität, Lücken und Verteilungen nicht vorab genau analysiert, baut im schlimmsten Fall hochkomplexe Modelle auf einer völlig unzuverlässigen oder falschen Datengrundlage auf."
+  },
+  {
+    "id": "EB44",
+    "topic": "DeltaMaster als Referenzwerkzeug",
+    "difficulty": "Mittel",
+    "question": "Warum wird im Kurs neben MS Power BI auch das Werkzeug Bissantz DeltaMaster als Maßstab für Dashboards und grafische Tabellen herangezogen?",
+    "options": [
+      "Weil DeltaMaster das einzige BI-Tool ist, das SQL-Datenbanken anbinden kann.",
+      "Wegen seiner unerreichten Informationsdichte, der strikten Einhaltung barrierefreier Gestaltungsregeln (Rot/Blau-Abweichungen) und der patentierten typografischen Skalierung (Bissantz' Numbers), die visuelle Wahrnehmungsfehler systematisch minimiert.",
+      "Weil es eine kostenlose App im Google Play Store für alle Smartphones ist.",
+      "Weil es vollständig auf HTML5 verzichtet und nur noch statische Bilder anzeigt."
+    ],
+    "correctIndex": 1,
+    "explanation": "DeltaMaster gilt im Kurs als ergonomischer Goldstandard. Während Power BI maximale Gestaltungsfreiheit bietet (was oft zu bunten, überladenen Dashboards führt), erzwingt DeltaMaster wissenschaftlich fundierte, hochpräzise und extrem datendichte Visualisierungen nach den Regeln von Tufte und Bissantz."
+  },
+  {
+    "id": "EB45",
+    "topic": "Didaktischer Mini-Check (SAY, UNIFY, SIMPLIFY)",
+    "difficulty": "Mittel",
+    "question": "Das Skript empfiehlt für jede Fallstudien-Präsentation einen 'Mini-Check' anhand von drei Begriffen: SAY, UNIFY und SIMPLIFY. Was bedeutet 'SIMPLIFY' in diesem Kontext konkret?",
+    "options": [
+      "Das Löschen aller komplexen Datenzeilen aus der Tabelle, um das Ergebnis einfacher zu machen.",
+      "Das rigorose Streichen überflüssiger visueller Elemente (Tinte streichen nach Tufte), um Ablenkungen zu minimieren und den Fokus rein auf die datentragenden Elemente zu lenken.",
+      "Das Ersetzen aller Fachbegriffe durch einfache Umgangssprache im Bericht.",
+      "Das automatische Runden aller Umsatzzahlen auf glatte Millionenbeträge."
+    ],
+    "correctIndex": 1,
+    "explanation": "SIMPLIFY basiert direkt auf Edward Tuftes 'Data-Ink-Ratio'-Prinzip. Jedes Pixel, das keine Daten repräsentiert (z. B. dicke Gitternetze, 3D-Effekte, unnötige Hintergründe), lenkt das Auge ab und erhöht die kognitive Last des Betrachters. Gutes Design bedeutet, so viel wie möglich wegzulassen, ohne Information zu verlieren."
+  },
+  {
+    "id": "EB46",
+    "topic": "Didaktischer Mini-Check: SAY",
+    "difficulty": "Mittel",
+    "question": "Was fordert die Regel 'SAY' im Rahmen des didaktischen Mini-Checks für jedes Diagramm in einem BI-Bericht?",
+    "options": [
+      "Dass das Diagramm über eine automatische Sprachausgabe (Text-to-Speech) verfügen muss.",
+      "Dass jedes Diagramm eine klare, unmissverständliche Botschaft (Aussage) transportieren muss, anstatt nur 'bunte Daten' ohne konkreten Erkenntniswert zu zeigen.",
+      "Dass der Name des Erstellers groß über dem Diagramm stehen muss.",
+      "Dass das Diagramm zwingend alphabetisch sortiert sein muss."
+    ],
+    "correctIndex": 1,
+    "explanation": "SAY bedeutet Botschafts-Fokus (nach Rolf Hichert). Ein Diagramm darf kein Selbstzweck sein. Jede Grafik muss eine konkrete geschäftliche Frage beantworten oder einen Befund aufdecken (z. B. 'Umsatz im September bricht wegen Produktkategorie Machines ein'). Fehlt diese Aussage, ist das Diagramm wertlos."
+  },
+  {
+    "id": "EB47",
+    "topic": "Das 'Wechselspiel' im BI-Betrieb",
+    "difficulty": "Anspruchsvoll",
+    "question": "Warum ist das Wechselspiel zwischen zentralen und dezentralen Ansätzen im modernen BI-Betrieb laut Skript so erfolgskritisch?",
+    "options": [
+      "Weil dezentrale Systeme billiger im Betrieb sind als zentrale Data Warehouses.",
+      "Weil erst die Kombination aus zentraler Qualitätssicherung (Data Governance, einheitliche Datenquelle) und dezentraler, agiler Nutzung im Fachbereich (Self-Service-BI) den maximalen geschäftlichen Nutzen stiftet, ohne im dezentralen Daten-Chaos oder der zentralen Trägheit zu enden.",
+      "Weil die IT-Abteilung dezentrale Server nicht kontrollieren kann.",
+      "Weil generative KI-Systeme nur in einer dezentralen Server-Infrastruktur lauffähig sind."
+    ],
+    "correctIndex": 1,
+    "explanation": "Es ist kein 'Entweder-oder'. Ein modernes Unternehmen benötigt beides: Die IT muss dezentrale Fachbereichsdaten wieder in das zentrale Data Warehouse integrieren und abgleichen (Konsistenz), während sie gleichzeitig den Fachabteilungen Werkzeuge an die Hand gibt, um schnell eigene Erkenntnisse zu gewinnen (Agilität)."
+  },
+  {
+    "id": "EB48",
+    "topic": "Self-Service-BI: Adoptionshürden",
+    "difficulty": "Schwer",
+    "question": "Das Skript zeigt ein Diagramm zur Adoption von BI und Analytics ('Strategies for Driving Adoption...'). Welche Hürde stellt laut diesem Modell die fundamentale Basis dar, auf der alle anderen Adoptionsstrategien aufbauen müssen?",
+    "options": [
+      "Der Erwerb der teuersten Softwarelizenzen auf dem Markt.",
+      "Eine stabile, vertrauenswürdige Datenbasis, exzellente Datenqualität (Quality, Master Data) und eine gelebte Data Governance, da Anwender unzuverlässige BI-Systeme sofort dauerhaft ignorieren.",
+      "Die Schulung der Mitarbeiter in fortgeschrittenem SQL-Code.",
+      "Die Bereitstellung von schicken mobilen Apps für alle Mitarbeiter."
+    ],
+    "correctIndex": 1,
+    "explanation": "Die Pyramide der BI-Adoption steht auf dem Fundament der Daten- und Modellqualität. Wenn Anwender einmal feststellen, dass die Zahlen im Dashboard falsch oder inkonsistent zu ihren operativen Systemen sind, schwindet das Vertrauen sofort. Keine Schulung und kein Change-Management der Welt kann ein BI-System retten, dessen Zahlen nicht stimmen."
+  },
+  {
+    "id": "EB49",
+    "topic": "Data Literacy und CRISP-DM",
+    "difficulty": "Mittel",
+    "question": "Inwiefern fördert das strukturierte Durchlaufen von CRISP-DM die 'Data Literacy' (Datenkompetenz) im Unternehmen?",
+    "options": [
+      "Mitarbeiter lernen, wie man Datenbanken physikalisch neu formatiert.",
+      "Mitarbeiter lernen, Daten nicht mehr nur blind zu konsumieren, sondern systematisch Fragen zu stellen, Datenquellen kritisch zu prüfen, Zusammenhänge (Kausalitäten) methodisch zu erforschen und Erkenntnisse faktenbasiert zu kommunizieren.",
+      "Es zwingt die Mitarbeiter, alle Entscheidungen rein nach Bauchgefühl zu treffen.",
+      "Sie lernen, wie man möglichst bunte Kreisdiagramme zeichnet, um Schwachstellen zu kaschieren."
+    ],
+    "correctIndex": 1,
+    "explanation": "Data Literacy bedeutet, datenbasierte Erkenntnisse kritisch lesen, bewerten, nutzen und hinterfragen zu können. Der CRISP-DM-Prozess erzieht das Team dazu, vom geschäftlichen Problem (Business Understanding) auszugehen und jeden Analyseschritt methodisch sauber herzuleiten, statt unreflektiert Datenberge anzuhäufen."
+  },
+  {
+    "id": "EB50",
+    "topic": "Der September-Einbruch: Die genauen Zahlen",
+    "difficulty": "Schwer",
+    "question": "Um wie viel Millionen Dollar brach der Umsatz im September 2016 im Vergleich zum Vorjahr laut den Fallstudiendaten ein, was die detaillierte Ursachenanalyse auslöste?",
+    "options": [
+      "Um genau -1,6 Mio. $.",
+      "Um dramatische -18,7 Mio. $ (von 40,8 Mio. $ auf 22,1 Mio. $).",
+      "Umsatzseitig lag im September 2016 kein Einbruch, sondern ein Rekordwachstum von +18,7 Mio. $ vor.",
+      "Um genau -16,9 Mio. $ im Segment Office Supplies."
+    ],
+    "correctIndex": 1,
+    "explanation": "Die Fallstudiendaten weisen einen extremen Einbruch im September 2016 aus: Der Umsatz stürzte im Vorjahresvergleich um dramatische -18,7 Mio. $ ab. Dieser massive Ausschlag nach unten war das Alarm-Signal für die Analysten, sofort über einen Drill-down die Ursachen in der Produkthierarchie (Haupttreiber: Machines) zu erforschen."
+  }
+]
