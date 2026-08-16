@@ -5,12 +5,12 @@
     "difficulty": "Mittel",
     "question": "Wann wurde das Python-Framework FastHTML von Answer.AI veröffentlicht und was zeichnet seinen Code-Kern im Vergleich zu anderen modernen Frameworks aus?",
     "options": [
-      "Es wurde 2026 veröffentlicht und besitzt einen extrem komplexen Kern mit über 100.000 Zeilen Code, um alle JS-Frameworks nativ zu emulieren.",
       "Es wurde 2024 veröffentlicht und sein Kern ist bewusst klein gehalten (anfangs unter 1.000 Zeilen Code), da es auf etablierten Fundamenten wie Uvicorn, Starlette und HTMX aufsetzt.",
-      "Es wurde 2020 als Fork von Django veröffentlicht und erfordert zwingend eine PostgreSQL-Datenbank im Kern.",
-      "Es wurde 2025 von der OWASP Foundation entwickelt, um ausschließlich hochverschlüsselte Finanz-Dashboards zu rendern."
+      "Es wurde 2025 von der OWASP Foundation entwickelt, um ausschließlich hochverschlüsselte Finanz-Dashboards zu rendern.",
+      "Es wurde 2026 veröffentlicht und besitzt einen extrem komplexen Kern mit über 100.000 Zeilen Code, um alle JS-Frameworks nativ zu emulieren.",
+      "Es wurde 2020 als Fork von Django veröffentlicht und erfordert zwingend eine PostgreSQL-Datenbank im Kern."
     ],
-    "correctIndex": 1,
+    "correctIndex": 0,
     "explanation": "FastHTML wurde 2024 von Answer.AI (unter der Leitung von Jeremy Howard) veröffentlicht. Der Kern ist extrem schlank (anfangs unter 1.000 Zeilen Code), weil das Framework das Rad nicht neu erfindet. Stattdessen nutzt es bewährte, hochperformante Bausteine: Uvicorn als Server, Starlette als Web-Werkzeugschicht und HTMX für die asynchrone Browser-Interaktion."
   },
   {
@@ -19,9 +19,9 @@
     "difficulty": "Schwer",
     "question": "Was ist die grundlegende Philosophie hinter dem 'HTML-first'-Ansatz von FastHTML und welcher Vorteil ergibt sich für BI-Anwendungen daraus?",
     "options": [
-      "Das Layout wird in JavaScript definiert, während die Daten über eine REST-API als JSON-Dokumente geladen werden.",
-      "Der Server rendert das fertige HTML direkt in Python, und HTMX tauscht später nur Fragmente aus. Daten und Anzeige verbleiben ohne Kontextwechsel in einer einzigen Sprache (Python).",
       "Sämtliche Visualisierungen werden als rohe SVG-Pfade direkt in einer SQLite-Datenbank gespeichert.",
+      "Der Server rendert das fertige HTML direkt in Python, und HTMX tauscht später nur Fragmente aus. Daten und Anzeige verbleiben ohne Kontextwechsel in einer einzigen Sprache (Python).",
+      "Das Layout wird in JavaScript definiert, während die Daten über eine REST-API als JSON-Dokumente geladen werden.",
       "Der Browser übernimmt die gesamte Berechnungslogik der Kennzahlen über WebAssembly, während der Server nur statische CSS-Klassen ausliefert."
     ],
     "correctIndex": 1,
@@ -35,8 +35,8 @@
     "options": [
       "Der Browser schickt eine Anfrage (Request) an den Server; FastHTML berechnet die Kennzahlen und gibt fertiges HTML zurück, das der Browser direkt anzeigt.",
       "Der Browser lädt die gesamte Datenbank in seinen Cache und filtert die Zeilen lokal über clientseitiges JavaScript.",
-      "Der Server antwortet mit einer leeren Seite und einem JSON-Datenpaket, welches über React-Komponenten gerendert werden muss.",
-      "Der Server fängt den Request ab, konvertiert ihn in ein PDF-Dokument und sendet dieses als Binärstream zurück."
+      "Der Server fängt den Request ab, konvertiert ihn in ein PDF-Dokument und sendet dieses als Binärstream zurück.",
+      "Der Server antwortet mit einer leeren Seite und einem JSON-Datenpaket, welches über React-Komponenten gerendert werden muss."
     ],
     "correctIndex": 0,
     "explanation": "Der Kreislauf ist klassisch und transparent: Der Browser stellt eine Anfrage (Request) mit Parametern wie '?jahr=2018'. Der FastHTML-Server nimmt diese Anfrage entgegen, berechnet serverseitig in Python die Kennzahlen und rendert das entsprechende HTML. Dieses wird als Antwort (Response) zurückgesendet, und der Browser (bzw. HTMX) zeigt es direkt an."
@@ -48,11 +48,11 @@
     "question": "In welchem Szenario ist der Einsatz von FastHTML gegenüber einer kommerziellen BI-Suite (wie Tableau oder PowerBI) besonders sinnvoll?",
     "options": [
       "Wenn ausschließlich vorkonfigurierte Standardberichte ohne Programmieraufwand und ohne eigenes Hosting verteilt werden sollen.",
-      "Wenn hochgradig individuelle Analytics-Anwendungen und maßgeschneiderte Daten-Produkte entwickelt werden sollen, bei denen jeder Schritt der Datenverarbeitung und Darstellung vollkommen transparent und kontrollierbar sein muss.",
       "Wenn eine fertige Benutzer- und Rechteverwaltung out-of-the-box ohne eigenen Entwicklungsaufwand benötigt wird.",
-      "Wenn Daten ausschließlich über ein No-Code-Interface per Drag-and-Drop verknüpft werden dürfen."
+      "Wenn Daten ausschließlich über ein No-Code-Interface per Drag-and-Drop verknüpft werden dürfen.",
+      "Wenn hochgradig individuelle Analytics-Anwendungen und maßgeschneiderte Daten-Produkte entwickelt werden sollen, bei denen jeder Schritt der Datenverarbeitung und Darstellung vollkommen transparent und kontrollierbar sein muss."
     ],
-    "correctIndex": 1,
+    "correctIndex": 3,
     "explanation": "Während kommerzielle BI-Suiten stark bei Standard-Reporting und fertigen Sicherheitskonzepten sind, glänzt FastHTML als 'Make'-Alternative. Es ist hervorragend geeignet für maßgeschneiderte Datenprodukte (Analytics-Anwendungen), bei denen Entwickler volle Kontrolle über das Einlesen der CSV/Datenbank, die Logik (pandas) und das UI-Design benötigen, ohne an die Grenzen einer proprietären Suite zu stoßen."
   },
   {
@@ -61,12 +61,12 @@
     "difficulty": "Schwer",
     "question": "Welche der folgenden Einschränkungen gehört ehrlicherweise zu den Risiken, wenn man sich für FastHTML als Plattform für Enterprise-Dashboards entscheidet?",
     "options": [
-      "Es läuft ausschließlich auf veralteten Python 2.7-Umgebungen.",
       "Es besitzt im Vergleich zu etablierten Frameworks ein kleineres Ökosystem (weniger fertige Komponenten) und Sicherheitsfunktionen wie Benutzerauthentifizierung oder granulare Zugriffsrechte müssen selbst implementiert werden.",
       "Es ist mathematisch unmöglich, interaktive Diagramme (z. B. mit Plotly) einzubinden.",
-      "Die Latenz ist aufgrund des 'HTML-first'-Ansatzes prinzipiell um den Faktor 1000 schlechter als bei klassischen Webseiten."
+      "Die Latenz ist aufgrund des 'HTML-first'-Ansatzes prinzipiell um den Faktor 1000 schlechter als bei klassischen Webseiten.",
+      "Es läuft ausschließlich auf veralteten Python 2.7-Umgebungen."
     ],
-    "correctIndex": 1,
+    "correctIndex": 0,
     "explanation": "Da FastHTML ein schlankes, junges Framework ist (0.x-Version), bringt es keine riesige Palette an vorgefertigten Enterprise-Komponenten mit. Themen wie Benutzerverwaltung (Auth), granulare Rechte und Serverbetrieb liegen komplett in der Verantwortung des Entwicklers (Eigenleistung), während eine vollumfängliche BI-Suite diese standardmäßig mitliefert."
   },
   {
@@ -75,12 +75,12 @@
     "difficulty": "Schwer",
     "question": "Aus welchen vier technischen Schichten baut sich die Infrastruktur einer FastHTML-Anwendung vom Netzwerkanschluss bis zum Fachcode auf?",
     "options": [
-      "1. WSGI, 2. Gunicorn, 3. Django-REST, 4. Jinja2",
-      "1. ASGI (Schnittstellenvereinbarung), 2. Uvicorn (Serverprozess), 3. Starlette (Web-Werkzeugschicht), 4. FastHTML (HTML-Ebene und Fachcode)",
       "1. HTTP/3, 2. Node.js, 3. Express, 4. React",
-      "1. TCP/IP, 2. Apache Server, 3. PHP-FPM, 4. Laravel"
+      "1. TCP/IP, 2. Apache Server, 3. PHP-FPM, 4. Laravel",
+      "1. ASGI (Schnittstellenvereinbarung), 2. Uvicorn (Serverprozess), 3. Starlette (Web-Werkzeugschicht), 4. FastHTML (HTML-Ebene und Fachcode)",
+      "1. WSGI, 2. Gunicorn, 3. Django-REST, 4. Jinja2"
     ],
-    "correctIndex": 1,
+    "correctIndex": 2,
     "explanation": "Zwischen dem Netzwerk und dem eigentlichen Fachcode liegen genau diese vier Schichten: ASGI definiert die asynchrone Schnittstelle; Uvicorn ist der konkrete Serverprozess, der Verbindungen annimmt; Starlette bildet die Web-Werkzeugschicht (Routen, Sessions, Requests); FastHTML thront ganz oben und liefert die HTML-Komfort-Funktionen (FastTags, HTMX-Integration), in denen der Fachcode geschrieben wird."
   },
   {
@@ -89,10 +89,10 @@
     "difficulty": "Mittel",
     "question": "Was ist die primäre Aufgabe von ASGI (Asynchronous Server Gateway Interface) im FastHTML-Stack?",
     "options": [
-      "Es berechnet die Aggregationen in pandas-Dataframes.",
+      "Es dient der Verschlüsselung von SSL-Zertifikaten direkt im Browser.",
       "Es fungiert als universelle, asynchrone Schnittstellenvereinbarung zwischen dem Webserver (z. B. Uvicorn) und der Webanwendung (Starlette/FastHTML).",
-      "Es wandelt SQL-Abfragen automatisch in NoSQL-Strukturen um.",
-      "Es dient der Verschlüsselung von SSL-Zertifikaten direkt im Browser."
+      "Es berechnet die Aggregationen in pandas-Dataframes.",
+      "Es wandelt SQL-Abfragen automatisch in NoSQL-Strukturen um."
     ],
     "correctIndex": 1,
     "explanation": "ASGI ist die moderne, asynchrone Spezifikation (Nachfolger von WSGI). Sie sorgt dafür, dass Webserver (wie Uvicorn) und Python-Web-Frameworks (wie Starlette/FastHTML) standardisiert und asynchron miteinander kommunizieren können, unabhängig von den konkreten Implementierungsdetails der einzelnen Schichten."
@@ -104,11 +104,11 @@
     "question": "Welche Kernfunktion übernimmt der Prozess 'Uvicorn' innerhalb des FastHTML-Laufzeitmodells?",
     "options": [
       "Er fungiert als Datenbank-Treiber für relationale Datenbanken.",
-      "Er nimmt als Webserver-Prozess die TCP/HTTP-Verbindungen aus dem Netzwerk an, verwaltet die Worker-Prozesse und übergibt die Anfragen an die ASGI-Anwendung.",
       "Er ist für das automatische Escaping von HTML-Tags zuständig.",
-      "Er visualisiert interaktive Grafiken im Browser des Endanwenders."
+      "Er visualisiert interaktive Grafiken im Browser des Endanwenders.",
+      "Er nimmt als Webserver-Prozess die TCP/HTTP-Verbindungen aus dem Netzwerk an, verwaltet die Worker-Prozesse und übergibt die Anfragen an die ASGI-Anwendung."
     ],
-    "correctIndex": 1,
+    "correctIndex": 3,
     "explanation": "Uvicorn ist ein blitzschneller ASGI-Webserver. Seine einzige, aber kritische Aufgabe ist es, die physikalischen Netzwerkverbindungen (HTTP-Anfragen, WebSockets) entgegenzunehmen, die Worker zu steuern und die Anfragen standardkonform an die Anwendung weiterzuleiten."
   },
   {
@@ -117,10 +117,10 @@
     "difficulty": "Schwer",
     "question": "FastHTML setzt direkt auf 'Starlette' auf. Welche Kernwerkzeuge stellt Starlette für FastHTML bereit?",
     "options": [
-      "Die mathematischen Formeln zur Standardabweichung und Varianz.",
+      "Ein Übersetzungstool, das Python-Code in echten JavaScript-Client-Code übersetzt.",
       "Das grundlegende Routing, die Repräsentation von Requests und Responses, Middleware-Support, Sessions sowie den Testclient.",
       "Ausschließend die CSS-Stylesheets für das Standard-Design.",
-      "Ein Übersetzungstool, das Python-Code in echten JavaScript-Client-Code übersetzt."
+      "Die mathematischen Formeln zur Standardabweichung und Varianz."
     ],
     "correctIndex": 1,
     "explanation": "Starlette ist ein mächtiges, aber leichtgewichtiges ASGI-Toolkit. Es liefert das gesamte Fundament für klassische Web-Funktionalitäten: Wie Routen aufgelöst werden, wie Request- und Response-Objekte aufgebaut sind, wie Cookies/Sessions verwaltet werden und wie man die App über einen Testclient automatisiert prüft."
@@ -131,12 +131,12 @@
     "difficulty": "Schwer",
     "question": "Warum ist das Verständnis des 4-Schichten-Modells (FastHTML, Starlette, Uvicorn, ASGI) für die Fehlersuche in einer BI-Anwendung von immenser praktischer Bedeutung?",
     "options": [
+      "Weil dadurch sichergestellt ist, dass nur Python-Entwickler mit Administratorrechten das Dashboard aufrufen können.",
       "Weil man dadurch weiß, ob ein Fehler in der Berechnungsformel einer Kennzahl (Fachcode) oder in den Netzwerksockets des Servers (Uvicorn) begründet liegt, was die gezielte Fehlersuche im Browser-Entwicklertool ermöglicht.",
-      "Weil Fehler in der ASGI-Schicht nur durch den Austausch der Hardware behoben werden können.",
       "Weil FastHTML bei Fehlern in Starlette automatisch die Datenbank löscht, um Datenverlust vorzubeugen.",
-      "Weil dadurch sichergestellt ist, dass nur Python-Entwickler mit Administratorrechten das Dashboard aufrufen können."
+      "Weil Fehler in der ASGI-Schicht nur durch den Austausch der Hardware behoben werden können."
     ],
-    "correctIndex": 0,
+    "correctIndex": 1,
     "explanation": "Wer die Trennung kennt, sucht gezielt dort, wo der Fehler wohnt. Ein Verbindungsfehler (Uvicorn/Netzwerk), eine falsche URL-Route (Starlette) oder ein fehlerhafter Wert in der HTML-Komponente (FastHTML/Fachcode) entstehen in unterschiedlichen Schichten. Entwickler-Werkzeuge im Browser helfen dabei, im Netzwerk-Tab genau zu sehen, an welcher Stelle die Kette bricht."
   },
   {
@@ -147,8 +147,8 @@
     "options": [
       "FastAPI kann nur mit NoSQL-Datenbanken kommunizieren, FastHTML nur mit SQLite.",
       "FastAPI liefert JSON-Verträge (APIs) für getrennte Client-Anwendungen (SPAs wie React); FastHTML ist HTML-first, rendert die UI direkt serverseitig in Python und schickt fertige HTML-Fragmente an den Browser.",
-      "FastAPI läuft ausschließlich asynchron, während FastHTML nur synchrone Blocking-Requests verarbeiten kann.",
-      "FastAPI ist für Python 2 optimiert, FastHTML erfordert Python 3.12."
+      "FastAPI ist für Python 2 optimiert, FastHTML erfordert Python 3.12.",
+      "FastAPI läuft ausschließlich asynchron, während FastHTML nur synchrone Blocking-Requests verarbeiten kann."
     ],
     "correctIndex": 1,
     "explanation": "Der fundamentale Unterschied liegt in der Antwortform: FastAPI ist 'API-first' und liefert maschinenlesbare JSON-Dokumente für getrennte Clients (die dort gerendert werden müssen). FastHTML ist 'HTML-first', bleibt auf dem Server die 'Source of Truth' für Daten und Darstellung und liefert direkt fertige visuelle Bausteine (HTML/Fragmente)."
@@ -159,12 +159,12 @@
     "difficulty": "Schwer",
     "question": "Wo liegt bei einer FastHTML-Anwendung im Vergleich zu einer FastAPI/React-Anwendung die 'Quelle der Wahrheit' für den Zustand der Benutzeroberfläche?",
     "options": [
-      "Im lokalen Speicher des Webbrowsers (LocalStorage) über JavaScript-State-Objekte.",
-      "Auf dem Server, wobei der Zustand direkt in der URL (Query-Parameter) und im generierten HTML-Markup ablesbar und reproduzierbar bleibt.",
       "In einer verteilten Cloud-Infrastruktur, die sekündlich Backups auf GitHub erstellt.",
-      "In den CSS-Klassen, die den Zustand über Farbänderungen codieren."
+      "In den CSS-Klassen, die den Zustand über Farbänderungen codieren.",
+      "Im lokalen Speicher des Webbrowsers (LocalStorage) über JavaScript-State-Objekte.",
+      "Auf dem Server, wobei der Zustand direkt in der URL (Query-Parameter) und im generierten HTML-Markup ablesbar und reproduzierbar bleibt."
     ],
-    "correctIndex": 1,
+    "correctIndex": 3,
     "explanation": "Bei FastHTML bleibt der Server die Quelle der Wahrheit. Der Filterzustand (z. B. ausgewählte Jahre oder Regionen) wird in die URL geschrieben und als Query-Parameter an den Server übertragen. Das Server-Modul rendert das exakte Markup passend zu diesem Zustand. Es gibt keine komplexe, separate Client-Zustandsverwaltung im Browser-JS."
   },
   {
@@ -173,12 +173,12 @@
     "difficulty": "Mittel",
     "question": "Ist es möglich, FastHTML und FastAPI parallel in einem gemeinsamen Unternehmensprojekt einzusetzen?",
     "options": [
-      "Nein, da beide Frameworks dieselben Ports blockieren und sich gegenseitig abstürzen lassen.",
       "Ja, dies ist hervorragend möglich: Die HTML-Benutzeroberfläche für die Analysten wird in FastHTML realisiert, während parallel eine schmale API-Schnittstelle über FastAPI für Partner- oder Maschinenzugriffe bereitgestellt wird.",
+      "Nein, weil FastHTML alle HTTP-Anfragen abfängt und FastAPI die Kommunikation verweigert.",
       "Ja, aber nur, wenn das gesamte Projekt zuvor in JavaScript übersetzt wurde.",
-      "Nein, weil FastHTML alle HTTP-Anfragen abfängt und FastAPI die Kommunikation verweigert."
+      "Nein, da beide Frameworks dieselben Ports blockieren und sich gegenseitig abstürzen lassen."
     ],
-    "correctIndex": 1,
+    "correctIndex": 0,
     "explanation": "Beide Ansätze schließen sich keineswegs aus. Sie beantworten lediglich unterschiedliche Anforderungen. Man kann wunderbar ein FastHTML-Projekt für das interaktive Mitarbeiter-Dashboard aufsetzen und daneben FastAPI-Routen für den automatisierten Datenexport (JSON) an Partnersysteme anbieten."
   },
   {
@@ -187,10 +187,10 @@
     "difficulty": "Mittel",
     "question": "Nach welchem primären Kriterium sollte entschieden werden, ob für ein BI-Dashboard FastHTML oder eine getrennte Client-Server-Architektur (API + SPA) gewählt wird?",
     "options": [
-      "Nach der bevorzugten Schriftart im Design-Handbuch.",
-      "Nach der benötigten Antwortform (HTML-Fragmente vs. JSON-Verträge) und der Frage, ob eine eigene, hochkomplexe Client-Logik im Browser zwingend notwendig ist oder ob eine serverseitige Steuerung ausreicht.",
       "Ausschließlich nach der Größe der CSV-Rohdaten auf dem Server.",
-      "Danach, ob die Anwendung auf mobilen Endgeräten im Darkmode angezeigt werden soll."
+      "Nach der benötigten Antwortform (HTML-Fragmente vs. JSON-Verträge) und der Frage, ob eine eigene, hochkomplexe Client-Logik im Browser zwingend notwendig ist oder ob eine serverseitige Steuerung ausreicht.",
+      "Danach, ob die Anwendung auf mobilen Endgeräten im Darkmode angezeigt werden soll.",
+      "Nach der bevorzugten Schriftart im Design-Handbuch."
     ],
     "correctIndex": 1,
     "explanation": "Die Wahl folgt der benötigten Antwortform und der Verteilung der Verantwortung. Wer eine reine Fach-Oberfläche für Datenanalysen ohne eigene, komplexe Client-Zustands-Engines im Browser braucht, spart mit FastHTML enorm viel Komplexität. Wer eine generische API für Drittentwickler baut, greift zu FastAPI."
@@ -201,10 +201,10 @@
     "difficulty": "Mittel",
     "question": "Wie bilden 'FastTags' HTML-Strukturen in FastHTML im Python-Code ab?",
     "options": [
-      "Sie übersetzen Python-Kommentare mithilfe von regulären Ausdrücken zur Laufzeit in CSS.",
-      "Sie nutzen Python-Klassen und Funktionsaufrufe, bei denen der Tag-Name (z. B. Div) zur Funktion wird, Argumente zu HTML-Attributen werden und Verschachtelungen durch Positionsargumente abgebildet werden.",
       "Sie erfordern das Schreiben von rohem HTML in großen, dreifach gecoteten Python-Strings.",
-      "Sie verwenden XML-Parser, um HTML-Dateien zur Laufzeit aus dem Internet nachzuladen."
+      "Sie nutzen Python-Klassen und Funktionsaufrufe, bei denen der Tag-Name (z. B. Div) zur Funktion wird, Argumente zu HTML-Attributen werden und Verschachtelungen durch Positionsargumente abgebildet werden.",
+      "Sie verwenden XML-Parser, um HTML-Dateien zur Laufzeit aus dem Internet nachzuladen.",
+      "Sie übersetzen Python-Kommentare mithilfe von regulären Ausdrücken zur Laufzeit in CSS."
     ],
     "correctIndex": 1,
     "explanation": "FastTags machen HTML zu nativem Python: Jedes HTML-Element ist eine Python-Funktion (z. B. `H1()`, `Div()`, `P()`). Der Code zeigt visuell dieselbe Einrückung und Struktur, die später im Browser ankommt. So bleibt die UI im Code extrem lesbar und profitiert von allen Vorteilen von Python (Typisierung, Schleifen, Funktionen)."
@@ -215,8 +215,8 @@
     "difficulty": "Mittel",
     "question": "Gegeben ist der Python-Code: `Div(H1('Dashboard'), P('Datenstand 2026'))`. Was generiert FastHTML daraus für den Browser?",
     "options": [
-      "Ein JSON-Dokument: `{'div': {'h1': 'Dashboard', 'p': 'Datenstand 2026'}}`",
       "Eine Fehlermeldung, da Funktionen in Python nicht verschachtelt aufgerufen werden dürfen.",
+      "Ein JSON-Dokument: `{'div': {'h1': 'Dashboard', 'p': 'Datenstand 2026'}}`",
       "Den HTML-Code: `<div><h1>Dashboard</h1><p>Datenstand 2026</p></div>`",
       "Einen formatierten Textstring ohne jegliche HTML-Tags."
     ],
@@ -229,9 +229,9 @@
     "difficulty": "Mittel",
     "question": "Wie werden HTML-Attribute wie `id='main'`, `class='container'` oder `action='/submit'` in FastTags als Python-Code übergeben?",
     "options": [
-      "Sie müssen als spezieller JSON-String am Ende der Funktion übergeben werden.",
-      "Sie werden als benannte Argumente (Keyword Arguments) direkt in den Funktionsaufruf geschrieben, z. B. `Div(id='main', cls='container', action='/submit')`.",
       "Sie dürfen in Python nicht definiert werden, sondern müssen nachträglich per JavaScript injiziert werden.",
+      "Sie werden als benannte Argumente (Keyword Arguments) direkt in den Funktionsaufruf geschrieben, z. B. `Div(id='main', cls='container', action='/submit')`.",
+      "Sie müssen als spezieller JSON-String am Ende der Funktion übergeben werden.",
       "Sie werden über globale Systemvariablen definiert."
     ],
     "correctIndex": 1,
@@ -243,10 +243,10 @@
     "difficulty": "Schwer",
     "question": "Welcher fundamentale softwaretechnische Vorteil ergibt sich daraus, dass FastTags gewöhnliche Python-Objekte und -Funktionen sind?",
     "options": [
-      "Es wird kein Webbrowser mehr benötigt, um das Dashboard anzuzeigen.",
+      "Sämtlicher Python-Code wird dadurch immun gegen Syntax-Fehler.",
       "Komponenten (wie z. B. ein standardisiertes Filterformular) lassen sich als gewöhnliche Python-Funktionen schreiben, mit Parametern dynamisch steuern, an beliebig vielen Stellen aufrufen und direkt in Unit-Tests prüfen.",
       "Die Ladezeit der Seite wird automatisch auf genau 0 Millisekunden verkürzt.",
-      "Sämtlicher Python-Code wird dadurch immun gegen Syntax-Fehler."
+      "Es wird kein Webbrowser mehr benötigt, um das Dashboard anzuzeigen."
     ],
     "correctIndex": 1,
     "explanation": "Weil eine Komponente in FastHTML einfach eine Python-Funktion ist, entfällt der Bedarf für proprietäre Template-Sprachen. Ein Filterformular ist eine Funktion, die eine Liste von Optionen als Parameter annimmt und FastTags zurückgibt. Diese Funktion kann in Standard-Unit-Tests wie `pytest` aufgerufen und ihr Rückgabewert auf Korrektheit geprüft werden."
@@ -258,11 +258,11 @@
     "question": "Betrachten Sie das FastHTML-Beispiel: `Form(Label('Jahr', Select(*year_options, name='year')), action='/db', method='get')`. Welche Funktion übernimmt das Zeichen `*` vor `year_options`?",
     "options": [
       "Es ist ein Multiplikationsoperator, der die Optionen verdoppelt.",
+      "Es deklariert die Variable als globalen Zeiger (Pointer).",
       "Es entpackt die Liste `year_options` (welche z. B. aus mehreren `Option(...)`-FastTags besteht) als Positionsargumente in die `Select`-Funktion.",
-      "Es maskiert die Optionen, um SQL-Injections zu verhindern.",
-      "Es deklariert die Variable als globalen Zeiger (Pointer)."
+      "Es maskiert die Optionen, um SQL-Injections zu verhindern."
     ],
-    "correctIndex": 1,
+    "correctIndex": 2,
     "explanation": "Das Sternchen `*` ist der Standard-Entpackungsoperator in Python (Argument Unpacking). Es nimmt eine Liste oder ein Tupel von FastTags (z. B. `[Option('2018'), Option('2019')]`) und übergibt sie als einzelne, fortlaufende Positionsargumente an die `Select`-Funktion, damit diese als Kindelemente des `<select>`-Tags gerendert werden."
   },
   {
@@ -271,12 +271,12 @@
     "difficulty": "Schwer",
     "question": "Welche der folgenden Aussagen beschreibt die Ausgabe von FastTags an den Browser korrekt?",
     "options": [
-      "FastTags erzeugen ein spezielles Binärformat, das nur von HTMX verarbeitet werden kann.",
       "Das Ergebnis ist standardkonformes, sauberes HTML; der Browser erhält kein proprietäres Framework-Format und benötigt keine FastHTML-Laufzeitumgebung.",
       "FastTags betten den gesamten Python-Quellcode lesbar in den HTML-Head ein.",
+      "FastTags erzeugen ein spezielles Binärformat, das nur von HTMX verarbeitet werden kann.",
       "Die Ausgabe besteht aus verschlüsselten XML-Dateien, die serverseitig decodiert werden müssen."
     ],
-    "correctIndex": 1,
+    "correctIndex": 0,
     "explanation": "FastTags sind lediglich eine komfortable Python-Syntax (DSL) zur HTML-Generierung. Die fertige Antwort, die den Server verlässt, ist reines, standardkonformes HTML. Für den Browser ist es absolut unsichtbar, ob dieses HTML auf dem Server durch ein Python-Skript, ein PHP-Skript oder eine statische Datei erzeugt wurde."
   },
   {
@@ -285,12 +285,12 @@
     "difficulty": "Mittel",
     "question": "Warum müssen HTMX-Attribute im FastHTML-Python-Code mit Unterstrichen geschrieben werden (z. B. `hx_get='/kpi'`), obwohl sie im Browser als Bindestriche ankommen (z. B. `hx-get='/kpi'`)?",
     "options": [
-      "Weil Bindestriche im Browser ab August 2026 aus Sicherheitsgründen verboten sind.",
-      "Weil der Bindestrich `-` in Python der Subtraktionsoperator ist und in Variablennamen oder Funktionsparametern syntaktisch nicht erlaubt ist.",
+      "Weil Unterstriche im Netzwerk-Protokoll schneller übertragen werden als Bindestriche.",
       "Weil FastHTML Unterstriche nutzt, um die Daten automatisch in einer SQL-Datenbank zu verschlüsseln.",
-      "Weil Unterstriche im Netzwerk-Protokoll schneller übertragen werden als Bindestriche."
+      "Weil der Bindestrich `-` in Python der Subtraktionsoperator ist und in Variablennamen oder Funktionsparametern syntaktisch nicht erlaubt ist.",
+      "Weil Bindestriche im Browser ab August 2026 aus Sicherheitsgründen verboten sind."
     ],
-    "correctIndex": 1,
+    "correctIndex": 2,
     "explanation": "In Python sind Bindestriche in Bezeichnern (wie Funktionsparametern) nicht erlaubt, da sie als Minuszeichen interpretiert würden. FastHTML konvertiert daher alle Keyword-Argumente, die Unterstriche enthalten, beim Rendern automatisch in die entsprechende HTML-Schreibweise mit Bindestrichen (z. B. `hx_get` wird zu `hx-get`, `hx_target` zu `hx-target`)."
   },
   {
@@ -299,12 +299,12 @@
     "difficulty": "Schwer",
     "question": "Was erzeugt der Aufruf `Div(H3('Umsatz'), hx_get='/kpi?jahr=2018')` im an den Browser gesendeten HTML?",
     "options": [
-      "`<div hx_get=\"/kpi?jahr=2018\"><h3>Umsatz</h3></div>`",
       "`<div hx-get=\"/kpi?jahr=2018\"><h3>Umsatz</h3></div>`",
+      "`<kpi-div jahr=\"2018\">Umsatz</kpi-div>`",
       "`<div class=\"kpi\">Umsatz (2018)</div>`",
-      "`<kpi-div jahr=\"2018\">Umsatz</kpi-div>`"
+      "`<div hx_get=\"/kpi?jahr=2018\"><h3>Umsatz</h3></div>`"
     ],
-    "correctIndex": 1,
+    "correctIndex": 0,
     "explanation": "FastHTML konvertiert den Python-Parameter `hx_get` in das korrekte HTML-Attribut `hx-get`. Die Kind-Elemente (das `H3`-Tag) werden wie gewohnt innerhalb des `<div>`-Containers platziert. Das Ergebnis ist valides HTML mit einem aktiven HTMX-Attribut."
   },
   {
@@ -313,10 +313,10 @@
     "difficulty": "Mittel",
     "question": "Welche Regel gilt allgemein für FastHTML-Parameter, die in HTML-Attribute mit Bindestrichen übersetzt werden sollen?",
     "options": [
-      "Man muss alle Bindestriche durch das Wort 'minus' ersetzen (z. B. `hxminusget`).",
+      "Es gibt keine Regel; FastHTML unterstützt standardmäßig keine Attribute mit Bindestrichen.",
       "Jeder Unterstrich im Argumentnamen des FastTags wird beim HTML-Rendering automatisch in einen Bindestrich konvertiert.",
       "Man muss die Attribute als Roh-Strings in einer separaten XML-Datei deklarieren.",
-      "Es gibt keine Regel; FastHTML unterstützt standardmäßig keine Attribute mit Bindestrichen."
+      "Man muss alle Bindestriche durch das Wort 'minus' ersetzen (z. B. `hxminusget`)."
     ],
     "correctIndex": 1,
     "explanation": "FastHTML wendet ein systematisches Mapping an: Da Python-Schlüsselwortargumente keine Bindestriche enthalten dürfen, wird jeder Unterstrich (`_`) beim Schreiben des HTML-Tags auf dem Server automatisch in einen Bindestrich (`-`) übersetzt. Dies gilt für alle HTMX-Attribute (`hx_get`, `hx_target`, `hx_swap` etc.) sowie für Standard-HTML-Attribute (z. B. `http_equiv`)."
@@ -329,8 +329,8 @@
     "options": [
       "Es blockiert sämtliche Anfragen, die Sonderzeichen enthalten, mit einem HTTP 500 Fehler.",
       "Es maskiert (escapet) alle übergebenen Zeichenketten standardmäßig automatisch, sodass z. B. ein `<script>`-Tag als harmloser Text im Browser angezeigt und nicht ausgeführt wird.",
-      "Es führt den JavaScript-Code auf dem Server in einer Sandbox aus, um dessen Gefährlichkeit zu testen.",
-      "Es zwingt den Anwender, sich vor jedem Filtervorgang mit einem Zwei-Faktor-Code zu authentifizieren."
+      "Es zwingt den Anwender, sich vor jedem Filtervorgang mit einem Zwei-Faktor-Code zu authentifizieren.",
+      "Es führt den JavaScript-Code auf dem Server in einer Sandbox aus, um dessen Gefährlichkeit zu testen."
     ],
     "correctIndex": 1,
     "explanation": "Sicherheit ist in FastHTML standardmäßig voreingestellt ('Secure by Default'). Alle Strings, die als Inhalt an FastTags übergeben werden, durchlaufen automatisch einen HTML-Entity-Escaping-Prozess. Zeichen wie `<` und `>` werden zu `&lt;` und `&gt;` umgewandelt, wodurch eingeschleuste Skripte im Browser wirkungslos verpuffen."
@@ -342,11 +342,11 @@
     "question": "Wann und wie darf das `Safe`-Konstrukt in FastHTML verwendet werden, und welches Risiko ist damit verbunden?",
     "options": [
       "Es muss bei jeder mathematischen Formel verwendet werden, um Rundungsfehler in Python zu verhindern.",
-      "Es wird verwendet, um das automatische Escaping bewusst zu umgehen (z. B. wenn man vertrauenswürdiges, fertig gerendertes HTML wie Plotly-Diagramme einbinden will). Das Risiko ist, dass bei unvorsichtiger Nutzung ungeprüfter User-Inputs XSS-Sicherheitslücken entstehen.",
+      "Es kennzeichnet Variablen, die im Arbeitsspeicher des Servers nicht überschrieben werden dürfen.",
       "Es dient der Verschlüsselung von Passwörtern in der SQLite-Datenbank.",
-      "Es kennzeichnet Variablen, die im Arbeitsspeicher des Servers nicht überschrieben werden dürfen."
+      "Es wird verwendet, um das automatische Escaping bewusst zu umgehen (z. B. wenn man vertrauenswürdiges, fertig gerendertes HTML wie Plotly-Diagramme einbinden will). Das Risiko ist, dass bei unvorsichtiger Nutzung ungeprüfter User-Inputs XSS-Sicherheitslücken entstehen."
     ],
-    "correctIndex": 1,
+    "correctIndex": 3,
     "explanation": "Das `Safe(...)`-Konstrukt ist eine bewusste Sicherheitsausnahme. Es teilt FastHTML mit: 'Dieser String enthält bereits fertiges, sicheres HTML und soll nicht maskiert werden.' Das ist z. B. für interaktive Plotly-Diagramme oder komplexe HTML-Komponenten zwingend erforderlich. Es darf jedoch niemals direkt auf ungeprüfte Benutzereingaben (wie Suchfelder oder Formularwerte) angewendet werden, da dies Tür und Tor für XSS-Angriffe öffnet."
   },
   {
@@ -370,11 +370,11 @@
     "question": "Wie wird eine bewusste Sicherheitsausnahme im FastHTML-Code visuell im Quellcode kenntlich gemacht?",
     "options": [
       "Durch das Voranstellen eines rote Ausrufezeichens im Funktionsnamen.",
-      "Durch das explizite Wrapping des Strings in die Funktion `Safe(html_inhalt)`.",
       "Durch die Deklaration der Route als `@app.unsafe`.",
-      "Durch das Schreiben des gesamten Python-Skripts in Großbuchstaben."
+      "Durch das Schreiben des gesamten Python-Skripts in Großbuchstaben.",
+      "Durch das explizite Wrapping des Strings in die Funktion `Safe(html_inhalt)`."
     ],
-    "correctIndex": 1,
+    "correctIndex": 3,
     "explanation": "Sicherheitskritische Ausnahmen sind in FastHTML nicht versteckt, sondern im Code sofort sichtbar: Wer HTML-Escaping umgehen will, muss die Funktion `Safe(...)` importieren und den String aktiv darin einpacken. Bei Code-Reviews stechen diese Stellen sofort ins Auge, was die Absicherung der App massiv erleichtert."
   },
   {
@@ -384,11 +384,11 @@
     "question": "Wie verarbeitet FastHTML dynamische Pfad-Parameter in Routen (z. B. `@rt('/kpi/{jahr}')`), und welche Rolle spielen Python-Typannotationen dabei?",
     "options": [
       "Typannotationen werden ignoriert; alle Parameter kommen immer als rohe Strings in der Funktion an und müssen manuell gecastet werden.",
-      "FastHTML nutzt die Typannotationen (z. B. `def get(jahr: int)`), um die URL-Parameter automatisch in den Zieltyp zu konvertieren und wirft bei ungültigen Typen (z. B. '{jahr}' = 'abc') automatisch einen Validierungsfehler.",
+      "Dynamische Pfade sind in FastHTML nicht erlaubt; jeder Filterwert erfordert eine eigene, statisch programmierte Datei.",
       "Typannotationen dienen nur der Dokumentation und haben keinen Einfluss auf die Laufzeit.",
-      "Dynamische Pfade sind in FastHTML nicht erlaubt; jeder Filterwert erfordert eine eigene, statisch programmierte Datei."
+      "FastHTML nutzt die Typannotationen (z. B. `def get(jahr: int)`), um die URL-Parameter automatisch in den Zieltyp zu konvertieren und wirft bei ungültigen Typen (z. B. '{jahr}' = 'abc') automatisch einen Validierungsfehler."
     ],
-    "correctIndex": 1,
+    "correctIndex": 3,
     "explanation": "FastHTML nutzt Pythons moderne Typannotationen für ein automatisches Parsing und Validieren. Wenn in der Route `{jahr}` definiert ist und die Funktion `def get(jahr: int)` deklariert, konvertiert FastHTML den String aus der URL automatisch in ein Python-Integer. Übergibt ein Nutzer einen ungültigen Typ (z. B. einen Text), schlägt die Validierung direkt fehl, was unzulässige Werte abfängt."
   },
   {
@@ -397,12 +397,12 @@
     "difficulty": "Mittel",
     "question": "Wie werden Query-Parameter (z. B. `?year=2018&region=CH`) an die Routen-Funktion in FastHTML übergeben?",
     "options": [
-      "Sie müssen mühsam aus dem globalen `os.environ`-Dictionary ausgelesen werden.",
       "Sie werden einfach als gleichnamige Argumente in der Signatur der Routen-Funktion definiert (z. B. `def get(year: int, region: str)`).",
+      "Query-Parameter werden von FastHTML grundsätzlich abgeschnitten.",
       "Man muss eine eigene JavaScript-Funktion schreiben, um die Parameter per POST-Body zu senden.",
-      "Query-Parameter werden von FastHTML grundsätzlich abgeschnitten."
+      "Sie müssen mühsam aus dem globalen `os.environ`-Dictionary ausgelesen werden."
     ],
-    "correctIndex": 1,
+    "correctIndex": 0,
     "explanation": "FastHTML macht den Zugriff auf Query-Parameter extrem einfach. Man deklariert die Parameter einfach als Argumente in der Python-Funktionssignatur. Das Framework matcht die URL-Parameter automatisch mit den Funktionsparametern, übernimmt die Typkonvertierung und stellt die Werte direkt in der Funktion bereit."
   },
   {
@@ -425,12 +425,12 @@
     "difficulty": "Mittel",
     "question": "Was ist das grundlegende Arbeitsprinzip von HTMX auf der Client-Seite eines FastHTML-Dashboards?",
     "options": [
+      "Es baut eine dauerhafte Peer-to-Peer-Verbindung zwischen allen aktiven Dashboard-Anwendern auf.",
       "Es kompiliert den gesamten Python-Code in WebAssembly, um Berechnungen im Browser zu beschleunigen.",
-      "Es ermöglicht den asynchronen Austausch von serverseitig gerenderten HTML-Fragmenten direkt im Browser, ohne dass die gesamte Webseite neu geladen werden muss.",
       "Es ersetzt alle CSS-Klassen durch ein proprietäres Vektor-Layout.",
-      "Es baut eine dauerhafte Peer-to-Peer-Verbindung zwischen allen aktiven Dashboard-Anwendern auf."
+      "Es ermöglicht den asynchronen Austausch von serverseitig gerenderten HTML-Fragmenten direkt im Browser, ohne dass die gesamte Webseite neu geladen werden muss."
     ],
-    "correctIndex": 1,
+    "correctIndex": 3,
     "explanation": "HTMX erweitert das klassische HTML-Modell. Anstatt bei jeder Interaktion (z. B. Filter anwenden) die gesamte Seite inklusive Header, Navigation und Skripten neu zu laden, sendet HTMX eine asynchrone Anfrage (AJAX), empfängt ein kleines HTML-Fragment vom Server und tauscht dieses gezielt an einer definierten Stelle (Target) aus."
   },
   {
@@ -439,12 +439,12 @@
     "difficulty": "Schwer",
     "question": "Welche fünf zentralen HTMX-Attribute steuern den asynchronen Austausch von HTML-Fragmenten auf einer Webseite?",
     "options": [
-      "1. hx-post, 2. hx-secure, 3. hx-style, 4. hx-route, 5. hx-db",
       "1. hx-get (Quelle/Pfad), 2. hx-target (Ziel-Container), 3. hx-swap (Austauschstrategie), 4. hx-trigger (auslösendes Ereignis), 5. hx-indicator (Ladeanzeige)",
       "1. hx-ajax, 2. hx-div, 3. hx-replace, 4. hx-click, 5. hx-spinner",
-      "1. hx-read, 2. hx-write, 3. hx-delete, 4. hx-update, 5. hx-commit"
+      "1. hx-read, 2. hx-write, 3. hx-delete, 4. hx-update, 5. hx-commit",
+      "1. hx-post, 2. hx-secure, 3. hx-style, 4. hx-route, 5. hx-db"
     ],
-    "correctIndex": 1,
+    "correctIndex": 0,
     "explanation": "Diese fünf Attribute bilden das Herzstück von HTMX: `hx-get` (oder hx-post) definiert, von wo das neue Fragment geladen wird; `hx-target` bestimmt per CSS-Selektor das Ziel-Element; `hx-swap` legt fest, wie das Ziel ersetzt wird (z. B. innerHTML oder outerHTML); `hx-trigger` definiert das Event (z. B. click, change); und `hx-indicator` zeigt während der Latenzzeit eine visuelle Ladeanzeige."
   },
   {
@@ -454,11 +454,11 @@
     "question": "Was passiert, wenn bei einem HTMX-Aufruf das Attribut `hx-target='#kpis'` gesetzt ist?",
     "options": [
       "Das empfangene HTML-Fragment wird in einer neuen SQLite-Tabelle namens 'kpis' gespeichert.",
+      "Die CSS-Stile für die KPI-Boxen werden gelöscht.",
       "Das vom Server gelieferte HTML-Fragment wird gezielt in das HTML-Element mit der ID `kpis` eingefügt.",
-      "Der Browser öffnet ein neues Fenster mit dem Namen 'kpis'.",
-      "Die CSS-Stile für die KPI-Boxen werden gelöscht."
+      "Der Browser öffnet ein neues Fenster mit dem Namen 'kpis'."
     ],
-    "correctIndex": 1,
+    "correctIndex": 2,
     "explanation": "Das Attribut `hx-target` erwartet einen CSS-Selektor. Mit `#kpis` wird das HTML-Element mit der ID `kpis` (z. B. `<div id=\"kpis\">`) als Ziel für das vom Server zurückgegebene HTML-Fragment deklariert."
   },
   {
@@ -467,12 +467,12 @@
     "difficulty": "Schwer",
     "question": "Was ist der genaue Unterschied zwischen den HTMX-Austauschstrategien `hx-swap='innerHTML'` und `hx-swap='outerHTML'`?",
     "options": [
-      "innerHTML verändert nur den Textinhalt ohne HTML-Tags; outerHTML verändert nur das CSS.",
-      "innerHTML ersetzt den gesamten Inhalt innerhalb des Ziel-Elements (das umschließende Tag bleibt bestehen); outerHTML ersetzt das gesamte Ziel-Element inklusive seiner eigenen umschließenden Tags durch das neue Fragment.",
+      "Es gibt keinen Unterschied; beide Begriffe sind vollkommen synonym.",
       "innerHTML ist nur für verschlüsselte Verbindungen zulässig; outerHTML für alle Verbindungen.",
-      "Es gibt keinen Unterschied; beide Begriffe sind vollkommen synonym."
+      "innerHTML ersetzt den gesamten Inhalt innerhalb des Ziel-Elements (das umschließende Tag bleibt bestehen); outerHTML ersetzt das gesamte Ziel-Element inklusive seiner eigenen umschließenden Tags durch das neue Fragment.",
+      "innerHTML verändert nur den Textinhalt ohne HTML-Tags; outerHTML verändert nur das CSS."
     ],
-    "correctIndex": 1,
+    "correctIndex": 2,
     "explanation": "Der Unterschied ist strukturell kritisch: Bei `innerHTML` bleibt der Container selbst (z. B. `<div id=\"my-container\">`) erhalten, und nur seine Kind-Elemente werden ausgetauscht. Bei `outerHTML` wird das Element selbst mitsamt seinen Attributen und dem Tag komplett aus dem DOM gelöscht und durch die Server-Antwort ersetzt."
   },
   {
@@ -481,12 +481,12 @@
     "difficulty": "Schwer",
     "question": "Warum ist der Einsatz von Entprellung (z. B. `hx_trigger='keyup delay:500ms'`) bei einem Text-Suchfeld im Dashboard absolut notwendig?",
     "options": [
-      "Weil der Server sonst bei jedem einzelnen Tastendruck des Nutzers sofort eine Datenbankabfrage startet, was bei schnellem Tippen zu einer massiven Überlastung des Servers führt.",
       "Weil die Zeichen sonst im Browser rückwärts getippt werden.",
       "Weil Tastatureingaben in FastHTML grundsätzlich verschlüsselt werden müssen.",
-      "Damit die Autovervollständigung des Browsers deaktiviert wird."
+      "Damit die Autovervollständigung des Browsers deaktiviert wird.",
+      "Weil der Server sonst bei jedem einzelnen Tastendruck des Nutzers sofort eine Datenbankabfrage startet, was bei schnellem Tippen zu einer massiven Überlastung des Servers führt."
     ],
-    "correctIndex": 0,
+    "correctIndex": 3,
     "explanation": "Ohne Entprellung (delay) würde jeder Tastenschlag unverzüglich einen HTTP-Request und damit eine teure Serverberechnung auslösen. Ein Suchbegriff wie 'Vertrieb' würde 8 aufeinanderfolgende Requests feuern. Mit `delay:500ms` wartet HTMX, bis der Nutzer eine halbe Sekunde lang nicht mehr getippt hat, und sendet erst dann den finalen, konsolidierten Request."
   },
   {
@@ -495,12 +495,12 @@
     "difficulty": "Mittel",
     "question": "Welchem Zweck dient das Attribut `hx-indicator` im Kontext von interaktiven KPI-Dashboards?",
     "options": [
-      "Es misst die Fehlerquote der Datenbankverbindung.",
-      "Es blendet während der asynchronen Datenübertragung (Request läuft) eine Ladeanzeige (z. B. einen Spinner oder Text 'Lädt...') ein und danach automatisch wieder aus, um dem Nutzer ein flüssiges Feedback zu geben.",
+      "Es markiert die Achsenbeschriftungen im Plotly-Diagramm.",
       "Es zeigt an, ob der Anwender Administrator-Rechte besitzt.",
-      "Es markiert die Achsenbeschriftungen im Plotly-Diagramm."
+      "Es misst die Fehlerquote der Datenbankverbindung.",
+      "Es blendet während der asynchronen Datenübertragung (Request läuft) eine Ladeanzeige (z. B. einen Spinner oder Text 'Lädt...') ein und danach automatisch wieder aus, um dem Nutzer ein flüssiges Feedback zu geben."
     ],
-    "correctIndex": 1,
+    "correctIndex": 3,
     "explanation": "In modernen Web-Apps ist unmittelbares Feedback essenziell. Da Serverabfragen (z. B. das Aggregieren von Millionen Datenzeilen) Sekundenbruchteile dauern können, blendet `hx-indicator` während dieser Latenzzeit ein Lade-Element ein, damit der Anwender weiß, dass seine Anfrage im Hintergrund verarbeitet wird."
   },
   {
@@ -509,12 +509,12 @@
     "difficulty": "Schwer",
     "question": "Was versteht man unter dem Begriff 'Progressive Enhancement' im Kontext von FastHTML und wie wird ein robuster Fallback für den Fall realisiert, dass JavaScript im Browser deaktiviert ist?",
     "options": [
-      "Dass die App bei deaktiviertem JS automatisch ein Python-Skript auf dem PC des Anwenders installiert.",
       "Dass die Anwendung auf semantischem HTML (Formularen mit action und method) aufbaut, das auch ohne JS vollkommen funktionsfähig ist; HTMX fängt diese Requests bei aktivem JS lediglich ab und verbessert die Interaktion asynchron.",
-      "Dass das Dashboard nur bei schnellen Internetverbindungen geladen wird.",
-      "Dass der Server alle Berechnungen einstellt, sobald JavaScript deaktiviert wird."
+      "Dass der Server alle Berechnungen einstellt, sobald JavaScript deaktiviert wird.",
+      "Dass die App bei deaktiviertem JS automatisch ein Python-Skript auf dem PC des Anwenders installiert.",
+      "Dass das Dashboard nur bei schnellen Internetverbindungen geladen wird."
     ],
-    "correctIndex": 1,
+    "correctIndex": 0,
     "explanation": "Progressive Enhancement bedeutet, dass die Basisfunktionalität immer auf solidem Standard-HTML aufbaut. Ein Formular deklariert `action='/dashboard'` und `method='get'`. Hat der Nutzer JS blockiert, funktioniert das Absenden und Filtern per klassischem Seiten-Reload einwandfrei. Erst bei aktivem JS klinkt sich HTMX ein und wertet das Benutzererlebnis asynchron auf."
   },
   {
@@ -523,12 +523,12 @@
     "difficulty": "Schwer",
     "question": "Wie unterscheidet eine FastHTML-Routenfunktion, ob eine Anfrage ein klassischer Seitenaufruf (z. B. Lesezeichen) oder ein asynchroner HTMX-Fragmentaustausch ist?",
     "options": [
-      "Der Browser sendet bei HTMX-Anfragen automatisch den speziellen HTTP-Header 'HX-Request: true' mit; die Route liest diesen Header aus und entscheidet, ob sie die ganze Seite oder nur das Fragment zurückgibt.",
       "HTMX nutzt ein anderes Netzwerk-Protokoll (FTP statt HTTP).",
-      "Die Route muss für jeden Client eine eigene IP-Adresse reservieren.",
-      "Der Unterschied wird über die Farbe des Buttons im Dashboard ermittelt."
+      "Der Browser sendet bei HTMX-Anfragen automatisch den speziellen HTTP-Header 'HX-Request: true' mit; die Route liest diesen Header aus und entscheidet, ob sie die ganze Seite oder nur das Fragment zurückgibt.",
+      "Der Unterschied wird über die Farbe des Buttons im Dashboard ermittelt.",
+      "Die Route muss für jeden Client eine eigene IP-Adresse reservieren."
     ],
-    "correctIndex": 0,
+    "correctIndex": 1,
     "explanation": "Das ist der Kern des intelligenten Routings in FastHTML: HTMX sendet bei jedem seiner Requests automatisch den Header `HX-Request: true` mit. Die Route in Python prüft das Vorhandensein dieses Headers. Ist er gesetzt, wird nur das nackte HTML-Fragment (z. B. die neue Tabelle) gesendet; fehlt er, wird das komplette Seitengerüst inklusive Header und Navigation gerendert."
   },
   {
@@ -551,12 +551,12 @@
     "difficulty": "Schwer",
     "question": "Welches kritische, schwer reproduzierbare Fehlerbild tritt auf, wenn ein Server unter derselben URL sowohl HTML-Fragmente als auch vollständige Seiten ausgibt, jedoch auf den HTTP-Header 'Vary: HX-Request' in der Antwort verzichtet?",
     "options": [
+      "Der Server stürzt mit einer Fehlermeldung bezüglich einer Division durch Null ab.",
       "Die Datenbank wird blockiert und führt keine Schreibvorgänge mehr aus.",
       "Ein Browser- oder CDN-Cache speichert z. B. das nackte Fragment und liefert es fälschlicherweise bei einem direkten URL-Aufruf ohne Navigation aus (oder umgekehrt), was das visuelle Layout komplett zerstört.",
-      "Die Schriftgröße der Tabellenwerte verdoppelt sich bei jedem Seitenaufruf.",
-      "Der Server stürzt mit einer Fehlermeldung bezüglich einer Division durch Null ab."
+      "Die Schriftgröße der Tabellenwerte verdoppelt sich bei jedem Seitenaufruf."
     ],
-    "correctIndex": 1,
+    "correctIndex": 2,
     "explanation": "Das ist ein klassischer Fallstrick im Hypermedia-Design. Caches speichern Antworten standardmäßig primär anhand der URL. Wenn dieselbe URL mal ein Fragment und mal eine ganze Seite liefert, muss der Server im Header `Vary: HX-Request` mitsenden. Dies signalisiert dem Cache: 'Speichere zwei unterschiedliche Versionen dieser Seite ab, abhängig davon, ob die Anfrage den HX-Request-Header enthielt oder nicht!'"
   },
   {
@@ -565,10 +565,10 @@
     "difficulty": "Schwer",
     "question": "Ein Anwender klickt in einem Dashboard auf einen Filter, HTMX lädt ein Fragment. Danach kopiert er die URL, öffnet einen neuen Tab, fügt sie ein und sieht plötzlich nur noch ein unformatiertes Bruchstück der Tabelle ohne Menüleiste. Woran liegt das?",
     "options": [
-      "Der Arbeitsspeicher des Client-PCs ist vollgelaufen.",
-      "Der Server hat die Antwort im Cache zwischengespeichert, aber wegen des fehlenden 'Vary: HX-Request'-Headers wurde das Fragment anstelle der vollständigen Seite ausgeliefert.",
       "Die CSS-Dateien des Dashboards wurden von der Antiviren-Software blockiert.",
-      "Der Anwender hat die URL zu schnell eingegeben."
+      "Der Server hat die Antwort im Cache zwischengespeichert, aber wegen des fehlenden 'Vary: HX-Request'-Headers wurde das Fragment anstelle der vollständigen Seite ausgeliefert.",
+      "Der Anwender hat die URL zu schnell eingegeben.",
+      "Der Arbeitsspeicher des Client-PCs ist vollgelaufen."
     ],
     "correctIndex": 1,
     "explanation": "Genau dies ist das typische Fehlerbild des Caching-Konflikts. Der Browser hat das für HTMX gedachte Tabellenfragment im lokalen Cache gespeichert. Beim direkten Aufruf im neuen Tab (ohne HTMX) denkt der Browser, er könne das im Cache liegende Fragment verwenden – und zeigt dem Nutzer das isolierte Bruchstück anstatt der kompletten Seite."
@@ -580,11 +580,11 @@
     "question": "Wie stellt FastHTML sicher, dass Caching-Konflikte zwischen Fragmenten und vollständigen Seiten standardmäßig vermieden werden?",
     "options": [
       "Indem es die Verwendung von Browser-Caches grundsätzlich im gesamten Netzwerk sperrt.",
-      "Indem es standardmäßig entsprechende HTTP-Vary-Header in den Antworten setzt, welche den Caches mitteilen, auf welche Request-Header (wie HX-Request) sie bei der Zwischenspeicherung achten müssen.",
+      "Durch die automatische Injektion von JavaScript-Code, der den Verlauf des Browsers löscht.",
       "Indem es alle HTML-Dateien jede Sekunde unter einem neuen Namen auf dem Server speichert.",
-      "Durch die automatische Injektion von JavaScript-Code, der den Verlauf des Browsers löscht."
+      "Indem es standardmäßig entsprechende HTTP-Vary-Header in den Antworten setzt, welche den Caches mitteilen, auf welche Request-Header (wie HX-Request) sie bei der Zwischenspeicherung achten müssen."
     ],
-    "correctIndex": 1,
+    "correctIndex": 3,
     "explanation": "FastHTML ist darauf ausgelegt, dieses Problem im Unterbau abzufangen. Es setzt bei dynamischen Antworten, die auf HTMX-Anfragen reagieren, automatisch den Header `Vary: HX-Request` (oder entsprechende Caching-Sperren), um sicherzustellen, dass Caches und Browser die Antworten streng trennen."
   },
   {
@@ -594,11 +594,11 @@
     "question": "FastHTML befindet sich aktuell im '0.14.x'-Zweig (Alpha-Klassifizierung auf PyPI). Welche konkrete Gefahr ergibt sich daraus für den produktiven Betrieb von BI-Anwendungen?",
     "options": [
       "Dass das Framework ab September 2026 kostenpflichtig wird.",
-      "Dass zwischen Minor-Releases unangekündigte Breaking Changes in den APIs auftreten können, wodurch ein ungetestetes automatisches Update die Anwendung im Betrieb brechen lassen kann.",
       "Dass das Framework nur maximal 10 gleichzeitige Benutzer verarbeiten kann.",
-      "Dass der Python-Code automatisch gelöscht wird, wenn die Internetverbindung abbricht."
+      "Dass der Python-Code automatisch gelöscht wird, wenn die Internetverbindung abbricht.",
+      "Dass zwischen Minor-Releases unangekündigte Breaking Changes in den APIs auftreten können, wodurch ein ungetestetes automatisches Update die Anwendung im Betrieb brechen lassen kann."
     ],
-    "correctIndex": 1,
+    "correctIndex": 3,
     "explanation": "Ein Versionsstand unter 1.0 (0.x) bedeutet nach den Regeln des Semantic Versioning, dass die API noch nicht final eingefroren ist. Die Entwickler können gravierende Änderungen an Funktionen und Parametern vornehmen. Ein unkontrolliertes Update (z. B. auf einem Build-Server) kann dazu führen, dass die App plötzlich nicht mehr startet."
   },
   {
@@ -607,12 +607,12 @@
     "difficulty": "Schwer",
     "question": "Mit welchem bewährten Dreiklang der Python-Paketverwaltung wird das Risiko von Breaking Changes im Alpha-Status von FastHTML im professionellen BI-Umfeld beherrscht?",
     "options": [
+      "1. Verwendung von Docker ohne Versionen, 2. Ignorieren von Sicherheitsupdates, 3. Programmierung in JavaScript",
       "1. Tägliche Neuinstallation, 2. Verzicht auf Bibliotheken, 3. Manueller Code-Upload per FTP",
       "1. Exaktes Pinning der Versionen in der Konfiguration (z. B. 'python-fasthtml==0.14.9'), 2. Verwendung einer Lock-Datei für reproduzierbare Builds, 3. Einrichten eines automatisierten Test-Gates (Upgrade-Gate) vor jedem Versionswechsel.",
-      "1. Deaktivierung aller Warnmeldungen, 2. Nutzung veralteter Python-Versionen, 3. Lokales Speichern ohne Git",
-      "1. Verwendung von Docker ohne Versionen, 2. Ignorieren von Sicherheitsupdates, 3. Programmierung in JavaScript"
+      "1. Deaktivierung aller Warnmeldungen, 2. Nutzung veralteter Python-Versionen, 3. Lokales Speichern ohne Git"
     ],
-    "correctIndex": 1,
+    "correctIndex": 2,
     "explanation": "Um im professionellen Betrieb keine bösen Überraschungen zu erleben, deklariert man exakte Versionen (Pinning) in der Konfigurationsdatei (z. B. `pyproject.toml`) und friert die gesamte Abhängigkeitskette in einer Lock-Datei ein. Ein Update wird nur über ein definiertes 'Upgrade-Gate' eingespielt, bei dem alle Unit- und Integrationstests erfolgreich durchlaufen müssen."
   },
   {
@@ -621,12 +621,12 @@
     "difficulty": "Mittel",
     "question": "Warum sollte in der `pyproject.toml` eine geprüfte Python-Spanne (z. B. `requires-python = '>=3.12,<3.15'`) definiert werden?",
     "options": [
-      "Weil FastHTML sonst versucht, sich auf Smartphones zu installieren.",
       "Die untere Grenze sichert benötigte moderne Sprachmerkmale, während die obere Grenze verhindert, dass eine brandneue, ungetestete Python-Version auf dem Server die Umgebung oder Dritthersteller-Bibliotheken bricht.",
+      "Das ist eine reine Formalität ohne jeglichen praktischen Nutzen.",
       "Weil ältere Python-Versionen keine Tabellen darstellen können.",
-      "Das ist eine reine Formalität ohne jeglichen praktischen Nutzen."
+      "Weil FastHTML sonst versucht, sich auf Smartphones zu installieren."
     ],
-    "correctIndex": 1,
+    "correctIndex": 0,
     "explanation": "Das Eingrenzen der Python-Version schützt das Projekt vor Inkompatibilitäten. Viele wissenschaftliche Bibliotheken (wie pandas oder Plotly) benötigen nach dem Release einer neuen Python-Hauptversion einige Monate, um ihre Binärpakete anzupassen. Die obere Grenze schützt den Build-Server vor Fehlern durch ungetestete Laufzeiten."
   },
   {
@@ -635,12 +635,12 @@
     "difficulty": "Schwer",
     "question": "FastHTML setzt auf Starlette auf. Wie muss im Projekt reagiert werden, wenn für eine Unterbau-Bibliothek wie Starlette ein kritisches Sicherheitsupdate erscheint, FastHTML aber noch im Alpha-Status verweilt?",
     "options": [
-      "Das Sicherheitsupdate muss ignoriert werden, da FastHTML-Anwendungen prinzipiell nicht gehackt werden können.",
       "Es muss geprüft werden, ob das FastHTML-Framework mit der neuen Starlette-Sicherheitsversion kompatibel ist; die Pins müssen im Test-Gate gezielt angehoben, getestet und anschließend dokumentiert in Produktion überführt werden.",
+      "Sicherheitsupdates der Unterbau-Bibliotheken werden von Uvicorn vollautomatisch und ungeprüft im laufenden RAM-Speicher des Servers installiert.",
       "Das gesamte Framework muss sofort gelöscht und durch ein PHP-Skript ersetzt werden.",
-      "Sicherheitsupdates der Unterbau-Bibliotheken werden von Uvicorn vollautomatisch und ungeprüft im laufenden RAM-Speicher des Servers installiert."
+      "Das Sicherheitsupdate muss ignoriert werden, da FastHTML-Anwendungen prinzipiell nicht gehackt werden können."
     ],
-    "correctIndex": 1,
+    "correctIndex": 0,
     "explanation": "Das Beherrschen der Lieferkette (Software Supply Chain) erfordert ständige Aufmerksamkeit. Sicherheitskorrekturen im Unterbau (z. B. in Starlette) erzwingen regelmäßige Updates. Diese dürfen jedoch nicht blind eingespielt werden, sondern müssen im lokalen Test-Setup (Upgrade-Gate) verifiziert werden, um sicherzustellen, dass FastHTML weiterhin fehlerfrei läuft."
   },
   {
@@ -649,12 +649,12 @@
     "difficulty": "Mittel",
     "question": "Welche Rolle spielen die Bibliotheken 'pandas' und 'Plotly' im typischen FastHTML-Dashboard-Szenario?",
     "options": [
+      "pandas ersetzt den Webserver Uvicorn, während Plotly die SQL-Datenbank verwaltet.",
       "Sie dienen ausschließlich der Verschlüsselung von Passwörtern im Browser.",
       "pandas übernimmt das Einlesen, Filtern und Verdichten der Daten (Rechenwerk), während Plotly die interaktiven Diagramme zeichnet, die dann als HTML-String in das FastHTML-Seitengerüst eingebettet werden.",
-      "pandas ersetzt den Webserver Uvicorn, während Plotly die SQL-Datenbank verwaltet.",
       "Sie übersetzen das gesamte Python-Dashboard in ein Excel-Arbeitsblatt."
     ],
-    "correctIndex": 1,
+    "correctIndex": 2,
     "explanation": "Dies ist die perfekte Arbeitsteilung im modernen Python-Stack: pandas filtert und berechnet im Hintergrund die KPIs aus den Rohdaten (z. B. CSV oder SQL). Das Ergebnis wird an Plotly übergeben, welches ein interaktives, responsives Diagramm generiert. Dieses Diagramm wird als HTML exportiert und per FastHTML an den Browser geschickt."
   },
   {
@@ -677,12 +677,12 @@
     "difficulty": "Mittel",
     "question": "Warum gilt die Kombination aus pandas, Plotly und FastHTML als besonders vorteilhaft für Data-Literacy- und BI-Lehrgänge?",
     "options": [
-      "Weil dieser Stack komplett ohne Programmierkenntnisse bedient werden kann.",
-      "Weil der gesamte Datenfluss – vom Einlesen der CSV-Zeile über die statistische Berechnung bis hin zur fertigen interaktiven Visualisierung – vollständig transparent, nachvollziehbar und in einer einzigen, konsistenten Programmiersprache (Python) abgebildet ist.",
       "Weil dadurch die Notwendigkeit entfällt, SQL-Datenbanken abzufragen.",
-      "Weil dieser Stack exklusiv für Windows-Betriebssysteme entwickelt wurde."
+      "Weil dieser Stack komplett ohne Programmierkenntnisse bedient werden kann.",
+      "Weil dieser Stack exklusiv für Windows-Betriebssysteme entwickelt wurde.",
+      "Weil der gesamte Datenfluss – vom Einlesen der CSV-Zeile über die statistische Berechnung bis hin zur fertigen interaktiven Visualisierung – vollständig transparent, nachvollziehbar und in einer einzigen, konsistenten Programmiersprache (Python) abgebildet ist."
     ],
-    "correctIndex": 1,
+    "correctIndex": 3,
     "explanation": "Die Transparenz schult das Verständnis enorm: Es gibt keine 'Blackbox'-Effekte wie bei Closed-Source-BI-Suiten und keinen anstrengenden Technologiewechsel zwischen Backend (Python) und Frontend (JavaScript/React). Der Daten- und Logikfluss bleibt von A bis Z in Python sichtbar, was das Verständnis von Datenströmen (Data Literacy) massiv fördert."
   },
   {
@@ -692,11 +692,11 @@
     "question": "Was sollte im Rahmen der Semester- oder Jahrespflege einer produktiven FastHTML-Dashboard-Anwendung regelmäßig geprüft werden?",
     "options": [
       "Die Farbe des Servergehäuses im Rechenzentrum.",
-      "Die Aktualität der gepinnten Abhängigkeiten (wie pandas, sqlalchemy, plotly und python-fasthtml) im Zusammenspiel mit der eingesetzten Python-Version, um geplante Upgrades kontrolliert durchzuführen.",
       "Dass keine neuen Fragen in den Katalog aufgenommen werden, um das System stabil zu halten.",
+      "Die Aktualität der gepinnten Abhängigkeiten (wie pandas, sqlalchemy, plotly und python-fasthtml) im Zusammenspiel mit der eingesetzten Python-Version, um geplante Upgrades kontrolliert durchzuführen.",
       "Dass die CSV-Dateien nach jedem Aufruf gelöscht werden."
     ],
-    "correctIndex": 1,
+    "correctIndex": 2,
     "explanation": "Ein stabiles Software-Ökosystem erfordert kontinuierliche Pflege. Zur Semester- oder Jahrespflege gehört es, die Tabelle der Abhängigkeiten (Pins) zu prüfen, Bibliotheken gezielt anzuheben, Inkompatibilitäten im Test-Setup zu bereinigen und das Upgrade-Gate erfolgreich zu durchlaufen. Dies sichert die langfristige Betriebsstabilität."
   }
 ]

@@ -5,10 +5,10 @@
     "difficulty": "Mittel",
     "question": "Für welches primäre Einsatzgebiet ist die BEAM✲-Methode im Vergleich zu CRISP-DM und ASUM-DM speziell konzipiert?",
     "options": [
-      "Für die hochperformante Abfrageoptimierung in Graphdatenbanken.",
-      "Für die strukturierte Anforderungserhebung und dimensionale Modellierung in Data-Warehouse- und Business-Intelligence-Projekten.",
       "Für die risikobasierte Qualitätssicherung von Deep-Learning-Modellen im Live-Betrieb.",
-      "Für den physischen ETL-Entwurf in NoSQL-Datenbanken."
+      "Für die strukturierte Anforderungserhebung und dimensionale Modellierung in Data-Warehouse- und Business-Intelligence-Projekten.",
+      "Für den physischen ETL-Entwurf in NoSQL-Datenbanken.",
+      "Für die hochperformante Abfrageoptimierung in Graphdatenbanken."
     ],
     "correctIndex": 1,
     "explanation": "Laut Skript 'Einstieg und Vorgehensmodelle' liegt der wesentliche Unterschied in den Anwendungsbereichen: Während CRISP-DM auf Data-Mining-Projekte und ASUM-DM auf agile IT-Integrationen fokussiert sind, ist BEAM✲ speziell auf Data Warehouses, BI-Projekte und das Erheben von fachlichen Anforderungen zugeschnitten."
@@ -19,12 +19,12 @@
     "difficulty": "Mittel",
     "question": "Auf welche Autoren geht das agile Framework der BEAM✲-Datenmodellierung zurück?",
     "options": [
-      "Ralph Kimball und Bill Inmon",
-      "Edgar F. Codd und John Tukey",
+      "Zhamak Dehghani und Nathan Marz",
       "Lawrence Corr und Jim Stagnitto",
-      "Zhamak Dehghani und Nathan Marz"
+      "Ralph Kimball und Bill Inmon",
+      "Edgar F. Codd und John Tukey"
     ],
-    "correctIndex": 2,
+    "correctIndex": 1,
     "explanation": "BEAM✲ (Business Event Analysis and Modeling) wurde von Lawrence Corr und Jim Stagnitto entwickelt. Es ist eine agile Methode zur dimensionalen Modellierung, um Data Warehouses und Data Marts kollaborativ zu konzipieren."
   },
   {
@@ -33,12 +33,12 @@
     "difficulty": "Schwer",
     "question": "Warum wird der CRISP-DM-Standard für klassische BI-Projekte im Vorlesungsskript als nur 'bedingt geeignet' eingestuft?",
     "options": [
-      "Weil CRISP-DM keine mathematischen Algorithmen unterstützt.",
-      "Weil es die lückenhafte Einbindung der fachlichen Stakeholder in der Anforderungserhebung zeigt, die IT erst sehr spät einbezieht und spezifische IT-Anforderungen wie Data Governance und physische Datenhaltung vernachlässigt.",
+      "Weil es vorschreibt, dass Datenmodelle zwingend normalisiert in der 3. Normalform vorliegen müssen.",
       "Weil es ausschließlich für die Programmiersprache R konzipiert wurde.",
-      "Weil es vorschreibt, dass Datenmodelle zwingend normalisiert in der 3. Normalform vorliegen müssen."
+      "Weil CRISP-DM keine mathematischen Algorithmen unterstützt.",
+      "Weil es die lückenhafte Einbindung der fachlichen Stakeholder in der Anforderungserhebung zeigt, die IT erst sehr spät einbezieht und spezifische IT-Anforderungen wie Data Governance und physische Datenhaltung vernachlässigt."
     ],
-    "correctIndex": 1,
+    "correctIndex": 3,
     "explanation": "CRISP-DM vernachlässigt BI-spezifische IT-Anforderungen wie Data Governance und die Art der Datenhaltung (z. B. Sternschema zwecks Performance). Zudem bindet es Stakeholder oft zu spät/lückenhaft ein und fokussiert primär auf Data-Mining-Projekte statt auf Business Intelligence."
   },
   {
@@ -47,12 +47,12 @@
     "difficulty": "Mittel",
     "question": "Was kennzeichnet das Vorgehensmodell ASUM-DM im Vergleich zu CRISP-DM im Kontext von analytischen Projekten?",
     "options": [
-      "Es eliminiert alle mathematischen Schritte und fokussiert rein auf UI-Design.",
       "Es ist eine Erweiterung von CRISP-DM, die zusätzliche Phasen für die agile IT-Integration, Projektmanagement-Elemente und den Betrieb enthält, aber primär von IBM gepflegt wird und wenig verbreitet ist.",
       "Es handelt sich um ein rein hardwarefokussiertes Modell zur Server-Kompilierung.",
-      "Es erzwingt eine strikte Wasserfall-Vorgehensweise ohne jegliche Feedbackschleifen."
+      "Es erzwingt eine strikte Wasserfall-Vorgehensweise ohne jegliche Feedbackschleifen.",
+      "Es eliminiert alle mathematischen Schritte und fokussiert rein auf UI-Design."
     ],
-    "correctIndex": 1,
+    "correctIndex": 0,
     "explanation": "ASUM-DM (Analytics Solutions Unified Method for Data Mining) erweitert CRISP-DM um agile Elemente, IT-Integration und Projektmanagement. Es ist für BI besser geeignet als CRISP-DM, ist jedoch im Gegensatz zu diesem kein etablierter, herstellerneutraler Standard, da es im Wesentlichen von IBM weiterentwickelt wird."
   },
   {
@@ -61,12 +61,12 @@
     "difficulty": "Schwer",
     "question": "Welche wesentliche Lücke von CRISP-DM schließt das moderne Vorgehensmodell CRISP-ML(Q)?",
     "options": [
-      "Es verbietet den Einsatz von Python und setzt ausschließlich auf SQL.",
-      "Es etabliert eine dedizierte Phase für den Betrieb nach dem Deployment ('Monitoring und Maintenance') sowie eine risikobasierte Qualitätssicherung des gesamten ML-Lebenszyklus.",
       "Es überführt alle Datenmodelle automatisch in ein Sternschema.",
-      "Es ersetzt den Business-Analysten durch einen KI-Agenten."
+      "Es ersetzt den Business-Analysten durch einen KI-Agenten.",
+      "Es etabliert eine dedizierte Phase für den Betrieb nach dem Deployment ('Monitoring und Maintenance') sowie eine risikobasierte Qualitätssicherung des gesamten ML-Lebenszyklus.",
+      "Es verbietet den Einsatz von Python und setzt ausschließlich auf SQL."
     ],
-    "correctIndex": 1,
+    "correctIndex": 2,
     "explanation": "Während CRISP-DM den Betrieb nach dem Deployment nicht vorsieht, besitzt CRISP-ML(Q) eine eigene Phase für das 'Monitoring und Maintenance' im Live-Betrieb sowie einen starken Fokus auf die kontinuierliche, risikobasierte Qualitätssicherung ('Q') des maschinellen Lernverfahrens."
   },
   {
@@ -75,12 +75,12 @@
     "difficulty": "Mittel",
     "question": "Wie startet der Anforderungs- und Modellierungsprozess nach der BEAM✲-Methode?",
     "options": [
-      "Mit dem physischen Aufbau einer SQL-Staging-Datenbank im Cloud-Speicher.",
       "Mit einem kollaborativen Fachgespräch über reale Geschäftsvorfälle ('Business Events') in verständlicher Sprache statt mit starren Phasen oder Datenstrukturen.",
+      "Mit dem mathematischen Beweis der Transitivität der beteiligten Attribute.",
       "Mit der automatischen Generierung von Code durch LLMs.",
-      "Mit dem mathematischen Beweis der Transitivität der beteiligten Attribute."
+      "Mit dem physischen Aufbau einer SQL-Staging-Datenbank im Cloud-Speicher."
     ],
-    "correctIndex": 1,
+    "correctIndex": 0,
     "explanation": "BEAM✲ bricht mit der Tradition, Datenmodellierung mit Tabellenstrukturen zu beginnen. Die Methode startet beim Gespräch über reale Geschäftsvorfälle, die von den Beteiligten in einfachen, verständlichen Sätzen beschrieben und schrittweise in Dimensionen und Measures zerlegt werden."
   },
   {
@@ -89,10 +89,10 @@
     "difficulty": "Schwer",
     "question": "Welche logische Arbeitsteilung der drei Vorgehensmodelle empfiehlt das Vorlesungsskript für ein erfolgreiches BI-Projekt?",
     "options": [
-      "CRISP-DM für das physische ETL, CRISP-ML(Q) für die Berichte und BEAM für die Serverwartung.",
+      "Es wird empfohlen, ausschließlich ein einziges Modell ohne jegliche Kombination einzusetzen, da sie sich gegenseitig blockieren.",
       "BEAM✲ für Anforderungen und Datenmodell, CRISP-DM als übergeordneten Projektrahmen und CRISP-ML(Q) für die risikobasierte Qualitätssicherung und den Betrieb.",
       "ASUM-DM für das Modellieren, CRISP-DM für das SQL-Design und BEAM für das Deployment.",
-      "Es wird empfohlen, ausschließlich ein einziges Modell ohne jegliche Kombination einzusetzen, da sie sich gegenseitig blockieren."
+      "CRISP-DM für das physische ETL, CRISP-ML(Q) für die Berichte und BEAM für die Serverwartung."
     ],
     "correctIndex": 1,
     "explanation": "Das Skript begründet keine Rangfolge, sondern eine klare Koexistenz und Arbeitsteilung im BI-Projekt: BEAM✲ dient der Anforderungsanalyse und dem Datenmodellentwurf, CRISP-DM liefert den bewährten Projektrahmen und CRISP-ML(Q) sichert Qualität und Betrieb ab."
@@ -103,12 +103,12 @@
     "difficulty": "Mittel",
     "question": "Wo liegt im BI-Umfeld der Unterschied zur statistischen Daten-Exploration, die CRISP-DM in der Phase 'Data Understanding' fordert?",
     "options": [
+      "Es wird durch automatisierte KI-Regressionen ersetzt.",
       "Es gibt keinen Unterschied, die Werkzeuge sind exakt dieselben.",
-      "Im BI-Umfeld übernimmt diese explorative Rolle meist das Profiling direkt im BI-Werkzeug (z. B. Analyse von Spaltenverteilung, Nullwerten und Kardinalitäten).",
       "Im BI-Umfeld wird auf jegliche Exploration verzichtet, da die Daten fehlerfrei importiert werden.",
-      "Es wird durch automatisierte KI-Regressionen ersetzt."
+      "Im BI-Umfeld übernimmt diese explorative Rolle meist das Profiling direkt im BI-Werkzeug (z. B. Analyse von Spaltenverteilung, Nullwerten und Kardinalitäten)."
     ],
-    "correctIndex": 1,
+    "correctIndex": 3,
     "explanation": "Während CRISP-DM für das Data Understanding statistische Programmierbibliotheken vorsieht, nutzen BI-Entwickler in dieser Phase das 'Data Profiling' direkt im BI-Tool (z. B. Power Query), um Spaltenverteilungen, unvollständige Daten und die Kardinalität zu bewerten."
   },
   {
@@ -117,12 +117,12 @@
     "difficulty": "Schwer",
     "question": "Welchen zentralen Aspekt fordert der BI-Kontext für gefundene Datenerkenntnisse, den CRISP-DM in seinen Phasen nicht explizit vorsieht?",
     "options": [
-      "Die Verschlüsselung aller Daten mit AES-256.",
-      "Die dauerhafte Dokumentation (Datenkatalog, Feldbeschreibungen und fachliche Definitionen) als operatives Betriebsmittel statt als reines, temporäres Projektartefakt.",
+      "Den Ausschluss jeglicher Metadaten zur Performance-Steigerung.",
       "Die automatische Generierung von PowerPoint-Präsentationen für das Management.",
-      "Den Ausschluss jeglicher Metadaten zur Performance-Steigerung."
+      "Die Verschlüsselung aller Daten mit AES-256.",
+      "Die dauerhafte Dokumentation (Datenkatalog, Feldbeschreibungen und fachliche Definitionen) als operatives Betriebsmittel statt als reines, temporäres Projektartefakt."
     ],
-    "correctIndex": 1,
+    "correctIndex": 3,
     "explanation": "Im BI-Umfeld sind Datenkataloge, Feldbeschreibungen und fachliche Definitionen kein bloßes Abfallprodukt eines Projekts, sondern geschäftskritische Betriebsmittel, die später darüber entscheiden, ob Berichte von Anwendern und KI-Systemen korrekt verstanden werden."
   },
   {
@@ -132,11 +132,11 @@
     "question": "Wofür steht das '(Q)' im Namen des Vorgehensmodells CRISP-ML(Q) und was ist seine Aufgabe?",
     "options": [
       "Es steht für 'Querying' und steuert die SQL-Abfrageperformance.",
-      "Es steht für 'Quality Assurance' und beschreibt eine risikobasierte Qualitätssicherung über den gesamten Lebenszyklus eines ML-Modells hinweg.",
+      "Es steht für 'Quick' und optimiert die Ladezeiten von Dashboards.",
       "Es steht für 'Quantitative' und verbietet qualitative Auswertungen.",
-      "Es steht für 'Quick' und optimiert die Ladezeiten von Dashboards."
+      "Es steht für 'Quality Assurance' und beschreibt eine risikobasierte Qualitätssicherung über den gesamten Lebenszyklus eines ML-Modells hinweg."
     ],
-    "correctIndex": 1,
+    "correctIndex": 3,
     "explanation": "Das 'Q' steht für Quality Assurance (Qualitätssicherung). CRISP-ML(Q) legt besonderen Wert auf die risikobasierte und kontinuierliche Qualitätssicherung in allen Phasen des maschinellen Lernprojekts, um Drift, Voreingenommenheit und Modellfehler im Betrieb zu minimieren."
   },
   {
@@ -146,11 +146,11 @@
     "question": "Welche Aussage charakterisiert die technologische und organisatorische Einordnung von BEAM✲ korrekt?",
     "options": [
       "BEAM✲ ist fest an Microsoft Power BI und SQL Server gebunden.",
-      "BEAM✲ ist branchenneutral, hersteller- und toolunabhängig und setzt massiv auf agile Formate wie Workshops ('Modelstorming') und 'Data Stories'.",
       "BEAM✲ erfordert zwingend den Einsatz von Python-Bibliotheken zur Klassifikation.",
+      "BEAM✲ ist branchenneutral, hersteller- und toolunabhängig und setzt massiv auf agile Formate wie Workshops ('Modelstorming') und 'Data Stories'.",
       "BEAM✲ ist eine proprietäre IBM-Methode, die nur im Großrechner-Umfeld eingesetzt werden darf."
     ],
-    "correctIndex": 1,
+    "correctIndex": 2,
     "explanation": "BEAM✲ ist eine völlig offene, agile Methode. Sie ist hersteller- und werkzeugneutral und nutzt kollaborative Formate wie Workshops ('Modelstorming') und Data Stories (analog zu User Stories), um Anforderungen gemeinsam mit dem Fachbereich zu erarbeiten."
   },
   {
@@ -160,11 +160,11 @@
     "question": "Welchen Stellenwert nimmt das Conceptual Data Model (CDM) in der Datenmodellierungshierarchie ein und welches Ziel verfolgt es?",
     "options": [
       "Es definiert die physischen Tabellenstrukturen, Datentypen und Primärschlüssel direkt im Datenbank-Managementsystem.",
+      "Es dient der automatischen Übersetzung von Python-Code in ausführbare SQL-Abfragen.",
       "Es beschreibt den Use Case anhand textlicher und visueller Hilfsmittel (z. B. ER-Diagramme oder BEAM✲-Notationen) als rein semantisches Modell zur Verständigung zwischen IT und Fachbereich.",
-      "Es optimiert die Indexstruktur für hochfrequente SQL-Joins.",
-      "Es dient der automatischen Übersetzung von Python-Code in ausführbare SQL-Abfragen."
+      "Es optimiert die Indexstruktur für hochfrequente SQL-Joins."
     ],
-    "correctIndex": 1,
+    "correctIndex": 2,
     "explanation": "Das CDM steht an der Spitze der Modellierungspyramide. Es ist ein fachliches, semantisches Modell, das als Übersetzungshilfe und Kommunikationsbasis zwischen dem Fachbereich (Business) und der IT dient, um das Geschäftsproblem ohne technische Hürden abzugrenzen."
   },
   {
@@ -173,12 +173,12 @@
     "difficulty": "Mittel",
     "question": "Wie grenzt sich das Logical Data Model (LDM) vom Conceptual Data Model (CDM) ab?",
     "options": [
-      "Das LDM enthält keinerlei Beziehungen, sondern nur flache Textdateien.",
-      "Das LDM überführt die semantischen Geschäftsobjekte des CDM in ein formalisiertes, datenbanknahes Schema (z. B. Tabellen, Schlüssel, Beziehungen), bleibt aber noch unabhängig von einem spezifischen Datenbank-Managementsystem.",
+      "Das LDM beschreibt ausschließlich dieBenutzeroberflächen-Interaktionen eines Dashboards.",
       "Das LDM ist fest auf die Hardware-Architektur des Cloud-Servers optimiert.",
-      "Das LDM beschreibt ausschließlich dieBenutzeroberflächen-Interaktionen eines Dashboards."
+      "Das LDM enthält keinerlei Beziehungen, sondern nur flache Textdateien.",
+      "Das LDM überführt die semantischen Geschäftsobjekte des CDM in ein formalisiertes, datenbanknahes Schema (z. B. Tabellen, Schlüssel, Beziehungen), bleibt aber noch unabhängig von einem spezifischen Datenbank-Managementsystem."
     ],
-    "correctIndex": 1,
+    "correctIndex": 3,
     "explanation": "Das logische Datenmodell (LDM) präzisiert das konzeptionelle Modell (CDM). Es formalisiert die Entitäten und deren Beziehungen in Tabellenstrukturen und Schlüssel, ohne sich jedoch bereits auf eine konkrete physische Datenbank-Engine (wie PostgreSQL oder Oracle) festzulegen."
   },
   {
@@ -187,12 +187,12 @@
     "difficulty": "Mittel",
     "question": "Welche Aspekte werden im Physical Data Model (PDM) im Unterschied zum logischen Datenmodell (LDM) definiert?",
     "options": [
+      "Das PDM dient der rein visuellen Präsentation von Kennzahlen für die Geschäftsführung.",
       "Im PDM werden ausschließlich die geschäftlichen Anforderungen in Prosa dokumentiert.",
       "Im PDM wird die reale Implementierung für ein konkretes Datenbank-Managementsystem definiert – inklusive exakter Datentypen, physischer Indizes, Partitionierungen und Speicherstrukturen.",
-      "Das PDM dient der rein visuellen Präsentation von Kennzahlen für die Geschäftsführung.",
       "Das PDM ist ein herstellerneutrales, nicht-technisches Flussdiagramm."
     ],
-    "correctIndex": 1,
+    "correctIndex": 2,
     "explanation": "Das physische Datenmodell (PDM) ist das konkrete Abbild in der Datenbank. Es ist hardware- und herstellerspezifisch codiert und enthält alle technischen Details wie exakte Datentypen (z. B. VARCHAR(50)), Primär- und Fremdschlüsselindizes sowie Performance-Optimierungen."
   },
   {
@@ -202,11 +202,11 @@
     "question": "Was versteht man unter dem Begriff 'Modelstorming' im BEAM✲-Prozess?",
     "options": [
       "Ein automatisierter Algorithmus zur Erkennung von fehlerhaften Datenzeilen im ETL-Prozess.",
-      "Ein agiles, kollaboratives Workshop-Format, bei dem Entwickler und Fachbereiche gemeinsam Anforderungen erheben und interaktiv an Whiteboards modellieren.",
       "Das künstliche Überlasten einer Datenbank, um deren Performance-Limit zu testen.",
+      "Ein agiles, kollaboratives Workshop-Format, bei dem Entwickler und Fachbereiche gemeinsam Anforderungen erheben und interaktiv an Whiteboards modellieren.",
       "Die automatische Generierung eines Datenmodells durch ein LLM."
     ],
-    "correctIndex": 1,
+    "correctIndex": 2,
     "explanation": "Modelstorming ist ein von Lawrence Corr geprägter Begriff für agile, kollaborative Modellierungs-Workshops. Hierbei erarbeiten Fachexperten und BI-Entwickler gemeinsam (z. B. am Whiteboard oder Miro-Board) das Datenmodell anhand realer Geschäftsvorfälle."
   },
   {
@@ -215,12 +215,12 @@
     "difficulty": "Schwer",
     "question": "Aus welchen sieben zentralen Fragen (fünf W-Fragen und zwei H-Fragen) baut sich die Anforderungserhebung nach BEAM✲ auf?",
     "options": [
-      "Who, What, Where, When, Why, How, How many",
-      "Which, Why, Where, Whenever, Who, How, How much",
       "Who, What, Where, Why, Whom, How, How long",
-      "What, Where, When, Which, Whose, How, How fast"
+      "What, Where, When, Which, Whose, How, How fast",
+      "Who, What, Where, When, Why, How, How many",
+      "Which, Why, Where, Whenever, Who, How, How much"
     ],
-    "correctIndex": 0,
+    "correctIndex": 2,
     "explanation": "Die sieben Dimensionierungsfragen von BEAM✲ stammen aus dem klassischen Journalismus (5W2H): Who (Beteiligte), What (Objekte), Where (Orte), When (Zeitpunkte), Why (Gründe/Kontext), How (Ereignistyp/Prozess) und How many (Mengen/Measures)."
   },
   {
@@ -229,12 +229,12 @@
     "difficulty": "Schwer",
     "question": "Wie werden die Ergebnisse der sieben BEAM✲-Fragen systematisch in das spätere analytische Datenmodell (Sternschema) übersetzt?",
     "options": [
-      "Alle W-Fragen werden zu Faktentabellen; die H-Fragen werden zu Dimensionen.",
       "Die Fragen Wer (Who), Was (What), Wo (Where), Wann (When), Warum (Why) und Wie (How) liefern die Dimensionen; die Frage 'Wie viele' (How many) liefert die quantitativen Measures der Faktentabelle.",
-      "Das 'How many' wird als Primärschlüssel definiert; alle anderen Fragen werden in einer Wide Table zusammengefasst.",
-      "Die 7 Ws dienen nur der Kommunikation und haben keinen direkten Platz im Datenmodell."
+      "Alle W-Fragen werden zu Faktentabellen; die H-Fragen werden zu Dimensionen.",
+      "Die 7 Ws dienen nur der Kommunikation und haben keinen direkten Platz im Datenmodell.",
+      "Das 'How many' wird als Primärschlüssel definiert; alle anderen Fragen werden in einer Wide Table zusammengefasst."
     ],
-    "correctIndex": 1,
+    "correctIndex": 0,
     "explanation": "Das ist die fundamentale Brücke von BEAM✲ zum Sternschema: Die W-Fragen beschreiben die Eigenschaften des Geschäftsvorfalls und bilden somit die Dimensionen. Die quantitative Frage 'How many' (z. B. Umsatz, Menge, Latenz) liefert die numerischen Fakten/Measures der Faktentabelle."
   },
   {
@@ -243,10 +243,10 @@
     "difficulty": "Mittel",
     "question": "Welches Modellelement oder welchen Aspekt beschreibt die Frage 'Who' (Wer) im BEAM✲-Szenario?",
     "options": [
-      "Den zeitlichen Verlauf eines Geschäftsprozesses.",
+      "Die berechnete Marge eines verkauften Produkts.",
       "Die beteiligten Personen, Rollen, Organisationseinheiten oder Systeme (z. B. Kunden, Mitarbeiter, Lieferanten).",
       "Ausschließlich die IP-Adresse des anfragenden Webservers.",
-      "Die berechnete Marge eines verkauften Produkts."
+      "Den zeitlichen Verlauf eines Geschäftsprozesses."
     ],
     "correctIndex": 1,
     "explanation": "Die Frage 'Who' identifiziert alle aktiven und passiven Akteure des Geschäftsvorfalls. Dazu gehören Kunden, Angestellte, Partnerunternehmen oder Quell-Software-Systeme. Sie werden im Datenmodell als Dimensionstabellen abgebildet."
@@ -257,9 +257,9 @@
     "difficulty": "Mittel",
     "question": "Was wird unter der Frage 'What' (Was) im Rahmen einer BEAM✲-Anforderungsanalyse verstanden?",
     "options": [
-      "Der geografische Standort der Firmenzentrale.",
-      "Die physischen oder abstrakten Dinge und Objekte, die im Mittelpunkt des Interesses stehen (z. B. Produkte, Dienstleistungen, Verträge, Konten).",
       "Die Anzahl der SQL-Transaktionen pro Sekunde.",
+      "Die physischen oder abstrakten Dinge und Objekte, die im Mittelpunkt des Interesses stehen (z. B. Produkte, Dienstleistungen, Verträge, Konten).",
+      "Der geografische Standort der Firmenzentrale.",
       "Der prozentuale Erreichungsgrad eines Vertriebsziels."
     ],
     "correctIndex": 1,
@@ -271,12 +271,12 @@
     "difficulty": "Mittel",
     "question": "Welches Element liefert die Frage 'Where' (Wo) für das spätere Sternschema?",
     "options": [
-      "Den Speicherort der JSON-Dateien auf dem Server.",
       "Geografische Orte, Standorte oder logische Plätze, an denen der Geschäftsvorfall stattfindet (z. B. Filialen, Lieferadressen, Lagerplätze, Web-Kanäle).",
+      "Den exakten Datentyp einer numerischen Spalte.",
       "Den Primärschlüssel-Index der Faktentabelle.",
-      "Den exakten Datentyp einer numerischen Spalte."
+      "Den Speicherort der JSON-Dateien auf dem Server."
     ],
-    "correctIndex": 1,
+    "correctIndex": 0,
     "explanation": "Die Frage 'Where' erfasst den räumlichen Kontext. Das können physische Orte (Filiale, Region, Regal) oder virtuelle Orte (Website, Social-Media-Kanal) sein. Sie wird als geografische oder organisatorische Dimension im Sternschema umgesetzt."
   },
   {
@@ -285,12 +285,12 @@
     "difficulty": "Mittel",
     "question": "Welche Rolle spielt die Frage 'When' (Wann) bei der Konstruktion eines Data Warehouses?",
     "options": [
+      "Sie definiert die Gültigkeitsdauer der Benutzer-Lizenzen.",
       "Sie legt fest, wann das wöchentliche Backup der SQL-Datenbank läuft.",
-      "Sie erfasst alle zeitlichen Aspekte und Zeitpunkte des Geschäftsvorfalls und bildet die Basis für die unverzichtbare Kalender-/Zeitdimension (z. B. Bestelldatum, Lieferzeitpunkt).",
       "Sie bestimmt die Latenzzeit des Netzwerks beim Laden der Berichte.",
-      "Sie definiert die Gültigkeitsdauer der Benutzer-Lizenzen."
+      "Sie erfasst alle zeitlichen Aspekte und Zeitpunkte des Geschäftsvorfalls und bildet die Basis für die unverzichtbare Kalender-/Zeitdimension (z. B. Bestelldatum, Lieferzeitpunkt)."
     ],
-    "correctIndex": 1,
+    "correctIndex": 3,
     "explanation": "Zeit ist die wichtigste Dimension im Data Warehouse, da Analysen fast immer historisch verglichen werden. Das 'When' liefert die exakten Zeitpunkte, Datumsangaben oder Intervalle des Geschäftsvorfalls, die in einer zentralen Zeitdimension (Kalendertabelle) verknüpft werden."
   },
   {
@@ -299,12 +299,12 @@
     "difficulty": "Schwer",
     "question": "Welchen oft vernachlässigten geschäftlichen Kontext beschreibt die Frage 'Why' (Warum) im BEAM✲-Modell?",
     "options": [
-      "Die psychologischen Gründe für das Kündigungsverhalten von Mitarbeitern.",
-      "Den kausalen Kontext, Marketingaktionen oder Sonderzustände, die den Geschäftsvorfall beeinflusst haben (z. B. Promotion-Kampagnen, Rabattaktionen, Fehlermeldungen).",
       "Die wirtschaftliche Begründung für die Anschaffung des BI-Tools.",
-      "Das mathematische Warum hinter der Normalisierung einer Relation."
+      "Das mathematische Warum hinter der Normalisierung einer Relation.",
+      "Den kausalen Kontext, Marketingaktionen oder Sonderzustände, die den Geschäftsvorfall beeinflusst haben (z. B. Promotion-Kampagnen, Rabattaktionen, Fehlermeldungen).",
+      "Die psychologischen Gründe für das Kündigungsverhalten von Mitarbeitern."
     ],
-    "correctIndex": 1,
+    "correctIndex": 2,
     "explanation": "Das 'Why' erfasst Sondersituationen oder Auslöser eines Ereignisses. Ohne diese Dimension ließe sich z. B. nicht ermitteln, ob ein plötzlicher Umsatzanstieg auf einer geplanten Marketingkampagne (Promotion) oder reinem Zufall beruht."
   },
   {
@@ -314,11 +314,11 @@
     "question": "Wie wird die Frage 'How' (Wie) im agilen Datenmodellierungs-Konzept nach Lawrence Corr typischerweise umgesetzt?",
     "options": [
       "Sie beschreibt die Programmierlogik der ETL-Pipelines.",
+      "Sie legt fest, wie viele Server für das Cluster benötigt werden.",
       "Sie beschreibt den genauen Modus, Typus oder Status des Geschäftsvorfalls (z. B. Zahlungsart: Kreditkarte, Vertriebskanal: Online/Offline, Bestellstatus: Storniert/Geliefert).",
-      "Sie definiert das physische Speichermedium (SSD vs. HDD).",
-      "Sie legt fest, wie viele Server für das Cluster benötigt werden."
+      "Sie definiert das physische Speichermedium (SSD vs. HDD)."
     ],
-    "correctIndex": 1,
+    "correctIndex": 2,
     "explanation": "Das 'How' beschreibt den Zustand, die Kategorie oder das Verfahren, in dem das Ereignis stattfand (z. B. Transaktionsart, Statuscodes). Diese werden oft in Form von 'Status-Dimensionen' oder 'degenerierten Dimensionen' im Sternschema abgebildet."
   },
   {
@@ -327,10 +327,10 @@
     "difficulty": "Mittel",
     "question": "Welche Daten werden unter der Kategorie 'How many' (Wie viele) zusammengefasst?",
     "options": [
-      "Die Anzahl der am Projekt beteiligten BI-Entwickler.",
-      "Numerische Messwerte, Mengen, Beträge, Raten und Zählungen, die den Geschäftsvorfall quantitativ beschreiben (z. B. Umsatz, Verkaufsmenge, Transportkosten).",
       "Die Anzahl der Dimensionstabellen im Sternschema.",
-      "Die maximale Länge eines Textfeldes in der Datenbank."
+      "Numerische Messwerte, Mengen, Beträge, Raten und Zählungen, die den Geschäftsvorfall quantitativ beschreiben (z. B. Umsatz, Verkaufsmenge, Transportkosten).",
+      "Die maximale Länge eines Textfeldes in der Datenbank.",
+      "Die Anzahl der am Projekt beteiligten BI-Entwickler."
     ],
     "correctIndex": 1,
     "explanation": "Das 'How many' liefert die additiven, semi-additiven oder nicht-additiven Fakten (Measures). Diese numerischen Werte stehen im Zentrum der Faktentabelle und sind das primäre Ziel aller mathematischen Aggregationen (SUM, AVG etc.) im Reporting."
@@ -342,11 +342,11 @@
     "question": "Warum ist die präzise Definition der 'Granularität' (Grain) im dimensionalen Datenmodellentwurf von so herausragender Bedeutung?",
     "options": [
       "Weil sie die maximale Festplattenkapazität des DWH-Servers begrenzt.",
-      "Weil sie unmissverständlich festlegt, was genau eine einzelne Zeile in der Faktentabelle repräsentiert (z. B. ein einzelner Kassenbon-Posten vs. ein tagesaggregierter Umsatz je Filiale), was die analytische Flexibilität bestimmt.",
       "Weil sie vorschreibt, wie viele Farben in den Dashboards verwendet werden dürfen.",
-      "Weil sie die maximale Anzahl an gleichzeitigen Datenbank-Verbindungen regelt."
+      "Weil sie die maximale Anzahl an gleichzeitigen Datenbank-Verbindungen regelt.",
+      "Weil sie unmissverständlich festlegt, was genau eine einzelne Zeile in der Faktentabelle repräsentiert (z. B. ein einzelner Kassenbon-Posten vs. ein tagesaggregierter Umsatz je Filiale), was die analytische Flexibilität bestimmt."
     ],
-    "correctIndex": 1,
+    "correctIndex": 3,
     "explanation": "Die Granularität bestimmt den Detailgrad der Faktentabelle. Ein grober Grain (z. B. Monats-Aggregate) spart Speicherplatz, verhindert aber jeglichen detaillierten Drill-down. Ein feiner Grain (Einzeltransaktion) bietet maximale analytische Freiheit, erhöht jedoch das Datenvolumen."
   },
   {
@@ -355,12 +355,12 @@
     "difficulty": "Schwer",
     "question": "Welchen primären Zweck erfüllen Surrogatschlüssel (Surrogate Keys) in einem dimensionalen Datenmodell im Gegensatz zu natürlichen fachlichen Schlüsseln?",
     "options": [
-      "Sie dienen der Verschlüsselung sensibler personenbezogener Daten nach DSGVO.",
       "Sie entkoppeln das Data Warehouse vollständig von den natürlichen Schlüsseln der operativen Quellsysteme (OLTP), ermöglichen eine saubere Historisierung (z. B. Slowly Changing Dimensions) und optimieren die Join-Performance durch einfache Integer-Werte.",
-      "Sie ersetzen alle Fremdschlüssel in der Faktentabelle, um Joins komplett überflüssig zu machen.",
-      "Sie sind temporäre Passwörter für den Datenbankadministrator."
+      "Sie sind temporäre Passwörter für den Datenbankadministrator.",
+      "Sie dienen der Verschlüsselung sensibler personenbezogener Daten nach DSGVO.",
+      "Sie ersetzen alle Fremdschlüssel in der Faktentabelle, um Joins komplett überflüssig zu machen."
     ],
-    "correctIndex": 1,
+    "correctIndex": 0,
     "explanation": "Surrogatschlüssel sind künstliche, meist fortlaufende Ganzzahlen (Integer), die als Primärschlüssel in Dimensionstabellen dienen. Sie schützen das DWH vor Änderungen in den Vorsystemen, erlauben das Festhalten historischer Zustände desselben Objekts (SCD Typ 2) und sind performanter als komplexe Text-Schlüssel."
   },
   {
@@ -369,10 +369,10 @@
     "difficulty": "Schwer",
     "question": "Wie dokumentiert die BEAM✲-Notation nach Lawrence Corr die Geschäftsvorfälle so, dass sie sowohl für Business-Stakeholder als auch für IT-Entwickler leicht nutzbar ist?",
     "options": [
-      "In Form von komplexem, kompiliertem C++ Code.",
+      "Ausschliesslich als handschriftliche Notiz im PDF-Skript.",
       "In einem standardisierten, tabellarischen Format, das den Geschäftsvorfall anhand von Prototyp-Datenzeilen beschreibt und direkt in physische Dimensionen und Fakten übersetzt werden kann.",
       "Als reines dreidimensionales Vektorgrafik-Modell.",
-      "Ausschliesslich als handschriftliche Notiz im PDF-Skript."
+      "In Form von komplexem, kompiliertem C++ Code."
     ],
     "correctIndex": 1,
     "explanation": "Die Stärke von BEAM✲ liegt in seiner inklusiven, tabellarischen Notation. Corr nutzt 'Event Tables', die mit echten Beispieldaten gefüllt werden. Dies ist für Fachanwender sofort verständlich ('Story') und kann von IT-Entwicklern direkt in relationale Sternschemata überführt werden."
@@ -384,11 +384,11 @@
     "question": "Wie werden im Rahmen der agilen BEAM✲-Anforderungsanalyse die grammatikalischen Wortarten eines beschriebenen Geschäftsvorfalls auf das spätere Datenmodell projiziert?",
     "options": [
       "Verben werden zu Dimensionen; Adjektive werden zu Measures.",
-      "Verben (Aktivitäten) repräsentieren das Geschäftsereignis und damit die Faktentabelle; Substantive definieren die Dimensionstabelle (Wer, Was, Wo); Adjektive beschreiben die Spalten/Attribute der Dimensionen.",
       "Nomen werden gelöscht; nur Verben und Adjektive werden im Sternschema gespeichert.",
+      "Verben (Aktivitäten) repräsentieren das Geschäftsereignis und damit die Faktentabelle; Substantive definieren die Dimensionstabelle (Wer, Was, Wo); Adjektive beschreiben die Spalten/Attribute der Dimensionen.",
       "Sämtliche grammatikalischen Strukturen sind für das Datenmodell irrelevant und werden verworfen."
     ],
-    "correctIndex": 1,
+    "correctIndex": 2,
     "explanation": "Das BEAM✲-Modellstorming übersetzt Grammatik direkt in Datenstrukturen: Das Verb beschreibt die eigentliche Transaktion (Faktentabelle, z. B. 'verkaufen', 'buchen'). Die Substantive sind die Dimensionsobjekte (z. B. 'Kunde', 'Produkt'). Adjektive liefern die detaillierten Attribute (z. B. 'Farbe', 'Größe')."
   },
   {
@@ -397,12 +397,12 @@
     "difficulty": "Schwer",
     "question": "Welche Rolle spielen Adverbien (z. B. 'schnell', 'online', 'am Montag') in einem BEAM✲-Satz für das analytische Modell?",
     "options": [
-      "Sie werden ignoriert, da sie keine numerischen Werte repräsentieren.",
-      "Sie liefern den Kontext, die Umstände und die genauen Eigenschaften der Dimensionen wie Zeit (Wann), Ort (Wo) und Methode (Wie).",
       "Sie definieren die mathematische Aggregationsfunktion (z. B. SUM).",
-      "Sie sind exklusiv für das Logging im Datenbank-Server reserviert."
+      "Sie sind exklusiv für das Logging im Datenbank-Server reserviert.",
+      "Sie werden ignoriert, da sie keine numerischen Werte repräsentieren.",
+      "Sie liefern den Kontext, die Umstände und die genauen Eigenschaften der Dimensionen wie Zeit (Wann), Ort (Wo) und Methode (Wie)."
     ],
-    "correctIndex": 1,
+    "correctIndex": 3,
     "explanation": "Adverbien beschreiben, unter welchen Umständen das Verb (Ereignis) stattfindet. Im Datenmodell präzisieren sie die Dimensionen (z. B. 'Wann' -> Kalenderdimension, 'Wo' -> Geografiedimension, 'Wie' -> Status/Kanal-Dimension)."
   },
   {
@@ -411,10 +411,10 @@
     "difficulty": "Mittel",
     "question": "Inwiefern 'erzählt' ein multidimensionales Sternschema eine 'Story' des realen Geschäftsvorfalls?",
     "options": [
-      "Indem es den Benutzern fiktive Romane auf dem Dashboard anzeigt.",
-      "Indem es den zentralen Geschäftsvorfall (Fakt) durch seine verknüpften Dimensionen in einen klaren, für den Menschen logisch nachvollziehbaren Kontext (Wer hat was, wann, wo, warum und wie gekauft/getan) setzt.",
       "Indem es alle Daten in einer einzigen, unstrukturierten Textspalte abspeichert.",
-      "Indem es die Daten chronologisch nach Alphabet sortiert."
+      "Indem es den zentralen Geschäftsvorfall (Fakt) durch seine verknüpften Dimensionen in einen klaren, für den Menschen logisch nachvollziehbaren Kontext (Wer hat was, wann, wo, warum und wie gekauft/getan) setzt.",
+      "Indem es die Daten chronologisch nach Alphabet sortiert.",
+      "Indem es den Benutzern fiktive Romane auf dem Dashboard anzeigt."
     ],
     "correctIndex": 1,
     "explanation": "Ein Sternschema spiegelt die menschliche Realität wider: Ein zentrales Geschäftsereignis (Faktentabelle) wird durch die sternförmig verknüpften Dimensionstabellen mit Kontext (Wer? Was? Wo? Wann?) angereichert. So lässt sich jede Datenzeile als konkrete Geschäfts-Story lesen."
@@ -425,12 +425,12 @@
     "difficulty": "Schwer",
     "question": "Welches der folgenden Raster-Bestandteile ist laut Vorlesungsskript zwingend erforderlich, wenn man eine generative KI (LLM) per Prompt bei der BEAM✲-Modellierung unterstützen lassen möchte?",
     "options": [
-      "Das vollständige Quellcode-Repository der Datenbank-Engine.",
       "Ein klares Prompt-Raster bestehend aus Rolle, Datenkontext (inkl. Spaltenliste mit Datentypen und Beispielwerten), Schema (Definition der 7 Ws) und klaren Bewertungskriterien zur Fehlerprüfung.",
+      "Die Angabe des Server-Root-Passworts zur Live-Ausführung.",
       "Ausschliesslich die Angabe des gewünschten KI-Modellnamens.",
-      "Die Angabe des Server-Root-Passworts zur Live-Ausführung."
+      "Das vollständige Quellcode-Repository der Datenbank-Engine."
     ],
-    "correctIndex": 1,
+    "correctIndex": 0,
     "explanation": "Um verlässliche Ergebnisse von einer KI bei der BEAM✲-Modellierung zu erhalten, muss der Prompt strukturiert sein. Wichtig ist vor allem der 'Datenkontext': Ohne konkrete Beispieldaten rät das LLM die Bedeutung von Spaltennamen oft falsch. Das Raster (Rolle, Datenkontext, Schema, Ausgabeformat, Kriterien) verhindert dies."
   },
   {
@@ -439,12 +439,12 @@
     "difficulty": "Mittel",
     "question": "Was löst das im Jahr 2026 vorgestellte 'Model Context Protocol' (MCP) im Kontext von KI und Business Intelligence?",
     "options": [
-      "Es beschleunigt das Laden von Power BI Berichten durch lokale Hardware-Verschlüsselung.",
       "Es stellt einen einheitlichen, standardisierten Anschluss bereit, über den sich ein KI-Assistent direkt mit Datenmodellen und Systemen verbinden kann, um deren Fähigkeiten, Beziehungen und Kennzahlen abzufragen.",
       "Es ersetzt alle BI-Entwickler durch eine serverlose Cloud-Architektur.",
+      "Es beschleunigt das Laden von Power BI Berichten durch lokale Hardware-Verschlüsselung.",
       "Es erzwingt eine strikte Reduzierung des Datenvolumens auf maximal 10 MB."
     ],
-    "correctIndex": 1,
+    "correctIndex": 0,
     "explanation": "Früher musste jede KI-Anbindung an ein BI-System individuell programmiert werden. MCP bietet eine standardisierte Schnittstelle. Ein KI-Assistent kann so direkt das Power-BI-Modell nach verfügbaren Tabellen, Beziehungen und Measures abfragen und diese gezielt nutzen."
   },
   {
@@ -453,12 +453,12 @@
     "difficulty": "Mittel",
     "question": "Von welchem bekannten KI-Unternehmen stammt der offene Standard des Model Context Protocols (MCP) ursprünglich?",
     "options": [
-      "OpenAI",
       "Google DeepMind",
       "Anthropic",
-      "Microsoft"
+      "Microsoft",
+      "OpenAI"
     ],
-    "correctIndex": 2,
+    "correctIndex": 1,
     "explanation": "Das Model Context Protocol (MCP) ist ein offener Standard, der ursprünglich von Anthropic entwickelt wurde und inzwischen von zahlreichen führenden Plattformen und Software-Anbietern (wie Microsoft für Power BI) unterstützt wird."
   },
   {
@@ -467,10 +467,10 @@
     "difficulty": "Schwer",
     "question": "Wie teilen sich die Komponenten 'Host mit Client', 'MCP-Server' und 'Zielsystem' im Kontext einer Power-BI-KI-Kopplung die Aufgaben auf?",
     "options": [
-      "Der Host speichert die Daten; der Server baut die Dashboards; das Zielsystem zeigt sie an.",
+      "Alle drei Komponenten machen exakt dasselbe, um Ausfallsicherheit zu garantieren.",
       "Der Host (KI-App, z. B. Claude) stellt die Frage und wählt das Tool; der MCP-Server nimmt den Aufruf an, prüft Parameter und übersetzt ihn; das Zielsystem (Power BI Semantikmodell) führt die Abfrage (z. B. DAX) direkt im Modell aus.",
-      "Das Zielsystem generiert das SQL; der Host übersetzt es in Python; der Server speichert die Logfiles.",
-      "Alle drei Komponenten machen exakt dasselbe, um Ausfallsicherheit zu garantieren."
+      "Der Host speichert die Daten; der Server baut die Dashboards; das Zielsystem zeigt sie an.",
+      "Das Zielsystem generiert das SQL; der Host übersetzt es in Python; der Server speichert die Logfiles."
     ],
     "correctIndex": 1,
     "explanation": "Das ist die präzise Aufgabenteilung: Der Host (Client/KI) steuert den Dialog und ruft das passende Tool auf. Der Server fungiert als Dolmetscher: Er prüft die Parameter und generiert die systemspezifische Abfrage (z. B. DAX). Das Zielsystem (Power BI) führt die Abfrage performant und sicher aus."
@@ -481,12 +481,12 @@
     "difficulty": "Schwer",
     "question": "Welcher Schritt erfolgt zwingend als Allererstes, wenn eine KI-Anwendung eine Verbindung zu einem MCP-Server aufbaut?",
     "options": [
+      "Die KI übersetzt das gesamte Modell vollautomatisch in Python.",
       "Die KI löscht alle temporären Tabellen auf dem Server.",
       "Client und Server führen einen Handshake durch, bei dem sie die Protokollversion und ihre gegenseitigen Fähigkeiten (Capabilities) abstimmen.",
-      "Der Server sendet der KI die komplette Festplatten-Spiegelung.",
-      "Die KI übersetzt das gesamte Modell vollautomatisch in Python."
+      "Der Server sendet der KI die komplette Festplatten-Spiegelung."
     ],
-    "correctIndex": 1,
+    "correctIndex": 2,
     "explanation": "Der erste Schritt im MCP-Protokoll ist die Verbindungsabstimmung (Handshake). Hierbei klären Client (KI-Host) und Server ab, welche Protokollversion sie sprechen und welche Features (z. B. Tools, Ressourcen, Prompts) unterstützt werden."
   },
   {
@@ -495,12 +495,12 @@
     "difficulty": "Mittel",
     "question": "Was geschieht im zweiten Schritt ('Tools auflisten') eines etablierten MCP-Verbindungsprozesses?",
     "options": [
+      "Das System führt einen automatischen Neustart durch.",
       "Die KI listet dem Server alle auf dem Client installierten Webbrowser auf.",
-      "Der MCP-Server meldet dem KI-Assistenten alle verfügbaren Werkzeuge inklusive deren Namen, Zweck und erwarteter Parameter.",
       "Der Server sperrt alle Benutzerzugriffe, um Datenkonsistenz zu sichern.",
-      "Das System führt einen automatischen Neustart durch."
+      "Der MCP-Server meldet dem KI-Assistenten alle verfügbaren Werkzeuge inklusive deren Namen, Zweck und erwarteter Parameter."
     ],
-    "correctIndex": 1,
+    "correctIndex": 3,
     "explanation": "Nach dem Handshake liest der Client die Liste der bereitstehenden Tools vom Server aus. Der Server beschreibt jedes Tool präzise (z. B. 'Führe DAX-Abfrage aus' mit Parameter 'DaxQuery'), damit die KI weiß, wie sie den Server ansteuern kann."
   },
   {
@@ -509,12 +509,12 @@
     "difficulty": "Schwer",
     "question": "Wo liegt die kritische funktionale Grenze für einen KI-Assistenten bei der Abfrage von Daten über ein MCP-Semantikmodell?",
     "options": [
+      "Der KI-Assistent kann nur einmal pro Tag auf das Modell zugreifen.",
       "Die KI kann keine Textdaten verarbeiten, sondern nur Ganzzahlen.",
-      "Ist eine Kennzahl (Measure) sauber im Modell definiert, liefert der Server sie absolut verlässlich; fehlt die Kennzahl im Modell, droht die Gefahr, dass die KI eine plausibel klingende, aber falsche Zahl frei erfindet (Halluzination).",
       "Die Verbindung bricht nach genau 10 Sekunden automatisch ab.",
-      "Der KI-Assistent kann nur einmal pro Tag auf das Modell zugreifen."
+      "Ist eine Kennzahl (Measure) sauber im Modell definiert, liefert der Server sie absolut verlässlich; fehlt die Kennzahl im Modell, droht die Gefahr, dass die KI eine plausibel klingende, aber falsche Zahl frei erfindet (Halluzination)."
     ],
-    "correctIndex": 1,
+    "correctIndex": 3,
     "explanation": "Das ist die goldene Regel der KI-BI-Kopplung: Die KI rechnet nicht selbst! Sie fragt nur ab. Ist ein Measure im Power-BI-Modell definiert, liefert der Server die korrekte Zahl. Fehlt das Measure, versucht die KI oft, die Berechnung selbst 'plausibel' zu erfinden, was zu fatalen Fehlberechnungen führt."
   },
   {
@@ -523,12 +523,12 @@
     "difficulty": "Schwer",
     "question": "Microsoft stellt für Power BI zwei unterschiedliche Typen von MCP-Servern bereit. Welche Aufgaben haben diese jeweils?",
     "options": [
-      "Einen Server für Windows-Nutzer und einen für macOS-Nutzer.",
-      "Einen Server exklusiv für Import-Daten und einen exklusiv für DirectQuery-Verbindungen.",
       "Einen Server zum Abfragen (Querying) von Daten und einen Server zum Modellieren (Modeling) und Verändern des Semantikmodells.",
-      "Einen Server für Testdaten und einen für Produktivdaten, die physisch getrennt sein müssen."
+      "Einen Server für Testdaten und einen für Produktivdaten, die physisch getrennt sein müssen.",
+      "Einen Server exklusiv für Import-Daten und einen exklusiv für DirectQuery-Verbindungen.",
+      "Einen Server für Windows-Nutzer und einen für macOS-Nutzer."
     ],
-    "correctIndex": 2,
+    "correctIndex": 0,
     "explanation": "Microsofts Power BI Integration sieht zwei spezialisierte MCP-Server vor: Der 'Querying-Server' erlaubt es der KI, Daten abzufragen und Auswertungen zu fahren. Der 'Modeling-Server' ermöglicht es dem Assistenten, das Semantikmodell aktiv zu verändern, Beziehungen anzulegen oder neue Measures zu definieren."
   },
   {
@@ -537,12 +537,12 @@
     "difficulty": "Schwer",
     "question": "Wie verhalten sich Datenberechtigungen (z. B. Lese-Rollen, Row-Level Security), wenn eine KI über einen lokalen oder remote MCP-Server Daten ausliest?",
     "options": [
-      "Da eine KI ein externes System ist, werden alle Sicherheitsregeln und RLS-Vorgaben komplett ignoriert.",
       "Die vergebenen Sicherheitsstrukturen und Benutzerrechte bleiben voll wirksam: Der Assistent erhält über die Verbindung ausschließlich Zugriff auf die Daten, die die zugewiesene Leserolle des Benutzers explizit erlaubt.",
+      "Der MCP-Server erzwingt automatisch Admin-Rechte für jede Abfrage.",
       "Das Modell sperrt bei KI-Anfragen sofort alle Tabellen aus Sicherheitsgründen.",
-      "Der MCP-Server erzwingt automatisch Admin-Rechte für jede Abfrage."
+      "Da eine KI ein externes System ist, werden alle Sicherheitsregeln und RLS-Vorgaben komplett ignoriert."
     ],
-    "correctIndex": 1,
+    "correctIndex": 0,
     "explanation": "Sicherheit hat oberste Priorität: Ein MCP-Server agiert im Sicherheitskontext des angemeldeten Benutzers. Alle im Semantikmodell definierten Sicherheitsrollen, Berechtigungen und Row-Level Security (RLS) Regeln greifen nahtlos. Die KI kann niemals Daten sehen, die der Nutzer nicht auch sehen dürfte."
   },
   {
@@ -553,8 +553,8 @@
     "options": [
       "Weil SQL-Code im Browser nicht ausgeführt werden kann.",
       "Weil das LLM über MCP auf ein bereits fachlich geprüftes, zentrales Semantikmodell (Single Source of Truth) mit vordefinierten Berechnungsregeln zugreift, statt Tabellenverknüpfungen und mathematische Logiken jedes Mal fehleranfällig neu zu erfinden.",
-      "Weil MCP den SQL-Code automatisch in Python-Skripte umschreibt, die schneller laufen.",
-      "Weil freies SQL-Code-Generieren seit 2026 gesetzlich verboten ist."
+      "Weil freies SQL-Code-Generieren seit 2026 gesetzlich verboten ist.",
+      "Weil MCP den SQL-Code automatisch in Python-Skripte umschreibt, die schneller laufen."
     ],
     "correctIndex": 1,
     "explanation": "Freies Text-to-SQL scheitert in der Praxis oft an komplexen Datenbankstrukturen (Falsche Joins, falsche Aggregationsspalten). MCP umgeht das Problem: Die KI erfindet keine Abfragelogik, sondern ruft bereits fertige, vom BI-Entwickler geprüfte und zertifizierte Kennzahlen aus dem Semantikmodell ab."
@@ -565,12 +565,12 @@
     "difficulty": "Mittel",
     "question": "Welche Erkenntnis liefert der BIRD-Benchmark bezüglich der Fähigkeiten moderner KI-Modelle bei komplexen SQL-Abfragen auf Rohdaten?",
     "options": [
-      "KI-Modelle schreiben zu 100% fehlerfreie SQL-Abfragen und übertreffen den Menschen in jeder Hinsicht.",
       "Moderne LLMs erreichen bei komplexen Datenbankabfragen ohne semantische Unterstützung oft nur eine Genauigkeit von etwa 55-65 % (während menschliche Experten bei über 92 % liegen), was eine unkontrollierte Live-Ausführung gefährlich macht.",
-      "KI-Modelle weigern sich grundsätzlich, SQL-Code zu generieren.",
-      "Der Benchmark beweist, dass relationale SQL-Datenbanken für KI ungeeignet sind."
+      "KI-Modelle schreiben zu 100% fehlerfreie SQL-Abfragen und übertreffen den Menschen in jeder Hinsicht.",
+      "Der Benchmark beweist, dass relationale SQL-Datenbanken für KI ungeeignet sind.",
+      "KI-Modelle weigern sich grundsätzlich, SQL-Code zu generieren."
     ],
-    "correctIndex": 1,
+    "correctIndex": 0,
     "explanation": "Der BIRD-Benchmark (ein etablierter Standard für Text-to-SQL-Bewertungen) zeigt eine signifikante Lücke: Auf komplexen relationalen Systemen ohne erklärende Metadaten machen LLMs häufig logische Fehler (z. B. falsche Tabellenverknüpfungen). Ihre Erfolgsquote liegt weit unter der von menschlichen SQL-Experten."
   },
   {
@@ -579,12 +579,12 @@
     "difficulty": "Schwer",
     "question": "Wie unterscheidet sich die Zielsetzung der Datenmodellierung in einer klassischen operativen Datenbank (OLTP) von der Modellierung in einem analytischen System (OLAP)?",
     "options": [
-      "OLTP-Systeme speichern ausschließlich historische Daten; OLAP-Systeme nur Echtzeitdaten.",
-      "OLTP (Fokus Datenbanken-Vorlesung) zielt auf Redundanzfreiheit und Schreibkonsistenz durch strikte Normalisierung (3NF); OLAP (Fokus dieser Vorlesung) zielt auf schnelle Lesezugriffe, einfache Navigation und minimale Joins durch bewusste Denormalisierung (Sternschema).",
       "OLTP nutzt ausschließlich NoSQL-Datenbanken; OLAP nutzt ausschließlich Excel-Dateien.",
-      "Es gibt keinen Unterschied, beide Systeme nutzen exakt dieselben Tabellenstrukturen."
+      "Es gibt keinen Unterschied, beide Systeme nutzen exakt dieselben Tabellenstrukturen.",
+      "OLTP-Systeme speichern ausschließlich historische Daten; OLAP-Systeme nur Echtzeitdaten.",
+      "OLTP (Fokus Datenbanken-Vorlesung) zielt auf Redundanzfreiheit und Schreibkonsistenz durch strikte Normalisierung (3NF); OLAP (Fokus dieser Vorlesung) zielt auf schnelle Lesezugriffe, einfache Navigation und minimale Joins durch bewusste Denormalisierung (Sternschema)."
     ],
-    "correctIndex": 1,
+    "correctIndex": 3,
     "explanation": "Das ist die fundamentale Brücke zwischen transaktionalen (DABA) und analytischen (BI) Vorlesungen: Operative Systeme (OLTP) müssen schnell schreiben und Anomalien verhindern (Normalisierung). Analytische Systeme (OLAP) müssen extrem schnell gigantische Datenmengen lesen und aggregieren (Denormalisierung im Sternschema)."
   },
   {
@@ -593,12 +593,12 @@
     "difficulty": "Mittel",
     "question": "Welches der folgenden Merkmale beschreibt die Strukturierung von Tabellen in einem analytischen Sternschema korrekt?",
     "options": [
+      "Es gibt keine Faktentabellen, sondern ausschließlich Dimensionen, die sich zyklisch referenzieren.",
       "Sämtliche Daten werden in einer einzigen, unendlich langen Zeile abgespeichert.",
-      "Die Daten sind in eine zentrale, numerische Faktentabelle (Facts) und mehrere sternförmig verknüpfte, beschreibende Dimensionstabellen (Dimensions) aufgeteilt.",
       "Alle Tabellen des Modells müssen zwingend in der 3. Normalform vorliegen, um Joins zu vermeiden.",
-      "Es gibt keine Faktentabellen, sondern ausschließlich Dimensionen, die sich zyklisch referenzieren."
+      "Die Daten sind in eine zentrale, numerische Faktentabelle (Facts) und mehrere sternförmig verknüpfte, beschreibende Dimensionstabellen (Dimensions) aufgeteilt."
     ],
-    "correctIndex": 1,
+    "correctIndex": 3,
     "explanation": "Das Sternschema teilt die analytische Welt sauber auf: Die Faktentabelle im Zentrum enthält die Messgrößen (Fakten) und Fremdschlüssel. Die Dimensionen drumherum enthalten den beschreibenden Kontext (Zeit, Kunde, Produkt). Dies minimiert Joins und maximiert die Ablesegeschwindigkeit."
   },
   {
@@ -607,12 +607,12 @@
     "difficulty": "Schwer",
     "question": "Auf welche Spalten sollte im physischen Entwurf eines Sternschemas aus Performancegründen zwingend ein Datenbank-Index gelegt werden?",
     "options": [
-      "Ausschliesslich auf lange Freitext-Beschreibungen in den Dimensionen.",
-      "Auf die Fremdschlüssel-Spalten (FK) der Faktentabelle, da über diese die hochfrequenten Joins mit den Primärschlüsseln (PK) der Dimensionstabellen berechnet werden.",
       "Auf alle Spalten der Faktentabelle gleichermaßen.",
-      "Auf die Spalten, die keine Daten enthalten (Nullwerte)."
+      "Auf die Spalten, die keine Daten enthalten (Nullwerte).",
+      "Ausschliesslich auf lange Freitext-Beschreibungen in den Dimensionen.",
+      "Auf die Fremdschlüssel-Spalten (FK) der Faktentabelle, da über diese die hochfrequenten Joins mit den Primärschlüsseln (PK) der Dimensionstabellen berechnet werden."
     ],
-    "correctIndex": 1,
+    "correctIndex": 3,
     "explanation": "Um die Abfrageperformance im Sternschema zu sichern, müssen die Verknüpfungsachsen optimiert werden. Da die Faktentabelle Millionen von Zeilen enthalten kann, beschleunigen Indizes auf ihren Fremdschlüsseln (FK) die Joins mit den viel kleineren Dimensionstabellen dramatisch."
   },
   {
@@ -621,10 +621,10 @@
     "difficulty": "Schwer",
     "question": "Welcher fatale Fehler wird im agilen Modellierungs-Workshop vermieden, indem man Anforderungen nicht als abstrakte Felder, sondern als reale Geschäftsvorfälle (Events) erhebt?",
     "options": [
-      "Dass die Festplatte des SQL-Servers überläuft.",
+      "Dass die Benutzeroberfläche des BI-Tools abstürzt.",
       "Dass man ein technisch perfektes Datenmodell am tatsächlichen Informationsbedarf der Fachabteilungen vorbeientwickelt ('Over-Engineering' ohne geschäftlichen Nutzen).",
       "Dass die Datenbank keine SQL-Abfragen mehr annimmt.",
-      "Dass die Benutzeroberfläche des BI-Tools abstürzt."
+      "Dass die Festplatte des SQL-Servers überläuft."
     ],
     "correctIndex": 1,
     "explanation": "Das ist das Kernziel von agiler Datenmodellierung nach Lawrence Corr (BEAM✲): Es verhindert, dass Entwickler isoliert im 'stillen Kämmerlein' Datenbankstrukturen bauen, die fachlich am Bedarf vorbeigehen. Durch das Gespräch über reale 'Events' bleibt der Business-Nutzen von Anfang an im Fokus."
@@ -636,11 +636,11 @@
     "question": "Was versteht man unter 'slowly changing dimensions' (SCD) im dimensionalen Modellentwurf und warum sind sie für historische Vergleiche wichtig?",
     "options": [
       "Dass sich die Hardware-Festplatten des DWH-Systems nur sehr langsam drehen.",
-      "Verfahren zur systematischen Erfassung und Verwaltung von historischen Attributänderungen in Dimensionstabellen (z. B. wenn ein Kunde den Wohnort wechselt), um zeitlich korrekte historische Analysen zu ermöglichen.",
       "Die automatische Löschung alter Daten nach genau 365 Tagen.",
+      "Verfahren zur systematischen Erfassung und Verwaltung von historischen Attributänderungen in Dimensionstabellen (z. B. wenn ein Kunde den Wohnort wechselt), um zeitlich korrekte historische Analysen zu ermöglichen.",
       "Das schrittweise Komprimieren von SQL-Datenbanktabellen zur Platzersparnis."
     ],
-    "correctIndex": 1,
+    "correctIndex": 2,
     "explanation": "Im operativen System wird eine Adressänderung einfach überschrieben (der alte Zustand geht verloren). Im Data Warehouse (DWH) müssen wir jedoch wissen, wo der Kunde zum Zeitpunkt des Kaufs wohnte (SCD Typ 2 erstellt eine neue Zeile mit Gültigkeitsdatum). Dies sichert die historische Wahrheit."
   },
   {
@@ -649,12 +649,12 @@
     "difficulty": "Mittel",
     "question": "Warum ist die Übergabe von drei konkreten Beispieldatenwerten je Spalte im KI-Datenkontext-Prompt laut Vorlesungsskript so wichtig?",
     "options": [
+      "Weil das LLM ansonsten den Dienst mit einer Fehlermeldung verweigert.",
       "Damit das LLM die Datenmenge auf dem Server reduzieren kann.",
       "Weil die KI ohne reale Beispieldatensätze die fachliche Bedeutung von kryptischen oder generischen Spaltennamen der Quelltabelle nicht verlässlich ableiten kann und falsche Zuordnungen trifft.",
-      "Weil das LLM ansonsten den Dienst mit einer Fehlermeldung verweigert.",
       "Um die Rechengeschwindigkeit der KI-Inferenz zu verdoppeln."
     ],
-    "correctIndex": 1,
+    "correctIndex": 2,
     "explanation": "Spaltennamen wie 'C_TYPE' oder 'VAL_X' sind mehrdeutig. Erst durch konkrete Werte (z. B. 'Premium', '149.99') versteht die KI im Prompt den semantischen Kontext sofort fehlerfrei und kann die Spalten den 7 Ws (Who, What, How many etc.) exakt zuordnen."
   },
   {
@@ -663,12 +663,12 @@
     "difficulty": "Schwer",
     "question": "Welches zentrale Integrationskonzept schlägt Ralph Kimball vor, um dezentralisierte, dimensionsbasierte Data Marts ohne zentrales Inmon-DWH konsistent zu halten?",
     "options": [
-      "Das Speichern aller Daten in einer einzigen flachen CSV-Datei auf einem Netzwerklaufwerk.",
-      "Die Verwendung von abgestimmten, einheitlich definierten Dimensionen ('Conformed Dimensions') über alle Data Marts hinweg, um eine nahtlose Vergleichbarkeit zu garantieren.",
       "Das Verbot von Primärschlüsseln im gesamten Datenmodell.",
-      "Die kontinuierliche, stündliche Replikation aller Datenbanken auf einen zentralen Mainframe."
+      "Das Speichern aller Daten in einer einzigen flachen CSV-Datei auf einem Netzwerklaufwerk.",
+      "Die kontinuierliche, stündliche Replikation aller Datenbanken auf einen zentralen Mainframe.",
+      "Die Verwendung von abgestimmten, einheitlich definierten Dimensionen ('Conformed Dimensions') über alle Data Marts hinweg, um eine nahtlose Vergleichbarkeit zu garantieren."
     ],
-    "correctIndex": 1,
+    "correctIndex": 3,
     "explanation": "Kimballs dimensionale DWH-Architektur beruht auf Evolution und Agilität. Um Datensilos zu verhindern, werden die dezentralen Data Marts über 'Conformed Dimensions' (abgestimmte Dimensionen wie eine einheitliche Kunden- oder Zeitdimension) miteinander verzahnt. Dies bildet den Kimball-DWH-Bus."
   },
   {
@@ -678,11 +678,11 @@
     "question": "Welche Design-Philosophie in BI-Berichten minimiert den kognitiv belastenden 'Split-Attention-Effekt' laut Skript?",
     "options": [
       "Das Auslagern aller Grafiken in separate PDF-Dokumente.",
+      "Die Beschränkung des Dashboards auf maximal zwei Zeichen Text.",
       "Die direkte visuelle Zusammenführung von numerischen Daten und grafischen Elementen (z. B. durch In-Cell-Sparklines oder Balken direkt in der Tabelle), sodass das Auge nicht ständig zwischen Legenden und Zahlen hin- und herspringen muss.",
-      "Das ununterbrochene Blinken wichtiger Leistungskennzahlen in Signalfarben.",
-      "Die Beschränkung des Dashboards auf maximal zwei Zeichen Text."
+      "Das ununterbrochene Blinken wichtiger Leistungskennzahlen in Signalfarben."
     ],
-    "correctIndex": 1,
+    "correctIndex": 2,
     "explanation": "Der Split-Attention-Effekt tritt auf, wenn der Betrachter Informationen aus räumlich getrennten Quellen (z. B. einer Tabelle auf Seite 1 und einem Diagramm auf Seite 2) mühsam im Kopf zusammenführen muss. Integrierte Tabellengrafiken (grafische Tabellen) lösen dieses Problem elegant."
   },
   {
@@ -691,12 +691,12 @@
     "difficulty": "Schwer",
     "question": "Welche Mindest-Voraussetzung muss erfüllt sein, damit eine BI-Anforderung laut Kickoff- und Datenmodellierungs-Skript die 'Definition of Ready' (bereit zur Entwicklung) erreicht?",
     "options": [
-      "Das Dashboard muss bereits vollständig fertig programmiert sein.",
       "Die Datenquelle muss namentlich benannt, die Feldbedeutungen und Datenqualität geklärt, die Kennzahl fachlich präzise definiert, der Vergleichszeitraum festgelegt und das Rechte-/Rollenkonzept bedacht sein.",
-      "Der Projektleiter muss die Freigabe per E-Mail erteilt haben.",
-      "Es müssen mindestens 500 Spalten in der Quelltabelle vorliegen."
+      "Das Dashboard muss bereits vollständig fertig programmiert sein.",
+      "Es müssen mindestens 500 Spalten in der Quelltabelle vorliegen.",
+      "Der Projektleiter muss die Freigabe per E-Mail erteilt haben."
     ],
-    "correctIndex": 1,
+    "correctIndex": 0,
     "explanation": "Die Definition of Ready (DoR) schützt BI-Entwickler vor unklaren Aufträgen. Es reicht nicht zu sagen 'Baut ein Umsatz-Dashboard'. Es müssen Quelle, Datenqualität, präzise Kennzahlenformel, Vergleichswerte (z. B. Vorjahr) und Berechtigungen (RLS) im Vorfeld eindeutig dokumentiert sein."
   }
 ]

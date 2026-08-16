@@ -6,11 +6,11 @@
     "question": "Wie wird der Begriff 'Deployment' im Software-Engineering und der Business Intelligence fachliterarisch definiert und von einem einfachen Kopierschritt abgegrenzt?",
     "options": [
       "Als einmaliger Vorgang des Kopierens einer fertigen Berichtsdatei auf einen Webserver.",
-      "Als dauerhafter Lebenszyklus, der alle Aktivitäten umfasst, die ein System zum Nutzer bringen und dort lauffähig halten (Release, Installation, Aktivierung, Update, Deaktivierung, Außerbetriebnahme).",
       "Als exklusive Phase der Code-Erstellung im Jupyter Notebook vor der Freigabe.",
+      "Als dauerhafter Lebenszyklus, der alle Aktivitäten umfasst, die ein System zum Nutzer bringen und dort lauffähig halten (Release, Installation, Aktivierung, Update, Deaktivierung, Außerbetriebnahme).",
       "Als reines Berechtigungsmanagement, das festlegt, welche Nutzergruppen Zugriff auf SQL-Datenbanken erhalten."
     ],
-    "correctIndex": 1,
+    "correctIndex": 2,
     "explanation": "Laut Carzaniga et al. (1998) ist Deployment kein einmaliger Kopierschritt, sondern ein fortlaufender Lebenszyklus. Er umfasst alle Aktivitäten, die Software (oder Berichte/Datenmodelle) zu ihren Nutzern bringen und dort aktuell und lauffähig halten: Release, Installation, Aktivierung, Update, Anpassung, Deaktivierung und Außerbetriebnahme."
   },
   {
@@ -19,12 +19,12 @@
     "difficulty": "Mittelschwer",
     "question": "Wie grenzen sich die Begriffe 'Release', 'Rollout' und 'Deployment' im BI-Kontext voneinander ab?",
     "options": [
+      "Release ist die Deaktivierung einer alten Berichtsversion, Rollout das Update und Deployment die Erstinstallation.",
       "Release ist die Installation beim Kunden, Rollout die Programmierung und Deployment die Planung.",
-      "Release bezeichnet den freigegebenen Stand, Rollout die flächige Einführung im Unternehmen und Deployment den gesamten Lebenszyklus der Bereitstellung.",
       "Rollout und Deployment sind Synonyme; Release bezeichnet lediglich die Lizenzierung der BI-Software.",
-      "Release ist die Deaktivierung einer alten Berichtsversion, Rollout das Update und Deployment die Erstinstallation."
+      "Release bezeichnet den freigegebenen Stand, Rollout die flächige Einführung im Unternehmen und Deployment den gesamten Lebenszyklus der Bereitstellung."
     ],
-    "correctIndex": 1,
+    "correctIndex": 3,
     "explanation": "Die Fachliteratur grenzt die Begriffe präzise ab: 'Release' bezeichnet den formal freigegebenen Stand der Software oder des Berichts. 'Rollout' ist die konkrete, flächige Einführung bei den Anwendern. 'Deployment' klammert diese Schritte und bezeichnet den gesamten Lebenszyklus der Bereitstellung von der Wiege bis zur Bahre."
   },
   {
@@ -34,11 +34,11 @@
     "question": "Was ist der architektonische Unterschied zwischen 'Continuous Delivery' und 'Continuous Deployment' gemäß ISO/IEC/IEEE 32675:2022 (DevOps)?",
     "options": [
       "Continuous Delivery erfordert eine manuelle Datenbankabfrage; Continuous Deployment automatisiert diese.",
+      "Es gibt keinen Unterschied; beide Begriffe beschreiben identische Automatisierungsstufen im klassischen Wasserfallmodell.",
       "Continuous Delivery hält Software jederzeit in einem lieferbaren Zustand; Continuous Deployment automatisiert den Weg jeder Änderung bis direkt in die Produktion.",
-      "Continuous Delivery ist nur für On-Premises-Systeme geeignet; Continuous Deployment ist exklusiv für Cloud-SaaS-Szenarien.",
-      "Es gibt keinen Unterschied; beide Begriffe beschreiben identische Automatisierungsstufen im klassischen Wasserfallmodell."
+      "Continuous Delivery ist nur für On-Premises-Systeme geeignet; Continuous Deployment ist exklusiv für Cloud-SaaS-Szenarien."
     ],
-    "correctIndex": 1,
+    "correctIndex": 2,
     "explanation": "Im DevOps-Kontext (ISO/IEC/IEEE 32675:2022) sorgt 'Continuous Delivery' dafür, dass die Software durch automatisierte Builds und Tests jederzeit bereit zur Auslieferung an die Produktion ist. 'Continuous Deployment' geht einen Schritt weiter und automatisiert den tatsächlichen Release-Prozess in die Produktion ohne manuellen Zwischenschritt."
   },
   {
@@ -47,12 +47,12 @@
     "difficulty": "Mittelschwer",
     "question": "In welchen drei Schichten ordnet die BI-Literatur die Werkzeuge und Prozesse des Deployments ein?",
     "options": [
-      "Datenbeschaffung, Datenspeicherung, Datenarchivierung",
-      "Datenbereitstellung, Informationsgenerierung und -distribution, Informationszugriff",
       "SQL-Layer, Python-Layer, HTML-Layer",
-      "Staging Area, Core Data Warehouse, Data Marts"
+      "Staging Area, Core Data Warehouse, Data Marts",
+      "Datenbereitstellung, Informationsgenerierung und -distribution, Informationszugriff",
+      "Datenbeschaffung, Datenspeicherung, Datenarchivierung"
     ],
-    "correctIndex": 1,
+    "correctIndex": 2,
     "explanation": "Der klassische BI-Ordnungsrahmen strukturiert das Deployment von unten nach oben in: 1. Datenbereitstellung (Data Warehouse, Data Marts), 2. Informationsgenerierung und -distribution (Analysesysteme, Verteilung) und 3. Informationszugriff (BI-Portal, Browser, mobile Apps)."
   },
   {
@@ -61,12 +61,12 @@
     "difficulty": "Schwer",
     "question": "Warum ist die Informationsverteilung (Distribution) als letzter Schritt der Nutzungskette ein kritisches Nadelöhr im BI-Erfolg, und wann muss die Deployment-Planung idealerweise ansetzen?",
     "options": [
-      "Weil erst oben beim Zugriff echter Nutzen durch Handeln entsteht. Die Deployment-Planung muss jedoch bereits ganz unten bei Datenmodell, Berechtigungen, Test und Betriebsdesign ansetzen, um tragfähig zu sein.",
       "Weil die Distribution die meiste CPU-Leistung beansprucht. Die Planung beginnt erst nach dem erfolgreichen Go-Live der Staging Area.",
-      "Weil Berichtsempfänger die Datenmodelle selbst kompilieren müssen. Die Planung setzt während des Rollouts an.",
-      "Weil erst bei der Distribution SQL-Indizes erstellt werden. Die Planung erfolgt nach der Bereitstellung der Data Marts."
+      "Weil erst bei der Distribution SQL-Indizes erstellt werden. Die Planung erfolgt nach der Bereitstellung der Data Marts.",
+      "Weil erst oben beim Zugriff echter Nutzen durch Handeln entsteht. Die Deployment-Planung muss jedoch bereits ganz unten bei Datenmodell, Berechtigungen, Test und Betriebsdesign ansetzen, um tragfähig zu sein.",
+      "Weil Berichtsempfänger die Datenmodelle selbst kompilieren müssen. Die Planung setzt während des Rollouts an."
     ],
-    "correctIndex": 0,
+    "correctIndex": 2,
     "explanation": "Wert entsteht erst ganz oben, wenn Empfänger auf Informationen zugreifen und fundiert handeln. Damit dieser Zugriff tragfähig ist, müssen Daten, Berechtigungen und der Betrieb darunter fehlerfrei funktionieren. Deshalb muss die Deployment-Planung zwingend bereits bei der Datenmodellierung, dem Berechtigungskonzept und dem Testdesign ansetzen, statt erst beim eigentlichen Kopierschritt."
   },
   {
@@ -75,10 +75,10 @@
     "difficulty": "Schwer",
     "question": "Welches Kriterium entscheidet im BI-Berichtswesen fundamental darüber, ob ein Verteilprozess dem 'Push'- oder dem 'Pull'-Prinzip zuzuordnen ist?",
     "options": [
+      "Das genutzte Endgerät: Berichte auf dem Smartphone sind immer Push, auf dem Desktop-PC immer Pull.",
       "Die Dateigröße des Berichts: Große PDF-Dateien sind Push, interaktive Dashboards sind Pull.",
-      "Die Netzwerklatenz: Echtzeitdaten-Übertragungen sind Push, Batch-Verarbeitungen sind Pull.",
       "Der Auslöser der physischen Übermittlung bzw. des Abrufs: Wird das Artefakt/die Benachrichtigung aktiv zugestellt (Push) oder holt der Nutzer die Information selbst ab (Pull)?",
-      "Das genutzte Endgerät: Berichte auf dem Smartphone sind immer Push, auf dem Desktop-PC immer Pull."
+      "Die Netzwerklatenz: Echtzeitdaten-Übertragungen sind Push, Batch-Verarbeitungen sind Pull."
     ],
     "correctIndex": 2,
     "explanation": "Entscheidend ist, wer den letzten Schritt der Informationskette auslöst. Wird die Information ohne Zutun des Empfängers aktiv an ihn gesendet (z. B. per E-Mail-Abonnement oder Alert bei Schwellenwertüberschreitung), liegt ein 'Push' vor. Ruft der Empfänger den Bericht selbst ab, handelt es sich um 'Pull' – selbst wenn der Bericht nach einem festen Zeitplan im Portal bereitgestellt wurde."
@@ -90,11 +90,11 @@
     "question": "Ein Standardbericht wird jeden Montag um 08:00 Uhr automatisiert im zentralen BI-Portal aktualisiert und hinterlegt. Der Abteilungsleiter öffnet diesen Bericht um 09:00 Uhr über seinen Browser. Welcher Verteilungsform entspricht dieses Szenario?",
     "options": [
       "Ereignisgesteuerter Push, da die Aktualisierung zeitlich getriggert wurde.",
-      "Termingesteuerter Pull, da der Bericht zwar termingesteuert bereitgestellt, aber erst durch das aktive Einloggen und Abrufen des Nutzers im Portal geöffnet wird.",
       "Reines Ad-hoc-Reporting, da der Abteilungsleiter den Bericht ohne feste Berechtigungen liest.",
-      "Echtzeit-Push, da die Daten montags pünktlich zur Verfügung stehen."
+      "Echtzeit-Push, da die Daten montags pünktlich zur Verfügung stehen.",
+      "Termingesteuerter Pull, da der Bericht zwar termingesteuert bereitgestellt, aber erst durch das aktive Einloggen und Abrufen des Nutzers im Portal geöffnet wird."
     ],
-    "correctIndex": 1,
+    "correctIndex": 3,
     "explanation": "Bereitstellung ist nicht gleich Zustellung! Da der Abteilungsleiter sich selbst im Portal einloggen und den Bericht aufrufen muss, löst er den letzten Schritt aus. Es handelt sich somit um einen nachfrageorientierten Abruf (Pull). Erst wenn der Bericht aktiv als E-Mail oder Chat-Nachricht in sein Postfach zugestellt worden wäre, läge ein Push vor."
   },
   {
@@ -103,12 +103,12 @@
     "difficulty": "Mittelschwer",
     "question": "Was charakterisiert den 'ereignisgesteuerten Push' im Berichtswesen und für welchen Einsatzzweck ist er prädestiniert?",
     "options": [
-      "Er erfolgt zu festen Kalenderzeiten für Standardberichte der Regelkommunikation.",
-      "Er wird durch definierte fachliche Bedingungen (z. B. Schwellenwert-Unterschreitungen) getriggert, um Abweichungsberichte oder Alerts aktiv an Verantwortliche zuzustellen ('Management by Exception').",
       "Er erlaubt es Benutzern, beliebige Ad-hoc-SQL-Abfragen direkt an das Produktivsystem zu senden.",
-      "Er dient dem manuellen Export von Rohdaten in lokale Excel-Arbeitsmappen bei Bedarf."
+      "Er erfolgt zu festen Kalenderzeiten für Standardberichte der Regelkommunikation.",
+      "Er dient dem manuellen Export von Rohdaten in lokale Excel-Arbeitsmappen bei Bedarf.",
+      "Er wird durch definierte fachliche Bedingungen (z. B. Schwellenwert-Unterschreitungen) getriggert, um Abweichungsberichte oder Alerts aktiv an Verantwortliche zuzustellen ('Management by Exception')."
     ],
-    "correctIndex": 1,
+    "correctIndex": 3,
     "explanation": "Der ereignisgesteuerte Push (auch Ausnahmeberichtswesen genannt) basiert auf dem Prinzip des 'Management by Exception'. Erst wenn eine vordefinierte Situation eintritt (z. B. Umsatz bricht um 15% ein), wird ein Trigger ausgelöst. BI-Dienste senden dann automatisiert eine Warnung (Alert) oder einen Detailbericht an die zuständigen Personen, um sofortige Reaktionen zu ermöglichen."
   },
   {
@@ -117,12 +117,12 @@
     "difficulty": "Mittelschwer",
     "question": "Welches Risiko und welchen Vorteil bringt der Verteilweg über reine 'Self-Service-BI' für ein Unternehmen mit sich?",
     "options": [
-      "Vorteil: Absolute Konsistenz aller Kennzahlen; Risiko: Sehr hohe Trägheit bei neuen Anforderungen.",
-      "Vorteil: Maximale Freiheit und Flexibilität für die Fachbereiche; Risiko: Hohes Konsistenzrisiko (Entstehung von Datensilos und abweichenden Kennzahlendefinitionen).",
       "Vorteil: Geringe IT-Infrastrukturkosten; Risiko: Es können keine mobilen Endgeräte angebunden werden.",
-      "Vorteil: Automatisches Löschen fehlerhafter Daten; Risiko: Erhöhte Netzwerklatenz durch langsame Joins."
+      "Vorteil: Absolute Konsistenz aller Kennzahlen; Risiko: Sehr hohe Trägheit bei neuen Anforderungen.",
+      "Vorteil: Automatisches Löschen fehlerhafter Daten; Risiko: Erhöhte Netzwerklatenz durch langsame Joins.",
+      "Vorteil: Maximale Freiheit und Flexibilität für die Fachbereiche; Risiko: Hohes Konsistenzrisiko (Entstehung von Datensilos und abweichenden Kennzahlendefinitionen)."
     ],
-    "correctIndex": 1,
+    "correctIndex": 3,
     "explanation": "Self-Service-BI verlagert die Berichtserstellung in die Fachbereiche. Das erhöht die Agilität und entlastet die IT. Allerdings besteht das gravierende Risiko, dass Fachbereiche eigene Datenquellen anzapfen, Berechnungslogiken eigenmächtig anpassen und somit inkonsistente Berichte (voneinander abweichende Wahrheiten) entstehen."
   },
   {
@@ -131,12 +131,12 @@
     "difficulty": "Mittelschwer",
     "question": "Welche Eigenschaften zeichnen die 'zentrale Verteilung' von Analyseresultaten aus?",
     "options": [
+      "Der vollständige Ausschluss von Führungskräften aus dem Berichtsempfängerkreis.",
       "Hohe Flexibilität für Ad-hoc-Anpassungen im Fachbereich bei minimalem IT-Aufwand.",
       "Eine spezialisierte 'Redaktion' (meist BI-Competence Center) erstellt und verteilt Berichte periodisch; das sichert hohe Konsistenz und standardisierte Qualität, führt aber zu organisatorischer Trägheit.",
-      "Der Verzicht auf ein zentrales Data Warehouse zugunsten lokaler Access-Datenbanken.",
-      "Der vollständige Ausschluss von Führungskräften aus dem Berichtsempfängerkreis."
+      "Der Verzicht auf ein zentrales Data Warehouse zugunsten lokaler Access-Datenbanken."
     ],
-    "correctIndex": 1,
+    "correctIndex": 2,
     "explanation": "Bei der klassischen zentralen Verteilung liegt die Datenhoheit und Berichtserstellung in den Händen einer zentralen Instanz. Das garantiert einheitlich definierte Kennzahlen (Single Source of Truth) und hohe Formatqualität. Änderungen oder neue Berichtsanforderungen müssen jedoch über die IT eingesteuert werden, was zu zeitlichen Verzögerungen führt."
   },
   {
@@ -145,12 +145,12 @@
     "difficulty": "Schwer",
     "question": "Wie versucht das moderne Konzept des 'Governed Self-Service' das Dilemma zwischen Flexibilität und Konsistenz zu lösen?",
     "options": [
-      "Indem Fachbereiche nur noch lesenden Zugriff auf statische PDF-Berichte erhalten.",
       "Indem die IT-Abteilung alle Berichte baut, diese aber wöchentlich per E-Mail-Abonnement versendet.",
-      "Indem Fachbereiche Berichte eigenständig erstellen, dies aber ausschließlich auf der Basis zentral verwalteter, zertifizierter semantischer Datenmodelle und kuratierter Kennzahlen der IT tun.",
-      "Durch die Abschaffung des Data Warehouses und die direkte Verbindung von Excel mit den operativen ERP-Systemen."
+      "Indem Fachbereiche nur noch lesenden Zugriff auf statische PDF-Berichte erhalten.",
+      "Durch die Abschaffung des Data Warehouses und die direkte Verbindung von Excel mit den operativen ERP-Systemen.",
+      "Indem Fachbereiche Berichte eigenständig erstellen, dies aber ausschließlich auf der Basis zentral verwalteter, zertifizierter semantischer Datenmodelle und kuratierter Kennzahlen der IT tun."
     ],
-    "correctIndex": 2,
+    "correctIndex": 3,
     "explanation": "Governed Self-Service ist eine erfolgreiche Mischform: Die IT stellt eine hochgradig kontrollierte, bereinigte und zertifizierte Datengrundlage (semantische Modelle mit einheitlich definierten Kennzahlen) bereit. Innerhalb dieser sicheren 'Leitplanken' dürfen die Fachanwender dann eigenständig explorieren und Berichte bauen. Das sichert Konsistenz bei gleichzeitiger Agilität."
   },
   {
@@ -159,10 +159,10 @@
     "difficulty": "Schwer",
     "question": "Warum ist ein 'zertifiziertes semantisches Modell' im Kontext des Deployments von Business Intelligence so wichtig?",
     "options": [
-      "Weil es die Komprimierung von Daten im Data Lake erzwingt, um Speicherplatz zu sparen.",
+      "Weil es die Ladezeiten beim ETL-Prozess durch den Verzicht auf relationale Joins verkürzt.",
       "Weil es als 'Single Source of Truth' fungiert, indem Definitionen und Berechnungslogiken einmal zentral abgestimmt und von allen Berichten wiederverwendet werden, was parallele Wildwuchs-Modelle verhindert.",
       "Weil es dafür sorgt, dass Berichte nur auf mobilen Geräten mit iOS-Betriebssystem geöffnet werden können.",
-      "Weil es die Ladezeiten beim ETL-Prozess durch den Verzicht auf relationale Joins verkürzt."
+      "Weil es die Komprimierung von Daten im Data Lake erzwingt, um Speicherplatz zu sparen."
     ],
     "correctIndex": 1,
     "explanation": "Ein zertifiziertes semantisches Modell kapselt die Geschäftslogik (z. B. wie die Kennzahl 'Umsatz' oder 'EBIT' exakt berechnet wird). Wenn alle Fachbereichs-Berichte auf dieses eine Modell zugreifen, führen Änderungen der Berechnungslogik an einer zentralen Stelle zur sofortigen und konsistenten Aktualisierung aller nachgelagerten Dashboards."
@@ -173,12 +173,12 @@
     "difficulty": "Schwer",
     "question": "Welche gravierende strategische Produktänderung hat Microsoft bezüglich der SQL Server Reporting Services (SSRS) angekündigt, und was bedeutet dies für das on-premises Reporting?",
     "options": [
-      "SSRS wird vollständig eingestellt und durch offene Python-Skripte im Jupyter Notebook ersetzt.",
       "Ab SQL Server 2025 erscheinen keine neuen eigenständigen SSRS-Versionen mehr; Microsoft konsolidiert das lokale Berichtswesen im Power BI Report Server, der paginierte und interaktive Berichte zusammenführt.",
-      "SSRS darf ab SQL Server 2025 nur noch in der Azure-Cloud betrieben werden; ein lokaler Betrieb wird technisch blockiert.",
-      "SSRS wird in eine reine NoSQL-Datenbank umgewandelt, die keine relationalen Tabellen mehr verarbeiten kann."
+      "SSRS wird in eine reine NoSQL-Datenbank umgewandelt, die keine relationalen Tabellen mehr verarbeiten kann.",
+      "SSRS wird vollständig eingestellt und durch offene Python-Skripte im Jupyter Notebook ersetzt.",
+      "SSRS darf ab SQL Server 2025 nur noch in der Azure-Cloud betrieben werden; ein lokaler Betrieb wird technisch blockiert."
     ],
-    "correctIndex": 1,
+    "correctIndex": 0,
     "explanation": "Microsoft konsolidiert sein lokales (on-premises) Berichtswesen. Ab SQL Server 2025 wird SSRS als eigenständiges Produkt nicht mehr weiterentwickelt. Seine Aufgaben und bestehenden RDL-Berichtsdefinitionen werden im 'Power BI Report Server' zusammengeführt, welcher somit zur primären on-premises Plattform für paginierte (klassische SSRS) und interaktive (Power BI) Berichte wird."
   },
   {
@@ -187,12 +187,12 @@
     "difficulty": "Mittelschwer",
     "question": "In welchem typischen Rhythmus veröffentlicht Microsoft Upgrades für den Power BI Report Server, und warum ist dieses Wissen für den BI-Betrieb wichtig?",
     "options": [
-      "Wöchentlich über automatische Windows-Updates im Hintergrund.",
-      "Dreimal jährlich: Im Januar, Mai und September. Upgrades müssen im Rahmen der IT-Governance gezielt geplant und getestet werden.",
       "Ausschließlich alle zwei Jahre gekoppelt an neue Windows-Server-Releases.",
-      "Es gibt keinen festen Rhythmus; Versionen werden unangekündigt On-Demand bereitgestellt."
+      "Wöchentlich über automatische Windows-Updates im Hintergrund.",
+      "Es gibt keinen festen Rhythmus; Versionen werden unangekündigt On-Demand bereitgestellt.",
+      "Dreimal jährlich: Im Januar, Mai und September. Upgrades müssen im Rahmen der IT-Governance gezielt geplant und getestet werden."
     ],
-    "correctIndex": 1,
+    "correctIndex": 3,
     "explanation": "Der Power BI Report Server folgt einem festen Release-Zyklus mit Veröffentlichungen im Januar, Mai und September. Da on-premises Systeme nicht auto-geupdatet werden, muss die IT diese Upgrades aktiv einplanen, testen (z. B. auf RDL-Kompatibilität und Authentifizierung) und installieren, um neue Features und Sicherheitsupdates zu erhalten."
   },
   {
@@ -201,10 +201,10 @@
     "difficulty": "Schwer",
     "question": "Welche fünf Aspekte müssen bei einer Migration bestehender lokaler SSRS-Berichte auf eine neuere Plattform (wie den Power BI Report Server) zwingend getestet werden?",
     "options": [
-      "CSS-Klassen, HTML5-Konformität, JavaScript-Bibliotheken, SQL-Indizes und Docker-Container-IDs.",
+      "Die Python-Version, das uv-Lockfile, pytest-Abdeckungsraten, ASGI-Server-Limits und Host-Ports.",
       "RDL-Kompatibilität, Datenquellen-Konnektivität, Authentifizierungsmethoden, Abonnements/Verteilungsregeln und das visuelle Renderingergebnis.",
-      "Die Ladekapazität des Netzteils, die Bildschirmauflösung der Endgeräte, die Tastaturbelegung, die Mausgeschwindigkeit und die CPU-Taktung.",
-      "Die Python-Version, das uv-Lockfile, pytest-Abdeckungsraten, ASGI-Server-Limits und Host-Ports."
+      "CSS-Klassen, HTML5-Konformität, JavaScript-Bibliotheken, SQL-Indizes und Docker-Container-IDs.",
+      "Die Ladekapazität des Netzteils, die Bildschirmauflösung der Endgeräte, die Tastaturbelegung, die Mausgeschwindigkeit und die CPU-Taktung."
     ],
     "correctIndex": 1,
     "explanation": "Bei der Migration von On-Premises-Berichten müssen die fachliche Korrektheit und die Betriebssicherheit gewährleistet sein. Getestet werden müssen: Läuft der XML-Berichtscode fehlerfrei (RDL-Kompatibilität)? Stehen die Verbindungen zu den Datenbanken? Funktionieren Single Sign-On oder Kerberos (Authentifizierung)? Werden geplante Push-Mails korrekt versendet? Und: Sieht das gerenderte PDF/Diagramm exakt so aus wie zuvor?"
@@ -216,11 +216,11 @@
     "question": "Aus welchen vier technischen Ebenen speist sich die Sichtbarkeit und Zugriffskontrolle von Berichtsdaten für einen Endanwender in modernen BI-Plattformen?",
     "options": [
       "IP-Whitelists, Windows-Firewall-Regeln, CPU-Priorisierungen und Browser-Cookies.",
-      "Workspace- und App-Rollen, granulare Objektberechtigungen, Build-Rechte sowie Row-Level Security (RLS) bzw. Object-Level Security (OLS).",
       "Nur aus dem NTFS-Dateizugriff auf dem Server und der Dateigröße des Berichts.",
+      "Workspace- und App-Rollen, granulare Objektberechtigungen, Build-Rechte sowie Row-Level Security (RLS) bzw. Object-Level Security (OLS).",
       "Der SQL-Benutzeranmeldung des lokalen Client-Rechners des Mitarbeiters."
     ],
-    "correctIndex": 1,
+    "correctIndex": 2,
     "explanation": "Sicherheit im BI-Betrieb ist mehrschichtig: Workspace-Rollen regeln die Bearbeitungsrechte auf Plattformebene, Objektberechtigungen steuern den Zugriff auf einzelne Berichte, Build-Rechte erlauben das Erstellen neuer Berichte auf Datenquellen, und RLS (Row-Level Security) filtert die eigentlichen Datenzeilen dynamisch (z. B. sieht Vertriebsleiter A nur Zeilen der Region Nord)."
   },
   {
@@ -229,12 +229,12 @@
     "difficulty": "Mittelschwer",
     "question": "Welche Faktoren begrenzen den Versand und die Formatierung von termingesteuerten BI-Berichts-Pushs via E-Mail-Abonnement in einer Enterprise-Architektur?",
     "options": [
+      "Die Farbsättigung des Berichts und die Anzahl der verwendeten Gitterlinien.",
       "Ausschließlich die maximale Zeichenlänge des Betreffs in Microsoft Outlook.",
       "Die zugewiesene Lizenzklasse, Server- oder Mandanten-Kapazitäten (Capacity), der konkrete Berichtstyp (paginiert vs. interaktiv), Exportgrenzen und gesetzte Sensitivity Labels (Vertraulichkeitsstufen).",
-      "Die Farbsättigung des Berichts und die Anzahl der verwendeten Gitterlinien.",
       "Die Anzahl der Joins im SQL-Server-Execution-Plan."
     ],
-    "correctIndex": 1,
+    "correctIndex": 2,
     "explanation": "BI-E-Mail-Abonnements unterliegen strengen Governance- und Performance-Einschränkungen. Paginierte Berichte eignen sich hervorragend für den PDF-Export, während interaktive Dashboards oft nur als Bildvorschau gesendet werden können. Zudem limitieren Kapazitätsgrenzen (z. B. Power BI Premium/Fabric Capacity) und Sicherheitsvorgaben (z. B. kein E-Mail-Export bei Dokumenten mit dem Label 'Streng Vertraulich') die Verteilung."
   },
   {
@@ -243,12 +243,12 @@
     "difficulty": "Schwer",
     "question": "Welchem Verteilungsprinzip entspricht die Einrichtung eines Alerts über den Microsoft 'Fabric Activator' und wie grenzt sich dieses von einem klassischen wöchentlichen Reporting ab?",
     "options": [
-      "Dem zeitgesteuerten Pull; der Nutzer entscheidet selbst, wann er die Anomalie im Dashboard untersucht.",
       "Dem ereignisgesteuerten Push; das System überwacht Datenströme kontinuierlich und stellt bei Erreichen eines vordefinierten Triggers (Schwellenwerts) aktiv eine Warnung oder Aktion zu (Management by Exception).",
       "Dem Ad-hoc-Pull; der Bericht wird nur auf explizite Anforderung per Chatbot generiert.",
-      "Dem statischen Berichtswesen; es werden ausschließlich paginierte Tabellen ohne Interaktionsmöglichkeit erzeugt."
+      "Dem statischen Berichtswesen; es werden ausschließlich paginierte Tabellen ohne Interaktionsmöglichkeit erzeugt.",
+      "Dem zeitgesteuerten Pull; der Nutzer entscheidet selbst, wann er die Anomalie im Dashboard untersucht."
     ],
-    "correctIndex": 1,
+    "correctIndex": 0,
     "explanation": "Fabric Activator ist Microsofts Werkzeug für proaktive BI. Es realisiert einen klassischen ereignisgesteuerten Push. Anstatt dass Anwender wöchentlich Berichte wälzen müssen, um Ausreißer zu suchen, agiert das System autonom: Es triggert bei vordefinierten Mustern oder Schwellenwertverletzungen sofortige Alerts per E-Mail, Teams oder startet automatisierte Workflows."
   },
   {
@@ -257,12 +257,12 @@
     "difficulty": "Mittelschwer",
     "question": "Welches Anwenderprofil und welche BI-Rolle ist typisch für die Nutzung von Mobile BI (Smartphone/Tablet) im Unternehmensumfeld?",
     "options": [
-      "Datenanalysten und ETL-Entwickler, die komplexe Datenaufbereitungen und statistische Modellierungen mobil programmieren.",
-      "Projektleiter und Manager, die primär als 'Information Consumer' (Empfänger) schnelle, handliche Lageübersichten benötigen, und weniger als 'Information Producer' (Ersteller) agieren.",
       "Datenbankadministratoren, die SQL-Indizes und Abfragepläne auf dem Tablet optimieren.",
-      "Ausschließlich externe Kunden ohne jeglichen Bezug zur internen BI-Infrastruktur des Unternehmens."
+      "Ausschließlich externe Kunden ohne jeglichen Bezug zur internen BI-Infrastruktur des Unternehmens.",
+      "Datenanalysten und ETL-Entwickler, die komplexe Datenaufbereitungen und statistische Modellierungen mobil programmieren.",
+      "Projektleiter und Manager, die primär als 'Information Consumer' (Empfänger) schnelle, handliche Lageübersichten benötigen, und weniger als 'Information Producer' (Ersteller) agieren."
     ],
-    "correctIndex": 1,
+    "correctIndex": 3,
     "explanation": "Mobile BI-Anwender (oft Manager unterwegs oder im Meeting) sind klassische Konsumenten von verdichteten Informationen. Sie benötigen keine tiefgehenden Entwicklungswerkzeuge auf dem Mobilgerät, sondern hochgradig responsive, intuitive Dashboards, die wichtige Kernkennzahlen (KPIs) für schnelle Entscheidungen auf einen Blick servieren."
   },
   {
@@ -271,10 +271,10 @@
     "difficulty": "Mittelschwer",
     "question": "Unter welchen Voraussetzungen sind Tablets für die mobile Berichtsverteilung besonders gut geeignet?",
     "options": [
-      "Nur wenn Berichte im Roh-CSV-Format vorliegen und keine Grafiken gerendert werden müssen.",
+      "Ausschließlich in Regionen, in denen keine Mobilfunkverbindung existiert.",
       "Wenn eine gute Balance aus Portabilität, ausreichender Displaygröße zur Lesbarkeit und Touch-Interaktion im Vordergrund steht und das Gerät in die BI-Sicherheitsinfrastruktur eingebunden ist.",
-      "Wenn auf den Geräten lokale SQL-Server-Datenbanken betrieben werden sollen.",
-      "Ausschließlich in Regionen, in denen keine Mobilfunkverbindung existiert."
+      "Nur wenn Berichte im Roh-CSV-Format vorliegen und keine Grafiken gerendert werden müssen.",
+      "Wenn auf den Geräten lokale SQL-Server-Datenbanken betrieben werden sollen."
     ],
     "correctIndex": 1,
     "explanation": "Tablets schließen die Lücke zwischen dem zu kleinen Smartphone-Display und dem unhandlichen Laptop. Sie eignen sich perfekt für interaktive Meetings, da sie Gestensteuerung (Wischen, Zoomen) erlauben, leicht sind, lange Akkulaufzeiten besitzen und dennoch genug Bildschirmfläche bieten, um komplexe visuelle Zusammenhänge fehlerfrei abzulesen."
@@ -285,12 +285,12 @@
     "difficulty": "Schwer",
     "question": "Wie lösen moderne mobile BI-Anwendungen die Herausforderung schwankender oder nicht vorhandener Netzverbindungen (Bandbreite) unterwegs, ohne Sicherheitsrisiken einzugehen?",
     "options": [
-      "Indem Berichte unverschlüsselt auf einer externen SD-Karte im Gerät dauerhaft zwischengespeichert werden.",
       "Durch die Bereitstellung verschlüsselter Offline-Vorschauen (Snapshots/Vorschau-Bilder) mit systemisch erzwungenen Ablaufzeiten (Timeouts), wodurch kein ungeschütztes dauerhaftes lokales Vorhalten der Rohdaten stattfindet.",
       "Indem die App bei Verbindungsabbruch automatisch Scheindaten generiert, um den Nutzer nicht zu irritieren.",
-      "Indem der Datenzugriff mobil generell nur bei stehender 5G-Glasfaser-Verbindung freigeschaltet wird."
+      "Indem der Datenzugriff mobil generell nur bei stehender 5G-Glasfaser-Verbindung freigeschaltet wird.",
+      "Indem Berichte unverschlüsselt auf einer externen SD-Karte im Gerät dauerhaft zwischengespeichert werden."
     ],
-    "correctIndex": 1,
+    "correctIndex": 0,
     "explanation": "Sicherheit hat im mobilen Deployment oberste Priorität (Geräteverlust!). Um offline arbeitsfähig zu bleiben, speichern Apps verschlüsselte, temporäre Snapshots der Berichtsseiten auf dem Gerät. Diese besitzen ein festes Ablaufdatum. Ist die App zu lange offline, verfallen die Previews und die Daten werden gelöscht, um unbefugten Zugriff zu verhindern."
   },
   {
@@ -299,10 +299,10 @@
     "difficulty": "Mittelschwer",
     "question": "Welche funktionale Einschränkung gilt typischerweise für mobile BI-Client-Apps wie Tableau Mobile im Vergleich zur Desktop-Umgebung?",
     "options": [
-      "Es können keinerlei Filter oder Sortierungen auf dem Mobilgerät angewendet werden.",
-      "Die Anzeige von serverseitig verarbeiteten Inhalten und interaktives Filtern sind möglich; das Erstellen oder tiefgehende Editieren von Berichten ist jedoch auf Mobilgeräten gesperrt und erfordert einen Desktop-Browser mit entsprechenden Rechten.",
       "Berichte können mobil ausschließlich im Schwarz-Weiß-Modus betrachtet werden.",
-      "Die mobile App hat keinen Zugriff auf Berechtigungsstrukturen und zeigt immer alle Daten unverschlüsselt an."
+      "Die Anzeige von serverseitig verarbeiteten Inhalten und interaktives Filtern sind möglich; das Erstellen oder tiefgehende Editieren von Berichten ist jedoch auf Mobilgeräten gesperrt und erfordert einen Desktop-Browser mit entsprechenden Rechten.",
+      "Die mobile App hat keinen Zugriff auf Berechtigungsstrukturen und zeigt immer alle Daten unverschlüsselt an.",
+      "Es können keinerlei Filter oder Sortierungen auf dem Mobilgerät angewendet werden."
     ],
     "correctIndex": 1,
     "explanation": "Mobile BI-Apps sind optimierte Konsum-Schnittstellen. Der Anwender kann filtern, zoomen, Drill-Downs machen und Daten explorieren. Das tatsächliche 'Authoring' (Erstellen und Layouten von Berichten) erfordert jedoch präzise Maussteuerung und viel Bildschirmfläche. Daher ist dieser Funktionsbereich auf Desktop-Browser bzw. Desktop-Editoren beschränkt."
@@ -313,12 +313,12 @@
     "difficulty": "Mittelschwer",
     "question": "Was beschreibt das berühmte 'DMBOK v2 Wheel' der Data Management Association (DAMA) und in welchem Verhältnis stehen Data Management und Data Governance?",
     "options": [
-      "Es zeigt das Zusammenspiel der 11 Wissensgebiete des Datenmanagements, wobei die 'Data Governance' als zentrales Steuerungselement in der Mitte des Rades liegt und Richtlinien, Rollen sowie Prozesse für alle anderen Disziplinen vorgibt.",
       "Es beschreibt eine mathematische Formel zur Berechnung der optimalen ETL-Server-Taktung.",
       "Es stellt ein reines Open-Source-Tool zur automatisierten Verteilung von Docker-Containern dar.",
+      "Es zeigt das Zusammenspiel der 11 Wissensgebiete des Datenmanagements, wobei die 'Data Governance' als zentrales Steuerungselement in der Mitte des Rades liegt und Richtlinien, Rollen sowie Prozesse für alle anderen Disziplinen vorgibt.",
       "Es dient der Klassifizierung von SQL-Join-Typen in dimensionalen Datenmodellen."
     ],
-    "correctIndex": 0,
+    "correctIndex": 2,
     "explanation": "Das DAMA-DMBOK v2 Framework definiert Datenmanagement als ganzheitliche Disziplin. Die 'Data Governance' steht im Zentrum des Wheels, weil sie die strategischen Spielregeln (Verfügungsrechte, Verantwortlichkeiten, Datenqualitätspolicies) definiert. Das Datenmanagement (Modellierung, Storage, Sicherheit etc.) setzt diese Vorgaben operativ um."
   },
   {
@@ -327,12 +327,12 @@
     "difficulty": "Schwer",
     "question": "Welche moderne Erweiterung erfährt das DMBOK-Wissensgebiet 'Data Storage & Operations' im Kontext moderner BI- und KI-Infrastrukturen durch aktuelle BI-Fachliteratur?",
     "options": [
-      "Den vollständigen Verzicht auf relationale Datenhaltung und die Migration aller DWHs in Textdateien.",
       "Die Einbindung von MLOps (Machine Learning Operations) und DevOps-Prinzipien zur operationalen Absicherung von automatisierten ML-Modellen und dem kontinuierlichen Deployment von Datenprodukten.",
-      "Die Beschränkung der Speicherung auf lokale Festplattenlaufwerke ohne Cloud-Anbindung.",
-      "Den automatisierten Einsatz generativer KI zur eigenständigen Generierung von Datenbanktabellen ohne menschliche Kontrolle."
+      "Den automatisierten Einsatz generativer KI zur eigenständigen Generierung von Datenbanktabellen ohne menschliche Kontrolle.",
+      "Den vollständigen Verzicht auf relationale Datenhaltung und die Migration aller DWHs in Textdateien.",
+      "Die Beschränkung der Speicherung auf lokale Festplattenlaufwerke ohne Cloud-Anbindung."
     ],
-    "correctIndex": 1,
+    "correctIndex": 0,
     "explanation": "Da das originale DAMA-DMBOK v2 Standardwerk aus dem Jahr 2017 stammt, fehlen ihm moderne Aspekte der automatisierten Bereitstellung. Die BI-Fachliteratur erweitert die Domäne 'Data Storage & Operations' daher um DevOps- und MLOps-Prinzipien. Nur so lässt sich der Lebenszyklus moderner, KI-gestützter Datenprodukte automatisiert und stabil betreiben."
   },
   {
@@ -342,11 +342,11 @@
     "question": "Warum greift die Definition von 'Informationsverteilung' im BI-Betrieb laut Baars (2006) weit über das schlichte 'Versenden einer E-Mail' hinaus?",
     "options": [
       "Weil der E-Mail-Versand aufgrund der SMTP-Protokoll-Einschränkungen keine Dateianhänge über 2 MB erlaubt.",
+      "Weil E-Mail-Verteiler ausschließlich über manuelle Registrierungsformulare gepflegt werden dürfen.",
       "Weil die Informationsverteilung Analyseergebnisse autorisierten Empfängern personalisiert bereitstellen muss (Logistik) und gleichzeitig sicherstellen muss, dass Empfänger die Zahlen kontextuell richtig interpretieren können (Semantik/Schulung).",
-      "Weil beim E-Mail-Versand die SQL-Indizes auf dem Berichtsserver zerstört werden.",
-      "Weil E-Mail-Verteiler ausschließlich über manuelle Registrierungsformulare gepflegt werden dürfen."
+      "Weil beim E-Mail-Versand die SQL-Indizes auf dem Berichtsserver zerstört werden."
     ],
-    "correctIndex": 1,
+    "correctIndex": 2,
     "explanation": "Informationsverteilung hat eine logistische und eine kognitive Seite. Logistisch geht es darum, die richtigen Daten zur richtigen Zeit an die berechtigten Personen zu liefern (Sicherheit, Personalisierung). Kognitiv/semantisch muss sichergestellt sein, dass die Empfänger die Kennzahlen richtig deuten können – das erfordert Metadaten, Kontextbeschreibungen und Schulungskonzepte."
   },
   {
@@ -357,8 +357,8 @@
     "options": [
       "Die native Übersetzung des gesamten Berichtscodes in maschinellen Assembler-Code für jeden CPU-Typ.",
       "Die konsequente Nutzung von standardisierten Web-Technologien wie JavaScript, HTML5 und CSS3, wodurch der Webbrowser als universelle Laufzeitumgebung fungiert.",
-      "Die Virtualisierung des kompletten Windows-Betriebssystems auf dem Mobilgerät.",
-      "Der Verzicht auf jegliche grafische UI zugunsten einer rein textbasierten Terminal-Ausgabe."
+      "Der Verzicht auf jegliche grafische UI zugunsten einer rein textbasierten Terminal-Ausgabe.",
+      "Die Virtualisierung des kompletten Windows-Betriebssystems auf dem Mobilgerät."
     ],
     "correctIndex": 1,
     "explanation": "Moderne BI-Plattformen (wie Power BI, Tableau oder FastHTML-Anwendungen) setzen auf Web-Standards auf. HTML5 strukturiert die Seite, CSS3 steuert das responsive Layout für unterschiedliche Bildschirmgrößen und JavaScript sorgt für die dynamische Interaktivität. Dadurch sind Berichte plattformunabhängig und ohne lokale Client-Installation lauffähig."
@@ -369,9 +369,9 @@
     "difficulty": "Schwer",
     "question": "Wie spiegelt sich das Paradigma des 'Continuous Deployment' im modernen Architekturkonzept des 'Data Mesh' (nach Zhamak Dehghani) wider?",
     "options": [
-      "Es wird abgeschafft, da im Data Mesh alle Daten manuell per SQL-Skript exportiert und importiert werden müssen.",
-      "Über das Prinzip der 'Self-Serve Data Platform': Die Domänenteams nutzen eine standardisierte, plattformunabhängige Infrastruktur, die den gesamten Lebenszyklus und die automatisierte Bereitstellung (Deployment) ihrer Datenprodukte autonom managt.",
       "Es wird ausschließlich für die zentrale IT-Abteilung eingesetzt, während Domänenteams keinen Zugriff auf CI/CD-Pipelines erhalten.",
+      "Über das Prinzip der 'Self-Serve Data Platform': Die Domänenteams nutzen eine standardisierte, plattformunabhängige Infrastruktur, die den gesamten Lebenszyklus und die automatisierte Bereitstellung (Deployment) ihrer Datenprodukte autonom managt.",
+      "Es wird abgeschafft, da im Data Mesh alle Daten manuell per SQL-Skript exportiert und importiert werden müssen.",
       "Durch das Verbot von agilen Projektmethoden zugunsten eines rein hierarchischen ITIL-Prozesses."
     ],
     "correctIndex": 1,
@@ -383,12 +383,12 @@
     "difficulty": "Mittelschwer",
     "question": "Was ist laut der BI-Governance-Lehre das primäre Ziel des Deployments im Sinne des 'Roten Fadens' der Datenwertschöpfung?",
     "options": [
+      "Die Reduzierung der Berichtskosten auf genau Null Euro durch den Verzicht auf kommerzielle Softwarelizenzen.",
       "Das Laden von möglichst vielen Gigabytes an Daten in den Hauptspeicher des Datenbankservers.",
-      "Dass ein Bericht erst dann echten geschäftlichen Nutzen stiftet, wenn er den richtigen Empfänger fehlerfrei erreicht, kognitiv verstanden wird und eine datengestützte Entscheidung auslöst.",
       "Die vollständige Automatisierung aller Berichte, sodass kein menschlicher Eingriff mehr nötig ist.",
-      "Die Reduzierung der Berichtskosten auf genau Null Euro durch den Verzicht auf kommerzielle Softwarelizenzen."
+      "Dass ein Bericht erst dann echten geschäftlichen Nutzen stiftet, wenn er den richtigen Empfänger fehlerfrei erreicht, kognitiv verstanden wird und eine datengestützte Entscheidung auslöst."
     ],
-    "correctIndex": 1,
+    "correctIndex": 3,
     "explanation": "Datenwertschöpfung ist eine Kette. Datenbereitstellung und Modellierung sind wertlose Kostenfaktoren, solange am Ende kein Erkenntnisgewinn steht. Erst wenn das Deployment die Information erfolgreich an den Entscheider liefert, dieser die Zahlen versteht und danach handelt, entsteht der Return on Investment (ROI) des BI-Projekts."
   },
   {
@@ -399,8 +399,8 @@
     "options": [
       "Es sind völlig synonyme Begriffe für dieselbe organisatorische Abteilung.",
       "IT-Governance regelt die Hardware-Infrastruktur; Datenmanagement sichert die Datenqualität über den Lebenszyklus; BI-Governance definiert die konkreten Spielregeln für die Nutzung, Rollen und Kennzahlenkonsistenz der Steuerungsinstrumente.",
-      "BI-Governance befasst sich ausschließlich mit den CSS-Farbcodes der Berichte; die anderen Disziplinen regeln die SQL-Abfragen.",
-      "Datenmanagement ist der IT-Governance hierarchisch übergeordnet und verbietet den Einsatz von BI-Governance."
+      "Datenmanagement ist der IT-Governance hierarchisch übergeordnet und verbietet den Einsatz von BI-Governance.",
+      "BI-Governance befasst sich ausschließlich mit den CSS-Farbcodes der Berichte; die anderen Disziplinen regeln die SQL-Abfragen."
     ],
     "correctIndex": 1,
     "explanation": "Die drei Begriffe verhalten sich komplementär: IT-Governance setzt den Rahmen für die IT-Infrastruktur und IT-Sicherheit. Data Management (DAMA) organisiert die Datenflüsse und die physische Datenqualität. BI-Governance setzt ganz oben an: Sie definiert die organisatorischen Rollen (z. B. KPI-Owner), sichert die inhaltliche Konsistenz der Kennzahlen und regelt die Verteilprozesse."
@@ -411,12 +411,12 @@
     "difficulty": "Schwer",
     "question": "Warum stellt das Simpson-Paradoxon eine massive Gefahr dar, wenn aggregierte Berichte an das Management 'deployed' werden, ohne dass eine mathematische Prüfung der Teilgruppen stattfand?",
     "options": [
-      "Weil das Simpson-Paradoxon dazu führt, dass die Diagramme im Webbrowser unvollständig gerendert werden.",
-      "Weil sich statistische Trends beim Aggregieren der Daten ins Gegenteil umkehren können, was zu katastrophalen, falschen Management-Entscheidungen führt, wenn der Berichtsempfänger den Confounder (Hintergrundvariable) nicht sieht.",
       "Weil es die Ladezeiten des Berichtsservers exponentiell verlängert.",
-      "Weil es die Authentifizierungsmethoden der Benutzerdatenbank blockiert."
+      "Weil es die Authentifizierungsmethoden der Benutzerdatenbank blockiert.",
+      "Weil sich statistische Trends beim Aggregieren der Daten ins Gegenteil umkehren können, was zu katastrophalen, falschen Management-Entscheidungen führt, wenn der Berichtsempfänger den Confounder (Hintergrundvariable) nicht sieht.",
+      "Weil das Simpson-Paradoxon dazu führt, dass die Diagramme im Webbrowser unvollständig gerendert werden."
     ],
-    "correctIndex": 1,
+    "correctIndex": 2,
     "explanation": "Beim Deployment aggregierter Berichte wird Datenverdichtung betrieben. Wenn das Simpson-Paradoxon vorliegt, zeigt der verdichtete Bericht (z. B. 'Umsatzentwicklung steigt') das exakte Gegenteil der Realität in den einzelnen Filialen/Teilgruppen (wo überall Umsatzrückgänge herrschen). BI-Governance muss daher prüfen, ob Datenaggregationen fachlich zulässig sind."
   },
   {
@@ -425,10 +425,10 @@
     "difficulty": "Mittelschwer",
     "question": "Welche Komponenten bilden das Fundament der 'Datenbereitstellung' im BI-Ordnungsrahmen und müssen vor jedem Deployment stehen?",
     "options": [
-      "Das BI-Portal und die mobile App.",
+      "Die SMTP-Serverkonfiguration für den E-Mail-Versand.",
       "Das Data Warehouse (DWH) und dimensionale Datenstrukturen (Data Marts), die eine stabile und bereinigte Datenbasis garantieren.",
       "Das CSS-Layout und die HTML-Dateien des Webservers.",
-      "Die SMTP-Serverkonfiguration für den E-Mail-Versand."
+      "Das BI-Portal und die mobile App."
     ],
     "correctIndex": 1,
     "explanation": "Ohne ein solides Fundament bricht jede Verteilung zusammen. Die unterste Schicht des BI-Ordnungsrahmens ist die Datenbereitstellung. Sie sorgt über ETL/ELT-Prozesse dafür, dass Rohdaten aus operativen Systemen extrahiert, bereinigt, historisiert und in dimensionalen Strukturen (DWH/Data Marts) performant für Abfragen bereitgestellt werden."
@@ -439,10 +439,10 @@
     "difficulty": "Mittelschwer",
     "question": "Zu welchem Zeitpunkt der BI-Nutzungskette greift die Informationsverteilung (Distribution) und warum?",
     "options": [
-      "Als allererster Schritt, um die Anforderungen der Anwender direkt auf den operativen Datenbanken zu testen.",
+      "Ausschließlich bei der Außerbetriebnahme eines veralteten Berichts-Systems.",
       "Als letzter Schritt der Nutzungskette, um die generierten und aufbereiteten Analyseergebnisse zielgerichtet zu den berechtigten Empfängern zu bringen.",
-      "Während der Datenmodellierung im Core-DWH, um Tabellenbeziehungen zu validieren.",
-      "Ausschließlich bei der Außerbetriebnahme eines veralteten Berichts-Systems."
+      "Als allererster Schritt, um die Anforderungen der Anwender direkt auf den operativen Datenbanken zu testen.",
+      "Während der Datenmodellierung im Core-DWH, um Tabellenbeziehungen zu validieren."
     ],
     "correctIndex": 1,
     "explanation": "Die Informationsverteilung ist die logistische Brücke zum Anwender. Sie greift als letzter Schritt der Nutzungskette (nach der Datenbereitstellung und der Informationsgenerierung). Erst wenn die Daten berechnet, aufbereitet und visualisiert wurden, sorgt die Distribution dafür, dass das fertige Informationsprodukt beim Empfänger ankommt."
@@ -453,12 +453,12 @@
     "difficulty": "Schwer",
     "question": "Welche zentrale Verantwortung trägt der 'KPI-Owner' im Rahmen einer gelebten BI-Governance vor der Verteilung von Berichten?",
     "options": [
-      "Er programmiert die SQL-Abfragen und entwirft die CSS-Layouts der Dashboards.",
-      "Er genehmigt die fachliche Definition, die zulässige Verwendung, die Berechnungslogik und die Qualitätsgrenzen einer Kennzahl (KPI) und bürgt für deren Korrektheit.",
       "Er verwaltet die Hardware-Server und tauscht defekte Festplatten im Rechenzentrum aus.",
-      "Er führt ausschließlich die abschließenden Penetrationstests der Web-App durch."
+      "Er programmiert die SQL-Abfragen und entwirft die CSS-Layouts der Dashboards.",
+      "Er führt ausschließlich die abschließenden Penetrationstests der Web-App durch.",
+      "Er genehmigt die fachliche Definition, die zulässige Verwendung, die Berechnungslogik und die Qualitätsgrenzen einer Kennzahl (KPI) und bürgt für deren Korrektheit."
     ],
-    "correctIndex": 1,
+    "correctIndex": 3,
     "explanation": "Ein Hauptgrund für inkonsistente Berichte ist das Fehlen von Verantwortlichkeiten. BI-Governance etabliert daher die Rolle des 'KPI-Owners'. Er ist der fachliche Vormund einer Kennzahl. Er legt fest, wie diese berechnet wird (z. B. wie sich der 'Kundenwert' exakt zusammensetzt) und bürgt dafür, dass diese Logik in allen verteilten Berichten einheitlich angewendet wird."
   },
   {
@@ -467,12 +467,12 @@
     "difficulty": "Schwer",
     "question": "Was beschreibt das Konzept der 'Data Lineage' im BI-Betrieb und warum ist es für das Deployment von Berichten unverzichtbar?",
     "options": [
-      "Es beschreibt die physische Verkabelung der Server im Netzwerk-Rack.",
-      "Es dokumentiert lückenlos den Weg der Daten von der operativen Quelle über alle Transformationsschritte und Kennzahlenberechnungen bis hin zum konkreten Diagramm und der darauf basierenden Entscheidung.",
+      "Es misst die Anzahl der Klicks, die ein Anwender im BI-Portal pro Minute tätigt.",
       "Es ist ein Tool zur automatischen Übersetzung von SQL-Code in Python.",
-      "Es misst die Anzahl der Klicks, die ein Anwender im BI-Portal pro Minute tätigt."
+      "Es beschreibt die physische Verkabelung der Server im Netzwerk-Rack.",
+      "Es dokumentiert lückenlos den Weg der Daten von der operativen Quelle über alle Transformationsschritte und Kennzahlenberechnungen bis hin zum konkreten Diagramm und der darauf basierenden Entscheidung."
     ],
-    "correctIndex": 1,
+    "correctIndex": 3,
     "explanation": "Data Lineage (Datenherkunft) schafft Vertrauen in die Zahlen. Sie belegt lückenlos den Stammbaum eines Datenpunkts. Wenn ein Manager im Dashboard einen kritischen Wert hinterfragt, ermöglicht es die Data Lineage, den Wert rückwärts über alle ETL-Stufen bis zur exakten ERP-Transaktionsquelle zurückzuverfolgen und die Berechnungen zu auditieren."
   },
   {
@@ -481,12 +481,12 @@
     "difficulty": "Schwer",
     "question": "Was ist die Kernaufgabe des Prozesses 'Change Control' im professionellen Deployment-Lebenszyklus von BI-Anwendungen?",
     "options": [
-      "Das Verhindern jeglicher Systemänderungen, um eine Auslastung von 100% zu garantieren.",
       "Das lückenlose Versionieren von Daten-Schemata, Kennzahlen-Semantiken, Berichts-Verträgen und die Definition klarer Migrationspfade bei System-Upgrades.",
       "Die automatische Zuweisung neuer Passwörter an alle Portalbenutzer im 30-Tage-Rhythmus.",
-      "Das manuelle Löschen alter Logdateien auf dem Berichtsserver."
+      "Das manuelle Löschen alter Logdateien auf dem Berichtsserver.",
+      "Das Verhindern jeglicher Systemänderungen, um eine Auslastung von 100% zu garantieren."
     ],
-    "correctIndex": 1,
+    "correctIndex": 0,
     "explanation": "Berichte und Datenmodelle leben. Werden Quellsysteme geändert (z. B. ERP-Update), bricht ohne 'Change Control' das nachgelagerte Reporting zusammen. Change Control regelt diesen Änderungsprozess: Es versioniert Anpassungen, prüft Abhängigkeiten und stellt sicher, dass Migrationspfade und Datenverträge eingehalten werden, um Stillstandszeiten beim Deployment zu verhindern."
   },
   {
@@ -496,11 +496,11 @@
     "question": "Welche Nachweise muss ein 'Audit'-Prozess in einer revisionssicheren Business-Intelligence-Architektur jederzeit erbringen können?",
     "options": [
       "Den Nachweis über die günstigsten Stromeinkäufe für das Rechenzentrum.",
-      "Eine lückenlose und nachvollziehbare Historie über alle Software-Releases, zugewiesene Benutzerrollen, tatsächliche Datenzugriffe und die konkrete KI-Nutzung im Analyseprozess.",
       "Die exakte Zeilenanzahl aller jemals geschriebenen Python-Testskripte.",
-      "Den Nachweis, dass alle Mitarbeiter der IT-Abteilung zertifizierte Scrum-Master sind."
+      "Den Nachweis, dass alle Mitarbeiter der IT-Abteilung zertifizierte Scrum-Master sind.",
+      "Eine lückenlose und nachvollziehbare Historie über alle Software-Releases, zugewiesene Benutzerrollen, tatsächliche Datenzugriffe und die konkrete KI-Nutzung im Analyseprozess."
     ],
-    "correctIndex": 1,
+    "correctIndex": 3,
     "explanation": "In regulierten Branchen (z. B. Finanz- oder Pharmasektor) müssen Berichte revisionssicher sein. Das Audit stellt sicher, dass man auch Monate später exakt nachweisen kann, wer wann welchen Bericht freigegeben hat (Release-History), wer Zugriff auf sensible Daten hatte und ob Entscheidungen durch automatisierte KI-Modelle unterstützt wurden."
   },
   {
@@ -509,10 +509,10 @@
     "difficulty": "Mittelschwer",
     "question": "Welche fünf Kernmetriken überwacht das 'Monitoring' im laufenden BI-Betrieb, um die Stabilität der Informationsverteilung zu garantieren?",
     "options": [
-      "Tastaturanschläge, CPU-Lüfterdrehzahlen, Raumtemperatur, Bürobeleuchtung und Kaffeekonsum.",
+      "Die Dateigröße der Quelldateien, den Druckerpapierverbrauch und die Anzahl der Excel-Arbeitsblätter.",
       "Aktualität der Daten (Data Freshness), Datenvolumen, Verteilungsverhalten, Latenzzeiten bei Abfragen und die systemische Fehlerquote.",
       "Die Anzahl der importierten Python-Pakete, CSS-Farbpaletten, HTML-Tags, Docker-Image-Größen und Git-Commits.",
-      "Die Dateigröße der Quelldateien, den Druckerpapierverbrauch und die Anzahl der Excel-Arbeitsblätter."
+      "Tastaturanschläge, CPU-Lüfterdrehzahlen, Raumtemperatur, Bürobeleuchtung und Kaffeekonsum."
     ],
     "correctIndex": 1,
     "explanation": "Monitoring ist das Frühwarnsystem der BI-Infrastruktur. Es überwacht permanent, ob Daten pünktlich geladen wurden (Freshness), ob die Datenmenge plausibel ist (Volumen), ob Berichte erfolgreich an die Empfänger zugestellt wurden, wie schnell Dashboards auf Benutzereingaben reagieren (Latenz) und ob Verbindungsfehler oder Berechnungsabbrüche vorliegen."
@@ -523,10 +523,10 @@
     "difficulty": "Mittelschwer",
     "question": "Welche Evolutionsstufen durchlief das mobile Berichtswesen (Mobile BI) historisch bis hin zu modernen eigenständigen Apps?",
     "options": [
-      "SQL-Konsole -> Excel-Makros -> PDF-Ausdrucke -> Webseiten.",
+      "Teletext -> Fax-Abonnements -> PDF-Anhänge -> Responsive Dashboards.",
       "Übertragung einfacher Textmeldungen (z. B. Pager/Pager-Dienste) -> Datenzugriff via mobile Webbrowser -> Remote-Zugang über Client-Apps -> Eigenständige native Apps für mobile BI.",
-      "Es gab keine Entwicklung; moderne BI-Systeme wurden direkt als native Smartphone-Apps erfunden.",
-      "Teletext -> Fax-Abonnements -> PDF-Anhänge -> Responsive Dashboards."
+      "SQL-Konsole -> Excel-Makros -> PDF-Ausdrucke -> Webseiten.",
+      "Es gab keine Entwicklung; moderne BI-Systeme wurden direkt als native Smartphone-Apps erfunden."
     ],
     "correctIndex": 1,
     "explanation": "Die Evolution von Mobile BI spiegelt die Hardware-Entwicklung wider: In den Anfängen (90er Jahre) wurden Alarme als simple Textnachrichten auf Pager gesendet. Mit den ersten Smartphones folgten unkomfortable Browser-Schnittstellen, danach generische Remote-Clients und heute hochoptimierte, native Apps, die Gestensteuerung, Offline-Caching und Hardware-Vorteile (wie GPS) voll ausschöpfen."
@@ -537,10 +537,10 @@
     "difficulty": "Mittelschwer",
     "question": "In welchem Szenario ist der nachfrageorientierte Abruf (Pull) von Berichten der klassischen Push-Zustellung fachlich vorzuziehen?",
     "options": [
-      "Bei täglichen Standard-Umsatzmeldungen der gesamten Geschäftsführung zur morgendlichen Routinekontrolle.",
+      "Zur lückenlosen und revisionssicheren Archivierung aller Monatsabschlüsse auf dem Fileserver.",
       "Bei individuellen, unregelmäßigen Einzelfragen und detaillierten Ad-hoc-Analysen der Fachbereiche, wenn Informationsbedarf nur situativ entsteht.",
-      "Wenn kritische Sicherheitswarnungen (Alerts) sofort an Systemadministratoren zugestellt werden müssen.",
-      "Zur lückenlosen und revisionssicheren Archivierung aller Monatsabschlüsse auf dem Fileserver."
+      "Bei täglichen Standard-Umsatzmeldungen der gesamten Geschäftsführung zur morgendlichen Routinekontrolle.",
+      "Wenn kritische Sicherheitswarnungen (Alerts) sofort an Systemadministratoren zugestellt werden müssen."
     ],
     "correctIndex": 1,
     "explanation": "Ein permanenter Push von Ad-hoc-Analysen würde Postfächer überfluten und zu massivem Informationsrauschen (Information Overload) führen. Für unregelmäßige Spezialfragen ist das Pull-Prinzip ideal: Der Anwender holt sich die Daten und Berichte genau dann selbst aus dem System, wenn das konkrete fachliche Problem auftritt."
@@ -551,10 +551,10 @@
     "difficulty": "Mittelschwer",
     "question": "Wie wird das klassische 'Berichtswesen' (Reporting) im Sinne des Deployments fachlich charakterisiert?",
     "options": [
-      "Als die ungefilterte und unbesehene Weiterleitung aller operativen Logdateien an die Mitarbeiter.",
+      "Als die manuelle Eingabe von Buchungsbelegen in das ERP-System.",
       "Als die zweckorientierte Bereitstellung von Informationen zur Führung, Planung, Kontrolle und Entscheidungsfindung in Führungs- und Fachbereichen.",
       "Als die rein ästhetische Aufbereitung von Grafiken für Marketingzwecke ohne Bezug zu realen Geschäftsdaten.",
-      "Als die manuelle Eingabe von Buchungsbelegen in das ERP-System."
+      "Als die ungefilterte und unbesehene Weiterleitung aller operativen Logdateien an die Mitarbeiter."
     ],
     "correctIndex": 1,
     "explanation": "Berichtswesen ist kein Selbstzweck, sondern dient der zielgerichteten Informationsversorgung. Seine Aufgabe ist es, die richtigen Daten in empfängergerechter Form so aufzubereiten und zu verteilen, dass Führungskräfte und Fachbereiche den aktuellen Zustand des Unternehmens analysieren, planen, steuern und Risiken frühzeitig kontrollieren können."
@@ -565,27 +565,27 @@
     "difficulty": "Schwer",
     "question": "Welches wissenschaftliche Werk gilt als Meilenstein zur formalen Charakterisierung und Strukturierung von Software-Deployment-Technologien in der Fachliteratur?",
     "options": [
-      "Hichert, R. (2013): IBCS Standards.",
+      "Kimball, R. (1996): The Data Warehouse Toolkit.",
       "Carzaniga, A.; Fuggetta, A.; Heimbigner, D. et al. (1998): A Characterization Framework for Software Deployment Technologies (Technical Report).",
       "Tufte, E. (1983): The Visual Display of Quantitative Information.",
-      "Kimball, R. (1996): The Data Warehouse Toolkit."
+      "Hichert, R. (2013): IBCS Standards."
     ],
     "correctIndex": 1,
     "explanation": "Der Technical Report 'A Characterization Framework for Software Deployment Technologies' von Carzaniga et al. (University of Colorado, 1998) definierte erstmals formal die Phasen des Deployment-Lebenszyklus. Er wird in der BI- und Software-Engineering-Literatur standardmäßig als wissenschaftliches Fundament für Deployment-Prozesse zitiert."
   },
   {
     "id": "D42",
-    "topic": "The Data Warehouse Lifecycle Toolkit",
+    "topic": "Export von Berichten als Governance-Frage",
     "difficulty": "Schwer",
-    "question": "In welchen Kapiteln des Standardwerks 'The Data Warehouse Lifecycle Toolkit' (Kimball, Ross et al.) wird das Deployment und der Betrieb von analytischen Datenstrukturen detailliert behandelt?",
+    "question": "Ein Bericht wird über eine Rendering-Erweiterung nach Excel, Word oder PDF exportiert und anschließend weitergereicht. Warum ist der Export nicht nur eine Bedienfrage, sondern auch eine Governance-Frage?",
     "options": [
-      "Ausschließlich in Kapitel 5 (Stern-Schema).",
-      "In den Kapiteln 1 und 13 (behandeln den gesamten Lifecycle bzw. die Bereitstellung und Wartung des DWHs).",
-      "In Kapitel 20 (behandelt exklusiv No-Code BI-Tools).",
-      "Das Werk befasst sich gar nicht mit dem Deployment, sondern ausschließlich mit der physischen SQL-Programmierung."
+      "Weil der Berichtsserver für jeden Export die Quelldaten vollständig neu lädt und die entstehende Last die termingesteuerten Abonnements anderer Empfängergruppen verzögert oder ausfallen lässt.",
+      "Weil der Export die Rollen und Rechte des Berichtsservers in die Datei einbettet und jeder Empfänger sich vor dem Öffnen erneut am Berichtsportal anmelden und authentifizieren muss.",
+      "Weil jedes Ausgabeformat eine eigene Berichtsdefinition erfordert und die Kennzahlen je Format neu berechnet werden, sodass zwischen Excel-, Word- und PDF-Fassung abweichende Werte entstehen.",
+      "Weil die exportierte Datei eine Momentaufnahme außerhalb des Berichtsservers ist: Sie wird ohne Berechtigungsprüfung weitergegeben, aktualisiert sich nicht mehr und ihre Nutzung wird nicht protokolliert."
     ],
-    "correctIndex": 1,
-    "explanation": "Ralph Kimball und Margy Ross widmen in ihrem Standardwerk 'The Data Warehouse Lifecycle Toolkit' (2. Auflage) wesentliche Teile dem Deployment. In Kapitel 1 geben sie den Überblick über den gesamten DWH-Lebenszyklus, während Kapitel 13 sich detailliert mit der physischen Bereitstellung, dem Rollout und dem laufenden Betrieb befasst."
+    "correctIndex": 3,
+    "explanation": "Dieselbe Berichtsdefinition lässt sich über Rendering-Erweiterungen in verschiedene Formate überführen — Excel zum Weiterrechnen, Word für Textvorlagen, PDF seitengetreu für Ablage und Versand. Mit dem Export verlässt der Inhalt jedoch den Berichtsserver: Die Datei ist eine Momentaufnahme ohne Berechtigungsprüfung, ohne Aktualisierung und ohne Protokollierung, und Interaktionen wie Sortieren oder Aufklappen gehen verloren. Genau deshalb gehören Download, Weitergabe und Anhänge zu den deployment-relevanten Controls."
   },
   {
     "id": "D43",
@@ -593,12 +593,12 @@
     "difficulty": "Schwer",
     "question": "Warum beschleunigen Self-Service-Dateninfrastrukturen im Data Mesh die Organisationsdynamik eines Unternehmens signifikant?",
     "options": [
+      "Weil sie die Anzahl der SQL-Abfragen durch den Einsatz von Excel-Makros halbieren.",
       "Weil sie den Fachbereichen erlauben, Hardware-Server selbstständig im Rechenzentrum zu installieren.",
       "Weil sie den Domänenteams ein hohes Maß an Autonomie gewähren, die dezentrale Datenverantwortung stärken und durch standardisierte CI/CD-Prozesse die Bereitstellung neuer Datenprodukte massiv beschleunigen.",
-      "Weil sie die Anzahl der SQL-Abfragen durch den Einsatz von Excel-Makros halbieren.",
       "Weil sie dafür sorgen, dass alle Berichte automatisch als offene Textdateien auf GitHub Pages gehostet werden."
     ],
-    "correctIndex": 1,
+    "correctIndex": 2,
     "explanation": "Wenn Fachbereiche (Domänen) ihre Daten als eigenständige Produkte anbieten sollen, dürfen sie nicht bei jeder Änderung auf die zentrale IT warten. Die Self-Serve-Datenplattform automatisiert den gesamten Lifecycle (Testing, Bereitstellung, Governance-Prüfung). Das befähigt die Teams zu maximaler Autonomie und beschleunigt die Bereitstellung neuer Analyselösungen enorm."
   },
   {
@@ -607,12 +607,12 @@
     "difficulty": "Mittelschwer",
     "question": "Welche fundamentale Weisheit über den Erfolg von BI-Projekten drückt der Satz 'Wert entsteht oben, getragen von unten' aus?",
     "options": [
-      "Dass die Grafiken im Dashboard möglichst teuer sein müssen, um dem Management zu gefallen.",
-      "Dass Berichtsempfänger nur dann erfolgreich agieren können (Wert oben), wenn die darunterliegenden Schichten (Datenbereitstellung, Datenqualität, Rechteverwaltung und stabiler IT-Betrieb) lückenlos funktionieren.",
       "Dass die CPU-Auslastung der SQL-Datenbank stets über 90% liegen muss, um effizient zu sein.",
-      "Dass das Data Warehouse physisch im Keller des Firmengebäudes untergebracht sein muss."
+      "Dass das Data Warehouse physisch im Keller des Firmengebäudes untergebracht sein muss.",
+      "Dass die Grafiken im Dashboard möglichst teuer sein müssen, um dem Management zu gefallen.",
+      "Dass Berichtsempfänger nur dann erfolgreich agieren können (Wert oben), wenn die darunterliegenden Schichten (Datenbereitstellung, Datenqualität, Rechteverwaltung und stabiler IT-Betrieb) lückenlos funktionieren."
     ],
-    "correctIndex": 1,
+    "correctIndex": 3,
     "explanation": "Ein wunderschönes, interaktives Dashboard (oben) ist wertlos und gefährlich, wenn die Datenbasis fehlerhaft ist, Berechtigungen fehlen oder der Server ständig abstürzt (unten). Wahrer BI-Erfolg erfordert eine durchgängige Qualitätskette von der Datenquelle über das Datenmodell bis zur Benutzeroberfläche."
   },
   {
@@ -621,12 +621,12 @@
     "difficulty": "Mittelschwer",
     "question": "Was versteht man unter einem 'Trigger' im Kontext der ereignisgesteuerten Informationsverteilung?",
     "options": [
-      "Ein spezielles visuelles Diagrammelement zur Darstellung von Zeitreihen.",
-      "Das auslösende Ereignis (meist das Über- oder Unterschreiten eines definierten Schwellenwerts in den Daten), das die automatische Generierung und Verteilung eines Berichts/Alerts startet.",
+      "Das automatische Herunterfahren des SQL-Servers bei Inaktivität.",
       "Die manuelle Bestätigung des Berichts durch den Systemadministrator.",
-      "Das automatische Herunterfahren des SQL-Servers bei Inaktivität."
+      "Ein spezielles visuelles Diagrammelement zur Darstellung von Zeitreihen.",
+      "Das auslösende Ereignis (meist das Über- oder Unterschreiten eines definierten Schwellenwerts in den Daten), das die automatische Generierung und Verteilung eines Berichts/Alerts startet."
     ],
-    "correctIndex": 1,
+    "correctIndex": 3,
     "explanation": "Ein Trigger ist der Funke, der den Push-Prozess zündet. Er überwacht kontinuierlich bestimmte Datenpunkte. Sobald eine Bedingung erfüllt ist (z. B. 'Lagerbestand von Produkt X fällt unter 10 Stück'), schlägt der Trigger an und die BI-Plattform versendet sofort die vordefinierte Warnmeldung an den Einkauf."
   },
   {
@@ -635,12 +635,12 @@
     "difficulty": "Schwer",
     "question": "Welche Komponenten umfasst ein autonomes 'Datenprodukt' (Data Product) im Data Mesh, um unabhängig deployed und betrieben werden zu können?",
     "options": [
-      "Ausschließlich die nackte SQL-Tabelle und eine beschreibende Textdatei.",
       "Den Quellcode (Transformationen), die eigentlichen Daten (Storage), die zugehörigen Metainformationen (Schema/Lineage), Sicherheits- und Governance-Policies sowie die benötigte Infrastruktur-Konfiguration.",
       "Nur das HTML-Dashboard und die zugehörigen CSS-Stylesheets.",
+      "Ausschließlich die nackte SQL-Tabelle und eine beschreibende Textdatei.",
       "Eine Sammlung von Jupyter Notebooks (.ipynb) ohne feste Datenanbindung."
     ],
-    "correctIndex": 1,
+    "correctIndex": 0,
     "explanation": "Ein Datenprodukt im Data Mesh ist eine autonome, funktionale Einheit. Es ist nicht nur eine Tabelle. Es kapselt alles, was zu seinem Betrieb gehört: den Code zur Datenverarbeitung, den physischen Speicher, die semantischen Metadaten, die Zugriffsrechte (Policies) und die Bereitstellungspfade. Nur so kann es unabhängig von anderen Produkten deployed werden."
   },
   {
@@ -650,11 +650,11 @@
     "question": "Was beschreibt der Begriff 'DevOps' im Kern und wie beeinflusst diese Kultur das Deployment von BI-Systemen?",
     "options": [
       "Das vollständige Outsourcing des IT-Betriebs an externe Dienstleister zur Kostensenkung.",
+      "Die manuelle Überwachung aller Serverprozesse durch wöchentliche Checklisten.",
       "Die Etablierung einer Kultur der engen Zusammenarbeit zwischen Software-Entwicklung (Development) und IT-Betrieb (Operations) zur Beschleunigung und qualitativen Absicherung von Releases durch kontinuierliche Automatisierung.",
-      "Die exklusive Programmierung von Weboberflächen mit CSS und HTML.",
-      "Die manuelle Überwachung aller Serverprozesse durch wöchentliche Checklisten."
+      "Die exklusive Programmierung von Weboberflächen mit CSS und HTML."
     ],
-    "correctIndex": 1,
+    "correctIndex": 2,
     "explanation": "DevOps bricht die klassischen Silos zwischen Entwicklern (die schnell neue Features liefern wollen) und Administratoren (die ein stabiles, unverändertes System wollen) auf. Durch automatisierte Pipelines (CI/CD), automatisierte Testläufe und gemeinsame Verantwortung wird der Deployment-Lifecycle beschleunigt und die Fehlerquote im Live-Betrieb drastisch gesenkt."
   },
   {
@@ -664,11 +664,11 @@
     "question": "Welche Disziplin des DAMA-DMBOK Frameworks befasst sich explizit mit dem Entwurf, der Implementierung und dem Support der physischen Datenspeicherung (Data Storage)?",
     "options": [
       "Data Governance",
-      "Data Storage & Operations",
       "Data Modeling & Design",
+      "Data Storage & Operations",
       "Metadata Management"
     ],
-    "correctIndex": 1,
+    "correctIndex": 2,
     "explanation": "Die Domäne 'Data Storage & Operations' (auch bekannt als Datenbankadministration und -betrieb) deckt den gesamten physischen Betrieb ab. Sie sorgt dafür, dass Daten sicher gespeichert, performant abgefragt werden können, Backups existieren und die Systeme hochverfügbar laufen."
   },
   {
@@ -677,12 +677,12 @@
     "difficulty": "Schwer",
     "question": "Warum ist die Implementierung von Row-Level Security (RLS) für das globale Deployment eines einzigen Berichts an Hunderte Empfänger ein enormer architektonischer Vorteil?",
     "options": [
+      "Weil RLS den Bericht unleserlich macht, wenn er auf einem unautorisierten Drucker ausgedruckt wird.",
       "Weil RLS die Ladezeiten des Berichts auf Smartphones halbiert.",
       "Weil die IT nur noch einen einzigen Bericht deployen und warten muss; die RLS-Filter sorgen beim Öffnen dynamisch dafür, dass jeder Empfänger (z. B. Regionalleiter) automatisch nur die Datenzeilen sieht, für die er berechtigt ist.",
-      "Weil RLS alle Tabellen automatisch in das Stern-Schema konvertiert.",
-      "Weil RLS den Bericht unleserlich macht, wenn er auf einem unautorisierten Drucker ausgedruckt wird."
+      "Weil RLS alle Tabellen automatisch in das Stern-Schema konvertiert."
     ],
-    "correctIndex": 1,
+    "correctIndex": 2,
     "explanation": "Ohne RLS müsste die IT für jeden Regionalleiter einen separaten, gefilterten Bericht erstellen und deployen (z. B. 'Bericht_Nord.pdf', 'Bericht_Süd.pdf'). Das führt zu massivem Wartungsaufwand. Mit RLS wird nur ein einziger Bericht deployed. Die Filterung erfolgt zur Laufzeit dynamisch basierend auf der Benutzer-Identität – hocheffizient und sicher."
   },
   {
@@ -692,11 +692,11 @@
     "question": "Wie steuern 'Sensitivity Labels' (Vertraulichkeitsstufen) die automatisierte Verteilung und das Deployment von Berichten im Unternehmen?",
     "options": [
       "Sie ändern die Hintergrundfarbe des Berichts je nach Dringlichkeit von Gelb nach Rot.",
-      "Sie klassifizieren die Schutzbedürftigkeit von Daten und können den Export (z. B. als Excel/PDF) oder den unverschlüsselten E-Mail-Versand hochsensibler Berichte systemisch blockieren oder einschränken.",
       "Sie dienen dem automatischen Löschen veralteter Datensätze im Core-DWH.",
-      "Sie zwingen den Benutzer, vor jedem Berichtsaufruf ein neues Passwort festzulegen."
+      "Sie zwingen den Benutzer, vor jedem Berichtsaufruf ein neues Passwort festzulegen.",
+      "Sie klassifizieren die Schutzbedürftigkeit von Daten und können den Export (z. B. als Excel/PDF) oder den unverschlüsselten E-Mail-Versand hochsensibler Berichte systemisch blockieren oder einschränken."
     ],
-    "correctIndex": 1,
+    "correctIndex": 3,
     "explanation": "Sensitivity Labels (wie 'Öffentlich', 'Intern', 'Vertraulich' oder 'Streng Geheim') sind ein wesentlicher Bestandteil der modernen Information Protection. BI-Plattformen werten diese Metadaten aus und verhindern im Deployment-Prozess aktiv Datenabflüsse: Berichte mit hohem Schutzbedarf können beispielsweise nicht an externe E-Mail-Adressen abonniert oder lokal heruntergeladen werden."
   }
 ]

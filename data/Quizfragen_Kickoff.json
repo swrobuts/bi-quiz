@@ -5,12 +5,12 @@
     "difficulty": "Mittel",
     "question": "Wie lautet die im Kickoff-Skript etablierte Arbeitsdefinition von Business Intelligence (BI) für diesen Kurs?",
     "options": [
-      "Die rein technische Speicherung und Archivierung unstrukturierter Big-Data-Bestände in Cloud-Infrastrukturen.",
       "Konzepte, Prozesse und Werkzeuge, die aus Daten entscheidungsrelevante Informationen machen — verlässlich, wiederholbar und nachvollziehbar.",
-      "Die automatisierte Generierung von Programmcode und Benutzeroberflächen mittels generativer Künstlicher Intelligenz.",
-      "Ein statistischer Analyseprozess, der ausschließlich retrospektiv historische Umsatzzahlen aggregiert und visualisiert."
+      "Die rein technische Speicherung und Archivierung unstrukturierter Big-Data-Bestände in Cloud-Infrastrukturen.",
+      "Ein statistischer Analyseprozess, der ausschließlich retrospektiv historische Umsatzzahlen aggregiert und visualisiert.",
+      "Die automatisierte Generierung von Programmcode und Benutzeroberflächen mittels generativer Künstlicher Intelligenz."
     ],
-    "correctIndex": 1,
+    "correctIndex": 0,
     "explanation": "Laut Kursdefinition (Einheit 1 - Kickoff) beschreibt Business Intelligence nicht nur Software, sondern die Gesamtheit aus 'Konzepten, Prozessen und Werkzeugen, die aus Daten entscheidungsrelevante Informationen machen — verlässlich, wiederholbar, nachvollziehbar'. Jede Stufe baut auf der vorherigen auf, um am Ende wirkungsvolle Entscheidungen zu ermöglichen."
   },
   {
@@ -19,9 +19,9 @@
     "difficulty": "Schwer",
     "question": "Welche logische Reihenfolge bildet das Fundament der BI-Wertschöpfungskette im Kickoff-Skript und welche Konsequenz hat das Fehlen einer dieser Stufen?",
     "options": [
-      "Entscheidungen -> Erkenntnisse -> Informationen -> Daten; Fehlt eine Stufe, muss die IT-Infrastruktur komplett neu aufgesetzt werden.",
-      "Daten -> Informationen -> Erkenntnisse -> Entscheidungen; Jede Stufe setzt die vorherige zwingend voraus. Wo eine Stufe fehlt, entsteht ein Bericht ohne Wirkung.",
       "Daten -> Erkenntnisse -> Informationen -> Entscheidungen; Fehlt eine Stufe, sinkt lediglich die Performance des Datenbanksystems.",
+      "Daten -> Informationen -> Erkenntnisse -> Entscheidungen; Jede Stufe setzt die vorherige zwingend voraus. Wo eine Stufe fehlt, entsteht ein Bericht ohne Wirkung.",
+      "Entscheidungen -> Erkenntnisse -> Informationen -> Daten; Fehlt eine Stufe, muss die IT-Infrastruktur komplett neu aufgesetzt werden.",
       "Informationen -> Daten -> Entscheidungen -> Erkenntnisse; Fehlt eine Stufe, wird der Bericht automatisch von einer generativen KI korrigiert."
     ],
     "correctIndex": 1,
@@ -33,12 +33,12 @@
     "difficulty": "Mittel",
     "question": "Wie grenzen sich 'Business Intelligence' (BI) und 'Business Analytics' (BA) laut dem Orientierungsraster des Kurses primär voneinander ab?",
     "options": [
-      "BI befasst sich exklusiv mit relationalen Datenbanken, während BA ausschließlich unstrukturierte Textdateien analysiert.",
+      "BI dient dem mittleren Management zur operativen Steuerung, während BA exklusiv von der Geschäftsführung für strategische Akquisitionen genutzt wird.",
       "BI stellt ein rein manuelles Berichtswesen dar, während BA vollautomatisiert ohne menschliche Interaktion abläuft.",
-      "BI beantwortet mit Reporting, Dashboards und Kennzahlen retrospektiv die Frage 'Was ist passiert, wo stehen wir?' (Rückspiegel); BA geht einen Schritt weiter und fragt 'Warum ist es passiert und was kommt als Nächstes?' (Prognose/Empfehlung).",
-      "BI dient dem mittleren Management zur operativen Steuerung, während BA exklusiv von der Geschäftsführung für strategische Akquisitionen genutzt wird."
+      "BI befasst sich exklusiv mit relationalen Datenbanken, während BA ausschließlich unstrukturierte Textdateien analysiert.",
+      "BI beantwortet mit Reporting, Dashboards und Kennzahlen retrospektiv die Frage 'Was ist passiert, wo stehen wir?' (Rückspiegel); BA geht einen Schritt weiter und fragt 'Warum ist es passiert und was kommt als Nächstes?' (Prognose/Empfehlung)."
     ],
-    "correctIndex": 2,
+    "correctIndex": 3,
     "explanation": "Im Kickoff-Skript wird BI als 'Rückspiegel und Armaturenbrett' definiert, das mit Reporting, Dashboards und Kennzahlen klärt, was passiert ist. Business Analytics hingegen blickt nach vorne: Es nutzt Prognosen und Empfehlungen, um die Ursachen ('Warum ist es passiert?') sowie die Zukunft ('Was kommt als Nächstes?') zu analysieren."
   },
   {
@@ -47,12 +47,12 @@
     "difficulty": "Schwer",
     "question": "Welche Rolle nimmt 'Data Science' im im Kickoff-Skript vorgestellten Begriffskorridor rund um Business Analytics und BI ein?",
     "options": [
-      "Es stellt ein reines Programmierwerkzeug dar, das dem DWH-ETL-Prozess nachgelagert ist.",
-      "Es bildet als interdisziplinäre Wissenschaft (Kombination aus Statistik, Informatik und Domänenwissen) die methodische Klammer über alle Begriffe mit der Leitfrage 'Mit welcher Methode?'.",
       "Es ist eine veraltete Bezeichnung für Business Intelligence und wird im modernen BI-Alltag nicht mehr verwendet.",
-      "Es befasst sich ausschließlich mit der Hardware-Infrastruktur und der physischen Speicherung von Serverdaten."
+      "Es befasst sich ausschließlich mit der Hardware-Infrastruktur und der physischen Speicherung von Serverdaten.",
+      "Es bildet als interdisziplinäre Wissenschaft (Kombination aus Statistik, Informatik und Domänenwissen) die methodische Klammer über alle Begriffe mit der Leitfrage 'Mit welcher Methode?'.",
+      "Es stellt ein reines Programmierwerkzeug dar, das dem DWH-ETL-Prozess nachgelagert ist."
     ],
-    "correctIndex": 1,
+    "correctIndex": 2,
     "explanation": "Data Science wird im Skript als die interdisziplinäre Klammer definiert, die Mathematik/Statistik, Informationstechnologie/Informatik und Domänenwissen vereint. Die Leitfrage lautet 'Mit welcher Methode?' (Statistik, Machine Learning, Programmierung). Sie dient dazu, durch explorative und modellgetriebene Ansätze Wissen aus Daten zu schöpfen ('Knowledge Discovery')."
   },
   {
@@ -63,8 +63,8 @@
     "options": [
       "Sie ersetzt menschliche Analysten vollständig und macht manuelle Datenprüfungen überflüssig.",
       "Sie wird als Code- und Sprachassistenz quer über alle Felder (BI, BA, Data Science) eingesetzt mit der Leitfrage: 'Welcher Arbeitsschritt lässt sich assistieren?'.",
-      "Sie ist auf die visuelle Gestaltung von Dashboards beschränkt und hat keinen Einfluss auf Datenmodelle.",
-      "Sie dient primär dem automatisierten Löschen fehlerhafter Datensätze direkt in der Staging-Area."
+      "Sie dient primär dem automatisierten Löschen fehlerhafter Datensätze direkt in der Staging-Area.",
+      "Sie ist auf die visuelle Gestaltung von Dashboards beschränkt und hat keinen Einfluss auf Datenmodelle."
     ],
     "correctIndex": 1,
     "explanation": "Seit der breiten Etablierung im Alltag (ab 2023) fungiert generative und agentische KI als mächtiger Assistent für Sprach- und Codegenerierung quer über alle Disziplinen. Die Leitfrage lautet: 'Welcher Arbeitsschritt lässt sich assistieren?' – sie ist ein Beschleuniger und Hilfsmittel, entbindet den Menschen aber nicht von der Prüfpflicht."
@@ -75,12 +75,12 @@
     "difficulty": "Schwer",
     "question": "Was beschreibt der 'Prüf-Dreisatz' im Kickoff-Skript und warum ist er das zentrale Muster, das den gesamten BINT-Kurs trägt?",
     "options": [
-      "Daten laden -> SQL-Abfrage schreiben -> PDF exportieren; Er optimiert die Ladezeiten der ETL-Pipelines.",
-      "Bauen lassen (z. B. durch KI) -> prüfen (die Ergebnisse kritisch verifizieren) -> verstehen (die zugrundeliegende Logik durchdringen); Er schützt vor unreflektiertem Glauben an KI-Generierung.",
       "Staging -> ODS -> Data Warehouse; Er beschreibt die drei physikalischen Speicherschichten.",
-      "SAY -> UNIFY -> SIMPLIFY; Er stellt den reinen Gestaltungsdreisatz für Kreisdiagramme dar."
+      "SAY -> UNIFY -> SIMPLIFY; Er stellt den reinen Gestaltungsdreisatz für Kreisdiagramme dar.",
+      "Bauen lassen (z. B. durch KI) -> prüfen (die Ergebnisse kritisch verifizieren) -> verstehen (die zugrundeliegende Logik durchdringen); Er schützt vor unreflektiertem Glauben an KI-Generierung.",
+      "Daten laden -> SQL-Abfrage schreiben -> PDF exportieren; Er optimiert die Ladezeiten der ETL-Pipelines."
     ],
-    "correctIndex": 1,
+    "correctIndex": 2,
     "explanation": "Der Prüf-Dreisatz lautet: 'bauen lassen -> prüfen -> verstehen'. Im ersten Durchlauf des Kurses lassen die Studierenden einen Bericht von einer KI bauen, prüfen die Ergebnisse kritisch von Hand (z. B. mit Excel/Taschenrechner) und durchdringen so die Logik, um sie wirklich zu verstehen. Dieses Muster zieht sich durch alle Module, um blindes Vertrauen in automatisierte Generate zu verhindern."
   },
   {
@@ -89,12 +89,12 @@
     "difficulty": "Schwer",
     "question": "Welcher Berührungspunkt stellt die direkte architektonische Verbindung zwischen der Vorlesung BINT (Business Intelligence) und DABA (Datenbanken) dar?",
     "options": [
-      "Die physische Verkabelung der Serverräume im Hochschulnetzwerk.",
       "Der Übergang von relationalen Datenbankschemata (DABA-Schwerpunkt) zu analytischen Datenmodellen (BINT-Schwerpunkt) wie dem Sternschema.",
-      "Die ausschließliche Verwendung von NoSQL-Datenbanken in beiden Vorlesungen.",
-      "Die gemeinsame Nutzung desselben Python-FastHTML-Frontends für operative Buchungssysteme."
+      "Die gemeinsame Nutzung desselben Python-FastHTML-Frontends für operative Buchungssysteme.",
+      "Die physische Verkabelung der Serverräume im Hochschulnetzwerk.",
+      "Die ausschließliche Verwendung von NoSQL-Datenbanken in beiden Vorlesungen."
     ],
-    "correctIndex": 1,
+    "correctIndex": 0,
     "explanation": "Die 'DABA-Brücke' beschreibt den fließenden Übergang von transaktionalen, relationalen Datenbanksystemen (OLTP, DABA-Schwerpunkt) hin zu analytischen Datenmodellen (OLAP, DWH, BINT-Schwerpunkt). Während DABA sich auf Normalisierung, Integrität und relationale Abfragen konzentriert, setzt BINT darauf auf, um multidimensionale Datenstrukturen (wie das Stern- oder Snowflake-Schema) für datengetriebene Entscheidungen zu entwerfen."
   },
   {
@@ -103,12 +103,12 @@
     "difficulty": "Schwer",
     "question": "Welche technologische Brücke verbindet relationale Datenbanken (DABA) mit modernen Cloud-Computing-Plattformen im BINT-Architekturgefüge?",
     "options": [
-      "Das manuelle Erstellen von Backups auf lokalen Magnetbändern.",
       "Die Transformation von ETL-Prozessen (Extract, Transform, Load) zu Cloud-basierten ELT-Pipelines (Extract, Load, Transform) mit unbegrenztem Object-Storage.",
       "Das Verbot von SQL-Abfragen in modernen Big-Data-Umgebungen.",
+      "Das manuelle Erstellen von Backups auf lokalen Magnetbändern.",
       "Die Beschränkung auf rein lokale SQLite-Datenbanken ohne Netzwerkanbindung."
     ],
-    "correctIndex": 1,
+    "correctIndex": 0,
     "explanation": "Die Brücke zu modernen BI-Plattformen in der Cloud wird durch den Wechsel von klassischen ETL-Prozessen (Transformieren vor dem Laden) hin zu flexiblen ELT-Pipelines realisiert. Hierbei werden Daten roh in günstige Cloud-Speicher (wie Data Lakes) geladen und erst bei Bedarf (Schema-on-Read) transformiert, was durch die elastische Skalierbarkeit moderner Cloud-Compute-Ressourcen ermöglicht wird."
   },
   {
@@ -117,12 +117,12 @@
     "difficulty": "Mittel",
     "question": "Welche konkreten Datensätze von welcher Plattform dienen als empirisches Fundament für die durchgängige Fallstudie 'Megastore' im Kurs?",
     "options": [
-      "Fiktive Banktransaktionen der EZB, die direkt aus GitHub importiert werden.",
       "Die Einzelhandels-Datensätze 'Global Superstore' und 'Superstore' der Data-Science-Plattform Kaggle.com.",
+      "Fiktive Banktransaktionen der EZB, die direkt aus GitHub importiert werden.",
       "Echtzeit-Sensordaten eines regionalen Windparks, die über eine REST-API gestreamt werden.",
       "Statistische Erhebungen des Statistischen Bundesamtes zur Bevölkerungsentwicklung."
     ],
-    "correctIndex": 1,
+    "correctIndex": 0,
     "explanation": "Die Fallstudie des Kurses basiert auf realitätsnahen, multidimensionalen Retail-Daten (Einzelhandel) namens 'Global Superstore' und 'Superstore', die von der Plattform Kaggle.com stammen. Diese Daten werden im Laufe des Kurses konsolidiert, modelliert und analysiert."
   },
   {
@@ -131,9 +131,9 @@
     "difficulty": "Mittel",
     "question": "Welches fiktive Unternehmensszenario wird im Kickoff für die Fallstudie 'Megastore' etabliert, das die BI-Abteilung vor große architektonische Herausforderungen stellt?",
     "options": [
-      "Der vollständige Systemabsturz aller lokalen Server durch eine Ransomware-Attacke.",
-      "Die Akquisition des Unternehmens 'Superstore' durch 'Global Superstore' und die daraus resultierende Notwendigkeit, zwei ehemals getrennte, denormalisierte IT- und Datensysteme in einer 'Single Source of Truth' zu verschmelzen.",
       "Die Insolvenz des Softwareanbieters Microsoft und der erzwungene Wechsel zu Linux-Systemen.",
+      "Die Akquisition des Unternehmens 'Superstore' durch 'Global Superstore' und die daraus resultierende Notwendigkeit, zwei ehemals getrennte, denormalisierte IT- und Datensysteme in einer 'Single Source of Truth' zu verschmelzen.",
+      "Der vollständige Systemabsturz aller lokalen Server durch eine Ransomware-Attacke.",
       "Die Umstellung des gesamten Vertriebskanals von Online-Handel auf rein stationäre Filialen."
     ],
     "correctIndex": 1,
@@ -141,45 +141,45 @@
   },
   {
     "id": "K11",
-    "topic": "Der erste Durchlauf des Prüf-Dreisatzes",
-    "difficulty": "Schwer",
-    "question": "In der ersten Übung des Kickoffs wird ein Prompt an eine KI gesendet, um einen Datensatz beschreiben zu lassen. Wie viele Defekte sind in diesem Datensatz versteckt und was soll diese Übung demonstrieren?",
+    "topic": "Spannweite der BI-Definitionsansätze",
+    "difficulty": "Mittel",
+    "question": "Welche Aussage beschreibt die Spannweite der gängigen Definitionsansätze zu Business Intelligence zutreffend?",
     "options": [
-      "Es gibt keine Defekte; die Übung zeigt die fehlerfreie Arbeitsweise moderner Sprachmodelle.",
-      "Es sind 6 Defekte versteckt; die Übung demonstriert, dass LLMs hervorragend plausible Texte generieren, aber feine, strukturelle Anomalien in Rohdaten leicht übersehen (Notwendigkeit der Verifikation).",
-      "Es sind genau 100 Defekte versteckt, die von der KI innerhalb von Millisekunden fehlerfrei bereinigt werden.",
-      "Es ist nur ein einziger Tippfehler enthalten, der den Import in die SQL-Datenbank blockiert."
+      "Sie fasst BI ausschließlich als Prozess der Überführung von Daten in Wissen und schließt system- oder organisationsbezogene Deutungen des Begriffs bewusst aus.",
+      "Sie reicht vom engen, systemorientierten Verständnis über BI als Prozess und als Sammelbegriff bis hin zum integrierten Gesamtansatz der IT-basierten Entscheidungsunterstützung.",
+      "Sie ordnet BI nach Branchen, sodass für jeden Wirtschaftszweig eine eigene verbindliche Definition samt zugehörigem Werkzeugkanon maßgeblich ist.",
+      "Sie unterscheidet sich nur in der Wortwahl, denn inhaltlich meinen alle Ansätze eine abgegrenzte Klasse von Auswertungswerkzeugen für die Managementebene eines Unternehmens."
     ],
     "correctIndex": 1,
-    "explanation": "In der 'Runde 1' des Kickoffs sind exakt 6 Defekte im Testdatensatz versteckt. Das primäre Lernziel ist die Erkenntnis, dass generative KI zwar exzellente und plausible Beschreibungen liefert, bei der präzisen Erkennung von versteckten Anomalien oder Datenqualitätsproblemen jedoch Schwächen zeigt. Dies zwingt den Analysten, den Prüf-Dreisatz anzuwenden: bauen lassen -> von Hand prüfen -> die Fehlerbilder verstehen."
+    "explanation": "Die Definitionsansätze lassen sich auf einer Achse anordnen: am einen Ende ein enges, systemorientiertes Verständnis von BI als spezielle Klasse von IT-Systemen, am anderen Ende BI als unternehmerischer Gesamtansatz zur Entscheidungsunterstützung. Dazwischen liegen die Deutung als Prozess der Überführung von Daten in Information und Wissen sowie die Verwendung als Sammelbegriff für Technologien und Konzepte. Genau diese Bandbreite erklärt, warum der Begriff im Sprachgebrauch so unterschiedlich weit gefasst wird."
   },
   {
     "id": "K12",
-    "topic": "Voraussetzungen und Erwartungen im BINT-Kurs",
+    "topic": "BI als Sammelbegriff und Vorläufersysteme",
     "difficulty": "Mittel",
-    "question": "Welche Haltung und Vorgehensweise erwartet Prof. Dr. Robert Butscher laut Vorwort/Kickoff-Skript von den Studierenden für ein nachhaltiges Lernerlebnis?",
+    "question": "Wie verhält sich Business Intelligence zu älteren analytischen Systemklassen wie MIS, DSS und EIS?",
     "options": [
-      "Passives Auswendiglernen des Skripts kurz vor der Klausur ohne praktische Übungen.",
-      "Das reine Konsumieren der Vorlesungsinhalte im Hintergrund bei ausgeschalteter Kamera.",
-      "Aktives Eindenken in die Materie vor der Veranstaltung, das Stellen von vermeintlich 'dummen' Fragen, das Einbringen kontroverser Denkanstöße und aktive Diskussionen.",
-      "Die ausschließliche Delegation aller Übungsaufgaben an automatisierte KI-Tools."
+      "BI bezeichnet allein die Versorgung des mittleren Managements mit Kennzahlen, während MIS, DSS und EIS für die operative Sachbearbeitung stehen.",
+      "BI bündelt als Sammelbegriff die Funktionalität, die mit den Vorläufersystemen nach und nach entstanden ist, und wird häufig synonym zum Management-Support-System verwendet.",
+      "BI ist ein Gegenentwurf zu den Management-Support-Systemen und trennt das Berichtswesen bewusst von jeder Form der modellgestützten Entscheidungsunterstützung.",
+      "BI ersetzt diese Systemklassen technisch vollständig, weil deren Funktionen mit dem Aufkommen des Data Warehouse fachlich hinfällig geworden sind."
     ],
-    "correctIndex": 2,
-    "explanation": "Prof. Dr. Robert Butscher betont im Vorwort aller Skripte, dass das Lernerlebnis nur dann nachhaltig ist, wenn sich die Studierenden aktiv einbringen: 'Mir ist bewusst, dass dies (viel) Arbeit bedeutet – aber das Lernerlebnis wird nachhaltiger sein... Ideal ist es, wenn Sie sich vor der jeweiligen Lehrveranstaltung in die Materie eindenken und die Vorlesungen dazu nutzen, vor allem Fragen zu stellen, Denkanstöße zu liefern und sich aktiv einzubringen.'"
+    "correctIndex": 1,
+    "explanation": "BI setzte sich ab den 1990er-Jahren als Dachbegriff durch und fasst die Fähigkeiten zusammen, die zuvor schrittweise in Vorläufersystemen wie MIS, DSS und EIS entstanden waren. Deshalb wird BI oft synonym mit dem Begriff Management-Support-System gebraucht. Der Kern ist die Bündelung bereits vorhandener Funktionalität unter einem gemeinsamen Namen, nicht deren Abschaffung."
   },
   {
     "id": "K13",
-    "topic": "Werdegang des Dozenten (Prof. Dr. Robert Butscher)",
+    "topic": "Zeit- und Informationsvorteil durch BI",
     "difficulty": "Mittel",
-    "question": "Welche beruflichen Stationen prägten den Werdegang von Prof. Dr. Robert Butscher vor seiner akademischen Laufbahn laut Kickoff-Skript?",
+    "question": "Der Nutzen einer BI-Lösung lässt sich über zwei Blickwinkel auf denselben Verlauf des Informationsgrads beschreiben. Welche Beschreibung trifft zu?",
     "options": [
-      "Er war ausschließlich im rein universitären Umfeld ohne jeglichen Industrie- oder Praxisbezug tätig.",
-      "Eine Ausbildung zum Industriekaufmann bei der Siemens AG (Stammhauslehre), BWL-Studium an der FAU, Promotion über Text Mining in der Konsumentenforschung (2006) sowie langjährige BI-Praxiserfahrung (u. a. bei der DATEV eG).",
-      "Er arbeitete als Software-Entwickler bei Apple und Google im Silicon Valley.",
-      "Er leitete die globale IT-Infrastruktur der Vereinten Nationen (UN) in New York."
+      "Der Zeitvorteil entsteht nur bei operativen Auswertungen, während der Informationsvorteil ausschließlich bei strategischen Entscheidungen mit langem Horizont auftritt.",
+      "Der Informationsgrad steigt mit und ohne BI gleich schnell; BI senkt lediglich die Kosten der Informationsbeschaffung, ohne den Zeitpunkt der Verfügbarkeit zu verändern.",
+      "Ein bestimmtes Niveau des Informationsgrads wird mit BI früher erreicht (Zeitgewinn), und zu einem festen Entscheidungszeitpunkt liegt der Informationsgrad höher (Informationsgewinn).",
+      "Der Informationsgrad liegt mit BI zunächst unter dem Niveau ohne BI und holt diesen Rückstand erst nach einer längeren Anlaufphase des Systems wieder auf."
     ],
-    "correctIndex": 1,
-    "explanation": "Professor Dr. Robert Butscher verfügt über einen stark praxisgeprägten Werdegang: 1994-1996 Ausbildung bei Siemens (Stammhauslehre), danach BWL-Studium an der FAU Erlangen-Nürnberg, Promotion im Jahr 2006 im Bereich Text Mining/Konsumentenforschung und weitreichende BI-Führungserfahrung in der Praxis (u. a. DATEV eG), was den starken Anwendungs- und Fallstudienfokus des Kurses begründet."
+    "correctIndex": 2,
+    "explanation": "Beide Darstellungen zeigen dieselbe Nutzenfunktion, nur aus unterschiedlicher Blickrichtung: horizontal gelesen ergibt sich ein Zeitgewinn bis zum Erreichen eines Informationsniveaus, vertikal gelesen ein höherer Informationsgrad zum Entscheidungszeitpunkt. Der Zeitgewinn wirkt als Puffer für schnellere Reaktionen, der Informationsgewinn als größere Sicherheit der Entscheidung. Entscheidungen werden dadurch faktenbasierter, nachvollziehbarer, überprüfbarer, früher möglich und risikoärmer."
   },
   {
     "id": "K14",
@@ -187,12 +187,12 @@
     "difficulty": "Schwer",
     "question": "Welche logische Kette an operativen Schritten durchlaufen die Studierenden in der Fallstudie, um aus den rohen Kaggle-Dateien ein fertiges Management-Dashboard zu entwickeln?",
     "options": [
-      "Daten importieren -> Daten transformieren -> Measures anlegen -> Tabellen verknüpfen -> Modell inspizieren -> Berichte erstellen.",
       "Daten visualisieren -> SQL-Code generieren -> Excel-Tabellen formatieren -> PDF per E-Mail versenden.",
-      "Python-Code schreiben -> HTML-Frontend bauen -> SQLite-Datenbank löschen -> Cloud-Deployment starten.",
-      "Anforderungen erheben -> KI-Prompt schreiben -> Dashboard kopieren -> Bericht präsentieren."
+      "Anforderungen erheben -> KI-Prompt schreiben -> Dashboard kopieren -> Bericht präsentieren.",
+      "Daten importieren -> Daten transformieren -> Measures anlegen -> Tabellen verknüpfen -> Modell inspizieren -> Berichte erstellen.",
+      "Python-Code schreiben -> HTML-Frontend bauen -> SQLite-Datenbank löschen -> Cloud-Deployment starten."
     ],
-    "correctIndex": 0,
+    "correctIndex": 2,
     "explanation": "Der methodische Pfad der Fallstudie ist im Kickoff exakt vordefiniert: Im ersten Schritt werden die Rohdaten importiert (RDBMS), danach bereinigt und transformiert (z. B. Datumsformate via OpenRefine vereinheitlicht), fachliche Kennzahlen (Measures) definiert, Tabellen über Schlüssel verknüpft (Sternschema), das Modell inspiziert und am Ende im BI-Frontend interaktive Berichte/Dashboards erstellt."
   },
   {
@@ -201,12 +201,12 @@
     "difficulty": "Schwer",
     "question": "Warum eignet sich Business Intelligence laut Kickoff-Skript hervorragend als Prüfwerkzeug für vorgelagerte IT-Infrastrukturen?",
     "options": [
-      "Weil BI-Tools automatisch fehlerhaften Quellcode in den Vorsystemen reparieren.",
-      "Weil BI-Analysen und Abweichungsberichte Datenlücken, Inkonsistenzen und Qualitätsmängel (z. B. durch fehlerhafte ETL-Strecken oder fehlende Eingaben in Vorsystemen) im Datenmodell präattentiv sichtbar machen.",
       "Weil BI-Dashboards ausschließlich perfekte, fehlerfreie Daten anzeigen können.",
-      "Weil BI-Tools transaktionale Sperren (Locks) auf Quelltabellen setzen und so Datenänderungen verhindern."
+      "Weil BI-Tools transaktionale Sperren (Locks) auf Quelltabellen setzen und so Datenänderungen verhindern.",
+      "Weil BI-Tools automatisch fehlerhaften Quellcode in den Vorsystemen reparieren.",
+      "Weil BI-Analysen und Abweichungsberichte Datenlücken, Inkonsistenzen und Qualitätsmängel (z. B. durch fehlerhafte ETL-Strecken oder fehlende Eingaben in Vorsystemen) im Datenmodell präattentiv sichtbar machen."
     ],
-    "correctIndex": 1,
+    "correctIndex": 3,
     "explanation": "BI ist das 'Ende der Nahrungskette' im Datenprozess. Treten beim Zusammenführen oder Aggregieren der Daten unerwartete Abweichungen, Nullwerte oder absurde Sprünge auf, ist dies ein klares Alarmsignal für Datenqualitätsprobleme in den operativen Quellsystemen oder auf dem ETL-Weg. BI deckt diese Schwachstellen gnadenlos auf."
   },
   {
@@ -215,12 +215,12 @@
     "difficulty": "Schwer",
     "question": "Im Kontext der Datenqualität: Warum warnt das Skript davor, auffällige Datenpunkte (Ausreißer) einfach 'stillschweigend' im ETL-Prozess zu korrigieren oder zu löschen?",
     "options": [
-      "Weil das Löschen von Daten das Speichervolumen der Cloud-Datenbanken künstlich verringert.",
-      "Weil hinter einem vermeintlichen Fehler oft ein realer Geschäftsverlauf (z. B. ein Großauftrag, eine Retourenwelle oder ein Systemausfall) steckt. Wer unangekündigt bereinigt, verfälscht die geschäftliche Wahrheit und entzieht der Entscheidung die Grundlage.",
       "Weil das Löschen von Zeilen die automatische Code-Generierung von FastHTML blockiert.",
-      "Weil jede Bereinigung die y-Achse von Balkendiagrammen zwingend verschiebt."
+      "Weil jede Bereinigung die y-Achse von Balkendiagrammen zwingend verschiebt.",
+      "Weil hinter einem vermeintlichen Fehler oft ein realer Geschäftsverlauf (z. B. ein Großauftrag, eine Retourenwelle oder ein Systemausfall) steckt. Wer unangekündigt bereinigt, verfälscht die geschäftliche Wahrheit und entzieht der Entscheidung die Grundlage.",
+      "Weil das Löschen von Daten das Speichervolumen der Cloud-Datenbanken künstlich verringert."
     ],
-    "correctIndex": 1,
+    "correctIndex": 2,
     "explanation": "Ausreißer dürfen niemals stillschweigend korrigiert werden. Es muss immer zuerst der Rohdatensatz auf Belege geprüft und die zeitliche Nachbarschaft analysiert werden. Die goldene Regel lautet: Die Kennzahl muss mit und ohne die Beobachtung berechnet und beides transparent berichtet werden. Jede Entscheidung und Änderung muss dokumentiert werden, da der Ausreißer oft den tatsächlichen Geschäftsverlauf erklärt."
   },
   {
@@ -230,11 +230,11 @@
     "question": "Welche wesentliche Gestaltungsregel wird im Kickoff für den Einsatz von Sparklines in Kennzahlkarten genannt, um deren visuelle Vergleichbarkeit abzusichern?",
     "options": [
       "Sie müssen zwingend in Ampelfarben (Rot/Grün) eingefärbt werden.",
+      "Sparklines dürfen nur als dreidimensionale Liniendiagramme dargestellt werden.",
       "Jede Sparkline muss ihre eigene, unbeschriftete Skala verwenden, um den Platz optimal auszunutzen.",
-      "Alle Kennzahlkarten müssen die Skala ihrer Sparkline explizit deklarieren (z. B. '1.3–8.0'), da die Verläufe andernfalls visuell nicht miteinander verglichen werden können und täuschen.",
-      "Sparklines dürfen nur als dreidimensionale Liniendiagramme dargestellt werden."
+      "Alle Kennzahlkarten müssen die Skala ihrer Sparkline explizit deklarieren (z. B. '1.3–8.0'), da die Verläufe andernfalls visuell nicht miteinander verglichen werden können und täuschen."
     ],
-    "correctIndex": 2,
+    "correctIndex": 3,
     "explanation": "Das Kickoff-Skript zeigt anhand von Praxisbeispielen, dass Sparklines ohne Skalenangabe wertlos und hochgradig irreführend sind. Erst durch die explizite Deklaration des Wertebereichs (z. B. 'Skala 1.3 - 8.0') im Tabellenkopf oder direkt neben der Grafik wird der visuelle Verlauf zeilenübergreifend vergleichbar."
   },
   {
@@ -243,12 +243,12 @@
     "difficulty": "Schwer",
     "question": "Warum kritisiert das Skript den Versuch scharf, ein einziges Dokument sowohl als Vortragsfolie als auch als Handout (Berichts-PDF) zu nutzen?",
     "options": [
-      "Weil Handouts im Gegensatz zu Vortragsfolien keine farbigen Elemente enthalten dürfen.",
-      "Weil auf der Projektionsfläche (Vortrag) eine große Schrift, wenige Datenreihen und klar beschriftete Werte (ohne störende Achsenraster) nötig sind; im Handout hingegen haben dichte Tabellen, Fußnoten und Methodendetails ihren Platz. Wer beides in einem löst, verliert an beiden Enden.",
+      "Weil der Lie Factor bei Handouts mathematisch anders berechnet werden muss als bei Folien.",
       "Weil moderne Web-Browser das gleichzeitige Drucken und Projizieren technisch nicht unterstützen.",
-      "Weil der Lie Factor bei Handouts mathematisch anders berechnet werden muss als bei Folien."
+      "Weil auf der Projektionsfläche (Vortrag) eine große Schrift, wenige Datenreihen und klar beschriftete Werte (ohne störende Achsenraster) nötig sind; im Handout hingegen haben dichte Tabellen, Fußnoten und Methodendetails ihren Platz. Wer beides in einem löst, verliert an beiden Enden.",
+      "Weil Handouts im Gegensatz zu Vortragsfolien keine farbigen Elemente enthalten dürfen."
     ],
-    "correctIndex": 1,
+    "correctIndex": 2,
     "explanation": "Das Skript zieht eine klare Trennlinie: Folie und Handout haben völlig unterschiedliche kognitive Zwecke. Eine Folie dient der schnellen, präattentiven Unterstützung eines Vortrags (Fokus auf die Kernbotschaft). Ein Handout (oder Bericht) ist zum Nachschlagen und Selbststudium gedacht und erfordert maximale Informationsdichte, Tabellen und dokumentierte Annahmen."
   },
   {
@@ -257,12 +257,12 @@
     "difficulty": "Schwer",
     "question": "Was ist das primäre Ziel der im Kurs verwendeten 'Ehrlichkeits-Checkliste' für Diagramme?",
     "options": [
-      "Sicherzustellen, dass alle Diagramme die CI-Farben des Unternehmens exakt einhalten.",
       "Das Erkennen und Eliminieren von bewussten oder unbewussten grafischen Verzerrungen (wie abgeschnittene Achsen, falsche Skalierungen oder unvollständige Datenreihen), die dem Betrachter eine falsche Realität vorspiegeln.",
-      "Die Überprüfung, ob der SQL-Code der Abfrage optimal indiziert ist.",
-      "Das automatische Übersetzen von deutschen Berichtstiteln ins Englische."
+      "Sicherzustellen, dass alle Diagramme die CI-Farben des Unternehmens exakt einhalten.",
+      "Das automatische Übersetzen von deutschen Berichtstiteln ins Englische.",
+      "Die Überprüfung, ob der SQL-Code der Abfrage optimal indiziert ist."
     ],
-    "correctIndex": 1,
+    "correctIndex": 0,
     "explanation": "Die Ehrlichkeits-Checkliste orientiert sich an Edward Tuftes Prinzipien (wie dem Lie Factor). Sie dient als strenge Qualitätskontrolle, um manipulative oder fehlerhafte Visualisierungen aufzudecken. Typische Prüfpunkte sind: Beginnt die y-Achse bei Balken bei Null? Sind die zeitlichen Abstände linear? Entspricht der grafische Effekt der echten Datenänderung?"
   },
   {
@@ -271,12 +271,12 @@
     "difficulty": "Mittel",
     "question": "Wie sollte ein BI-Analyst reagieren, wenn ein generatives KI-Modell ein Diagramm basierend auf fehlerhaften Daten (z. B. Tippfehler oder falsche Einheiten) klaglos visualisiert?",
     "options": [
-      "Das Diagramm direkt veröffentlichen, da die KI die Daten implizit geprüft haben muss.",
       "Das Modell als 'unbrauchbar' einstufen und KI-Tools vollständig aus dem BI-Prozess verbannen.",
-      "Erkennen, dass LLMs blind visualisieren, was man ihnen gibt (sie halluzinieren eine korrekte Struktur). Der Analyst muss durch bewusste Stresstests ('Falle stellen') die Fehlertoleranz des Modells prüfen und korrigieren.",
-      "Die Skalierung des Diagramms so verändern, dass der Fehler optisch nicht mehr auffällt."
+      "Die Skalierung des Diagramms so verändern, dass der Fehler optisch nicht mehr auffällt.",
+      "Das Diagramm direkt veröffentlichen, da die KI die Daten implizit geprüft haben muss.",
+      "Erkennen, dass LLMs blind visualisieren, was man ihnen gibt (sie halluzinieren eine korrekte Struktur). Der Analyst muss durch bewusste Stresstests ('Falle stellen') die Fehlertoleranz des Modells prüfen und korrigieren."
     ],
-    "correctIndex": 2,
+    "correctIndex": 3,
     "explanation": "Sprachmodelle besitzen kein inhärentes physikalisches oder betriebswirtschaftliches Weltverständnis. Sie zeichnen auch Diagramme mit negativen Preisen oder absurden Einheiten, solange der Code syntaktisch korrekt ist. Der Analyst muss daher gezielt 'Fallen stellen' (Stresstests), um die Grenzen des KI-Generats aufzudecken und abzusichern."
   },
   {
@@ -285,55 +285,55 @@
     "difficulty": "Schwer",
     "question": "Wie unterscheiden sich 'konzept-orientierte' Analysen von 'anwendungsspezifischen' Analysen im BI-Architekturmodell nach Kemper?",
     "options": [
-      "Konzept-orientierte Analysen basieren auf Excel; anwendungsspezifische Analysen nutzen Python.",
       "Konzept-orientierte Analysen (wie OLAP oder Data Mining) sind anwendungsneutral und erlauben freie, explorative Fragestellungen auf dem integrierten Datenbestand; anwendungsspezifische Analysen sind fest auf einen vordefinierten Geschäftszweck zugeschnitten.",
       "Es gibt keinen Unterschied; beide Begriffe beschreiben identische Reporting-Verfahren.",
-      "Konzept-orientierte Analysen befassen sich nur mit Metadaten, während anwendungsspezifische Analysen nur Rohdaten verarbeiten."
+      "Konzept-orientierte Analysen befassen sich nur mit Metadaten, während anwendungsspezifische Analysen nur Rohdaten verarbeiten.",
+      "Konzept-orientierte Analysen basieren auf Excel; anwendungsspezifische Analysen nutzen Python."
     ],
-    "correctIndex": 1,
+    "correctIndex": 0,
     "explanation": "Im generischen BI-Architekturmodell (nach Kemper/Baars) stehen konzept-orientierte Analysen über den anwendungsspezifischen. Sie sind anwendungsneutral, da sie auf einem konsolidierten, multidimensionalen Datenbestand (DWH) aufsetzen und dem Analysten die Freiheit geben, mittels OLAP (Slice, Dice, Drill-down) oder Data Science beliebige, neue Hypothesen explorativ zu prüfen."
   },
   {
     "id": "K22",
-    "topic": "Das Drei-Runden-Muster im Kickoff",
-    "difficulty": "Mittel",
-    "question": "Welchem Zweck dient das im Kickoff-Showcase etablierte Drei-Runden-Muster der Teamarbeit?",
+    "topic": "Zweck der nichtlinearen Aktivierung",
+    "difficulty": "Schwer",
+    "question": "Warum folgt in einem künstlichen Neuron auf die gewichtete Summe der Eingaben noch eine nichtlineare Aktivierungsfunktion?",
     "options": [
-      "Der reinen Zeitersparnis bei der Erstellung des wöchentlichen Statusberichts.",
-      "Der systematischen Annäherung an Datenqualitätsprobleme: Erstens den Datensatz beschreiben lassen (KI-Sicht), zweitens konkrete Geschäftsfragen stellen und manuell nachrechnen, drittens die Stärken und Schwächen der KI-Generierung kritisch reflektieren.",
-      "Dem automatischen Exportieren von SQL-Datenbanken in drei unterschiedliche Cloud-Speicherorte.",
-      "Der Aufteilung der Studierenden in drei konkurrierende Programmier-Teams."
+      "Sie hält die geschätzten Gewichte betragsmäßig klein und verhindert dadurch, dass das Netz einzelne Zeilen der Trainingsdaten auswendig lernt.",
+      "Sie ersetzt den Bias-Term, indem sie den Schwellenwert festlegt, ab dem eine gewichtete Summe überhaupt an die nächste Schicht weitergereicht wird.",
+      "Ohne sie wäre jede Schicht nur eine Linearkombination der vorherigen, sodass sich das gesamte Netz zu einer einzigen linearen Abbildung zusammenfassen ließe.",
+      "Sie normiert die Merkmalswerte auf einen einheitlichen Wertebereich und macht damit eine Standardisierung der Eingangsdaten vor dem Training entbehrlich."
     ],
-    "correctIndex": 1,
-    "explanation": "Das Drei-Runden-Muster ist die praktische Umsetzung des Prüf-Dreisatzes. Es zwingt die Studierenden, sich nicht auf die erste, oft glänzende Antwort der KI zu verlassen, sondern durch gezieltes Nachfragen, manuelles Nachrechnen und methodisches Verifizieren die tatsächliche Datenqualität und die Grenzen des Modells offenzulegen."
+    "correctIndex": 2,
+    "explanation": "Ein Neuron multipliziert jedes Merkmal mit einem Gewicht, addiert die Produkte samt Bias und schickt diese Summe durch die Aktivierungsfunktion. Wäre die Funktion linear, ließen sich beliebig viele Schichten zu einer einzigen zusammenfassen, und zusätzliche Tiefe brächte keinen Gewinn. Erst die Nichtlinearität erlaubt es, gekrümmte Zusammenhänge abzubilden, etwa eine mit steigendem Rabatt nachlassende Absatzwirkung."
   },
   {
     "id": "K23",
-    "topic": "BINT-Veranstaltungsüberblick",
-    "difficulty": "Mittel",
-    "question": "Welche der folgenden Themenreihen bildet den tatsächlichen, chronologischen roten Faden der BINT-Veranstaltungen laut dem Kickoff-Lehrplan?",
+    "topic": "Rechenverfahren hinter BI-Analysefunktionen",
+    "difficulty": "Schwer",
+    "question": "Was rechnet üblicherweise hinter eingebauten Funktionen eines BI-Frontends wie Prognoselinie, Anomalieerkennung und Analyse der Einflussfaktoren?",
     "options": [
-      "HTML-Grundlagen -> CSS-Styling -> JavaScript-Frameworks -> Web-Hosting.",
-      "Grundlagen & Einsatzgebiete -> Vorgehensmodelle & Datenmodellierung -> Data Warehouse & Architekturen -> Datenbanken & SQL -> Python & FastHTML -> Berichtsverbesserung -> Deployment.",
-      "Excel-Tabellen -> Access-Datenbanken -> Powerpoint-Präsentationen -> Outlook-Verteilung.",
-      "Statistik-Grundlagen -> SPSS-Programmierung -> R-Skripte -> Wissenschaftliches Arbeiten."
+      "Durchweg neuronale Netze, die vor jeder Darstellung auf den Daten des jeweiligen Semantikmodells neu trainiert und anschließend verworfen werden.",
+      "Reine Interpolationsregeln ohne statistisches Modell, weshalb sich zu solchen Funktionen grundsätzlich keine Aussage über Unsicherheit treffen lässt.",
+      "Dasselbe Sprachmodell, das auch die Abfrage in natürlicher Sprache bedient und die dargestellten Werte aus dem Kontext des Prompts ableitet.",
+      "Überwiegend klassische Verfahren wie exponentielle Glättung, Zeitreihenmodelle mit Erwartungsband, logistische Regression und Entscheidungsbäume."
     ],
-    "correctIndex": 1,
-    "explanation": "Der BINT-Kurs ist als durchgängige logische Kette aufgebaut. Er startet bei den organisatorischen und begrifflichen Grundlagen (Kickoff), geht über die agile Anforderungserhebung (BEAM, Datenmodellierung) und den Aufbau von Architekturen (DWH, Data Lake, Lakehouse), schlägt die Brücke zu SQL und relationalen Datenbanken (DABA), führt ein modernes Web-BI-Stack ein (Python, FastHTML, HTMX), korrigiert Berichte nach Gestaltungsstandards (IBCS, Bissantz) und schließt mit dem sicheren Betrieb (Deployment, Governance, DAMA)."
+    "correctIndex": 3,
+    "explanation": "Nicht jede als KI-Funktion beworbene Schaltfläche steckt voller neuronaler Netze: Prognoselinien beruhen typischerweise auf exponentieller Glättung, Anomaliehinweise auf einem Zeitreihenmodell mit Erwartungsband, Einflussfaktoren auf logistischer Regression und Entscheidungsbäumen. Ein Sprachmodell kommt erst bei Assistenz- und Sprachabfragefunktionen ins Spiel. Wer weiß, welches Verfahren rechnet, kann das Ergebnis prüfen und die nötigen Angaben ergänzen: Verfahren, Zeitraum beziehungsweise Trainingsdaten und Unsicherheit."
   },
   {
     "id": "K24",
-    "topic": "Das Akronym BINT",
-    "difficulty": "Mittel",
-    "question": "Wofür steht das Akronym 'BINT' im Kontext Ihres Studiengangs?",
+    "topic": "Verfahrenswahl bei Tabellendaten",
+    "difficulty": "Schwer",
+    "question": "Für eine Absatzschätzung auf einer Faktentabelle mit rund 10.000 Zeilen stehen ein Boosting-Verfahren und ein neuronales Netz zur Wahl. Was entspricht der Befundlage?",
     "options": [
-      "Betriebliche Integration von Netzwerk-Technologien.",
-      "Business Intelligence.",
-      "Big Data Integration and Network Technologies.",
-      "Basic Information and Network Toolset."
+      "Bei tabellarischen Daten dieser Größenordnung liegen Baumverfahren meist vorn; ein Netz lohnt erst, wenn es eine einfache Baseline auf denselben Daten messbar schlägt.",
+      "Ein Vergleich erübrigt sich, weil das aufwendigere Verfahren bei ausreichender Datenqualität grundsätzlich die genaueren Schätzwerte für die Zielgröße liefert.",
+      "Neuronale Netze sind bei Tabellendaten überlegen, sobald genügend Merkmalsspalten vorliegen; Baumverfahren eignen sich vor allem für Text-, Bild- und Audiodaten.",
+      "Beide Verfahren erreichen bei Tabellendaten praktisch dieselbe Güte, weshalb allein die Kosten der benötigten Infrastruktur über die Auswahl entscheiden sollten."
     ],
-    "correctIndex": 1,
-    "explanation": "Im Rahmen des Bachelor-Studiengangs Business Analytics steht das Kürzel 'BINT' als etabliertes Modulkürzel für das Kernfach 'Business Intelligence' (welches im Verlauf durch Aspekte der Data Analytics und modernen Architekturen ergänzt wird)."
+    "correctIndex": 0,
+    "explanation": "Benchmarks über zahlreiche Tabellendatensätze zeigen, dass Baumverfahren bei mittlerer Datengröße vorn bleiben, weil typische Faktentabellen viele uninformative Spalten, eine feste Bedeutung je Spalte und sprunghafte Zusammenhänge aufweisen. Neuronale Netze spielen ihre Stärke dort aus, wo sich keine sinnvollen Spalten bilden lassen, etwa bei Text, Bild und Audio. Entschieden wird nicht nach Aufwand, sondern über den Vergleich mit einer einfachen Baseline auf denselben Daten und demselben Zeitraum."
   },
   {
     "id": "K25",
@@ -341,12 +341,12 @@
     "difficulty": "Schwer",
     "question": "Welche fundamentale Frage zur Zielgruppe muss laut Kickoff-Skript an jedem BI-Projektanfang zwingend beantwortet sein, bevor überhaupt Daten importiert werden?",
     "options": [
-      "Welche Programmiersprache bevorzugt die IT-Abteilung der Zielgruppe?",
-      "Für welche spezifische Zielgruppe mit welchem konkreten Informationsbedarf sind die Analysen gedacht und welchen exakten betriebswirtschaftlichen Zweck und Nutzen sollen sie erfüllen?",
       "Wie viele Personen werden das Dashboard gleichzeitig auf mobilen Endgeräten aufrufen?",
-      "Welches farbliche Theme passt am besten zum Logo des Kunden?"
+      "Welches farbliche Theme passt am besten zum Logo des Kunden?",
+      "Welche Programmiersprache bevorzugt die IT-Abteilung der Zielgruppe?",
+      "Für welche spezifische Zielgruppe mit welchem konkreten Informationsbedarf sind die Analysen gedacht und welchen exakten betriebswirtschaftlichen Zweck und Nutzen sollen sie erfüllen?"
     ],
-    "correctIndex": 1,
+    "correctIndex": 3,
     "explanation": "Bevor technische Implementierungen starten, muss der geschäftliche Kontext absolut klar sein. Ohne die Definition der Zielgruppe, deren konkreten Informationsbedarfs und des beabsichtigten Nutzens für die Entscheidungsfindung läuft jedes BI-Projekt Gefahr, 'Berichte ohne Wirkung' zu erzeugen."
   },
   {
@@ -356,11 +356,11 @@
     "question": "Auf wen geht die moderne Prägung des Begriffs 'Business Intelligence' im Jahr 1989 zurück?",
     "options": [
       "Bill Gates (Microsoft)",
+      "James Serra (Microsoft)",
       "Howard Dresner (Gartner Group)",
-      "Edward Tufte (Yale University)",
-      "James Serra (Microsoft)"
+      "Edward Tufte (Yale University)"
     ],
-    "correctIndex": 1,
+    "correctIndex": 2,
     "explanation": "Obwohl der Begriff historisch älter ist, wird Howard Dresner von der Gartner Group im Jahr 1989 die moderne Etablierung von 'Business Intelligence' als Schirmbegriff für Konzepte und Methoden zur Verbesserung geschäftlicher Entscheidungen durch faktenbasierte Supportsysteme zugeschrieben."
   },
   {
@@ -369,9 +369,9 @@
     "difficulty": "Mittel",
     "question": "Warum bezeichnet das Kickoff-Skript BI-Informationen als 'verlässlich, wiederholbar und nachvollziehbar'?",
     "options": [
-      "Weil die Daten durch KI-Algorithmen minütlich neu erfunden werden.",
-      "Um sicherzustellen, dass Berichte nicht auf ad-hoc zusammengewürfelten, manuellen Excel-Tabellen basieren, sondern auf standardisierten, auditierten und transparenten Datenprozessen.",
       "Weil BI-Systeme ausschließlich historische Daten ohne Relevanz für die Zukunft verarbeiten.",
+      "Um sicherzustellen, dass Berichte nicht auf ad-hoc zusammengewürfelten, manuellen Excel-Tabellen basieren, sondern auf standardisierten, auditierten und transparenten Datenprozessen.",
+      "Weil die Daten durch KI-Algorithmen minütlich neu erfunden werden.",
       "Damit die Ladezeit des Webbrowsers unter einer Sekunde bleibt."
     ],
     "correctIndex": 1,
@@ -385,8 +385,8 @@
     "options": [
       "Sobald die Geschäftsführung die Freigabe erteilt hat.",
       "Wenn die Quelle benannt, die Feldbedeutung geklärt, die Kennzahl präzise definiert, der Vergleichszeitraum festgelegt und die Berechtigungen bedacht wurden.",
-      "Sobald das Datenbank-Staging-Schema fehlerfrei normalisiert ist.",
-      "Wenn die KI einen ersten visuellen Mockup-Entwurf generiert hat."
+      "Wenn die KI einen ersten visuellen Mockup-Entwurf generiert hat.",
+      "Sobald das Datenbank-Staging-Schema fehlerfrei normalisiert ist."
     ],
     "correctIndex": 1,
     "explanation": "Die 'Definition of Ready' ist ein strenges Qualitätsgate im agilen BI-Projekt. Fehlt auch nur einer dieser Aspekte (z. B. unklare Kennzahl-Definition oder unbenannte Quelle), darf mit der Entwicklung nicht begonnen werden, da dies unweigerlich zu Missverständnissen und Fehlentwicklungen führt."
@@ -397,10 +397,10 @@
     "difficulty": "Schwer",
     "question": "Warum sind Metadaten ('Daten über Daten') laut Skript eine fundamentale Voraussetzung für ein funktionierendes Data Warehouse?",
     "options": [
-      "Sie dienen ausschließlich der Verschlüsselung sensibler Mitarbeiterdaten.",
+      "Sie ermöglichen das direkte Editieren von Quelltabellen durch Endanwender.",
       "Sie stellen sicher, dass Dateninhalte, -strukturen und -prozesse auch langfristig inhaltlich verstanden und richtig interpretiert werden, besonders wenn Daten 'auf Verdacht' gespeichert werden.",
       "Sie reduzieren die Lizenzgebühren von Cloud-Datenbanken.",
-      "Sie ermöglichen das direkte Editieren von Quelltabellen durch Endanwender."
+      "Sie dienen ausschließlich der Verschlüsselung sensibler Mitarbeiterdaten."
     ],
     "correctIndex": 1,
     "explanation": "Daten ohne Kontext sind wertlos. Metadaten dokumentieren, was eine Spalte bedeutet, woher sie stammt (Lineage) und welche Transformationsregeln angewandt wurden. Nur so bleibt das DWH über Jahre hinweg verständlich und wartbar."
@@ -412,11 +412,11 @@
     "question": "Was fordert das 'SAY'-Prinzip aus dem im Kickoff erwähnten Visualisierungs-Mini-Check?",
     "options": [
       "Dass der Sprecher während des Vortrags laut und deutlich spricht.",
-      "Dass jedes Diagramm und jeder Bericht eine klare, unmissverständliche Botschaft (Aussage) transportieren muss, anstatt nur Datenwüsten abzubilden.",
+      "Dass die KI den Berichtstext vollautomatisch vorlesen kann.",
       "Dass alle Achsenbeschriftungen alphabetisch sortiert sein müssen.",
-      "Dass die KI den Berichtstext vollautomatisch vorlesen kann."
+      "Dass jedes Diagramm und jeder Bericht eine klare, unmissverständliche Botschaft (Aussage) transportieren muss, anstatt nur Datenwüsten abzubilden."
     ],
-    "correctIndex": 1,
+    "correctIndex": 3,
     "explanation": "Das 'SAY'-Prinzip (nach Hichert/IBCS) verlangt, dass Visualisierungen eine Geschichte erzählen oder eine klare Botschaft vermitteln müssen. Ein Diagramm ohne Aussage ('Umsatz 2024') ist reiner Selbstzweck; es muss heißen: 'Umsatz brach im Q3 durch Lieferengpässe um 15% ein'."
   },
   {
@@ -426,11 +426,11 @@
     "question": "Welche Kernforderung stellt das 'UNIFY'-Prinzip für das Berichtswesen auf?",
     "options": [
       "Dass alle Datenquellen in einer einzigen physikalischen Tabelle zusammengefasst werden.",
-      "Dass Gleiches zwingend gleich aussehen muss (einheitliche Notation, Farben, Schriftgrößen und Symbole über alle Berichte hinweg), um die kognitive Entlastung des Lesers zu sichern.",
       "Dass alle Mitarbeiter dasselbe Betriebssystem nutzen müssen.",
-      "Dass Berichte nur noch im PDF-Format verteilt werden dürfen."
+      "Dass Berichte nur noch im PDF-Format verteilt werden dürfen.",
+      "Dass Gleiches zwingend gleich aussehen muss (einheitliche Notation, Farben, Schriftgrößen und Symbole über alle Berichte hinweg), um die kognitive Entlastung des Lesers zu sichern."
     ],
-    "correctIndex": 1,
+    "correctIndex": 3,
     "explanation": "UNIFY steht für Standardisierung. Wenn in einem Bericht Ist-Werte mal blau, mal grau und mal grün dargestellt werden, muss der Leser jedes Mal die Legende neu studieren. Eine einheitliche Notation (wie nach IBCS) ermöglicht ein sofortiges, präattentives Verstehen."
   },
   {
@@ -439,12 +439,12 @@
     "difficulty": "Mittel",
     "question": "Inwiefern spiegelt das 'SIMPLIFY'-Prinzip des Mini-Checks die Philosophie von Edward Tufte wider?",
     "options": [
-      "Es fordert, komplexe Berechnungen durch einfache Schätzungen zu ersetzen.",
-      "Es verlangt das radikale Streichen von visuellem Rauschen und überflüssiger Tinte (Maximierung der Data-Ink-Ratio durch Entfernen von 3D-Effekten, Schatten und Ziergittern).",
+      "Es verbietet den Einsatz von Farben in geschäftlichen Berichten.",
       "Es verlangt die Beschränkung aller Dashboards auf maximal zwei Datenpunkte.",
-      "Es verbietet den Einsatz von Farben in geschäftlichen Berichten."
+      "Es verlangt das radikale Streichen von visuellem Rauschen und überflüssiger Tinte (Maximierung der Data-Ink-Ratio durch Entfernen von 3D-Effekten, Schatten und Ziergittern).",
+      "Es fordert, komplexe Berechnungen durch einfache Schätzungen zu ersetzen."
     ],
-    "correctIndex": 1,
+    "correctIndex": 2,
     "explanation": "SIMPLIFY fordert Einfachheit und Klarheit im Design. Alles, was nicht direkt zur Informationsübertragung dient (Tufte's 'Chart-Junk' wie Hintergrundbilder, dekorative Rahmen oder dicke Gitterlinien), lenkt ab und muss rigoros entfernt werden, um die Data-Ink-Ratio zu maximieren."
   },
   {
@@ -453,27 +453,27 @@
     "difficulty": "Schwer",
     "question": "Wie arbeiten moderne BI-Werkzeuge (wie DeltaMaster) bei einer Abweichung im September 2016 und wo liegt dabei die Grenze der KI laut Skript?",
     "options": [
-      "Das Tool korrigiert den Fehler vollautomatisch in der Datenbank; der Mensch ist überflüssig.",
       "Das Tool macht Abweichungen sofort ohne langes Suchen sichtbar und rankt die größten Treiber automatisch; die kritische Bewertung, ob dieser Treiber die tatsächliche Ursache erklärt, bleibt jedoch zwingend beim Menschen.",
+      "Das Tool berechnet den Lie Factor und lehnt die Visualisierung bei einem Wert über 1,0 ab.",
       "Das Tool blockiert die Anzeige, bis der Systemadministrator den Datensatz manuell freigibt.",
-      "Das Tool berechnet den Lie Factor und lehnt die Visualisierung bei einem Wert über 1,0 ab."
+      "Das Tool korrigiert den Fehler vollautomatisch in der Datenbank; der Mensch ist überflüssig."
     ],
-    "correctIndex": 1,
+    "correctIndex": 0,
     "explanation": "Automatisierte Treiberanalysen können mathematisch exakt bestimmen, welche Unterkategorie (z. B. 'Machines') die größte Abweichung verursacht hat. Aber die kausale Erklärung (z. B. 'Lieferengpass beim Vorlieferanten' oder 'Sondereffekt durch Rabattaktion') kann nur durch menschliches Domänen- und Kontextwissen erbracht werden."
   },
   {
     "id": "K34",
-    "topic": "Zusammenspiel von BI und KI (Rechnungsanalyse)",
-    "difficulty": "Mittel",
-    "question": "Das Kickoff-Skript zeigt das Beispiel einer Rechnungsanalyse (live unter invoices.butscher.cloud). Welcher Diagrammtyp wird dort zur Visualisierung der Verteilung von Rechnungshöhen eingesetzt?",
+    "topic": "Datenleck im Prognosemodell",
+    "difficulty": "Schwer",
+    "question": "Ein Kündigungsmodell erreicht auf den Testdaten eine auffällig hohe Güte, enttäuscht aber im Betrieb; unter den Merkmalen befindet sich das Stornodatum. Welche Fehlerquelle liegt nahe?",
     "options": [
-      "Ein dreidimensionales Kreisdiagramm.",
-      "Ein horizontaler Boxplot (Kastengrafik) mit Minimum, Median, Quartilen und Maximum zur präzisen Verteilungsanalyse auf einen Blick.",
-      "Ein einfaches Liniendiagramm ohne Achsenbeschriftung.",
-      "Ein Sunburst-Diagramm für hierarchische Strukturen."
+      "Eine ungeeignete Entscheidungsschwelle: Das Modell liefert brauchbare Wahrscheinlichkeiten, die erst bei der Umwandlung in Entscheidungen verzerrt werden.",
+      "Ein Datenleck: Das Merkmal trägt Information, die zum Prognosezeitpunkt noch gar nicht vorlag; die hohe Testgüte ist ein Prüfanlass, kein Erfolgsnachweis.",
+      "Drift: Kundenstruktur und Sortiment haben sich seit dem Training verschoben, sodass das Modell auf aktuellen Daten schlechter trifft als im Test.",
+      "Ein Rechteproblem: Die Prognosetabelle entsteht außerhalb des Semantikmodells und umgeht dessen Zeilenberechtigungen bei der späteren Auswertung."
     ],
     "correctIndex": 1,
-    "explanation": "In der gezeigten Applikation ('Rechnungsanalyse') wird ein horizontaler Boxplot verwendet. Er zeigt auf einen Blick die statistische Verteilung der Rechnungsbeträge (inkl. Median bei 896 € und qualitativem Bereich) und eignet sich hervorragend, um Ausreißer sofort zu identifizieren."
+    "explanation": "Beim Datenleck enthält ein Merkmal Information über das Ereignis, das erst vorhergesagt werden soll; das Stornodatum entsteht fachlich erst mit der Kündigung. Im Test wirkt das Modell dadurch hervorragend, im Betrieb fehlt die Information zum Prognosezeitpunkt. Die Gegenmaßnahme ist, für jedes Merkmal zu klären, wann es fachlich entsteht, und ungewöhnlich hohe Testgüte als Warnsignal zu behandeln."
   },
   {
     "id": "K35",
@@ -481,10 +481,10 @@
     "difficulty": "Mittel",
     "question": "Was versteht man unter dem Begriff 'Data Swamp' (Datenmorast) im Gegensatz zu einem geordneten Data Lake?",
     "options": [
-      "Ein physischer Defekt auf den Festplatten des Cloud-Anbieters.",
+      "Ein Sicherheitsbereich für infizierte oder kompromittierte Dateien.",
       "Ein unstrukturierter, wilder Speicherort, in den Daten ohne Metadaten, Berechtigungsprüfung oder Qualitätskontrollen hineingekippt werden, sodass sie unbrauchbar und unauffindbar werden.",
-      "Ein modernes NoSQL-Datenbankschema für geografische Daten.",
-      "Ein Sicherheitsbereich für infizierte oder kompromittierte Dateien."
+      "Ein physischer Defekt auf den Festplatten des Cloud-Anbieters.",
+      "Ein modernes NoSQL-Datenbankschema für geografische Daten."
     ],
     "correctIndex": 1,
     "explanation": "Ein Data Lake ist nur dann wertvoll, wenn er durch ein klares Zonenkonzept und Metadaten-Management geschützt wird. Fehlen diese Kontrollen, degeneriert der Data Lake schnell zu einem unbrauchbaren 'Data Swamp', in dem niemand mehr weiß, welche Daten vertrauenswürdig sind."
@@ -495,12 +495,12 @@
     "difficulty": "Schwer",
     "question": "Welches Wissensgebiet steht im Zentrum des DAMA-DMBOK v2 Frameworks (Data Management Body of Knowledge) und steuert alle anderen Disziplinen?",
     "options": [
-      "Data Storage & Operations",
       "Data Governance",
       "Data Integration & Interoperability",
+      "Data Storage & Operations",
       "Document & Content Management"
     ],
-    "correctIndex": 1,
+    "correctIndex": 0,
     "explanation": "Im DAMA-Wheel steht 'Data Governance' im absoluten Zentrum. Sie definiert die Rollen, Verantwortlichkeiten, Richtlinien und Prozesse für das gesamte Datenmanagement einer Organisation und stellt sicher, dass alle anderen Wissensgebiete (wie Datenqualität oder Modellierung) darauf ausgerichtet sind."
   },
   {
@@ -510,11 +510,11 @@
     "question": "Warum befasst sich der BINT-Kurs intensiv mit der Wahrnehmungspsychologie (z. B. Gestaltgesetze, präattentive Merkmale)?",
     "options": [
       "Weil BI-Analysten später primär als Psychotherapeuten im Unternehmen arbeiten.",
-      "Weil das menschliche Auge visuelle Reize innerhalb von Millisekunden (präattentiv) verarbeitet. Ein gutes Dashboard-Design muss diese biologischen Mechanismen nutzen, um wichtige Signale ohne kognitive Anstrengung hervorzuheben.",
       "Um den ästhetischen Kunstanspruch von Designabteilungen mathematisch zu rechtfertigen.",
-      "Um den Einsatz von bunten Blinkeffekten und Animationen wissenschaftlich zu begründen."
+      "Um den Einsatz von bunten Blinkeffekten und Animationen wissenschaftlich zu begründen.",
+      "Weil das menschliche Auge visuelle Reize innerhalb von Millisekunden (präattentiv) verarbeitet. Ein gutes Dashboard-Design muss diese biologischen Mechanismen nutzen, um wichtige Signale ohne kognitive Anstrengung hervorzuheben."
     ],
-    "correctIndex": 1,
+    "correctIndex": 3,
     "explanation": "Unser Gehirn verarbeitet visuelle Merkmale wie Länge, Position oder Farbkontraste unbewusst und extrem schnell (präattentive Phase). Gutes BI-Design nutzt diese Mechanismen gezielt aus (z. B. durch rote Abweichungsbalken), um den Blick des Entscheiders sofort auf den Handlungsbedarf zu lenken, noch bevor kognitives Nachdenken einsetzt."
   },
   {
@@ -523,12 +523,12 @@
     "difficulty": "Schwer",
     "question": "Was versteht man im modernen Dashboard-Design unter 'Filterstabilität' von Kennzahlen?",
     "options": [
-      "Dass sich das visuelle Layout bei der Auswahl eines Filters nicht verschiebt.",
-      "Dass mathematische Berechnungen (z. B. prozentuale Anteile oder gleitende Durchschnitte) auch bei dynamischen Benutzerinteraktionen (Slicing/Dicing) im Hintergrund logisch korrekt und konsistent neu berechnet werden.",
       "Dass der Datenbank-Server bei komplexen Filterabfragen nicht abstürzt.",
-      "Dass Filteroptionen ausschließlich alphabetisch geordnet angezeigt werden."
+      "Dass sich das visuelle Layout bei der Auswahl eines Filters nicht verschiebt.",
+      "Dass Filteroptionen ausschließlich alphabetisch geordnet angezeigt werden.",
+      "Dass mathematische Berechnungen (z. B. prozentuale Anteile oder gleitende Durchschnitte) auch bei dynamischen Benutzerinteraktionen (Slicing/Dicing) im Hintergrund logisch korrekt und konsistent neu berechnet werden."
     ],
-    "correctIndex": 1,
+    "correctIndex": 3,
     "explanation": "In BI-Systemen interagieren Nutzer ständig mit Filtern (z. B. Wechsel von Jahr 2025 auf 2026). Eine Kennzahl ist nur dann filterstabil, wenn ihre Berechnungslogik (z. B. in DAX oder SQL) den Filterkontext korrekt berücksichtigt. Eine statisch berechnete Prozentzahl würde bei Filtern falsche Summen liefern."
   },
   {
@@ -537,12 +537,12 @@
     "difficulty": "Schwer",
     "question": "Welche architektonische Bedeutung hat das Prinzip der 'Unveränderlichkeit' (Immutability) in modernen Data-Lake-Szenarien?",
     "options": [
-      "Es verbietet jegliche Erweiterung des Datenbestands nach dem ersten Go-Live.",
-      "Rohdaten werden nach dem Schreiben niemals verändert oder überschrieben (Write-Once-Read-Many). Korrekturen werden als neue, historisierte Versionen angehängt, um eine lückenlose Auditierbarkeit zu sichern.",
       "Dass die Benutzeroberfläche der Dashboards für alle Anwender starr und unlesbar bleibt.",
-      "Dass Tabellenbeziehungen nach dem Verknüpfen nicht mehr gelöst werden dürfen."
+      "Dass Tabellenbeziehungen nach dem Verknüpfen nicht mehr gelöst werden dürfen.",
+      "Es verbietet jegliche Erweiterung des Datenbestands nach dem ersten Go-Live.",
+      "Rohdaten werden nach dem Schreiben niemals verändert oder überschrieben (Write-Once-Read-Many). Korrekturen werden als neue, historisierte Versionen angehängt, um eine lückenlose Auditierbarkeit zu sichern."
     ],
-    "correctIndex": 1,
+    "correctIndex": 3,
     "explanation": "Moderne Speicherarchitekturen (wie Lakehouses) setzen auf Immutability im Raw-Layer. Dies verhindert Datenverluste durch fehlerhafte Transformationsskripte. Läuft ein Fehler durch das System, wird das Skript korrigiert und die Transformationskette einfach auf den unveränderten Rohdaten neu ausgeführt."
   },
   {
@@ -551,12 +551,12 @@
     "difficulty": "Mittel",
     "question": "Wie unterscheiden sich transaktionale Vorsysteme (OLTP) und analytische BI-Systeme (OLAP) im Hinblick auf ihre Datenstruktur?",
     "options": [
-      "OLTP nutzt unstrukturierte Textdateien; OLAP basiert ausschließlich auf Excel-Tabellen.",
-      "OLTP-Systeme sind hochgradig normalisiert (3NF), um Anomalien bei schnellen Schreib-/Änderungszugriffen zu verhindern; OLAP-Systeme sind bewusst denormalisiert (z. B. Sternschema), um Joins zu minimieren und maximale Leseperformance zu garantieren.",
+      "OLTP speichert nur historische Daten; OLAP befasst sich ausschließlich mit Live-Prognosen.",
       "OLTP wird in der Cloud betrieben; OLAP läuft ausschließlich auf lokalen Servern.",
-      "OLTP speichert nur historische Daten; OLAP befasst sich ausschließlich mit Live-Prognosen."
+      "OLTP-Systeme sind hochgradig normalisiert (3NF), um Anomalien bei schnellen Schreib-/Änderungszugriffen zu verhindern; OLAP-Systeme sind bewusst denormalisiert (z. B. Sternschema), um Joins zu minimieren und maximale Leseperformance zu garantieren.",
+      "OLTP nutzt unstrukturierte Textdateien; OLAP basiert ausschließlich auf Excel-Tabellen."
     ],
-    "correctIndex": 1,
+    "correctIndex": 2,
     "explanation": "Dies ist das fundamentale Brückenkonzept: Operative Systeme (OLTP, z. B. ERP oder CRM) müssen Daten fehlerfrei und extrem schnell schreiben (Normalisierung verhindert Redundanzen). BI-Systeme (OLAP) hingegen verdichten und analysieren Daten. Hier behindern Joins über 20 normalisierte Tabellen die Performance, weshalb man Daten im Sternschema mit Faktentabellen und flachen Dimensionen strukturiert."
   },
   {
@@ -565,12 +565,12 @@
     "difficulty": "Mittel",
     "question": "Was beschreibt das Prinzip des 'Single Point of Truth' (SPOT) im BI-Kontext?",
     "options": [
+      "Dass alle Daten des Unternehmens in einer einzigen Tabellenzeile gespeichert werden.",
       "Dass jede Kennzahl von genau einer, autorisierten Person im Unternehmen manuell eingetippt werden muss.",
       "Dass jede geschäftsrelevante Information und Kennzahl genau an einer einzigen, zentral definierten Stelle im System (z. B. im semantischen Modell) gepflegt wird, um redundante und widersprüchliche Definitionen zu verhindern.",
-      "Dass im gesamten Unternehmen nur noch ein einziges Dashboard-Tool (z. B. Power BI) erlaubt ist.",
-      "Dass alle Daten des Unternehmens in einer einzigen Tabellenzeile gespeichert werden."
+      "Dass im gesamten Unternehmen nur noch ein einziges Dashboard-Tool (z. B. Power BI) erlaubt ist."
     ],
-    "correctIndex": 1,
+    "correctIndex": 2,
     "explanation": "Ohne SPOT entstehen widersprüchliche Berichte (z. B. Vertrieb definiert 'Umsatz' anders als Finanzen). SPOT sorgt dafür, dass die Geschäftslogik im Core-Modell zentral definiert wird. Alle Frontend-Tools greifen darauf zu, was konsistente Zahlen über alle Berichte hinweg garantiert."
   },
   {
@@ -580,11 +580,11 @@
     "question": "Warum setzt das Prüfen von Daten auf Plausibilität laut Kickoff-Skript zwingend 'Domänenwissen' voraus?",
     "options": [
       "Weil nur Programmierer mit tiefen SQL-Kenntnissen in der Lage sind, Datenfehler zu debuggen.",
-      "Weil mathematische Algorithmen zwar fehlerfreie Summen rechnen, aber nicht bewerten können, ob ein Wert im geschäftlichen Kontext (z. B. ein negativer Umsatz oder unrealistische Frachtkosten) plausibel ist. Dies erfordert tiefes Verständnis des Geschäftsfeldes.",
+      "Weil nur Domänenexperten den genauen Speicherort der Rohdaten auf den physischen Festplatten kennen.",
       "Weil Domänenwissen zwingend für die Installation von FastHTML auf dem Server benötigt wird.",
-      "Weil nur Domänenexperten den genauen Speicherort der Rohdaten auf den physischen Festplatten kennen."
+      "Weil mathematische Algorithmen zwar fehlerfreie Summen rechnen, aber nicht bewerten können, ob ein Wert im geschäftlichen Kontext (z. B. ein negativer Umsatz oder unrealistische Frachtkosten) plausibel ist. Dies erfordert tiefes Verständnis des Geschäftsfeldes."
     ],
-    "correctIndex": 1,
+    "correctIndex": 3,
     "explanation": "Ein System kann problemlos 'Frachtkosten: -5000 €' berechnen. Mathematisch ist das korrekt. Erst ein Domänenexperte, der das reale Speditionsgeschäft versteht, erkennt sofort: 'Das ist unmöglich, hier liegt ein Vorzeichenfehler im Quellsystem vor'. Domänenwissen schützt vor mathematisch korrekten, aber inhaltlich absurden Berichten."
   },
   {
@@ -595,8 +595,8 @@
     "options": [
       "Dass die Datenbank-Lizenzgebühren augenblicklich steigen.",
       "Dass man sich im unstrukturierten Datenrauschen verliert, irrelevante Scheinkorrelationen visualisiert und am tatsächlichen geschäftlichen Informationsbedarf vorbei entwickelt (Gefahr von 'Berichten ohne Wirkung').",
-      "Dass die Ladezeit der Visualisierung künstlich blockiert wird.",
-      "Dass das System automatisch alle Daten als nominalskaliert einstuft."
+      "Dass das System automatisch alle Daten als nominalskaliert einstuft.",
+      "Dass die Ladezeit der Visualisierung künstlich blockiert wird."
     ],
     "correctIndex": 1,
     "explanation": "Ein rein datengetriebener Ansatz ohne vorherige Anforderungsanalyse (Model-First / BEAM) führt fast immer zu unbrauchbaren Dashboards. Man muss zuerst die fachlichen Fragen stellen ('Was wollen wir entscheiden?') und danach das passende Datenmodell ableiten, statt blind Daten bunt aufzubereiten."
@@ -607,10 +607,10 @@
     "difficulty": "Mittel",
     "question": "Warum ist die strikte Rollen- und Rechteverteilung in modernen BI-Architekturen ein unumgängliches Governance-Kriterium?",
     "options": [
-      "Um sicherzustellen, dass jeder Mitarbeiter exakt dasselbe Dashboard sieht und keine individuellen Anpassungen möglich sind.",
-      "Um sensible Daten vor unbefugtem Zugriff zu schützen (z. B. Row-Level-Security bei Gehältern) und gleichzeitig sicherzustellen, dass operative Manager nur die für sie entscheidungsrelevanten Teilmengen sehen.",
       "Weil Datenbank-Lizenzen pro Rolle abgerechnet werden.",
-      "Um den Datenimport im Staging-Bereich künstlich zu verlangsamen."
+      "Um sensible Daten vor unbefugtem Zugriff zu schützen (z. B. Row-Level-Security bei Gehältern) und gleichzeitig sicherzustellen, dass operative Manager nur die für sie entscheidungsrelevanten Teilmengen sehen.",
+      "Um den Datenimport im Staging-Bereich künstlich zu verlangsamen.",
+      "Um sicherzustellen, dass jeder Mitarbeiter exakt dasselbe Dashboard sieht und keine individuellen Anpassungen möglich sind."
     ],
     "correctIndex": 1,
     "explanation": "BI-Governance erfordert ein klares Rollenkonzept. Ein Regionalleiter in Asien darf aus datenschutzrechtlichen und wettbewerbsrechtlichen Gründen oft nicht die Detaildaten der Region Europa einsehen. Dies wird über dynamische Sicherheitsrollen direkt im Datenmodell (RLS) gesteuert."
@@ -623,8 +623,8 @@
     "options": [
       "Die Daten werden bei der Übertragung automatisch verschlüsselt.",
       "Sämtliche zeitbasierten Berechnungen (wie Vorjahresvergleiche, gleitende Durchschnitte oder chronologische Sortierungen) schlagen fehl oder liefern falsche Ergebnisse, da die Datenbank den Text nicht als fortlaufende Zeitachse interpretieren kann.",
-      "Das Datenbanksystem löscht die Spalte automatisch ohne Warnmeldung.",
-      "Die SQL-Abfragen werden um den Faktor 1000 schneller ausgeführt."
+      "Die SQL-Abfragen werden um den Faktor 1000 schneller ausgeführt.",
+      "Das Datenbanksystem löscht die Spalte automatisch ohne Warnmeldung."
     ],
     "correctIndex": 1,
     "explanation": "Datentypen sind im Data Warehouse heilig. Ein Datum als Text lässt sich nicht chronologisch sortieren (Januar folgt dann evtl. auf August wegen Alphabet). Zeitreihenberechnungen setzen zwingend valide DATE- oder DATETIME-Typen voraus, weshalb im Transformationsschritt (z. B. OpenRefine) eine explizite Typkonvertierung stattfinden muss."
@@ -637,8 +637,8 @@
     "options": [
       "Weil KI-generierte Grafiken von minderwertiger Bildqualität sind.",
       "Weil sie ausschließlich dazu dienen, im Team die richtige visuelle Darstellung und fachliche Botschaft zu diskutieren und zu finden – noch bevor teure technische Datenanbindungen an produktive Quellen programmiert werden.",
-      "Weil der Webserver FastHTML temporäre Entwürfe automatisch nach 24 Stunden löscht.",
-      "Weil Prototypen grundsätzlich unvollständige Datenreihen enthalten müssen."
+      "Weil Prototypen grundsätzlich unvollständige Datenreihen enthalten müssen.",
+      "Weil der Webserver FastHTML temporäre Entwürfe automatisch nach 24 Stunden löscht."
     ],
     "correctIndex": 1,
     "explanation": "Agiles Prototyping spart Zeit und Geld. Es ist um ein Vielfaches effizienter, ein 'Wegwerf-Dashboard' per KI mit fiktiven Daten zu generieren und mit dem Fachbereich abzustimmen, ob dies die Fragen beantwortet, als direkt eine komplexe Datenpipeline aufzubauen und am Ende zu merken, dass das Layout unbrauchbar ist."
@@ -649,12 +649,12 @@
     "difficulty": "Schwer",
     "question": "Was beschreibt der Schritt 'Falle stellen' beim Testen von BI-Diagrammen mit generativer KI?",
     "options": [
-      "Das absichtliche Einschleusen von SQL-Injections in das Login-Formular der Web-App.",
       "Das bewusste Übergeben fehlerhafter Rohdaten (z. B. offensichtliche Tippfehler oder falsche Einheiten) an das KI-Modell, um kritisch zu prüfen, ob die KI den Fehler erkennt und meldet, oder ob sie ihn blind und kritiklos visualisiert.",
+      "Das absichtliche Einschleusen von SQL-Injections in das Login-Formular der Web-App.",
       "Das Sperren des Benutzerzugangs während einer laufenden Live-Präsentation.",
       "Das künstliche Verzerren der Achsenskalierung im fertigen PDF-Bericht."
     ],
-    "correctIndex": 1,
+    "correctIndex": 0,
     "explanation": "Dieser Stresstest ('Falle stellen') deckt das mangelnde semantische Verständnis von generativen Modellen auf. Da LLMs primär probabilistische Text- und Codegeneratoren sind, visualisieren sie oft fehlerhafte Daten ohne Einwand. Erkennt der Analyst dieses Verhalten, kann er die Prompts und Validierungsschritte entsprechend anpassen."
   },
   {
@@ -663,27 +663,27 @@
     "difficulty": "Mittel",
     "question": "Warum wird im Data-Warehouse-Core-Bereich (Inmon-Ansatz) eine hohe Normalisierung (3NF) angestrebt, obwohl dies Abfragen durch Joins verlangsamt?",
     "options": [
-      "Um den Speicherplatzbedarf auf den Serverplatten künstlich zu maximieren.",
-      "Um Redundanzen und damit das Risiko von Dateninkonsistenzen (z. B. unterschiedliche Schreibweisen desselben Kundennamens) bei der Datenintegration aus vielen verschiedenen Systemen absolut zu minimieren.",
       "Weil moderne Cloud-Datenbanken keine denormalisierten Strukturen verarbeiten können.",
-      "Um den Zugriff von Endanwendern auf sensible Faktentabellen zu blockieren."
+      "Um den Zugriff von Endanwendern auf sensible Faktentabellen zu blockieren.",
+      "Um den Speicherplatzbedarf auf den Serverplatten künstlich zu maximieren.",
+      "Um Redundanzen und damit das Risiko von Dateninkonsistenzen (z. B. unterschiedliche Schreibweisen desselben Kundennamens) bei der Datenintegration aus vielen verschiedenen Systemen absolut zu minimieren."
     ],
-    "correctIndex": 1,
+    "correctIndex": 3,
     "explanation": "Der normalisierte Core-Bereich (3NF) dient als die saubere, integrierte Datenwaschanlage des Unternehmens. Hier werden alle Datenquellen harmonisiert. Für die performante Abfrage durch den Endanwender werden die Daten erst im nachgelagerten Presentation-Layer (Data Marts) wieder gezielt in Sternschemata denormalisiert."
   },
   {
     "id": "K49",
-    "topic": "BINT-Veranstaltungsphilosophie: Der rote Faden",
+    "topic": "Warum Sprachmodelle falsche Zahlen liefern",
     "difficulty": "Mittel",
-    "question": "Welche übergeordnete Philosophie trägt die Gestaltung des BINT-Kurses durch Prof. Dr. Robert Butscher?",
+    "question": "Warum kann ein Sprachmodell eine sachlich falsche Kennzahl in völlig überzeugender Formulierung ausgeben?",
     "options": [
-      "Das Ausbilden von reinen 'Klick-Experten' für ein bestimmtes Softwareprodukt wie Tableau oder Power BI.",
-      "Das Erlernen von theoretischen Datenbankmodellen ohne jeglichen praktischen Bezug.",
-      "Der Brückenschlag zwischen theoretischer Fundierung (Warum verhält sich ein System so?) und praktischer Umsetzungskompetenz (Wie implementiere ich ein robustes Datenprodukt?), getragen vom wissenschaftlichen Anspruch.",
-      "Die ausschließliche Konzentration auf das Schreiben wissenschaftlicher Forschungsberichte."
+      "Weil ihm im Training fehlerhafte Zahlen vorgelegt wurden; mit einem bereinigten Trainingsbestand entfällt dieses Verhalten weitgehend von selbst.",
+      "Weil es Rechenschritte intern an ein Tabellenkalkulationsmodul übergibt und dessen Zwischenergebnisse ungeprüft in den erzeugten Text übernimmt.",
+      "Weil es Zahlen zwar aus der Datenschicht liest, sie beim Formulieren jedoch rundet und dabei den Bezug zu Zeitraum und Einheit verliert.",
+      "Weil es schrittweise das wahrscheinlichste nächste Textstück wählt und so die plausibelste Fortsetzung erzeugt, statt einen geprüften Wert nachzuschlagen."
     ],
-    "correctIndex": 2,
-    "explanation": "Der Kurs zielt auf echtes Verständnis ab: 'Der Prüf-Dreisatz: bauen lassen -> prüfen -> verstehen — Ihr erster Durchlauf des Musters, das den ganzen Kurs trägt.' Es geht nicht um reine Produktschulung, sondern um das Begreifen der kausalen Zusammenhänge, Datenqualität und Architekturparadigmen."
+    "correctIndex": 3,
+    "explanation": "Ein Sprachmodell zerlegt die Eingabe in Tokens, schätzt für das nächste Token eine Wahrscheinlichkeitsverteilung und hängt das gewählte Token an, bevor der Lauf von vorn beginnt. Zielgröße ist damit die sprachliche Plausibilität, nicht die fachliche Richtigkeit einer Zahl. Eine überzeugend formulierte falsche Zahl ist deshalb erwartbares Verhalten; im Berichtswesen muss der Wert aus der Datenschicht kommen und das Modell nur den Text darum herum liefern."
   },
   {
     "id": "K50",
@@ -691,12 +691,12 @@
     "difficulty": "Schwer",
     "question": "Wann gilt ein Datenbericht oder eine BI-Anwendung im Kurskontext als endgültig 'fertig'?",
     "options": [
-      "Sobald der erste Screenshot im Team-Kanal auf MS Teams gepostet wurde.",
-      "Wenn die Testsuite vollständig grün ist, der Filterzyklus im Browser manuell geprüft wurde, die Kontrollzahlen dokumentiert sind und das Ergebnis im Team verstanden wurde. Ein Screenshot allein belegt keinen Zustand.",
       "Sobald das Cloud-Deployment ohne Fehlermeldung im Uvicorn-Log gestartet ist.",
-      "Wenn die y-Achse aller Balkendiagramme exakt bei Null beginnt."
+      "Wenn die y-Achse aller Balkendiagramme exakt bei Null beginnt.",
+      "Wenn die Testsuite vollständig grün ist, der Filterzyklus im Browser manuell geprüft wurde, die Kontrollzahlen dokumentiert sind und das Ergebnis im Team verstanden wurde. Ein Screenshot allein belegt keinen Zustand.",
+      "Sobald der erste Screenshot im Team-Kanal auf MS Teams gepostet wurde."
     ],
-    "correctIndex": 1,
+    "correctIndex": 2,
     "explanation": "Im professionellen BI-Engineering gilt: 'Fertig heißt: Die Referenzanwendung gilt als fertig, wenn die Testsuite grün ist, der Filterzyklus im Browser geprüft wurde und die Kontrollzahlen dokumentiert sind. Ein Screenshot allein belegt keinen Zustand.' Erst die lückenlose Verifikation sichert die Verlässlichkeit der Entscheidungsgrundlage ab."
   }
 ]

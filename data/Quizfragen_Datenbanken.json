@@ -5,10 +5,10 @@
     "difficulty": "Mittel",
     "question": "Welche Datenbank-Familie eignet sich laut dem Vorlesungsskript am besten für die schnelle Aggregation über Millionen von Zeilen in einer Auswertungsschicht für Data Warehouses und Business Intelligence?",
     "options": [
-      "Dokumentenorientierte NoSQL-Datenbanken (z. B. MongoDB)",
+      "Relational-transaktionale OLTP-Datenbanken (z. B. Standard-PostgreSQL ohne Optimierungen)",
       "Analytische, spaltenorientierte Datenbanken (z. B. Snowflake, BigQuery, ClickHouse)",
-      "Key-Value / In-Memory-Datenbanken (z. B. Redis)",
-      "Relational-transaktionale OLTP-Datenbanken (z. B. Standard-PostgreSQL ohne Optimierungen)"
+      "Dokumentenorientierte NoSQL-Datenbanken (z. B. MongoDB)",
+      "Key-Value / In-Memory-Datenbanken (z. B. Redis)"
     ],
     "correctIndex": 1,
     "explanation": "Laut Skript gehören analytische, spaltenorientierte Datenbanken (wie Snowflake, BigQuery, Redshift, Fabric DW und ClickHouse) zur Auswertungsschicht für DWH und BI, da sie Aggregate über Millionen Zeilen extrem performant berechnen können. Dokumentendatenbanken oder Key-Value-Stores dienen im BI-Umfeld meist nur als Vorstufen oder Zuspieler."
@@ -19,10 +19,10 @@
     "difficulty": "Schwer",
     "question": "James Serra (2024) definiert fünf Kernaspekte einer Datenarchitektur. Welcher Aspekt befasst sich mit der Frage, wie Endbenutzer und BI-Tools auf die Daten zugreifen und wie die semantische Schicht aufgebaut ist?",
     "options": [
-      "Ingestion Layer",
+      "Security & Governance",
       "Data Access & Semantics",
-      "Storage Layer",
-      "Security & Governance"
+      "Ingestion Layer",
+      "Storage Layer"
     ],
     "correctIndex": 1,
     "explanation": "James Serra definiert in seinem Standardwerk (2024) fünf Kernsäulen: Storage, Compute, Ingestion, Security und Data Access / Semantics. Letztere steuert den Datenzugriff und stellt über eine semantische Schicht sicher, dass Anwender und BI-Werkzeuge ein einheitliches, geschäftsorientiertes Verständnis der Daten vorfinden."
@@ -33,12 +33,12 @@
     "difficulty": "Schwer",
     "question": "Warum sind spaltenorientierte Datenbanken bei analytischen Abfragen (OLAP) im Vergleich zu zeilenorientierten Datenbanken (OLTP) um den Faktor 10 bis 100 schneller?",
     "options": [
-      "Weil sie Daten sequenziell auf Magnetplatten schreiben und dadurch Suchzeiten minimieren.",
-      "Weil Abfragen nur die tatsächlich benötigten Spalten berühren und aggregieren müssen, anstatt komplette Datensätze (Zeilen) von der Festplatte in den Hauptspeicher zu laden.",
       "Weil sie auf Tabellen-Joins verzichten und ausschließlich unstrukturierte JSON-Dokumente verarbeiten.",
-      "Weil sie standardmäßig alle Tabellen-Beziehungen in Primärschlüssel-Indizes auflösen."
+      "Weil sie standardmäßig alle Tabellen-Beziehungen in Primärschlüssel-Indizes auflösen.",
+      "Weil Abfragen nur die tatsächlich benötigten Spalten berühren und aggregieren müssen, anstatt komplette Datensätze (Zeilen) von der Festplatte in den Hauptspeicher zu laden.",
+      "Weil sie Daten sequenziell auf Magnetplatten schreiben und dadurch Suchzeiten minimieren."
     ],
-    "correctIndex": 1,
+    "correctIndex": 2,
     "explanation": "Bei zeilenweiser Speicherung (OLTP) muss die Datenbank beim Aggregieren einer Spalte (z. B. Summe Umsatz) stets die gesamte Zeile inklusive aller nicht benötigten Spalten (Datum, Region, Produkt-ID etc.) einlesen. Spaltenorientierte Systeme speichern jede Spalte separat. Aggregate müssen daher nur die exakt betroffenen Spaltenblöcke einlesen, was drastisch weniger I/O-Operationen erfordert und hocheffiziente Kompressionsverfahren ermöglicht."
   },
   {
@@ -47,12 +47,12 @@
     "difficulty": "Mittel",
     "question": "Welche interne Engine nutzt Microsoft Power BI zur hochkomprimierten, spaltenorientierten In-Memory-Datenverarbeitung in Tabular Models?",
     "options": [
-      "Hadoop MapReduce",
-      "VertiPaq",
+      "Postgres Execution Engine",
       "DuckDB Engine",
-      "Postgres Execution Engine"
+      "VertiPaq",
+      "Hadoop MapReduce"
     ],
-    "correctIndex": 1,
+    "correctIndex": 2,
     "explanation": "Microsoft Power BI nutzt intern (wie auch Analysis Services im Tabular Model) die proprietäre VertiPaq-Engine. Diese arbeitet spaltenorientiert und komprimiert die importierten Daten hochgradig im Arbeitsspeicher (In-Memory), um extrem schnelle Filter- und Aggregationsabfragen zu ermöglichen."
   },
   {
@@ -61,12 +61,12 @@
     "difficulty": "Mittel",
     "question": "Für welches Szenario eignet sich die in-process Datenbank DuckDB laut dem Datenbank-Report im Vorlesungsskript am besten?",
     "options": [
-      "Als hochverfügbarer Mehrbenutzer-Dienst mit feingranularer Active-Directory-Rechteverwaltung.",
-      "Für Ad-hoc-Analysen und schnelle OLAP-Abfragen direkt im lokalen Jupyter Notebook oder auf lokalen Dateien (CSV, Parquet).",
+      "Als Vektordatenbank zur Ähnlichkeitssuche in unstrukturierten Videodaten.",
       "Zur persistenten Speicherung von transaktionalen ACID-Datenströmen in global verteilten ERP-Systemen.",
-      "Als Vektordatenbank zur Ähnlichkeitssuche in unstrukturierten Videodaten."
+      "Für Ad-hoc-Analysen und schnelle OLAP-Abfragen direkt im lokalen Jupyter Notebook oder auf lokalen Dateien (CSV, Parquet).",
+      "Als hochverfügbarer Mehrbenutzer-Dienst mit feingranularer Active-Directory-Rechteverwaltung."
     ],
-    "correctIndex": 1,
+    "correctIndex": 2,
     "explanation": "DuckDB wird im Skript als embedded/in-process Datenbank für serverloses OLAP klassifiziert. Ihre große Stärke liegt in schnellen, lokalen analytischen Abfragen direkt im Notebook oder auf CSV-/Parquet-Dateien, ohne dass ein dedizierter Datenbankserver aufgesetzt oder verwaltet werden muss. Sie bietet jedoch keine Mehrbenutzerverwaltung."
   },
   {
@@ -75,12 +75,12 @@
     "difficulty": "Mittel",
     "question": "Welches System wird im Skript explizit für performancekritische Echtzeit- und Log-Analytik auf sehr großen Datenmengen empfohlen?",
     "options": [
-      "ClickHouse",
-      "SQLite",
       "MongoDB",
-      "Oracle RDBMS"
+      "SQLite",
+      "Oracle RDBMS",
+      "ClickHouse"
     ],
-    "correctIndex": 0,
+    "correctIndex": 3,
     "explanation": "ClickHouse ist ein spaltenorientiertes Open-Source-Datenbankmanagementsystem, das speziell für extrem schnelle, echtzeitnahe analytische Abfragen (Real-Time OLAP) und Log-Analysen auf Milliarden von Datensätzen optimiert ist."
   },
   {
@@ -89,9 +89,9 @@
     "difficulty": "Schwer",
     "question": "Welche PostgreSQL-Erweiterung hat im Zuge des künstlichen Intelligenz- und RAG-Booms (Retrieval-Augmented Generation) immense Bedeutung für die Ähnlichkeitssuche auf hochdimensionalen Vektoren erlangt?",
     "options": [
-      "pg_trgm",
-      "pgvector",
       "pg_crypto",
+      "pgvector",
+      "pg_trgm",
       "hstore"
     ],
     "correctIndex": 1,
@@ -103,10 +103,10 @@
     "difficulty": "Mittel",
     "question": "Was beschreibt der Begriff 'Tupel' im Kontext des von Edgar F. Codd im Jahr 1970 geschaffenen relationalen Datenbankmodells?",
     "options": [
-      "Eine Spalte in einer Tabelle, die den Datentyp definiert.",
-      "Einen Datensatz (eine Zeile) innerhalb einer Relation (Tabelle).",
       "Die mathematische Verknüpfung zweier Primärschlüssel.",
-      "Ein logisches Schema zur Datenkompression."
+      "Einen Datensatz (eine Zeile) innerhalb einer Relation (Tabelle).",
+      "Ein logisches Schema zur Datenkompression.",
+      "Eine Spalte in einer Tabelle, die den Datentyp definiert."
     ],
     "correctIndex": 1,
     "explanation": "In Codds relationaler Theorie entspricht eine Tabelle einer 'Relation'. Die Spalten werden als 'Attribute' bezeichnet, und die einzelnen Datensätze (Zeilen) entsprechen den mathematischen 'Tupeln'. Diese Terminologie bildet die wissenschaftliche Basis relationaler DBMS."
@@ -117,12 +117,12 @@
     "difficulty": "Mittel",
     "question": "Was ist das primäre Ziel der Normalisierung eines relationalen Datenmodells in einem OLTP-System?",
     "options": [
-      "Die Minimierung der Anzahl der JOINS bei komplexen Abfragen zur Steigerung der Lese-Performance.",
       "Das Vermeiden von Redundanzen sowie das Verhindern von Einfüge-, Änderungs- und Lösch-Anomalien zur Sicherung der Datenkonsistenz.",
+      "Die Minimierung der Anzahl der JOINS bei komplexen Abfragen zur Steigerung der Lese-Performance.",
       "Die spaltenweise Speicherung zur effizienten Komprimierung großer Datenvolumina im Arbeitsspeicher.",
       "Das automatische Erstellen von Star-Schemata aus flachen Importtabellen."
     ],
-    "correctIndex": 1,
+    "correctIndex": 0,
     "explanation": "Die schrittweise Normalisierung (meist bis zur 3NF) zielt in operationalen Systemen (OLTP) darauf ab, Redundanzen zu eliminieren. Dadurch werden schädliche Anomalien (z. B. unvollständiges Löschen oder Ändern redundanter Daten) vermieden, was die Datenkonsistenz (= Widerspruchsfreiheit) und Integrität der operativen Geschäftsprozesse garantiert."
   },
   {
@@ -131,12 +131,12 @@
     "difficulty": "Mittel",
     "question": "Wann befindet sich eine Relation (Tabelle) in der ersten Normalform (1NF)?",
     "options": [
+      "Wenn jedes Nichtprimärattribut voll funktionell vom Primärschlüssel abhängt.",
       "Wenn sie keine transitiven Abhängigkeiten aufweist.",
       "Wenn alle Attribute einen atomaren Wertebereich aufweisen (keine zusammengesetzten oder mehrfachen Werte pro Feld) und die Tabelle frei von Wiederholungsgruppen ist.",
-      "Wenn jedes Nichtprimärattribut voll funktionell vom Primärschlüssel abhängt.",
       "Wenn sie mindestens einen Fremdschlüssel besitzt, der auf eine andere Tabelle verweist."
     ],
-    "correctIndex": 1,
+    "correctIndex": 2,
     "explanation": "Eine Relation ist in der ersten Normalform (1NF), wenn alle ihre Attribute atomar sind. Das bedeutet, dass in einer Tabellenzelle nur ein einziger, unteilbarer Wert stehen darf (z. B. nicht Name und Vorname in einer Spalte oder mehrere Telefonnummern kommasepariert in einem Feld) und keine sich wiederholenden Spaltengruppen existieren."
   },
   {
@@ -145,10 +145,10 @@
     "difficulty": "Schwer",
     "question": "Welche Bedingung muss eine Relation erfüllen, um die zweite Normalform (2NF) zu erreichen?",
     "options": [
-      "Sie muss in der 1NF sein und darf keine transitiven Abhängigkeiten von Nichtschlüsselattributen aufweisen.",
+      "Sie darf ausschließlich numerische Attribute enthalten.",
       "Sie muss in der 1NF sein, und jedes Nichtprimärattribut muss voll funktionell vom gesamten Primärschlüssel abhängen (keine Abhängigkeit von Teilen eines zusammengesetzten Schlüssels).",
-      "Sie muss alle Joins über Fremdschlüssel vollständig aufgelöst haben.",
-      "Sie darf ausschließlich numerische Attribute enthalten."
+      "Sie muss in der 1NF sein und darf keine transitiven Abhängigkeiten von Nichtschlüsselattributen aufweisen.",
+      "Sie muss alle Joins über Fremdschlüssel vollständig aufgelöst haben."
     ],
     "correctIndex": 1,
     "explanation": "Die zweite Normalform (2NF) setzt die 1NF voraus. Sie verlangt zusätzlich, dass jedes Nichtschlüsselattribut voll funktionell vom gesamten Primärschlüssel abhängt. Das ist besonders bei zusammengesetzten Primärschlüsseln relevant: Ein Attribut darf nicht nur von einem Teil des Schlüssels abhängen."
@@ -159,12 +159,12 @@
     "difficulty": "Schwer",
     "question": "Unter welcher Bedingung befindet sich eine Relation in der dritten Normalform (3NF)?",
     "options": [
+      "Wenn sie über eine kategoriale Farbskala visualisiert werden kann.",
       "Wenn sie in der 2NF ist und kein Nichtschlüsselattribut transitiv vom Primärschlüssel abhängt (keine funktionalen Abhängigkeiten zwischen Nichtschlüsselattributen).",
-      "Wenn alle Fremdschlüssel-Beziehungen zu einer flachen 'Flat Table' zusammengeführt wurden.",
       "Wenn sie ausschließlich atomare Werte enthält und keine Joins mehr benötigt werden.",
-      "Wenn sie über eine kategoriale Farbskala visualisiert werden kann."
+      "Wenn alle Fremdschlüssel-Beziehungen zu einer flachen 'Flat Table' zusammengeführt wurden."
     ],
-    "correctIndex": 0,
+    "correctIndex": 1,
     "explanation": "Die dritte Normalform (3NF) verlangt, dass die Relation in der 2NF ist und kein Nichtschlüsselattribut transitiv vom Primärschlüssel abhängt. Das bedeutet: Ein Nichtschlüsselattribut darf nicht über ein anderes Nichtschlüsselattribut vom Primärschlüssel abhängen (z. B. 'PLZ' bestimmt 'Ort', während der Schlüssel die 'Kunden-ID' ist – Ort muss in eine eigene PLZ-Tabelle ausgelagert werden)."
   },
   {
@@ -173,12 +173,12 @@
     "difficulty": "Mittel",
     "question": "Welches Szenario beschreibt eine typische 'Einfüge-Anomalie' in einer nicht normalisierten Tabelle?",
     "options": [
-      "Ein Datensatz kann nicht gelöscht werden, ohne dass gleichzeitig andere, wichtige Informationen unwiederbringlich verloren gehen.",
-      "Ein neuer Kunde kann im System erst dann angelegt werden, wenn er seine erste konkrete Bestellung aufgibt, da der Primärschlüssel der Tabelle an die Bestellnummer gekoppelt ist.",
+      "Das Einfügen eines neuen Produkts führt zu einer Sperre (Deadlock) in der transaktionalen Datenbank.",
       "Die Aktualisierung der Adresse eines Kunden führt dazu, dass die Adresse in älteren Bestellungen nicht automatisch angepasst wird.",
-      "Das Einfügen eines neuen Produkts führt zu einer Sperre (Deadlock) in der transaktionalen Datenbank."
+      "Ein neuer Kunde kann im System erst dann angelegt werden, wenn er seine erste konkrete Bestellung aufgibt, da der Primärschlüssel der Tabelle an die Bestellnummer gekoppelt ist.",
+      "Ein Datensatz kann nicht gelöscht werden, ohne dass gleichzeitig andere, wichtige Informationen unwiederbringlich verloren gehen."
     ],
-    "correctIndex": 1,
+    "correctIndex": 2,
     "explanation": "Eine Einfüge-Anomalie tritt auf, wenn das Hinzufügen von Daten blockiert wird, weil ein Teil des zusammengesetzten Schlüssels noch nicht existiert. Wenn Kunden und Bestellungen in einer Tabelle liegen, kann ein Kunde ohne Bestellung nicht erfasst werden, da die Bestell-ID als Teil des Schlüssels nicht NULL sein darf."
   },
   {
@@ -188,11 +188,11 @@
     "question": "Was versteht man unter einer 'Lösch-Anomalie' in einem relationalen Datenmodell?",
     "options": [
       "Das Löschen eines Datensatzes ist aufgrund fehlender Berechtigungen blockiert.",
+      "Das Löschen von Daten führt zu einer unkontrollierten Erhöhung des belegten Speicherplatzes.",
       "Durch das Löschen eines bestimmten Sachverhalts (z. B. der letzten Bestellung eines Kunden) gehen ungewollt auch andere Daten verloren (z. B. die Existenz und Adresse des Kunden selbst, weil diese in derselben Zeile lagen).",
-      "Beim Löschen eines Datensatzes wird der Index der Tabelle beschädigt.",
-      "Das Löschen von Daten führt zu einer unkontrollierten Erhöhung des belegten Speicherplatzes."
+      "Beim Löschen eines Datensatzes wird der Index der Tabelle beschädigt."
     ],
-    "correctIndex": 1,
+    "correctIndex": 2,
     "explanation": "Eine Lösch-Anomalie tritt auf, wenn das Löschen eines Datensatzes zum unerwünschten Verlust von logisch unabhängigen Informationen führt. Liegen Kundenstammdaten und Bestelldaten in einer Tabelle, löscht das Entfernen der letzten Bestellung fälschlicherweise auch den gesamten Kundenstamm dieses Kunden aus dem System."
   },
   {
@@ -201,12 +201,12 @@
     "difficulty": "Mittel",
     "question": "Welches Risiko birgt eine 'Änderungs-Anomalie' (Update Anomaly) für ein Unternehmen?",
     "options": [
-      "Dass Datenänderungen aufgrund von Transaktionsabbrüchen nicht persistent gespeichert werden.",
-      "Dass eine Adressänderung eines Lieferanten an mehreren Stellen (Redundanzen) manuell geändert werden muss, was bei Fehlern zu widersprüchlichen Datenbeständen (Inkonsistenz) führt.",
       "Dass Fremdschlüssel-Beziehungen beim Update von Tabellen automatisch gelöscht werden.",
-      "Dass Tabellen-Sichten (Views) nach einer Datenänderung nicht mehr geladen werden können."
+      "Dass Datenänderungen aufgrund von Transaktionsabbrüchen nicht persistent gespeichert werden.",
+      "Dass Tabellen-Sichten (Views) nach einer Datenänderung nicht mehr geladen werden können.",
+      "Dass eine Adressänderung eines Lieferanten an mehreren Stellen (Redundanzen) manuell geändert werden muss, was bei Fehlern zu widersprüchlichen Datenbeständen (Inkonsistenz) führt."
     ],
-    "correctIndex": 1,
+    "correctIndex": 3,
     "explanation": "Eine Änderungs-Anomalie entsteht durch Redundanz. Wenn dieselben Daten (z. B. die Adresse eines Lieferanten) mehrfach in verschiedenen Zeilen gespeichert sind, muss bei einer Änderung jeder einzelne Datensatz aktualisiert werden. Wird eine Zeile vergessen, entstehen widersprüchliche Daten (Inkonsistenzen) im System."
   },
   {
@@ -215,12 +215,12 @@
     "difficulty": "Mittel",
     "question": "In welchem Punkt unterscheidet sich ein klassisches OLAP-System (analytisch) grundlegend von einem operativen OLTP-System?",
     "options": [
-      "OLTP-Systeme sind subjektorientiert (Subject-oriented), während OLAP-Systeme anwendungsorientiert (Application-oriented) arbeiten.",
-      "OLTP-Systeme sind auf den Durchsatz von Transaktionen und Redundanzfreiheit (3NF) optimiert, während OLAP-Systeme auf schnelle Lesezugriffe und komplexe, konsolidierte Auswertungen ausgelegt sind.",
       "OLAP-Systeme speichern ausschließlich relationale Echtzeitdaten, während OLTP-Systeme nur historische Daten verarbeiten.",
-      "OLTP-Systeme nutzen das Prinzip 'Schema-on-Read', während OLAP-Systeme 'Schema-on-Write' vorschreiben."
+      "OLTP-Systeme sind subjektorientiert (Subject-oriented), während OLAP-Systeme anwendungsorientiert (Application-oriented) arbeiten.",
+      "OLTP-Systeme nutzen das Prinzip 'Schema-on-Read', während OLAP-Systeme 'Schema-on-Write' vorschreiben.",
+      "OLTP-Systeme sind auf den Durchsatz von Transaktionen und Redundanzfreiheit (3NF) optimiert, während OLAP-Systeme auf schnelle Lesezugriffe und komplexe, konsolidierte Auswertungen ausgelegt sind."
     ],
-    "correctIndex": 1,
+    "correctIndex": 3,
     "explanation": "OLTP-Systeme unterstützen das laufende Tagesgeschäft. Sie verarbeiten viele kurze Schreib-/Lesetransaktionen gleichzeitig bei hoher Benutzerzahl und fordern strikte Konsistenz (3NF). OLAP-Systeme hingegen dienen der Entscheidungsunterstützung. Sie halten konsolidierte, oft historische Daten und sind für komplexe Leseanfragen über riesige Datenmengen optimiert."
   },
   {
@@ -229,12 +229,12 @@
     "difficulty": "Schwer",
     "question": "Welche technologische Innovation ermöglicht es modernen Systemen wie SAP HANA oder Snowflake, die traditionelle, physische Trennung zwischen OLTP und OLAP aufzuheben?",
     "options": [
-      "Die verteilte Ausführung über Hadoop MapReduce.",
-      "Die Kombination aus spaltenorientierter Speicherung, hocheffizienter Datenkompression und massiver In-Memory-Verarbeitung (Arbeitsspeicher).",
+      "Die ausschließliche Nutzung von lokalen SQLite-Datenbanken direkt im Webbrowser.",
       "Der Verzicht auf relationale Datenstrukturen und der Wechsel zu NoSQL-Graphen.",
-      "Die ausschließliche Nutzung von lokalen SQLite-Datenbanken direkt im Webbrowser."
+      "Die verteilte Ausführung über Hadoop MapReduce.",
+      "Die Kombination aus spaltenorientierter Speicherung, hocheffizienter Datenkompression und massiver In-Memory-Verarbeitung (Arbeitsspeicher)."
     ],
-    "correctIndex": 1,
+    "correctIndex": 3,
     "explanation": "Moderne In-Memory-Datenbanken (z. B. SAP HANA) und fortschrittliche Cloud-Plattformen können Daten so schnell im Arbeitsspeicher komprimieren und verarbeiten, dass transaktionale Prozesse (OLTP) und analytische Echtzeit-Auswertungen (OLAP) parallel auf demselben System laufen können. Dies nivelliert die traditionelle Notwendigkeit, Daten nachts in ein separates System zu kopieren."
   },
   {
@@ -243,12 +243,12 @@
     "difficulty": "Schwer",
     "question": "Welchen wesentlichen Nachteil hat die Nutzung eines hochgradig normalisierten Datenmodells (3NF) direkt als Quelle für Endanwender in einem Self-Service-BI-Werkzeug (wie Power BI)?",
     "options": [
-      "Es können keine Berechnungen (Measures) auf den Tabellen erstellt werden.",
       "Die Datenqualität verschlechtert sich, da normalisierte Tabellen anfälliger für Konsistenzfehler sind.",
-      "Anwender müssen komplexe Pfade über zahlreiche Tabellen-Beziehungen (JOINS) genau kennen, um einfache Fragen (wie Umsatz je Region) fehlerfrei abzufragen, was die Self-Service-Nutzung blockiert.",
-      "Es lassen sich keine spaltenorientierten Indizes auf 3NF-Strukturen aufbauen."
+      "Es lassen sich keine spaltenorientierten Indizes auf 3NF-Strukturen aufbauen.",
+      "Es können keine Berechnungen (Measures) auf den Tabellen erstellt werden.",
+      "Anwender müssen komplexe Pfade über zahlreiche Tabellen-Beziehungen (JOINS) genau kennen, um einfache Fragen (wie Umsatz je Region) fehlerfrei abzufragen, was die Self-Service-Nutzung blockiert."
     ],
-    "correctIndex": 2,
+    "correctIndex": 3,
     "explanation": "Im normalisierten Schema müssen für eine einfache geografische Umsatzabfrage oft 4 bis 5 Tabellen (Bestellposition -> Bestellung -> Kunde -> Ort -> Region) gejoint werden. Dies erfordert tiefes Modellwissen und komplexe SQL-Statements. Ein denormalisiertes Star Schema reduziert dies auf wenige, intuitive Beziehungen, wodurch Self-Service-BI für Fachanwender erst alltagstauglich wird."
   },
   {
@@ -257,12 +257,12 @@
     "difficulty": "Schwer",
     "question": "Ein klassisches Star Schema überführt normalisierte Daten in Fakten- und Dimensionstabellen. Welches Ziel verfolgt das Star Schema primär im Vergleich zum 3NF-Quellschema?",
     "options": [
-      "Die vollständige Vermeidung von Redundanzen in den Dimensionstabellen.",
       "Die drastische Vereinfachung des Datenmodells (Intuition) und die signifikante Reduzierung von JOIN-Operationen zur Beschleunigung analytischer Abfragen.",
-      "Das Ermöglichen von transaktionalen Echtzeit-Schreibvorgängen mit ACID-Garantie.",
-      "Das Speichern von unstrukturierten JSON-Dokumenten in hierarchischen Baumstrukturen."
+      "Das Speichern von unstrukturierten JSON-Dokumenten in hierarchischen Baumstrukturen.",
+      "Die vollständige Vermeidung von Redundanzen in den Dimensionstabellen.",
+      "Das Ermöglichen von transaktionalen Echtzeit-Schreibvorgängen mit ACID-Garantie."
     ],
-    "correctIndex": 1,
+    "correctIndex": 0,
     "explanation": "Das Star Schema (nach Ralph Kimball) ist bewusst denormalisiert. Die Dimensionstabellen enthalten Redundanzen (z. B. Stadt und Region in einer Tabelle), um Joins zu minimieren. Dies macht das Modell extrem performant für Lesezugriffe und für Endanwender leicht verständlich, da alle Dimensionen direkt sternförmig an der Faktentabelle anliegen."
   },
   {
@@ -271,10 +271,10 @@
     "difficulty": "Mittel",
     "question": "Was versteht man unter einer 'Flat Table' (Wide Table) im Kontext der analytischen Datenaufbereitung?",
     "options": [
-      "Eine Tabelle, die ausschließlich atomare Primärschlüssel enthält.",
+      "Eine Hilfstabelle, die zur Auflösung von n:m-Beziehungen dient.",
       "Eine vollständig denormalisierte Relation, in der alle Attribute (Fakten und Dimensionen) in einer einzigen, breiten Tabelle zusammengeführt sind, wodurch Tabellen-JOINS komplett entfallen.",
       "Eine Tabelle, die im Dateisystem als CSV-Datei statt in einer relationalen Datenbank abgelegt ist.",
-      "Eine Hilfstabelle, die zur Auflösung von n:m-Beziehungen dient."
+      "Eine Tabelle, die ausschließlich atomare Primärschlüssel enthält."
     ],
     "correctIndex": 1,
     "explanation": "Eine Flat Table oder Wide Table löst alle Primärschlüssel-Fremdschlüssel-Beziehungen auf und führt alle relevanten Attribute in einer einzigen Relation zusammen. SQL-Abfragen benötigen dadurch keine JOINS mehr, was die Abfragekomplexität minimiert und die Performance bei In-Memory- oder spaltenorientierter Verarbeitung optimiert."
@@ -285,12 +285,12 @@
     "difficulty": "Schwer",
     "question": "Welches fachliche Risiko droht in einem Umsatzbericht, wenn die Verknüpfung zwischen der Faktentabelle und der Kundendimension über einen INNER JOIN statt über einen LEFT OUTER JOIN realisiert wird?",
     "options": [
-      "Es kommt zu einer Fehlermeldung der Datenbank, falls ein Kunde gelöscht wurde.",
-      "Umsatzzeilen, bei denen (z. B. durch Erfassungsfehler oder Gastbestellungen) keine gültige Kunden-ID hinterlegt ist, werden stillschweigend komplett aus dem Gesamtergebnis gelöscht, was zu einer gefährlichen Unterbewertung des Umsatzes führt.",
       "Die Abfragegeschwindigkeit sinkt drastisch, da LEFT OUTER JOINS immer schneller ausgeführt werden als INNER JOINS.",
-      "Alle Kundennamen werden im Bericht automatisch durch NULL-Werte ersetzt."
+      "Alle Kundennamen werden im Bericht automatisch durch NULL-Werte ersetzt.",
+      "Es kommt zu einer Fehlermeldung der Datenbank, falls ein Kunde gelöscht wurde.",
+      "Umsatzzeilen, bei denen (z. B. durch Erfassungsfehler oder Gastbestellungen) keine gültige Kunden-ID hinterlegt ist, werden stillschweigend komplett aus dem Gesamtergebnis gelöscht, was zu einer gefährlichen Unterbewertung des Umsatzes führt."
     ],
-    "correctIndex": 1,
+    "correctIndex": 3,
     "explanation": "Ein INNER JOIN liefert nur Zeilen zurück, bei denen in beiden Tabellen ein passender Partner existiert. Fehlt bei einer Umsatzbuchung die Kunden-ID (oder ist fehlerhaft), verliert der INNER JOIN diese Zeile komplett. Ein LEFT OUTER JOIN behält alle Zeilen der linken Tabelle (Umsätze) bei und füllt die fehlenden Kundeninformationen einfach mit NULL-Werten auf, sodass der Umsatz im Gesamtergebnis sichtbar bleibt."
   },
   {
@@ -299,12 +299,12 @@
     "difficulty": "Schwer",
     "question": "Wann sollte in einem analytischen Datenmodell (z. B. Power BI oder SSAS) eine 'berechnete Spalte' (Calculated Column) anstelle eines 'Measures' (berechnete Kennzahl) verwendet werden?",
     "options": [
+      "Wenn die Berechnung ausschließlich im RAM ausgeführt werden soll.",
       "Wenn das Ergebnis dynamisch auf Zeilenfilter reagieren soll und keinen physischen Speicher belegen darf.",
-      "Wenn der berechnete Wert als Dimension zum Filtern, Sortieren oder Gruppieren (z. B. Altersklassen oder Umsatzsegmente) im Bericht verwendet werden soll.",
       "Wenn eine einfache mathematische Summation über Millionen Zeilen durchgeführt wird.",
-      "Wenn die Berechnung ausschließlich im RAM ausgeführt werden soll."
+      "Wenn der berechnete Wert als Dimension zum Filtern, Sortieren oder Gruppieren (z. B. Altersklassen oder Umsatzsegmente) im Bericht verwendet werden soll."
     ],
-    "correctIndex": 1,
+    "correctIndex": 3,
     "explanation": "Eine berechnete Spalte wird beim Datenimport berechnet und physisch im Modell (und damit auf der Festplatte/im RAM) gespeichert. Sie verhält sich wie eine normale Spalte und kann für Slicer, Zeilenbeschriftungen oder Gruppierungen genutzt werden. Measures hingegen werden zur Laufzeit im jeweiligen Filterkontext berechnet, verbrauchen keinen persistenten Speicher und eignen sich für dynamische Aggregationen."
   },
   {
@@ -315,8 +315,8 @@
     "options": [
       "Eine Dimensionstabelle, die aufgrund mangelnder Datenpflege unvollständig ist.",
       "Ein Attribut mit klarem Dimensionscharakter (wie eine Rechnungs- oder Bestellnummer), das jedoch keine eigenen beschreibenden Attribute besitzt und daher direkt in der Faktentabelle als Spalte geführt wird, statt eine eigene Dimensionstabelle zu erhalten.",
-      "Eine Dimension, die sich über die Zeit hinweg dynamisch verändert (Slowly Changing Dimension).",
-      "Eine Fremdschlüssel-Beziehung, die ins Leere führt."
+      "Eine Fremdschlüssel-Beziehung, die ins Leere führt.",
+      "Eine Dimension, die sich über die Zeit hinweg dynamisch verändert (Slowly Changing Dimension)."
     ],
     "correctIndex": 1,
     "explanation": "Eine degenerierte Dimension ist ein Attribut (z. B. Bestellnummer, Ticketnummer oder Rechnungs-ID), das zur Identifikation von Faktenzeilen dient, aber außer dieser ID keine weiteren analysierbaren Attribute besitzt. Da das Erstellen einer separaten Dimensionstabelle nur redundanten Overhead bedeuten würde, verbleibt die ID als nackte Spalte direkt in der Faktentabelle."
@@ -328,11 +328,11 @@
     "question": "Welchen primären Vorteil bietet die Verwendung von Common Table Expressions (CTEs, eingeleitet mit 'WITH') gegenüber geschachtelten Subqueries in komplexen SQL-Abfragen?",
     "options": [
       "CTEs werden von relationalen Datenbanken immer signifikant schneller ausgeführt als Subqueries.",
-      "Sie erlauben das Speichern von Abfrageergebnissen auf der Festplatte des Clients.",
       "Sie strukturieren komplexe Abfragen in logische, benannte Zwischenschritte, wodurch sich die Abfrage wie eine lesbare Pipeline von oben nach unten lesen und viel einfacher testen lässt.",
-      "Sie erzwingen automatisch die Einhaltung der dritten Normalform."
+      "Sie erzwingen automatisch die Einhaltung der dritten Normalform.",
+      "Sie erlauben das Speichern von Abfrageergebnissen auf der Festplatte des Clients."
     ],
-    "correctIndex": 2,
+    "correctIndex": 1,
     "explanation": "CTEs (Common Table Expressions) strukturieren SQL-Statements. Anstatt Abfragen tief ineinander zu verschachteln (Subqueries), definieren CTEs benannte Zwischenschritte am Anfang des Codes. Dies verbessert die Lesbarkeit, Wartbarkeit und erleichtert das schrittweise Debugging ungemein, da jeder Baustein separat geprüft werden kann."
   },
   {
@@ -341,12 +341,12 @@
     "difficulty": "Schwer",
     "question": "Wie unterscheidet sich die Funktionsweise einer SQL Window Function (OVER-Klausel) grundlegend von einer klassischen GROUP BY-Gruppierung?",
     "options": [
-      "GROUP BY rechnet im RAM, während Window Functions temporäre Tabellen auf der Festplatte anlegen.",
-      "GROUP BY verdichtet (aggregiert) die Zeilen des Abfrageergebnisses und reduziert deren Anzahl; eine Window Function hingegen behält alle Zeilen im Detail bei und rechnet den aggregierten Kontext einfach als zusätzliche Spalte neben jede Zeile.",
       "Window Functions können ausschließlich auf NoSQL-Datenbanken angewendet werden.",
-      "Eine Window Function erlaubt keine mathematischen Aggregationen wie SUM oder AVG."
+      "GROUP BY rechnet im RAM, während Window Functions temporäre Tabellen auf der Festplatte anlegen.",
+      "Eine Window Function erlaubt keine mathematischen Aggregationen wie SUM oder AVG.",
+      "GROUP BY verdichtet (aggregiert) die Zeilen des Abfrageergebnisses und reduziert deren Anzahl; eine Window Function hingegen behält alle Zeilen im Detail bei und rechnet den aggregierten Kontext einfach als zusätzliche Spalte neben jede Zeile."
     ],
-    "correctIndex": 1,
+    "correctIndex": 3,
     "explanation": "Das ist der fundamentale Unterschied: Ein 'GROUP BY' kollabiert/reduziert das Abfrageergebnis auf die gruppierten Zeilen. Eine Window Function (OVER-Klausel) lässt die Detailzeilen unangetastet. Sie berechnet den Kontext (z. B. die Gesamtsumme aller Zeilen oder den gleitenden Durchschnitt) und schreibt das Ergebnis als neuen Wert in jede einzelne Detailzeile hinein."
   },
   {
@@ -356,11 +356,11 @@
     "question": "Sie möchten in SQL einen Vorjahresvergleich (Umsatz laufender Monat vs. Umsatz Vorjahresmonat) mittels der Window Function 'LAG(sales, 12) OVER (ORDER BY date)' realisieren. Welche zwingende methodische Voraussetzung müssen Ihre Rohdaten erfüllen, damit diese Abfrage fachlich korrekte Ergebnisse liefert?",
     "options": [
       "Die Daten müssen vorab in einer NoSQL-Datenbank gespeichert sein.",
-      "Die Umsatzwerte müssen lückenlos positiv sein.",
       "Die zeitliche Achse (Monate) in den Daten muss absolut lückenlos und fortlaufend sein, da LAG starr um genau 12 physische Zeilen nach oben springt – andernfalls würde bei fehlenden Monaten der falsche Monat geladen.",
-      "Die Tabelle muss in der 3NF vorliegen."
+      "Die Tabelle muss in der 3NF vorliegen.",
+      "Die Umsatzwerte müssen lückenlos positiv sein."
     ],
-    "correctIndex": 2,
+    "correctIndex": 1,
     "explanation": "Da die Funktion `LAG(Wert, Offset)` starr um die angegebene Anzahl an Zeilen (hier 12) in der sortierten Tabelle nach oben springt, funktioniert dieser einfache Vorjahresvergleich nur, wenn für jeden Monat exakt eine Zeile existiert. Fehlt ein Monat in den Daten (z. B. weil im Februar kein Umsatz gemacht wurde), springt LAG(..., 12) in den 13. Monat zurück und vergleicht falsche Zeiträume. Bei Lücken ist ein Self-Join über das berechnete Vorjahr sicherer."
   },
   {
@@ -369,12 +369,12 @@
     "difficulty": "Mittel",
     "question": "Warum ist die logische Abstraktion durch Datenbank-Views (Sichten) im modernen BI-Architekturdesign so wertvoll?",
     "options": [
+      "Weil sie den Einsatz von SQL-Indizes überflüssig machen.",
       "Weil Views physische Kopien der Tabellen erstellen und dadurch die Abfrageperformance verdoppeln.",
-      "Weil nichts kopiert wird und die logische Struktur der Daten jederzeit änderbar bleibt; Kennzahl-Definitionen liegen zentral an einer Stelle in der Datenbank und alle Reporting-Tools greifen konsistent darauf zu.",
       "Weil Views NoSQL-Daten automatisch in relationale Schemata konvertieren.",
-      "Weil sie den Einsatz von SQL-Indizes überflüssig machen."
+      "Weil nichts kopiert wird und die logische Struktur der Daten jederzeit änderbar bleibt; Kennzahl-Definitionen liegen zentral an einer Stelle in der Datenbank und alle Reporting-Tools greifen konsistent darauf zu."
     ],
-    "correctIndex": 1,
+    "correctIndex": 3,
     "explanation": "Datenbank-Sichten (Views) speichern keinen physischen Datenbestand, sondern nur die Abfragedefinition. Dies ermöglicht eine logische Abstraktionsschicht: Ändert sich das darunterliegende Tabellenschema, muss nur die View angepasst werden. Das Frontend merkt davon nichts. Zudem werden Kennzahl-Definitionen zentralisiert und für alle BI-Werkzeuge vereinheitlicht."
   },
   {
@@ -383,12 +383,12 @@
     "difficulty": "Mittel",
     "question": "Welches der folgenden Merkmale beschreibt eine Kerneigenschaft von NoSQL-Datenbanken (z. B. Dokumenten- oder Key-Value-Stores)?",
     "options": [
-      "Sie basieren zwingend auf dem relationalen Paradigma nach Edgar Codd.",
-      "Sie erzwingen vor dem Schreiben von Daten ein starres Schema ('Schema-on-Write').",
       "Sie sind meist hervorragend horizontal auf Standard-Hardware ('commodity hardware') skalierbar und bieten eine hohe Schema-Flexibilität ('Schema-on-Read').",
-      "Sie unterstützen standardmäßig nur tabellierte Daten ohne jegliche Verschachtelungsmöglichkeit."
+      "Sie erzwingen vor dem Schreiben von Daten ein starres Schema ('Schema-on-Write').",
+      "Sie unterstützen standardmäßig nur tabellierte Daten ohne jegliche Verschachtelungsmöglichkeit.",
+      "Sie basieren zwingend auf dem relationalen Paradigma nach Edgar Codd."
     ],
-    "correctIndex": 2,
+    "correctIndex": 0,
     "explanation": "NoSQL-Datenbanken wurden entwickelt, um die Skalierungsgrenzen relationaler Systeme zu überwinden. Sie sind auf horizontale Verteilung ausgelegt und nutzen das Prinzip 'Schema-on-Read'. Daten (z. B. JSON-Dokumente) können hochgradig flexibel und ohne vordefiniertes Schema geladen und erst bei der Abfrage interpretiert werden."
   },
   {
@@ -398,11 +398,11 @@
     "question": "Was unterscheidet das relationale Prinzip 'Schema-on-Write' vom NoSQL-Prinzip 'Schema-on-Read'?",
     "options": [
       "Bei Schema-on-Write werden Daten unstrukturiert importiert und erst beim Schreiben automatisch normalisiert.",
-      "Schema-on-Write verlangt, dass die Tabellenstruktur (Schema, Datentypen, Beziehungen) vor dem Einfügen von Daten exakt definiert sein muss; bei Schema-on-Read werden Rohdaten flexibel geladen und die Strukturierung erfolgt erst dynamisch bei der Abfrage.",
       "Schema-on-Read ist ein veraltetes Verfahren, das in modernen Cloud-DWHs nicht mehr vorkommt.",
-      "Schema-on-Write wird ausschließlich bei spaltenorientierten In-Memory-Datenbanken eingesetzt."
+      "Schema-on-Write wird ausschließlich bei spaltenorientierten In-Memory-Datenbanken eingesetzt.",
+      "Schema-on-Write verlangt, dass die Tabellenstruktur (Schema, Datentypen, Beziehungen) vor dem Einfügen von Daten exakt definiert sein muss; bei Schema-on-Read werden Rohdaten flexibel geladen und die Strukturierung erfolgt erst dynamisch bei der Abfrage."
     ],
-    "correctIndex": 1,
+    "correctIndex": 3,
     "explanation": "Klassische RDBMS verlangen 'Schema-on-Write': Die Tabellenstruktur muss stehen, andernfalls verweigert die Datenbank das Schreiben von Daten. Moderne Big-Data-Systeme (wie Data Lakes) nutzen 'Schema-on-Read': Daten werden im Rohformat (z. B. unstrukturierte JSONs oder Logfiles) hineingeschrieben. Erst das abfragende Tool strukturiert die Daten zur Laufzeit."
   },
   {
@@ -411,12 +411,12 @@
     "difficulty": "Schwer",
     "question": "Was versteht man unter einer 'HTAP-Architektur' (Hybrid Transactional/Analytical Processing) im Kontext moderner Enterprise-Datenbanksysteme?",
     "options": [
+      "Die ausschließliche Modellierung von Data Vaults über XML-Schnittstellen.",
       "Das nächtliche Kopieren von OLTP-Daten in ein OLAP-Warehouse mittels ETL-Batch-Prozessen.",
       "Den Versuch, sowohl transaktionale Echtzeitverarbeitung (OLTP) als auch analytische Auswertungen (OLAP) performant in einem einzigen, integrierten Datenbanksystem auszuführen, anstatt sie physisch zu trennen.",
-      "Die Verschlüsselung von Daten während des Deployments über verschiedene Cloud-Anbieter hinweg.",
-      "Die ausschließliche Modellierung von Data Vaults über XML-Schnittstellen."
+      "Die Verschlüsselung von Daten während des Deployments über verschiedene Cloud-Anbieter hinweg."
     ],
-    "correctIndex": 1,
+    "correctIndex": 2,
     "explanation": "HTAP (Hybrid Transactional/Analytical Processing) bricht das klassische Paradigma auf, dass OLTP und OLAP strikt getrennte Datenbanken benötigen. Durch innovative In-Memory- und Hybrid-Speichertechnologien (zeilen- und spaltenbasiert parallel) können analytische Abfragen direkt auf den operativen Transaktionsdaten ausgeführt werden, ohne das operative Geschäft zu bremsen."
   },
   {
@@ -425,12 +425,12 @@
     "difficulty": "Schwer",
     "question": "Microsoft Analysis Services (SSAS) bietet das 'multidimensional model' (klassische OLAP-Cubes) und das neuere 'tabular model' an. Welcher technologische Unterschied zeichnet das 'tabular model' aus?",
     "options": [
-      "Es speichert Daten ausschließlich zeilenorientiert auf rotierenden Festplatten.",
       "Es verarbeitet Daten spaltenorientiert und nutzt In-Memory-Technologien, wodurch ein Vorab-Berechnen von multidimensionalen Aggregations-Cubes überflüssig wird.",
-      "Es verzichtet vollständig auf die Abfragesprache DAX und nutzt stattdessen ausschließlich MDX-Schnittstellen.",
-      "Es ist auf maximal 10.000 Zeilen pro Tabelle beschränkt."
+      "Es ist auf maximal 10.000 Zeilen pro Tabelle beschränkt.",
+      "Es speichert Daten ausschließlich zeilenorientiert auf rotierenden Festplatten.",
+      "Es verzichtet vollständig auf die Abfragesprache DAX und nutzt stattdessen ausschließlich MDX-Schnittstellen."
     ],
-    "correctIndex": 1,
+    "correctIndex": 0,
     "explanation": "Traditionelle multidimensionale Modelle (OLAP-Cubes) berechnen Aggregate zeitaufwendig vorab (Prä-Aggregation). Das 'tabular model' (eingeführt 2012) nutzt die xVelocity/VertiPaq In-Memory-Engine. Da die Daten spaltenorientiert im RAM hochkomprimiert vorliegen, können Aggregationen ad-hoc blitzschnell zur Laufzeit berechnet werden, was den Administrationsaufwand massiv reduziert."
   },
   {
@@ -439,10 +439,10 @@
     "difficulty": "Mittel",
     "question": "Das Akronym 'FASMI' (Pendse & Creeth, 1995) definiert die Kernanforderungen an ein OLAP-System. Wofür steht der Buchstabe 'S' in dieser Definition?",
     "options": [
-      "Strict Consistency (Strikte Transaktionskonsistenz nach ACID)",
+      "Szenario-orientiert (Standardisierte Codierung nach IBCS)",
       "Shared (Gemeinsamer, sicherer Zugriff für viele Benutzer mit feingranularer Rechtesteuerung)",
       "Serverless (Betrieb ohne dedizierte Serverstruktur)",
-      "Szenario-orientiert (Standardisierte Codierung nach IBCS)"
+      "Strict Consistency (Strikte Transaktionskonsistenz nach ACID)"
     ],
     "correctIndex": 1,
     "explanation": "FASMI steht für: Fast (schnelle Antwortzeiten), Analytical (komplexe Analysen ohne Programmieraufwand), Shared (gemeinsamer, sicherer Zugriff für viele Anwender inklusive Vertraulichkeits- und Rollenschutz), Multidimensional (mehrdimensionale Sicht) und Information (Zugriff auf alle benötigten Daten). Das 'S' fordert also die sichere Mehrbenutzerfähigkeit."
@@ -453,12 +453,12 @@
     "difficulty": "Schwer",
     "question": "Was versteht man unter dem Optimierungsprinzip des 'Filter-Pushdowns' bei der Datenverarbeitung zwischen einer Web-Anwendung (z. B. FastHTML/Pandas) und einer analytischen Datenbank?",
     "options": [
-      "Das nachträgliche Filtern von Daten im Browser des Benutzers mittels JavaScript.",
-      "Das frühestmögliche Anwenden von WHERE-Bedingungen direkt in der SQL-Datenbank, sodass nur die gefilterten, minimal benötigten Datensätze über das Netzwerk an die Web-Anwendung übertragen werden.",
       "Das automatische Löschen von ungültigen Fremdschlüsseln während des Imports.",
-      "Das Herunterskalieren von hochauflösenden Grafiken in ein kleineres Format."
+      "Das Herunterskalieren von hochauflösenden Grafiken in ein kleineres Format.",
+      "Das frühestmögliche Anwenden von WHERE-Bedingungen direkt in der SQL-Datenbank, sodass nur die gefilterten, minimal benötigten Datensätze über das Netzwerk an die Web-Anwendung übertragen werden.",
+      "Das nachträgliche Filtern von Daten im Browser des Benutzers mittels JavaScript."
     ],
-    "correctIndex": 1,
+    "correctIndex": 2,
     "explanation": "Filter-Pushdown ist eine kritische Performance-Regel: Daten sollten immer so nah wie möglich an der Quelle (in der Datenbank) gefiltert werden. Anstatt Millionen Zeilen ungefiltert in den Arbeitsspeicher des Webservers zu laden (z. B. in ein Pandas-DataFrame) und dort zu filtern, führt die Datenbank den Filter über SQL aus und sendet nur die winzige Ergebnismenge über das Netzwerk."
   },
   {
@@ -467,12 +467,12 @@
     "difficulty": "Schwer",
     "question": "Wann ist der Speichermodus 'DirectQuery' in Power BI dem Standard-Importmodus vorzuziehen?",
     "options": [
-      "Wenn die maximale Abfragegeschwindigkeit im Dashboard erreicht werden soll.",
-      "Wenn das Datenvolumen die Kapazitätsgrenzen des lokalen RAMs überschreitet oder Daten nahezu in Echtzeit direkt aus der operativen Quelle visualisiert werden müssen.",
       "Wenn komplexe DAX-Measures ohne Performanceverlust berechnet werden sollen.",
-      "Wenn das Dashboard offline ohne Internetverbindung funktionieren muss."
+      "Wenn die maximale Abfragegeschwindigkeit im Dashboard erreicht werden soll.",
+      "Wenn das Dashboard offline ohne Internetverbindung funktionieren muss.",
+      "Wenn das Datenvolumen die Kapazitätsgrenzen des lokalen RAMs überschreitet oder Daten nahezu in Echtzeit direkt aus der operativen Quelle visualisiert werden müssen."
     ],
-    "correctIndex": 1,
+    "correctIndex": 3,
     "explanation": "Der Importmodus kopiert die Daten in den hochkomprimierten RAM von Power BI (beste Performance). Ist die Datenmenge jedoch gigantisch (z. B. Terabytes) oder müssen die Daten absolut live sein (Echtzeit), scheidet der Import aus. 'DirectQuery' belässt die Daten in der Quelle; jedes Visual schickt zur Laufzeit maßgeschneiderte SQL-Queries an die Quelldatenbank."
   },
   {
@@ -481,12 +481,12 @@
     "difficulty": "Schwer",
     "question": "Welche architektonische Besonderheit zeichnet den neuen 'Direct Lake'-Modus in Microsoft Fabric/Power BI im Vergleich zu Import und DirectQuery aus?",
     "options": [
-      "Er kopiert die Daten in ein lokales Excel-Dokument auf dem Client-PC.",
-      "Er liest die spaltenbasierten Delta-Parquet-Dateien direkt aus dem OneLake-Speicher in den Arbeitsspeicher der Power BI Engine, wodurch weder Daten kopiert (Import) noch langsame Live-SQL-Abfragen (DirectQuery) gesendet werden müssen.",
+      "Er schränkt den Datenzugriff auf maximal eine Abfrage pro Minute ein.",
       "Er erfordert zwingend den nächtlichen Aufbau von klassischen multidimensionalen OLAP-Cubes.",
-      "Er schränkt den Datenzugriff auf maximal eine Abfrage pro Minute ein."
+      "Er kopiert die Daten in ein lokales Excel-Dokument auf dem Client-PC.",
+      "Er liest die spaltenbasierten Delta-Parquet-Dateien direkt aus dem OneLake-Speicher in den Arbeitsspeicher der Power BI Engine, wodurch weder Daten kopiert (Import) noch langsame Live-SQL-Abfragen (DirectQuery) gesendet werden müssen."
     ],
-    "correctIndex": 1,
+    "correctIndex": 3,
     "explanation": "Direct Lake ist ein revolutionärer Hybrid-Modus in Microsoft Fabric. Da die Daten im OneLake bereits im hocheffizienten, spaltenorientierten Delta-Parquet-Format vorliegen (was dem internen Power-BI-Format sehr ähnelt), kann die Analysis-Engine die Dateien direkt 'streamen' und im RAM verarbeiten. Das eliminiert Datenkopien und bietet nahezu die Performance des Imports bei der Aktualität von Live-Daten."
   },
   {
@@ -495,12 +495,12 @@
     "difficulty": "Mittel",
     "question": "Welche Metapher beschreibt das 'OneLake'-Konzept von Microsoft im Kontext von Cloud-Datenarchitekturen am treffendsten?",
     "options": [
+      "Ein hochgesichertes, separates Netzwerk für mobile BI-Endgeräte.",
       "Ein unstrukturierter Datenfriedhof (Data Swamp), der durch künstliche Intelligenz sortiert wird.",
-      "Das 'OneDrive für Daten': Ein einziger, logischer, unternehmensweiter Datensee für alle analytischen Engines (SQL, Spark, Power BI), der Datensilos aufbricht.",
       "Eine physische Festplatte, die lokal auf dem Datenbankserver installiert ist.",
-      "Ein hochgesichertes, separates Netzwerk für mobile BI-Endgeräte."
+      "Das 'OneDrive für Daten': Ein einziger, logischer, unternehmensweiter Datensee für alle analytischen Engines (SQL, Spark, Power BI), der Datensilos aufbricht."
     ],
-    "correctIndex": 1,
+    "correctIndex": 3,
     "explanation": "OneLake ist als einheitlicher, SaaS-basierter Datensee für das gesamte Unternehmen konzipiert ('OneDrive for Data'). Alle Workspaces, Abteilungen und analytischen Berechnungs-Engines (von Spark über SQL bis Power BI) greifen auf denselben Speicher zu. Dies verhindert redundante Datenkopien und bricht traditionelle Datensilos auf."
   },
   {
@@ -509,10 +509,10 @@
     "difficulty": "Schwer",
     "question": "Mit welchem analytischen SQL-Konstrukt lässt sich in einer einzigen Abfrage der prozentuale Umsatzanteil einer Region am Gesamtergebnis berechnen, ohne einen langsamen Self-Join oder eine Unterabfrage (Subquery) zu nutzen?",
     "options": [
-      "SUM(sales) / SUM(sales) GROUP BY region",
-      "SUM(sales) / SUM(SUM(sales)) OVER ()",
       "sales / LAG(sales, 1) OVER (ORDER BY region)",
-      "SUM(sales) OVER (PARTITION BY region) / SUM(sales)"
+      "SUM(sales) / SUM(SUM(sales)) OVER ()",
+      "SUM(sales) OVER (PARTITION BY region) / SUM(sales)",
+      "SUM(sales) / SUM(sales) GROUP BY region"
     ],
     "correctIndex": 1,
     "explanation": "Das Konstrukt `SUM(sales) / SUM(SUM(sales)) OVER ()` ist ein Paradebeispiel für analytisches SQL. Der Zähler `SUM(sales)` berechnet den aggregierten Umsatz der aktuellen Zeile (z. B. gruppiert nach Region). Der Nenner `SUM(SUM(sales)) OVER ()` nutzt eine Window-Function, um die Summe aller Regionsumsätze (die Gesamtsumme) ohne Zeilenkollaps zu ermitteln. Die Division liefert direkt den exakten Prozentanteil."
@@ -523,12 +523,12 @@
     "difficulty": "Schwer",
     "question": "Drei Verkäufer haben exakt den gleichen Umsatz erzielt und teilen sich Platz 1. Wie unterscheidet sich das Verhalten der Window Functions 'RANK()' und 'DENSE_RANK()' bei der Vergabe des nächsten Rangs für den vierten Verkäufer?",
     "options": [
+      "RANK() vergibt Platz 2; DENSE_RANK() vergibt Platz 4.",
       "Beide vergeben für den vierten Verkäufer Platz 2.",
       "RANK() vergibt Platz 4 (lässt Lücken); DENSE_RANK() vergibt Platz 2 (schließt Lücken lückenlos an).",
-      "RANK() vergibt Platz 2; DENSE_RANK() vergibt Platz 4.",
       "ROW_NUMBER() vergibt für alle vier Verkäufer Platz 1."
     ],
-    "correctIndex": 1,
+    "correctIndex": 2,
     "explanation": "Bei Gleichständen verhalten sich die Funktionen unterschiedlich: `ROW_NUMBER()` nummeriert strikt fortlaufend (1, 2, 3, 4) ohne Rücksicht auf Gleichstände. `RANK()` vergibt bei Gleichstand denselben Rang, lässt danach aber Werte aus (1, 1, 1, 4). `DENSE_RANK()` verfährt ebenfalls gleich bei Gleichständen, schließt den nächsten Rang jedoch lückenlos an (1, 1, 1, 2)."
   },
   {
@@ -537,12 +537,12 @@
     "difficulty": "Mittel",
     "question": "Welche Datenbankregel der referenziellen Integrität wird verletzt, wenn in einer Faktentabelle eine 'Kunden-ID' eingefügt wird, die in der zugehörigen Dimensionstabelle 'Kunden' nicht existiert?",
     "options": [
-      "Die Domänen-Integrität",
-      "Die referenzielle Integrität (Fremdschlüssel-Constraint-Verletzung)",
+      "Die Normalform-Integrität (3NF-Verstoß)",
       "Die Entitäts-Integrität (Null-Wert-Verbot)",
-      "Die Normalform-Integrität (3NF-Verstoß)"
+      "Die referenzielle Integrität (Fremdschlüssel-Constraint-Verletzung)",
+      "Die Domänen-Integrität"
     ],
-    "correctIndex": 1,
+    "correctIndex": 2,
     "explanation": "Die referenzielle Integrität sichert die Beziehung zwischen Tabellen. Ein Fremdschlüssel (Foreign Key) in einer Tabelle (z. B. Faktentabelle) darf nur Werte annehmen, die als Primärschlüssel (Primary Key) in der referenzierten Tabelle (z. B. Dimensionstabelle) tatsächlich existieren (oder NULL sein, falls erlaubt). Verstöße verhindern konsistente Datenverknüpfungen."
   },
   {
@@ -551,12 +551,12 @@
     "difficulty": "Schwer",
     "question": "Was unterscheidet den 'Corporate Information Factory'-Ansatz (Bill Inmon) fundamental vom 'DWH Bus Architecture'-Ansatz (Ralph Kimball)?",
     "options": [
-      "Inmon propagiert den direkten Aufbau dezentraler, unabhängiger Datensilos ohne zentrales Core-DWH.",
-      "Inmon fordert ein zentrales, hochgradig normalisiertes (3NF) Core-DWH als 'Single Source of Truth', aus dem nachgelagerte dimensionale Data Marts gespeist werden; Kimball baut das DWH dezentral über abgestimmte, dimensionale Strukturen (Conformed Dimensions) bottom-up auf.",
       "Kimball lehnt Stern-Schemata strikt ab und arbeitet ausschließlich mit normalisierten Snowflake-Strukturen.",
-      "Inmon arbeitet ausschließlich mit NoSQL-Datenbanken, Kimball mit relationalen Systemen."
+      "Inmon propagiert den direkten Aufbau dezentraler, unabhängiger Datensilos ohne zentrales Core-DWH.",
+      "Inmon arbeitet ausschließlich mit NoSQL-Datenbanken, Kimball mit relationalen Systemen.",
+      "Inmon fordert ein zentrales, hochgradig normalisiertes (3NF) Core-DWH als 'Single Source of Truth', aus dem nachgelagerte dimensionale Data Marts gespeist werden; Kimball baut das DWH dezentral über abgestimmte, dimensionale Strukturen (Conformed Dimensions) bottom-up auf."
     ],
-    "correctIndex": 1,
+    "correctIndex": 3,
     "explanation": "Dies ist die klassische DWH-Philosophie-Debatte. Inmon verfolgt einen Top-Down-Ansatz: Daten fließen zuerst hochgradig konsolidiert und normalisiert in ein zentrales Enterprise DWH (3NF). Erst danach werden relationale Data Marts für Abteilungen befüllt. Kimball arbeitet pragmatischer (Bottom-Up): Das DWH besteht direkt aus dimensionalen Stern-Schemata, die über unternehmensweit abgestimmte Dimensionen ('Conformed Dimensions') miteinander im DWH-Bus verknüpft sind."
   },
   {
@@ -565,12 +565,12 @@
     "difficulty": "Mittel",
     "question": "Warum wird im Presentation Layer eines DWHs das Stern-Schema (Star Schema) dem Snowflake-Schema in der Praxis meist vorgezogen?",
     "options": [
+      "Weil Snowflake-Schemata ausschließlich auf dem gleichnamigen Cloud-Anbieter 'Snowflake' ausgeführt werden können.",
       "Weil das Stern-Schema weniger Speicherplatz verbraucht als das Snowflake-Schema.",
       "Weil das Stern-Schema keine Fremdschlüssel-Beziehungen benötigt.",
-      "Weil das Stern-Schema die Dimensionen flach (denormalisiert) hält, wodurch weniger Tabellen-Joins nötig sind. Dies verbessert die Abfragegeschwindigkeit und die Benutzerfreundlichkeit im Berichtswerkzeug drastisch.",
-      "Weil Snowflake-Schemata ausschließlich auf dem gleichnamigen Cloud-Anbieter 'Snowflake' ausgeführt werden können."
+      "Weil das Stern-Schema die Dimensionen flach (denormalisiert) hält, wodurch weniger Tabellen-Joins nötig sind. Dies verbessert die Abfragegeschwindigkeit und die Benutzerfreundlichkeit im Berichtswerkzeug drastisch."
     ],
-    "correctIndex": 2,
+    "correctIndex": 3,
     "explanation": "Das Snowflake-Schema normalisiert die Dimensionen (z. B. wird die Region aus der Geografie-Tabelle in eine eigene Tabelle ausgelagert). Dies spart zwar minimal Redundanz, zwingt das Reporting-Tool jedoch zu deutlich mehr Joins bei Abfragen. Das Stern-Schema denormalisiert diese Attribute in eine einzige Dimensionstabelle (flache Struktur) – das vereinfacht Abfragen für Anwender und BI-Engines enorm."
   },
   {
@@ -594,11 +594,11 @@
     "question": "Welche schwerwiegende Gefahr droht einer IT-Landschaft, wenn fachspezifische 'Data Marts' dezentral als 'unabhängige (independent) Data Marts' statt als 'abhängige (dependent) Data Marts' konzipiert werden?",
     "options": [
       "Sie können nicht mehr in-Memory verarbeitet werden.",
+      "Es können keine Dashboards mehr auf diesen Daten erstellt werden.",
       "Es entstehen isolierte Datensilos mit redundanten ETL-Pipelines und abweichenden Kennzahl-Definitionen, was zu widersprüchlichen Wahrheiten im Unternehmens-Reporting führt.",
-      "Die Abfrageperformance sinkt, da unabhängige Data Marts zwingend auf langsamen Festplatten liegen müssen.",
-      "Es können keine Dashboards mehr auf diesen Daten erstellt werden."
+      "Die Abfrageperformance sinkt, da unabhängige Data Marts zwingend auf langsamen Festplatten liegen müssen."
     ],
-    "correctIndex": 1,
+    "correctIndex": 2,
     "explanation": "Unabhängige Data Marts werden direkt aus den operativen Quellen befüllt, ohne ein zentrales Core-DWH als Vermittler zu nutzen. Dadurch baut jede Abteilung ihre eigene Logik und Datenbereinigung auf. Es entstehen unweigerlich inkonsistente Zahlen (z. B. unterschiedliche Definitionen von 'Umsatz' oder 'Kunde'). Abhängige Data Marts hingegen speisen sich konsistent aus dem zentralen, validierten Datenbestand des Core-DWHs."
   },
   {
@@ -607,12 +607,12 @@
     "difficulty": "Mittel",
     "question": "Welche primäre Aufgabe hat die 'Staging Area' (auch Datenbereitstellungsschicht genannt) in einer klassischen Data-Warehouse-Architektur?",
     "options": [
-      "Sie dient der finalen grafischen Aufbereitung und Verteilung von Berichten an das Management.",
-      "Sie nimmt die Daten aus den verschiedenen Quellsystemen unverändert und eins-zu-eins auf (Replikation), um operative Systeme zeitlich und rechentechnisch maximal zu entlasten und als stabiler Ausgangspunkt für die Bereinigung zu dienen.",
+      "Sie normalisiert alle eingehenden Daten direkt in die dritte Normalform.",
       "Sie berechnet komplexe Predictive-Analytics-Modelle mittels neuronaler Netze.",
-      "Sie normalisiert alle eingehenden Daten direkt in die dritte Normalform."
+      "Sie nimmt die Daten aus den verschiedenen Quellsystemen unverändert und eins-zu-eins auf (Replikation), um operative Systeme zeitlich und rechentechnisch maximal zu entlasten und als stabiler Ausgangspunkt für die Bereinigung zu dienen.",
+      "Sie dient der finalen grafischen Aufbereitung und Verteilung von Berichten an das Management."
     ],
-    "correctIndex": 1,
+    "correctIndex": 2,
     "explanation": "Die Staging Area (Eingangszone) dient als Puffer. Daten werden aus den Quellsystemen extrahiert und dort unverändert abgelegt. Dies entlastet die operativen Systeme, da der Zugriff nur einmal kurz erfolgt. Auf der Staging Area können die komplexen Bereinigungs- und Transformationsschritte (ETL) durchgeführt werden, ohne die operativen Datenbanken zu belasten."
   },
   {
@@ -621,12 +621,12 @@
     "difficulty": "Schwer",
     "question": "Welchen Zweck erfüllt ein 'Operational Data Store' (ODS) innerhalb einer modernen BI-Infrastruktur im Vergleich zu einem Data Warehouse?",
     "options": [
-      "Er dient der langfristigen Archivierung historischer Daten über Jahrzehnte hinweg.",
       "Er stellt tagesaktuelle oder echtzeitnahe, operative Daten aus verschiedenen Systemen integriert für kurzfristige, operative Entscheidungen bereit, ohne historische Tiefen vorzuhalten.",
-      "Er ist eine NoSQL-Datenbank, die ausschließlich für unstrukturierte IoT-Sensorik genutzt wird.",
-      "Er dient als Auswertungsplattform für statistische Data-Mining-Modelle."
+      "Er dient als Auswertungsplattform für statistische Data-Mining-Modelle.",
+      "Er dient der langfristigen Archivierung historischer Daten über Jahrzehnte hinweg.",
+      "Er ist eine NoSQL-Datenbank, die ausschließlich für unstrukturierte IoT-Sensorik genutzt wird."
     ],
-    "correctIndex": 1,
+    "correctIndex": 0,
     "explanation": "Ein Operational Data Store (ODS) ist ein komplementärer Bestandteil. Während das DWH auf historische Datenanalysen und langfristige Trends spezialisiert ist, hält das ODS integrierte, detaillierte Daten des aktuellen Tagesgeschäfts (nahezu Echtzeit). Es dient operativen Managern für kurzfristige Kontrollen (z. B. aktueller Lagerbestand oder heutige Lieferungen)."
   },
   {
@@ -635,10 +635,10 @@
     "difficulty": "Mittel",
     "question": "Was zeigt der im Skript erwähnte wissenschaftliche 'BIRD-Benchmark' bezüglich des Einsatzes von generativer KI (LLMs) für Text-to-SQL-Anfragen auf Datenbanken?",
     "options": [
-      "Generative KI-Modelle generieren SQL-Code mit einer Fehlerquote von nahezu 0 % und übertreffen menschliche SQL-Entwickler in jeder Disziplin.",
-      "Die Genauigkeit von LLMs bei komplexen SQL-Abfragen liegt signifikant unter der menschlichen Genauigkeit (ca. 76-82% vs. 93%), was den ungeprüften produktiven Einsatz von Text-to-SQL auf Rohdaten hochgradig riskant macht.",
       "LLMs können SQL-Code nur für NoSQL-Datenbanken fehlerfrei generieren.",
-      "Dass SQL-Abfragen in Zukunft vollständig durch natürliche Sprache in der Datenbank ersetzt werden."
+      "Die Genauigkeit von LLMs bei komplexen SQL-Abfragen liegt signifikant unter der menschlichen Genauigkeit (ca. 76-82% vs. 93%), was den ungeprüften produktiven Einsatz von Text-to-SQL auf Rohdaten hochgradig riskant macht.",
+      "Dass SQL-Abfragen in Zukunft vollständig durch natürliche Sprache in der Datenbank ersetzt werden.",
+      "Generative KI-Modelle generieren SQL-Code mit einer Fehlerquote von nahezu 0 % und übertreffen menschliche SQL-Entwickler in jeder Disziplin."
     ],
     "correctIndex": 1,
     "explanation": "Der BIRD-Benchmark zeigt die aktuellen Grenzen von generativer KI bei Text-to-SQL. Während menschliche Experten eine Genauigkeit von ca. 93 % erreichen, liegen moderne LLMs bei komplexen geschäftlichen Abfragen deutlich darunter (76-82 %). Dies beweist, dass LLMs ohne eine stabilisierende Semantikschicht (Semantic Layer) und menschliche Kontrolle leicht fehlerhafte Joins oder falsche Kennzahl-Aggregationen erzeugen."
@@ -649,12 +649,12 @@
     "difficulty": "Schwer",
     "question": "Warum ist der Aufbau einer stabilen, zentralen 'Semantikschicht' (Semantic Layer) über den Datenbanken eine zwingende Voraussetzung für den erfolgreichen Einsatz von KI-Sprachassistenten im Business-Reporting?",
     "options": [
-      "Weil LLMs ohne diese Schicht keine Netzwerkverbindung zur Datenbank aufbauen können.",
-      "Weil die Semantikschicht abstrakte Geschäftsbegriffe (wie 'Umsatz' oder 'Kunde') und deren mathematische Berechnungen und Joins fest vordefiniert, sodass die KI auf verlässliche Metadaten zugreift, statt komplexe Joins und Formeln fehlerhaft selbst zu 'halluzinieren'.",
       "Weil sie alle relationalen Tabellen automatisch in unstrukturierte JSON-Dokumente transformiert.",
-      "Weil sie die Ausführungsgeschwindigkeit von SQL-Queries auf ein Zehntel reduziert."
+      "Weil sie die Ausführungsgeschwindigkeit von SQL-Queries auf ein Zehntel reduziert.",
+      "Weil LLMs ohne diese Schicht keine Netzwerkverbindung zur Datenbank aufbauen können.",
+      "Weil die Semantikschicht abstrakte Geschäftsbegriffe (wie 'Umsatz' oder 'Kunde') und deren mathematische Berechnungen und Joins fest vordefiniert, sodass die KI auf verlässliche Metadaten zugreift, statt komplexe Joins und Formeln fehlerhaft selbst zu 'halluzinieren'."
     ],
-    "correctIndex": 1,
+    "correctIndex": 3,
     "explanation": "Eine semantische Schicht übersetzt die technische Datenbankstruktur (Tabellen, Spalten, Fremdschlüssel) in die Sprache des Fachbereichs. Für eine KI ist dies die 'Rettungsleine': Statt mühsam und fehleranfällig selbst Tabellen zu verknüpfen und Umsatzformeln zu raten, fragt das LLM einfach das vordefinierte Objekt 'Total Revenue' ab. Die Schicht garantiert somit verlässliche, konsistente Antworten."
   },
   {
@@ -663,12 +663,12 @@
     "difficulty": "Mittel",
     "question": "Wie wirkt sich ein schlecht modelliertes, hochgradig fragmentiertes Datenbanksystem mit unklaren Tabellenbeziehungen auf die Berichtserstellung aus?",
     "options": [
-      "Es erhöht die kognitive Belastung (Cognitive Load) für Entwickler und Anwender massiv, da viel mentale Energie für das Entwirren von Joins und Datensilos verschwendet wird, statt für die eigentliche Analyse.",
+      "Es führt dazu, dass Berichte nur noch als Kreisdiagramme dargestellt werden können.",
       "Es verringert die Anzahl der benötigten SQL-Statements zur Datenabfrage.",
-      "Es hat keinen Einfluss, da moderne BI-Tools alle strukturellen Fehler vollautomatisch im Hintergrund korrigieren.",
-      "Es führt dazu, dass Berichte nur noch als Kreisdiagramme dargestellt werden können."
+      "Es erhöht die kognitive Belastung (Cognitive Load) für Entwickler und Anwender massiv, da viel mentale Energie für das Entwirren von Joins und Datensilos verschwendet wird, statt für die eigentliche Analyse.",
+      "Es hat keinen Einfluss, da moderne BI-Tools alle strukturellen Fehler vollautomatisch im Hintergrund korrigieren."
     ],
-    "correctIndex": 0,
+    "correctIndex": 2,
     "explanation": "Schlechte Datenmodellierung ist ein massiver BI-Treiber für kognitive Überlastung. Müssen Analysten Stunden damit verbringen, herauszufinden, welche Schlüssel zusammenpassen, welche Tabellen historisiert sind und wo Datenredundanzen liegen, bleibt kaum Zeit für die fachliche Interpretation. Saubere Modelle (wie Star Schemata oder klare Views) senken diesen kognitiven Overhead drastisch."
   },
   {
@@ -677,12 +677,12 @@
     "difficulty": "Mittel",
     "question": "Was versteht man unter dem Prinzip der 'Unveränderlichkeit' (Immutability / Write-Once) in modernen analytischen Datenarchitekturen im Vergleich zu klassischen operativen RDBMS?",
     "options": [
-      "Dass Daten nach dem ersten Import niemals wieder gelesen werden dürfen.",
       "Dass Daten im analytischen Datenspeicher (z. B. Data Lake / Raw Zone) niemals überschrieben oder aktualisiert werden; neue Stände werden stets als neue Datensätze angehängt, um eine lückenlose Historie und Auditierbarkeit zu sichern.",
+      "Dass Daten nach dem ersten Import niemals wieder gelesen werden dürfen.",
       "Dass das Datenbankschema nach der Erstellung unter keinen Umständen mehr verändert werden darf.",
       "Dass nur numerische Werte in die Datenbank geschrieben werden dürfen."
     ],
-    "correctIndex": 1,
+    "correctIndex": 0,
     "explanation": "Klassische operative Datenbanken (RDBMS) überschreiben Daten direkt (UPDATE), sobald sich z. B. eine Adresse oder ein Bestellstatus ändert. In analytischen Systemen (Big Data / Data Lakes) gilt oft das Prinzip 'Write-Once': Daten sind unveränderlich. Statusänderungen werden als neue Zeilen mit Zeitstempel angehängt. Das sichert die vollständige Nachvollziehbarkeit und Reproduzierbarkeit aller historischen Berichte."
   },
   {
@@ -691,9 +691,9 @@
     "difficulty": "Schwer",
     "question": "In welche logischen Zonen wird ein Data Lake typischerweise unterteilt, um zu verhindern, dass er sich unstrukturiert in einen unbrauchbaren Datensumpf ('Data Swamp') verwandelt?",
     "options": [
-      "In eine rote, gelbe und grüne Zone basierend auf den Ampelfarben der IBCS-Notation.",
-      "In Transient Loading (Raw Data), Curated (Prepared) und Consumption (Business/Presentation) Layer.",
       "In relationale, multidimensionale und spaltenorientierte Speicherbereiche im RAM.",
+      "In Transient Loading (Raw Data), Curated (Prepared) und Consumption (Business/Presentation) Layer.",
+      "In eine rote, gelbe und grüne Zone basierend auf den Ampelfarben der IBCS-Notation.",
       "In lokale, hybride und Cloud-basierte physische Festplattenlaufwerke."
     ],
     "correctIndex": 1,
