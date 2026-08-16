@@ -40,6 +40,18 @@
       }
     },
     {
+      "key": "E04",
+      "nummer": 4,
+      "titel": "Datenmodellierung",
+      "kurz": "Datenmodell",
+      "datei": "data/Quizfragen_Datenmodellierung.json",
+      "anzahl": 50,
+      "stufen": {
+        "Mittel": 23,
+        "Schwer": 27
+      }
+    },
+    {
       "key": "E05",
       "nummer": 5,
       "titel": "Verbesserter Bericht",
