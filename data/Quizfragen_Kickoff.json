@@ -351,17 +351,17 @@
   },
   {
     "id": "K26",
-    "topic": "Herkunft des Begriffs Business Intelligence",
-    "difficulty": "Mittel",
-    "question": "Auf wen geht die moderne Prägung des Begriffs 'Business Intelligence' im Jahr 1989 zurück?",
+    "topic": "Wie ein neuronales Netz Gewichte lernt",
+    "difficulty": "Schwer",
+    "question": "Ein neuronales Netz soll aus einer Faktentabelle eine Kennzahl schätzen. Wie werden die Gewichte des Netzes im Training bestimmt?",
     "options": [
-      "Bill Gates (Microsoft)",
-      "James Serra (Microsoft)",
-      "Howard Dresner (Gartner Group)",
-      "Edward Tufte (Yale University)"
+      "Die Gewichte ergeben sich in einem einzigen Rechenschritt als exakte Lösung eines Gleichungssystems, sobald genügend Datenzeilen vorliegen; wiederholte Durchläufe sind unnötig.",
+      "Für jedes Gewicht wird der Wertebereich systematisch abgesucht und die Kombination übernommen, die auf den Trainingsdaten den kleinsten Fehler zeigt; eine Rückrechnung entfällt dabei.",
+      "Eine Datenzeile durchläuft das Netz, die Vorhersage wird am Ist-Wert gemessen, rückwärts wird je Gewicht der Fehlerbeitrag bestimmt, und jedes Gewicht wandert einen kleinen Schritt dagegen.",
+      "Fachleute setzen die Gewichte vorab, indem sie jedem Eingangsmerkmal seine Bedeutung für die Zielgröße zuweisen; das Netz rechnet mit diesen festen Werten unverändert weiter."
     ],
     "correctIndex": 2,
-    "explanation": "Obwohl der Begriff historisch älter ist, wird Howard Dresner von der Gartner Group im Jahr 1989 die moderne Etablierung von 'Business Intelligence' als Schirmbegriff für Konzepte und Methoden zur Verbesserung geschäftlicher Entscheidungen durch faktenbasierte Supportsysteme zugeschrieben."
+    "explanation": "Training ist ein Vierschritt, der sich sehr oft wiederholt: Vorwärtslauf, Messen der Abweichung über eine Verlustfunktion, Rückwärtslauf, der je Gewicht den Beitrag zum Fehler bestimmt, und ein bewusst kleiner Anpassungsschritt entgegen dieser Richtung. Ein vollständiger Durchlauf durch alle Trainingszeilen heißt Epoche. Das Verfahren findet eine Gewichtskombination mit geringem Fehler auf den Trainingsdaten, aber keinen Beweis für ihre Güte — ob sie auf neuen Daten trägt, zeigt erst die Prüfung an zurückgehaltenen Daten."
   },
   {
     "id": "K27",

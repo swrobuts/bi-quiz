@@ -561,17 +561,17 @@
   },
   {
     "id": "D41",
-    "topic": "Das Standard-Werkzeug Carzaniga et al. (1998)",
-    "difficulty": "Schwer",
-    "question": "Welches wissenschaftliche Werk gilt als Meilenstein zur formalen Charakterisierung und Strukturierung von Software-Deployment-Technologien in der Fachliteratur?",
+    "topic": "Stiller Ausfall trotz grüner Überwachung",
+    "difficulty": "Mittel",
+    "question": "Ein Bericht lädt fehlerfrei, alle Kacheln erscheinen, doch die Diagramme sind seit Wochen leer; die technische Überwachung meldet durchgehend „in Ordnung“. Warum schlägt sie nicht an, und wie wäre sie zu ergänzen?",
     "options": [
-      "Kimball, R. (1996): The Data Warehouse Toolkit.",
-      "Carzaniga, A.; Fuggetta, A.; Heimbigner, D. et al. (1998): A Characterization Framework for Software Deployment Technologies (Technical Report).",
-      "Tufte, E. (1983): The Visual Display of Quantitative Information.",
-      "Hichert, R. (2013): IBCS Standards."
+      "Sie prüft nur, ob die Seite antwortet; die Zahlen kommen erst danach. Zu ergänzen sind eine Kontrollzahl gegen einen Sollwert und das Alter des jüngsten Datensatzes.",
+      "Sie greift erst nach dem Ladelauf; zu ergänzen wäre ein automatischer zweiter Ladeversuch, damit eine fehlgeschlagene Aktualisierung ohne Zutun des Betriebs nachgeholt wird.",
+      "Leere Diagramme sind technisch kein Fehler; zu ergänzen wäre ein Hinweistext im Bericht, der die Empfänger auf mögliche Lücken hinweist und um Rückmeldung bittet.",
+      "Sie misst nur die Antwortzeit der Seite; zu ergänzen wären eine höhere Prüffrequenz und ein zweiter Prüfstandort, damit auch kurze Ausfälle des Servers zuverlässig erfasst werden."
     ],
-    "correctIndex": 1,
-    "explanation": "Der Technical Report 'A Characterization Framework for Software Deployment Technologies' von Carzaniga et al. (University of Colorado, 1998) definierte erstmals formal die Phasen des Deployment-Lebenszyklus. Er wird in der BI- und Software-Engineering-Literatur standardmäßig als wissenschaftliches Fundament für Deployment-Prozesse zitiert."
+    "correctIndex": 0,
+    "explanation": "Der häufigste Betriebsfehler im Berichtswesen ist nicht der Absturz, sondern der stille Ausfall: Die Seite lädt, das Gerüst steht, nur die Werte sind alt oder leer. Eine erfolgreiche Antwort des Servers besagt lediglich, dass er lebt, nicht dass die Zahlen stimmen — die Daten werden erst nach dem Seitengerüst nachgeladen. Ein tragfähiger Check prüft deshalb inhaltlich mit: eine Kontrollzahl wie Summe oder Zeilenzahl gegen einen Sollwert sowie die Aktualität des jüngsten Datensatzes. Dazu gehört, dass der Alarm an eine benannte Rolle mit vereinbarter Reaktionszeit geht."
   },
   {
     "id": "D42",

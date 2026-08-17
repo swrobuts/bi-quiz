@@ -309,17 +309,17 @@
   },
   {
     "id": "A23",
-    "topic": "Lambda-Architektur",
+    "topic": "Zielkonflikt der Lambda-Architektur",
     "difficulty": "Schwer",
-    "question": "Auf welchen Erfinder geht die Lambda-Architektur zurück und welchen grundlegenden, architektonischen Konflikt versucht sie bei der Verarbeitung von Big Data zu lösen?",
+    "question": "Welchen grundlegenden architektonischen Konflikt löst die Lambda-Architektur bei der Verarbeitung sehr großer Datenmengen?",
     "options": [
-      "Zhamak Dehghani; Konflikt zwischen zentralen Monolithen und dezentralen Domänen.",
-      "Nathan Marz; die Herausforderung, sehr große polystrukturierte Datenmengen gleichzeitig mit minimaler Latenzzeit (Echtzeit/Streaming) und maximaler Vollständigkeit/Berechnungsgenauigkeit (Batch) effizient zu verarbeiten.",
-      "Ralph Kimball; Konflikt zwischen Normalisierung und Denormalisierung.",
-      "William Inmon; Konflikt zwischen operativen Transaktionen und analytischen Berichten."
+      "Sehr große polystrukturierte Datenmengen sollen zugleich mit minimaler Latenz und mit maximaler Vollständigkeit und Berechnungsgenauigkeit verarbeitet werden.",
+      "Zentrale Datenmonolithen und dezentrale Fachdomänen sollen sich dieselbe Datenhoheit teilen, ohne dass Verantwortlichkeiten unklar werden.",
+      "Operative Transaktionen und analytische Auswertungen sollen auf demselben System laufen, ohne einander auszubremsen.",
+      "Normalisierte und denormalisierte Modelle sollen in derselben Datenbank nebeneinander betrieben werden, ohne dass Abfragen mehrdeutig werden."
     ],
-    "correctIndex": 1,
-    "explanation": "Die von Nathan Marz entwickelte Lambda-Architektur löst das fundamentale Big-Data-Dilemma: Echtzeit-Datenströme (Streaming/Speed Layer) haben eine sehr geringe Latenz, sind aber fehleranfällig und schwer historisch zu aggregieren. Historische Batch-Analysen (Batch Layer) sind absolut präzise und vollständig, haben aber eine hohe Latenz (z. B. stundenlange Berechnungszeit). Lambda führt beide Pfade parallel und führt sie im Serving Layer für Abfragen zusammen."
+    "correctIndex": 0,
+    "explanation": "Die Lambda-Architektur löst ein Dilemma der Massendatenverarbeitung: Echtzeit-Datenströme im Speed Layer haben eine sehr geringe Latenz, sind aber fehleranfällig und historisch schwer zu aggregieren. Batch-Analysen sind vollständig und präzise, brauchen dafür aber Stunden. Lambda führt beide Pfade parallel und bringt sie im Serving Layer für die Abfrage zusammen. Der Entwurf geht auf Nathan Marz zurück."
   },
   {
     "id": "A24",
@@ -533,17 +533,17 @@
   },
   {
     "id": "A39",
-    "topic": "Data Mesh | Soziotechnischer Ansatz",
+    "topic": "Grundgedanke des Data Mesh",
     "difficulty": "Schwer",
-    "question": "Auf welche Vordenkerin geht das 'Data Mesh'-Paradigma zurück und wie lässt sich dieser Ansatz grundlegend beschreiben?",
+    "question": "Wie lässt sich das Paradigma des Data Mesh grundlegend beschreiben?",
     "options": [
-      "Zhamak Dehghani; ein rein technologisches Softwareprodukt zur automatischen Erstellung von NoSQL-Clustern in der Cloud.",
-      "Zhamak Dehghani; ein soziotechnischer, dezentraler Architekturansatz, der Datenverantwortung und Datenmanagement an die jeweiligen fachlichen Domänen (Fachbereiche) überträgt, anstatt Daten in einer zentralen IT-Dienstleistungseinheit zu monopolisieren.",
-      "Jay Kreps; eine Erweiterung der Kappa-Streaming-Architektur für IoT-Anwendungen.",
-      "Nathan Marz; eine Organisationsrichtlinie zur Reduzierung von Cloud-Kosten im BI-Betrieb."
+      "Als soziotechnischer, dezentraler Architekturansatz, der Datenverantwortung und Datenmanagement an die fachlichen Domänen überträgt, statt sie in einer zentralen IT-Einheit zu bündeln.",
+      "Als Organisationsrichtlinie, deren Hauptzweck die Senkung der Cloud- und Lizenzkosten im laufenden BI-Betrieb ist.",
+      "Als Erweiterung einer Streaming-Architektur, die speziell auf Anwendungen im Internet der Dinge und deren Sensordaten zugeschnitten ist.",
+      "Als rein technologisches Softwareprodukt, das den Aufbau verteilter NoSQL-Cluster in der Cloud automatisiert und dadurch den Betrieb vereinfacht."
     ],
-    "correctIndex": 1,
-    "explanation": "Zhamak Dehghani stellte Data Mesh ab 2019 als revolutionären Gegenentwurf zu zentralistischen, monolithischen Datenarchitekturen (wie klassischen Data Warehouses oder monolithischen Data Lakes) vor. Sie argumentiert, dass zentralisierte Datenplattformen an der organisatorischen Skalierung und dem Mangel an Domänen-Kontext scheitern. Data Mesh versteht sich als soziotechnisches Paradigma: Es verbindet technische Architektur (dezentrale Datenprodukte) mit einer neuen Unternehmensorganisation (Domain Driven Design)."
+    "correctIndex": 0,
+    "explanation": "Data Mesh ist ein Gegenentwurf zu zentralistischen, monolithischen Datenarchitekturen wie dem klassischen Data Warehouse oder dem monolithischen Data Lake. Die Kernthese lautet, dass zentrale Datenplattformen an der organisatorischen Skalierung und am fehlenden Domänenkontext scheitern. Der Ansatz versteht sich ausdrücklich als soziotechnisch: Er verbindet eine technische Architektur aus dezentralen Datenprodukten mit einer veränderten Aufbauorganisation. Formuliert wurde er von Zhamak Dehghani."
   },
   {
     "id": "A40",

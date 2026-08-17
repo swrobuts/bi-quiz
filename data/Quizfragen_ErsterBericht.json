@@ -1,17 +1,17 @@
 [
   {
     "id": "EB01",
-    "topic": "CRISP-DM Entstehung & Konsortium",
-    "difficulty": "Mittel",
-    "question": "Wann und durch welches Konsortium wurde das weit verbreitete Vorgehensmodell CRISP-DM in der Version 1.0 veröffentlicht?",
+    "topic": "Datenvertrag gegen stille Schemaänderungen",
+    "difficulty": "Schwer",
+    "question": "In einem Vorsystem wird ein Feld umbenannt, der Ladelauf läuft ohne Fehlermeldung weiter, und ein Bericht weist seitdem falsche Werte aus. Welche Vereinbarung setzt an dieser Ursache an, und wovon hängt ihre Wirksamkeit ab?",
     "options": [
-      "Im Jahr 2000 durch ein Konsortium bestehend aus DaimlerChrysler, SPSS (damals ISL), NCR und dem Versicherer OHRA.",
-      "Im Jahr 2012 durch die Data Management Association (DAMA) International.",
-      "Im Jahr 1989 durch John Tukey im Rahmen der explorativen Datenanalyse.",
-      "Im Jahr 1995 durch die Microsoft Corporation und die Stanford University."
+      "Eine nachgelagerte Bereinigung im BI-Bereich, die abweichende Feldnamen automatisch zuordnet; wirksam wird sie durch regelmäßige Stichproben der betroffenen Fachabteilung.",
+      "Ein Datenvertrag über Schema, Bedeutung, Aktualität und Zuständigkeit; wirksam wird er durch automatische Prüfung im Ladelauf und eine benannte Stelle, die bei Verstoß entscheidet.",
+      "Eine Namenskonvention für Felder in allen Vorsystemen; wirksam wird sie durch ein zentrales Glossar, in dem jede Spaltenbezeichnung genau einmal hinterlegt ist.",
+      "Eine Freigaberegel, nach der jeder Bericht vor der Veröffentlichung fachlich abgezeichnet wird; wirksam wird sie durch eine sichtbare Kennzeichnung geprüfter Berichte im Portal."
     ],
-    "correctIndex": 0,
-    "explanation": "Der CRISP-DM (CRoss Industry Standard Process for Data Mining) Leitfaden in der Version 1.0 wurde im Jahr 2000 veröffentlicht. Das dahinterstehende Konsortium bestand aus führenden Unternehmen wie DaimlerChrysler, SPSS, NCR und OHRA, die bereits frühzeitig Data-Mining und Analytics-Lösungen operativ einsetzten."
+    "correctIndex": 1,
+    "explanation": "Die stille Schemaänderung ist der typische Fall, in dem technisch nichts scheitert und trotzdem eine falsche Zahl im Bericht steht. Ein Datenvertrag hält fest, was Produzent und Konsument voneinander erwarten dürfen — Schema, Bedeutung, Aktualität und Zuständigkeit — und räumt Änderungen eine Ankündigungsfrist ein; damit verlagert er die Qualitätssicherung nach vorn, statt sie nachträglich im BI-Bereich zu reparieren. Ohne automatische Prüfung im Ladelauf und eine zuständige Stelle bleibt er allerdings bloße Dokumentation."
   },
   {
     "id": "EB02",

@@ -10,8 +10,8 @@
       "datei": "data/Quizfragen_Kickoff.json",
       "anzahl": 50,
       "stufen": {
-        "Mittel": 21,
-        "Schwer": 29
+        "Mittel": 20,
+        "Schwer": 30
       }
     },
     {
@@ -35,8 +35,8 @@
       "anzahl": 50,
       "stufen": {
         "Leicht": 1,
-        "Mittel": 27,
-        "Schwer": 22
+        "Mittel": 26,
+        "Schwer": 23
       }
     },
     {
@@ -47,8 +47,8 @@
       "datei": "data/Quizfragen_Datenmodellierung.json",
       "anzahl": 50,
       "stufen": {
-        "Mittel": 23,
-        "Schwer": 27
+        "Mittel": 22,
+        "Schwer": 28
       }
     },
     {
@@ -107,8 +107,8 @@
       "datei": "data/Quizfragen_Deployment.json",
       "anzahl": 50,
       "stufen": {
-        "Mittel": 28,
-        "Schwer": 22
+        "Mittel": 29,
+        "Schwer": 21
       }
     }
   ]

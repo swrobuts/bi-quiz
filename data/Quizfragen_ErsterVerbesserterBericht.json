@@ -267,17 +267,17 @@
   },
   {
     "id": "EB20",
-    "topic": "Small Multiples (Trellis Charts)",
+    "topic": "Konstruktionsprinzip der Small Multiples",
     "difficulty": "Mittel",
-    "question": "Auf welchen Vordenker geht der Begriff 'Small Multiples' (oft auch als Trellis Charts bezeichnet) zurück und welches Konstruktionsprinzip liegt ihm zugrunde?",
+    "question": "Was ist das Konstruktionsprinzip von Small Multiples (auch Trellis Charts), und welches Darstellungsproblem lösen sie damit?",
     "options": [
-      "Nathan Marz; die strikte Trennung von Batch- und Speed-Layer.",
-      "Edward Tufte; die Aufteilung einer komplexen Datenreihe in mehrere kleine, identisch aufgebaute Diagramme mit identischer Skalierung nebeneinander, um Vergleiche über die Position statt über Farben zu ermöglichen.",
-      "Rolf Hichert; die strikte Einhaltung der Ampelfarben.",
-      "Nicolas Bissantz; das dynamische Sortieren von Tabellenspalten."
+      "Eine Datenreihe wird auf mehrere Diagramme verteilt, deren Skalen jeweils an den eigenen Wertebereich angepasst werden, damit jede Teilgrafik ihren Verlauf gut ausfüllt.",
+      "Die Teilgrafiken werden zeitlich nacheinander animiert eingeblendet, sodass Veränderungen als Bewegung und nicht als Nebeneinander wahrgenommen werden.",
+      "Mehrere Datenreihen werden in einem einzigen Diagramm übereinandergelegt und durch kräftige Signalfarben unterschieden, um den Vergleich in einem einzigen Bild zu ermöglichen.",
+      "Eine komplexe Datenreihe wird in mehrere kleine, identisch aufgebaute und identisch skalierte Diagramme nebeneinander zerlegt, sodass der Vergleich über die Position statt über Farben läuft."
     ],
-    "correctIndex": 1,
-    "explanation": "Small Multiples verhindern das gefürchtete 'Spaghetti-Diagramm' (viele überlagerte Linien in einem Bild). Durch die Zerlegung in kleine, gleichartig skalierte Einzelgrafiken kann das Auge Trends über Regionen oder Jahre hinweg blitzschnell und verzerrungsfrei vergleichen."
+    "correctIndex": 3,
+    "explanation": "Small Multiples verhindern das gefürchtete Spaghetti-Diagramm, also viele überlagerte Linien in einem Bild. Durch die Zerlegung in kleine, gleichartig aufgebaute und vor allem gleich skalierte Einzelgrafiken kann das Auge Verläufe über Regionen oder Jahre hinweg verzerrungsfrei vergleichen. Entscheidend ist die identische Skalierung: Passt man jede Teilgrafik an ihren eigenen Wertebereich an, wirken kleine und große Schwankungen optisch gleich. Der Begriff geht auf Edward Tufte zurück."
   },
   {
     "id": "EB21",
@@ -309,17 +309,17 @@
   },
   {
     "id": "EB23",
-    "topic": "Beautiful Evidence Veröffentlichungsjahr",
+    "topic": "Dimensionen im Modell ableiten oder per ETL",
     "difficulty": "Mittel",
-    "question": "In welchem Jahr veröffentlichte Edward Tufte sein einflussreiches Buch 'Beautiful Evidence', in welchem er das Konzept der Sparklines detailliert beschrieb?",
+    "question": "Im analytischen Datenmodell werden Dimensionen und Faktentabelle schrittweise mit der Formelsprache des Modells aus einer einzigen breiten, denormalisierten Tabelle abgeleitet. Wie ist dieses Vorgehen einzuordnen?",
     "options": [
-      "1998",
-      "1983",
-      "2006",
-      "2020"
+      "Das Ableiten im Modell ist der produktive Regelfall; eine Verlagerung in vorgelagerte Ladestrecken scheidet aus, weil die Formelsprache des Modells dort nicht zur Verfügung steht.",
+      "Das Ableiten ersetzt das Stern-Schema: Die breite Tabelle bleibt Auswertungsgrundlage, weil Dimensionen im Modell lediglich als Anzeigefilter über den Spalten geführt werden.",
+      "Es entstehen berechnete, aus den Daten abgeleitete Tabellen; im Unternehmensbetrieb wird diese Ableitung möglichst automatisiert, etwa durch ETL-Prozesse beim Befüllen des Datenhaltungssystems.",
+      "Es entstehen importierte Originaltabellen der Quelle; sie werden bei jeder Aktualisierung neu aus dem Vorsystem gelesen und müssen deshalb ausschließlich dort gepflegt werden."
     ],
     "correctIndex": 2,
-    "explanation": "Während Edward Tufte seine grundlegende Visualisierungstheorie (Data-Ink-Ratio etc.) bereits 1983 in 'The Visual Display of Quantitative Information' veröffentlichte, stellte er das Konzept der Sparklines im Jahr 2006 in seinem Werk 'Beautiful Evidence' (S. 46-63) vor."
+    "explanation": "Nach dem Einbinden der Quelle liegen die Daten zunächst als eine einzige breite Tabelle vor — das ist der Ausgangspunkt, nicht das Ziel. Aus ihr werden stufenweise Dimensionen und die Faktentabelle herausgelöst; jede so entstehende Tabelle ist eine berechnete, aus den Daten abgeleitete Tabelle und keine importierte Originaltabelle. Das macht die Modellierung nachvollziehbar, ist aber mühsam: Im Unternehmensbetrieb werden solche Schritte möglichst automatisiert, etwa durch ETL-Prozesse beim Befüllen eines Data Warehouse."
   },
   {
     "id": "EB24",

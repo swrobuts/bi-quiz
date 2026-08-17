@@ -15,17 +15,17 @@
   },
   {
     "id": "M02",
-    "topic": "Urheber der BEAM-Methode",
-    "difficulty": "Mittel",
-    "question": "Auf welche Autoren geht das agile Framework der BEAM✲-Datenmodellierung zurück?",
+    "topic": "Additivität von Kennzahlen über die Zeit",
+    "difficulty": "Schwer",
+    "question": "Der Lagerbestand wird je Monat als Wert zum Monatsende in der Faktentabelle geführt. Wie muss dieses Measure im analytischen Modell behandelt werden?",
     "options": [
-      "Zhamak Dehghani und Nathan Marz",
-      "Lawrence Corr und Jim Stagnitto",
-      "Ralph Kimball und Bill Inmon",
-      "Edgar F. Codd und John Tukey"
+      "Es ist additiv wie ein Umsatz und darf über sämtliche Dimensionen hinweg unverändert mit SUM verdichtet werden.",
+      "Es ist über die Zeit additiv, über Produkt und Region dagegen ausschließlich als Durchschnittswert je Stichtag auswertbar.",
+      "Es ist nicht additiv und darf über keine Dimension summiert werden, sondern ist auf jeder Ebene als Quotient neu zu berechnen.",
+      "Es ist semi-additiv: über Produkt und Region ist SUM zulässig, über die Zeit gilt der Stichtagswert statt der Summe."
     ],
-    "correctIndex": 1,
-    "explanation": "BEAM✲ (Business Event Analysis and Modeling) wurde von Lawrence Corr und Jim Stagnitto entwickelt. Es ist eine agile Methode zur dimensionalen Modellierung, um Data Warehouses und Data Marts kollaborativ zu konzipieren."
+    "correctIndex": 3,
+    "explanation": "Eine Stromgröße misst, was in einem Zeitraum passiert, und ist über die Zeit additiv; eine Zeitpunktgröße misst einen Zustand zum Stichtag. Drei Monatsbestände von je 500 Stück ergeben aufsummiert 1.500 Stück — einen Bestand, den es nie gab. Über Produkt und Region werden dagegen verschiedene Bestände gezählt, dort ist SUM korrekt; über die Zeit setzt man Stichtagsfunktionen ein, additiv sind nur die Bewegungen aus Zugängen und Abgängen."
   },
   {
     "id": "M03",
@@ -449,17 +449,17 @@
   },
   {
     "id": "M33",
-    "topic": "Initiator des Model Context Protocols",
+    "topic": "Abgrenzung der OLAP-Operationen Slice und Dice",
     "difficulty": "Mittel",
-    "question": "Von welchem bekannten KI-Unternehmen stammt der offene Standard des Model Context Protocols (MCP) ursprünglich?",
+    "question": "Eine Auswertung wird gleichzeitig auf eine bestimmte Produktgruppe, eine Region und ein Quartal eingeschränkt, ohne dass sich Detailtiefe oder Aufriss ändern. Welche OLAP-Operation beschreibt diesen Vorgang?",
     "options": [
-      "Google DeepMind",
-      "Anthropic",
-      "Microsoft",
-      "OpenAI"
+      "Pivot, weil die beteiligten Dimensionen zwischen den Zeilen und den Spalten der Darstellung vertauscht werden.",
+      "Slice, weil der Datenwürfel entlang genau einer Dimension zu einem zweidimensionalen Datenanschnitt geschnitten wird.",
+      "Dice, weil durch die Auswahl bestimmter Werte aus mehreren Dimensionen ein kleinerer Teilwürfel entsteht.",
+      "Drill-Through, weil von der aggregierten Ebene zu den zugrunde liegenden Transaktionsdaten gewechselt wird."
     ],
-    "correctIndex": 1,
-    "explanation": "Das Model Context Protocol (MCP) ist ein offener Standard, der ursprünglich von Anthropic entwickelt wurde und inzwischen von zahlreichen führenden Plattformen und Software-Anbietern (wie Microsoft für Power BI) unterstützt wird."
+    "correctIndex": 2,
+    "explanation": "Slice und Dice verändern beide den Ausschnitt, unterscheiden sich aber in der Zahl der beteiligten Dimensionen: Slice schneidet entlang einer Dimension und lässt eine Scheibe übrig, Dice grenzt mehrere Dimensionen zugleich ein und erzeugt einen Teilwürfel. Pivot verändert demgegenüber nur den Aufriss, Drill-Through den Betrachtungsgegenstand, Drill-Down und Drill-Up die Detailtiefe. In einem BI-Werkzeug entspricht Dice mehreren gleichzeitig gesetzten Datenschnitten, von denen jeder weitere den Ausschnitt verkleinert."
   },
   {
     "id": "M34",

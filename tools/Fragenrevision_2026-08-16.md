@@ -99,13 +99,44 @@ verengt die Auswahl faktisch auf drei und macht die Frage leichter, als sie sein
 eine plausible technische Abfolge ersetzt. Ein systematischer Durchlauf über alle 450 Fragen fand
 keine weitere Option dieser Art.
 
-## Grenzfälle — bewusst stehen gelassen
+---
 
-Nach dem zweiten Durchgang ist von der ursprünglichen Grenzfallliste nur noch ein Punkt offen:
+# Dritter Durchgang: Literatur- und Namensfragen
 
-* **D41 (Einheit 9)** — das Standardwerk von Carzaniga et al. (1998) als Meilenstein der
-  Deployment-Forschung. Das ist Literaturkenntnis und kein Kursartefakt, deshalb steht die Frage
-  weiterhin. Wenn du auch reine Literaturfragen nicht willst, ersetze ich sie.
+Vorgabe: Auch Fragen, deren Antwort eine Person, ein Unternehmen, eine Jahreszahl oder ein
+Buchtitel ist, gehören nicht in ein fachliches Quiz. Alle 450 Fragen wurden auf diesen Fragetyp
+durchsucht. **6 ersetzt, 3 umformuliert.**
 
-K09, K10, K14, EB29 (Einheit 3) sowie EB39 und EB40 (Einheit 5) sind im zweiten Durchgang ersetzt
-worden und damit erledigt.
+## Ersetzt (6)
+
+| Einheit | id | vorher — gesuchte Antwort war | jetzt | Folien |
+|---|---|---|---|---|
+| 1 Kickoff | K26 | „Howard Dresner (Gartner Group)" | Wie ein neuronales Netz Gewichte lernt | 54 |
+| 3 Erster Bericht | EB01 | Jahr und Konsortium der CRISP-DM-Veröffentlichung | Datenvertrag gegen stille Schemaänderungen | 99 |
+| 4 Datenmodellierung | M02 | „Lawrence Corr und Jim Stagnitto" | Additivität von Kennzahlen über die Zeit | 87, 88 |
+| 4 Datenmodellierung | M33 | „Anthropic" | Abgrenzung der OLAP-Operationen Slice und Dice | 150, 152, 153 |
+| 5 Verb. Bericht | EB23 | „2006" (Erscheinungsjahr eines Buches) | Dimensionen im Modell ableiten oder per ETL | 19–21 |
+| 9 Deployment | D41 | Titel eines Technical Report von 1998 | Stiller Ausfall trotz grüner Überwachung | 27, 28 |
+
+## Umformuliert (3)
+
+Hier stand der Name nur am Anfang der Frage, die Substanz trug den Rest. Die Namensabfrage ist
+entfallen, der Fachinhalt geblieben; die Urheberschaft steht jetzt am Ende der Begründung, wo sie
+als Beleg hingehört und nicht als gesuchte Antwort.
+
+| Einheit | id | vorher | jetzt |
+|---|---|---|---|
+| 5 Verb. Bericht | EB20 | „Auf welchen Vordenker geht ‚Small Multiples' zurück und welches Prinzip …" | Konstruktionsprinzip der Small Multiples |
+| 6 Architekturen | A23 | „Auf welchen Erfinder geht die Lambda-Architektur zurück und welchen Konflikt …" | Zielkonflikt der Lambda-Architektur |
+| 6 Architekturen | A39 | „Auf welche Vordenkerin geht ‚Data Mesh' zurück und wie …" | Grundgedanke des Data Mesh |
+
+## Stand nach allen drei Durchgängen
+
+Ein abschließender Lauf über alle 450 Fragen findet:
+
+* keine Frage mehr, deren Antwort ein Name, ein Unternehmen, eine Jahreszahl oder ein Werk ist,
+* keine Zahl und keinen Inhalt aus der Kursfallstudie — auch nicht in Optionen oder Begründungen,
+* keine Frage zu Kursorganisation, Personen oder Übungsabläufen,
+* **450 verschiedene Themen**, kursweit keine einzige Dublette,
+* keine doppelten ids, keine unvollständige Frage, keinen ungültigen `correctIndex`,
+* die richtige Antwort gleichmäßig über alle vier Positionen verteilt.
