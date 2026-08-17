@@ -10,8 +10,8 @@
       "datei": "data/Quizfragen_Kickoff.json",
       "anzahl": 50,
       "stufen": {
-        "Mittel": 22,
-        "Schwer": 28
+        "Mittel": 21,
+        "Schwer": 29
       }
     },
     {
@@ -35,8 +35,8 @@
       "anzahl": 50,
       "stufen": {
         "Leicht": 1,
-        "Mittel": 28,
-        "Schwer": 21
+        "Mittel": 27,
+        "Schwer": 22
       }
     },
     {

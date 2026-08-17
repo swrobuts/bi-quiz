@@ -141,17 +141,17 @@
   },
   {
     "id": "EB11",
-    "topic": "Fallstudie 'Global Superstore' Kontext",
-    "difficulty": "Mittel",
-    "question": "Welches Szenario beschreibt die Ausgangslage der Fallstudie 'Global Superstore' im Skript?",
+    "topic": "Accuracy bei seltenen Ereignissen",
+    "difficulty": "Schwer",
+    "question": "Ein Klassifikationsmodell soll seltene Betrugsfälle erkennen. Von 1.000 Testfällen sind 30 Betrugsfälle; das Modell sagt ausnahmslos „kein Betrug“ voraus und erreicht damit 97 % Accuracy. Wie ist dieses Ergebnis zu beurteilen?",
     "options": [
-      "Ein produzierendes Industrieunternehmen sucht nach Fehlern in seiner physischen Lieferkette mittels IoT-Sensordaten.",
-      "Eine Bank möchte betrügerische Kreditkartentransaktionen mittels Neuronaler Netze in Echtzeit blockieren.",
-      "Ein Handelsunternehmen vertreibt Produkte (z.B. Möbel, Bürobedarf, Technologie) über den stationären Handel und einen Online-Shop. Eine interdisziplinäre Projektgruppe soll die Servicequalität und die Beliebtheit von Produkten analysieren.",
-      "Ein reiner Online-Händler für Softwareprodukte möchte seine Server-Infrastruktur optimieren."
+      "Der Wert bleibt undeutbar, da Accuracy erst bei mehr als zwei Klassen aussagekräftig wird, hier aber eine binäre Zielgröße vorliegt.",
+      "Das Modell ist überangepasst, denn eine derart hohe Accuracy entsteht nur dann, wenn ein Verfahren die Trainingsmenge auswendig gelernt hat.",
+      "Die Accuracy weist ein brauchbares Modell aus, da sie den Anteil korrekter Vorhersagen über sämtliche Testfälle hinweg misst.",
+      "Der Wert ist wertlos: Kein einziger positiver Fall wird gefunden, der Recall liegt bei 0 % und die Precision ist mangels positiver Vorhersagen nicht definiert."
     ],
-    "correctIndex": 2,
-    "explanation": "Der Global Superstore ist ein fiktives, internationales Einzelhandelsunternehmen (Retail), das typische Konsumgüter (Möbel, Office Supplies, Technology) verkauft. Die Fallstudie dient dazu, den gesamten Weg vom Rohdatensatz bis zum interaktiven Power BI / DeltaMaster-Bericht praxisnah aufzuzeigen."
+    "correctIndex": 3,
+    "explanation": "Accuracy setzt alle korrekten Vorhersagen ins Verhältnis zu allen Fällen und wird deshalb von der großen negativen Klasse dominiert. Wer nie „positiv“ vorhersagt, erzeugt weder Treffer noch Fehlalarme: Der Recall liegt bei 0 %, die Precision ist nicht definiert, der F1-Wert null. Bei unausgeglichenen Klassen sind deshalb Recall, Precision und F1 heranzuziehen; die Wahl des Schwellenwerts folgt anschließend aus der Abwägung, was ein übersehener Fall und was ein Fehlalarm kostet."
   },
   {
     "id": "EB12",
@@ -197,17 +197,17 @@
   },
   {
     "id": "EB15",
-    "topic": "Das 'September-Problem' im Global Superstore",
+    "topic": "Arbeitsbereich, App und Deployment-Pipeline",
     "difficulty": "Mittel",
-    "question": "Welche auffällige Anomalie in den Verkaufsdaten des Global Superstore im Jahr 2016 bildet den Ausgangspunkt für detaillierte betriebswirtschaftliche Analysen im Skript?",
+    "question": "Ein zunächst lokal erstellter Bericht soll zu einem Artefakt des Unternehmens werden. Welche Aufgabe erfüllen dabei Arbeitsbereich (Workspace), App und Deployment-Pipeline?",
     "options": [
-      "Ein plötzlicher Anstieg der Retourenquote im Dezember 2016 auf über 90%.",
-      "Größere Abweichungen bei den Umsatzwerten ab August 2016 im Vergleich zum Vorjahr, insbesondere ein massiver Umsatzeinbruch in der Produkt-Kategorie 'Technology' im September 2016.",
-      "Ein systematischer Preisausfall bei allen Möbelstücken im Frühjahr 2016.",
-      "Die vollständige Einstellung des Online-Shops im gesamten europäischen Markt im Sommer 2016."
+      "Alle drei Stufen erfüllen denselben Zweck und unterscheiden sich lediglich darin, ob der Zugriff über Browser, lokal installierte Anwendung oder mobiles Endgerät erfolgt.",
+      "Der Arbeitsbereich trägt die Zusammenarbeit am unfertigen Stand, die App stellt eine kuratierte Zusammenstellung für das Publikum bereit, die Pipeline führt Änderungen geprüft von Entwicklung über Test in Produktion.",
+      "Der Arbeitsbereich verteilt an das breite Publikum, die App dient der Zusammenarbeit am unfertigen Stand und die Pipeline ersetzt die Vergabe von Leseberechtigungen.",
+      "Der Arbeitsbereich hält ausschließlich den geprüften Endstand, die App sammelt die Entwicklungsstände und die Pipeline übernimmt die Verteilung an die einzelnen Zielgruppen."
     ],
     "correctIndex": 1,
-    "explanation": "Ab August 2016 zeigen sich in den Verkaufsdaten deutliche negative Abweichungen zum Vorjahr. Der dramatische Höhepunkt ist der September 2016, in dem vor allem die Schlüsselkategorie 'Technology' extrem schwächelt. Dies triggert den Drill-down und die Ursachenanalyse im BI-System."
+    "explanation": "Die drei Stufen bauen aufeinander auf und bringen je eine eigene Rechtefrage mit. Im Arbeitsbereich arbeitet das Team mit abgestuften Rollen am noch unfertigen Stand; die App bündelt daraus eine kuratierte Zusammenstellung mit eigener Navigation für ein Publikum, das den Bericht nutzt und nicht baut. Die Deployment-Pipeline verkettet Entwicklung, Test und Produktion als jeweils eigene Arbeitsbereiche, damit Änderungen geprüft werden, bevor sie das Publikum erreichen."
   },
   {
     "id": "EB16",
@@ -393,17 +393,17 @@
   },
   {
     "id": "EB29",
-    "topic": "Power BI Datenimport-Modifikationen",
+    "topic": "Eigene Datums-Dimension statt Automatik",
     "difficulty": "Mittel",
-    "question": "Im Hands-on-Teil wird erwähnt, dass die Daten aus Kaggle für das Kurs-Beispiel modifiziert wurden (z. B. wurde aus '33.6' der Wert '336' gemacht). Welchen didaktischen Zweck verfolgt diese Modifikation im Kurs?",
+    "question": "Ein BI-Werkzeug legt beim Laden für jede Datumsspalte automatisch eine verborgene Zeittabelle an. Warum wird diese Automatik abgeschaltet und stattdessen eine eigene Datums-Dimension angelegt und mit den Faktendaten verknüpft?",
     "options": [
-      "Um absichtlich Softwarefehler in Power BI zu provozieren.",
-      "Um die Einhaltung europäischer Datenschutz-Richtlinien (DSGVO) zu garantieren.",
-      "Damit im Bericht möglichst hohe Werte entstehen, die typische Skalierungs- und Visualisierungseffekte im Dashboard deutlicher und praxisnäher hervortreten lassen.",
-      "Um die Datenmenge künstlich zu verkleinern, damit Excel die Datei schneller öffnet."
+      "Weil aus der breiten Tabelle allein durch das Abschalten der Automatik bereits ein vollständiges Sternschema entsteht, das Faktentabelle und Dimensionen sauber trennt.",
+      "Weil die Automatik ausschließlich ganze Kalenderjahre kennt und deshalb jede Verdichtung von Tages- auf Monatswerte im Bericht rechnerisch falsche Summen liefert.",
+      "Weil die Automatik je Datumsspalte einen eigenen kleinen Kalender erzeugt; eine verknüpfte Datums-Dimension schafft eine einheitliche Zeitachse und lässt sich um Felder wie Geschäftsjahr erweitern.",
+      "Weil sich Datumswerte andernfalls nicht sortieren lassen und die Monate in jedem Visual in alphabetischer statt in chronologischer Reihenfolge erscheinen würden."
     ],
     "correctIndex": 2,
-    "explanation": "Durch das Verschieben des Dezimalpunkts werden die Umsatz- und Gewinnzahlen künstlich vergrößert. Größere Werte (Mio. statt Tsd.) verdeutlichen im Dashboard typische visuelle Herausforderungen wie Zahlenüberläufe, die Notwendigkeit kompakter Formatierungen und Skalierungseffekte."
+    "explanation": "Die Automatik erzeugt viele kleine, voneinander unabhängige Kalender statt eines gemeinsamen; übergreifende Auswertungen entlang einer einheitlichen Zeitachse werden dadurch erschwert. Eine eigene, per DAX berechnete Datums-Dimension bleibt über ihren Code nachvollziehbar und lässt sich um Felder wie Geschäftsjahr oder Kalenderwoche ergänzen. Erst die Verknüpfung mit den Faktendaten macht sie wirksam — ein vollständiges Sternschema entsteht dabei allerdings noch nicht."
   },
   {
     "id": "EB30",
@@ -473,7 +473,7 @@
       "Measures werden ausschließlich in SQL geschrieben, berechnete Spalten in Python."
     ],
     "correctIndex": 1,
-    "explanation": "Measures sind das Herzstück der Power BI-Berechnungslogik. Da sie dynamisch auf den Filterkontext reagieren (z. B. filtert der Anwender auf 'September 2016', rechnet das Measure SUM(Sales) nur für diesen Monat), sind sie extrem performant und flexibel. Berechnete Spalten hingegen blähen das Datenmodell im RAM unnötig auf."
+    "explanation": "Measures sind das Herzstück der Berechnungslogik in Power BI. Da sie dynamisch auf den Filterkontext reagieren — filtert der Anwender auf einen einzelnen Monat, rechnet das Measure SUM(Sales) nur für diesen Monat —, sind sie sparsam im Speicher und flexibel. Berechnete Spalten blähen das Datenmodell im Arbeitsspeicher dagegen dauerhaft auf."
   },
   {
     "id": "EB35",
@@ -619,7 +619,7 @@
     "id": "EB45",
     "topic": "Didaktischer Mini-Check (SAY, UNIFY, SIMPLIFY)",
     "difficulty": "Mittel",
-    "question": "Das Skript empfiehlt für jede Fallstudien-Präsentation einen 'Mini-Check' anhand von drei Begriffen: SAY, UNIFY und SIMPLIFY. Was bedeutet 'SIMPLIFY' in diesem Kontext konkret?",
+    "question": "Der Mini-Check für Berichte und Präsentationen stützt sich auf drei Begriffe: SAY, UNIFY und SIMPLIFY. Was bedeutet „SIMPLIFY“ konkret?",
     "options": [
       "Das Ersetzen aller Fachbegriffe durch einfache Umgangssprache im Bericht.",
       "Das rigorose Streichen überflüssiger visueller Elemente (Tinte streichen nach Tufte), um Ablenkungen zu minimieren und den Fokus rein auf die datentragenden Elemente zu lenken.",
@@ -641,7 +641,7 @@
       "Dass das Diagramm über eine automatische Sprachausgabe (Text-to-Speech) verfügen muss."
     ],
     "correctIndex": 0,
-    "explanation": "SAY bedeutet Botschafts-Fokus (nach Rolf Hichert). Ein Diagramm darf kein Selbstzweck sein. Jede Grafik muss eine konkrete geschäftliche Frage beantworten oder einen Befund aufdecken (z. B. 'Umsatz im September bricht wegen Produktkategorie Machines ein'). Fehlt diese Aussage, ist das Diagramm wertlos."
+    "explanation": "SAY bedeutet Botschafts-Fokus. Ein Diagramm darf kein Selbstzweck sein: Jede Grafik muss eine konkrete geschäftliche Frage beantworten oder einen Befund aufdecken — etwa „Der Rückgang im zweiten Quartal geht fast vollständig auf eine einzige Produktgruppe zurück“. Fehlt diese Aussage, bleibt das Diagramm ohne Erkenntniswert."
   },
   {
     "id": "EB47",
@@ -687,16 +687,16 @@
   },
   {
     "id": "EB50",
-    "topic": "Der September-Einbruch: Die genauen Zahlen",
+    "topic": "Kennzeichnung KI-erzeugter Berichtstexte",
     "difficulty": "Schwer",
-    "question": "Um wie viel Millionen Dollar brach der Umsatz im September 2016 im Vergleich zum Vorjahr laut den Fallstudiendaten ein, was die detaillierte Ursachenanalyse auslöste?",
+    "question": "Ein Kommentartext in einem Bericht wurde von einem Sprachmodell erzeugt; der Bericht wird ausschließlich innerhalb des Unternehmens verteilt. Wie ist die Offenlegungspflicht nach Art. 50 der KI-Verordnung hier einzuordnen?",
     "options": [
-      "Um genau -16,9 Mio. $ im Segment Office Supplies.",
-      "Umsatzseitig lag im September 2016 kein Einbruch, sondern ein Rekordwachstum von +18,7 Mio. $ vor.",
-      "Um dramatische -18,7 Mio. $ (von 40,8 Mio. $ auf 22,1 Mio. $).",
-      "Um genau -1,6 Mio. $."
+      "Die Pflicht trifft allein den Werkzeughersteller, der Ausgaben maschinenlesbar markiert; für die Gestaltung von Berichtsinhalten folgen daraus keine eigenen Anforderungen.",
+      "Die Offenlegung entfällt vollständig, sobald ein Mensch den Text vor der Verteilung liest; der Text gilt damit rechtlich als nicht maschinell erzeugt.",
+      "Für Texte greift die Offenlegung erst bei Veröffentlichung zur Information der Öffentlichkeit; intern entfällt sie in der Regel, die Pflicht zur KI-Kompetenz gilt davon unabhängig.",
+      "Jeder maschinell erzeugte Inhalt ist zu kennzeichnen, sobald er ein Publikum erreicht; für interne und externe Verteilung gelten dabei dieselben Anforderungen."
     ],
     "correctIndex": 2,
-    "explanation": "Die Fallstudiendaten weisen einen extremen Einbruch im September 2016 aus: Der Umsatz stürzte im Vorjahresvergleich um dramatische -18,7 Mio. $ ab. Dieser massive Ausschlag nach unten war das Alarm-Signal für die Analysten, sofort über einen Drill-down die Ursachen in der Produkthierarchie (Haupttreiber: Machines) zu erforschen."
+    "explanation": "Art. 50 begründet keine allgemeine Kennzeichnungspflicht für alles, was ein KI-System erzeugt, sondern getrennte Pflichten. Absatz 1 verlangt, dass ein Chat-Feld als KI erkennbar ist; Absatz 2 richtet sich an den Werkzeughersteller und verlangt eine maschinenlesbare Markierung der Ausgaben. Absatz 4 greift bei Bild, Ton und Video unabhängig vom Thema, bei Texten dagegen nur, wenn sie veröffentlicht werden, um die Öffentlichkeit über Angelegenheiten von öffentlichem Interesse zu informieren. Die Pflicht zur KI-Kompetenz nach Art. 4 besteht für Anbieter und Betreiber ohnehin."
   }
 ]

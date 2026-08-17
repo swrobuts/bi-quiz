@@ -67,7 +67,7 @@
       "Die Treiberanalyse schlägt basierend auf KI-Modellen neue Farbschemata für die Berichtsgestaltung vor."
     ],
     "correctIndex": 1,
-    "explanation": "Die Treiberanalyse (z. B. via PowerSearch) nimmt dem Analysten die mühsame Klick-Arbeit ab: Das System berechnet die Abweichungen über alle Hierarchien hinweg und rankt die stärksten Treiber (z. B. 'Machines' im September 2016). Der Mensch bewertet anschließend, ob der gefundene Treiber die betriebswirtschaftliche Erklärung für das Phänomen liefert."
+    "explanation": "Die automatisierte Treiberanalyse nimmt dem Analysten die mühsame Klick-Arbeit ab: Das System berechnet die Abweichungen über alle Hierarchien hinweg und rankt die stärksten Treiber. Der Mensch bewertet anschließend, ob der gefundene Treiber die betriebswirtschaftliche Erklärung für das Phänomen liefert — diese Bewertung kann der Algorithmus nicht leisten."
   },
   {
     "id": "EB06",
@@ -227,7 +227,7 @@
     "id": "EB17",
     "topic": "Referenzierung des Berichtsmonats bei Sparklines",
     "difficulty": "Schwer",
-    "question": "Warum ist es bei der Verwendung von Sparklines in Berichts-Tabellen zwingend erforderlich, den exakten Berichtsmonat (z. B. in der Überschrift oder Spalte) explizit auszuweisen?",
+    "question": "Warum ist es bei Sparklines in Berichts-Tabellen erforderlich, den Berichtsmonat explizit auszuweisen, etwa in der Überschrift oder der Spaltenbeschriftung?",
     "options": [
       "Um die Anforderungen der Datenschutz-Grundverordnung (DSGVO) zu erfüllen.",
       "Damit der Leser weiß, zu welchem konkreten Zeitpunkt der letzte (ganz rechte) Datenpunkt der Sparkline gehört, um die Logik des Periodenvergleichs korrekt zu interpretieren.",
@@ -235,7 +235,7 @@
       "Weil das Datenmodell (Tabular Model) sonst einen Syntaxfehler ausgibt."
     ],
     "correctIndex": 1,
-    "explanation": "Eine Sparkline zeigt eine relative Entwicklung (z. B. 12 Monate rückwirkend). Ohne die Angabe des Bezugspunkts (z. B. 'Dezember 2016') weiß der Betrachter nicht, ob der letzte Balken für den Dezember, den November oder ein ganz anderes Jahr steht. Erst die zeitliche Verankerung macht den Vergleich interpretierbar."
+    "explanation": "Eine Sparkline zeigt eine relative Entwicklung, typischerweise zwölf Monate rückwirkend. Ohne die Angabe des Bezugspunkts weiß der Betrachter nicht, ob der letzte Punkt für den laufenden Monat, den Vormonat oder ein ganz anderes Jahr steht. Erst die zeitliche Verankerung macht den Vergleich interpretierbar."
   },
   {
     "id": "EB18",
@@ -351,87 +351,87 @@
   },
   {
     "id": "EB26",
-    "topic": "Das Abweichungsszenario ab August 2016",
+    "topic": "Datenmodell fest an das BI-Tool gebunden",
     "difficulty": "Mittel",
-    "question": "Welches auffällige betriebswirtschaftliche Phänomen zeigt sich ab August 2016 in den fiktiven Daten der Fallstudie im Vorlesungsskript?",
+    "question": "Welcher Nachteil entsteht, wenn ein analytisches Datenmodell unmittelbar innerhalb eines BI-Frontends aufgebaut wird, statt es in einer eigenen Modellierungsumgebung zu erstellen?",
     "options": [
-      "Ein rasanter, unerwarteter Umsatzanstieg in allen Produktkategorien.",
-      "Größere negative Abweichungen bei den Umsatz-Werten (Sales) im Vergleich zur Vorjahresperiode 2015, wobei insbesondere die Produkt-Kategorie 'Technology' schwächelt.",
-      "Ein totaler Systemausfall der ERP-Vorsysteme mit anschließendem Datenverlust.",
-      "Eine signifikante Reduzierung der Lieferzeiten im europäischen Raum."
+      "Das Modell kann in einem BI-Frontend grundsätzlich keine Hierarchie-Ebenen und keine abgeleiteten Kennzahlen aufnehmen, weshalb Auswertungen stets flach bleiben müssen.",
+      "Das Modell erzwingt, dass sämtliche Kennzahlen ausschließlich in SQL formuliert werden, wodurch die im Fachbereich verbreiteten Ausdruckssprachen entfallen.",
+      "Das Modell ist fest mit dem Werkzeug verdrahtet; erst zusammen mit einem kostenpflichtigen Cloud-Dienst lässt es sich praktikabel von mehreren nutzen, und die enge Bindung erschwert spätere Migrationen.",
+      "Das Modell lässt sich nachträglich nicht mehr grafisch inspizieren, sodass gesetzte Beziehungen zwischen Fakten- und Dimensions-Tabellen unkontrollierbar bleiben."
     ],
-    "correctIndex": 1,
-    "explanation": "Die Analyse der Daten zeigt ab August 2016 einen spürbaren Einbruch der Umsätze im Vorjahresvergleich. Als Hauptproblemzone kristallisiert sich die Kategorie 'Technology' heraus, deren Untersuchung den Ausgangspunkt der detaillierten Abweichungsanalyse bildet."
+    "correctIndex": 2,
+    "explanation": "Ein im BI-Frontend gebautes Modell erlaubt zwar einen schnellen Start, bleibt aber an dieses Werkzeug gekoppelt. Für eine Nutzung durch mehrere Personen ist zusätzlich ein kostenpflichtiger Cloud-Dienst nötig, und genau diese enge Bindung erschwert einen späteren Wechsel. Wird das Modell dagegen getrennt in einer Entwicklungsumgebung erstellt, lässt es sich zentral bereitstellen und von unterschiedlichen BI-Werkzeugen nutzen."
   },
   {
     "id": "EB27",
-    "topic": "Der genaue Abweichungsmonat",
-    "difficulty": "Mittel",
-    "question": "Welcher konkrete Monat des Jahres 2016 rückt im Zuge des Drill-downs in die Abweichungsspalte ΔVJ (Abweichung zum Vorjahr) als absoluter Ausreißer in den Fokus?",
+    "topic": "Bestellungen statt Positionen zählen",
+    "difficulty": "Schwer",
+    "question": "In einer Fakten-Tabelle entspricht jede Zeile einem einzelnen Auftragsposten, sodass dieselbe Bestellnummer mehrfach vorkommt. Wie ist ein Measure anzulegen, das die Anzahl der Bestellungen korrekt ausweist?",
     "options": [
-      "September 2016",
-      "Juni 2016",
-      "Dezember 2016",
-      "Januar 2016"
+      "Über eine einfache Zeilenzählung der Fakten-Tabelle, weil im Stern-Schema ohnehin jede Zeile genau einer abgeschlossenen Bestellung entspricht.",
+      "Über eine Summierung der Bestellnummern, da sich die Zahl der Bestellungen aus der Summe der Schlüsselwerte je Periode zuverlässig ableiten lässt.",
+      "Über eine Zählung in der Produkt-Dimension, da dort jede Bestellung durch die Zuordnung des jeweiligen Produkts genau einmal repräsentiert wird.",
+      "Über eine Zählung eindeutiger Werte der Bestellnummer, denn eine schlichte Zählung der Zeilen würde Auftragspositionen statt Bestellungen ausweisen."
     ],
-    "correctIndex": 0,
-    "explanation": "Beim Blick auf die Jahresübersicht der Abweichungen sticht der September 2016 extrem hervor. Hier verzeichnet das Unternehmen den massivsten Umsatzeinbruch im Vergleich zum Vorjahresmonat (September 2015)."
+    "correctIndex": 3,
+    "explanation": "Measures müssen im tabellarischen Modell explizit angelegt werden, hier mit einer Zählung eindeutiger Werte über die Bestellnummer. Da eine Zeile der Fakten-Tabelle einem Auftragsposten entspricht, taucht dieselbe Bestellnummer mehrfach auf. Ohne die Beschränkung auf eindeutige Werte würde die Kennzahl Positionen statt Bestellungen zählen und damit systematisch zu hoch ausfallen."
   },
   {
     "id": "EB28",
-    "topic": "Der mathematische Wert des Einbruchs",
-    "difficulty": "Schwer",
-    "question": "Wie hoch ist die absolute Umsatzabweichung zum Vorjahr (ΔVJ) im September 2016 im Vergleich zum September 2015 laut den Kontrollzahlen des Skripts?",
+    "topic": "Kardinalität und Filterrichtung der Beziehung",
+    "difficulty": "Mittel",
+    "question": "Welche Angaben sind beim Anlegen einer Beziehung zwischen Fakten- und Dimensions-Tabelle entscheidend, und wie sind sie fachlich zu deuten?",
     "options": [
-      "Anstieg um +20,3 Mio. $",
-      "Rückgang um -1,6 Mio. $",
-      "Es gab keine Abweichung; die Werte waren exakt identisch.",
-      "Rückgang um -18,7 Mio. $ (Umsatz bricht von 40,8 Mio. $ auf 22,1 Mio. $ ein)"
+      "Kardinalität und Filterrichtung: Es gilt n:1, da ein Element der Dimension in der Fakten-Tabelle keinmal, einmal oder mehrfach vorkommen kann; der Pfeil zeigt, dass die Dimension die Fakten filtert.",
+      "Kardinalität und Datentyp: Beide Tabellen müssen dieselbe Kardinalität von 1:1 aufweisen, damit eine Verknüpfung technisch überhaupt zulässig ist.",
+      "Kardinalität und Sortierreihenfolge: Die Dimensions-Tabelle gibt vor, in welcher Ordnung die Zeilen der Fakten-Tabelle im Bericht ausgegeben werden.",
+      "Kardinalität und Aggregationsart: Es gilt n:m, weil jede Zeile der Fakten-Tabelle grundsätzlich auf mehrere Elemente derselben Dimension verweisen kann."
     ],
-    "correctIndex": 3,
-    "explanation": "Die Kontrollzahlen im Anhang A1 weisen für den September 2016 einen dramatischen Einbruch aus: Der Umsatz sank von 40,8 Mio. $ (Sep 2015) auf nur noch 22,1 Mio. $ (Sep 2016), was einer negativen Abweichung von genau -18,7 Mio. $ entspricht."
+    "correctIndex": 0,
+    "explanation": "Zwischen Fakten- und Dimensions-Tabelle besteht eine n:1-Beziehung: Ein Dimensionselement, etwa ein Land, kann in der Tabelle aller Bestellungen beliebig oft auftreten. Das Pfeilchen auf der Verbindung gibt die Filterrichtung an, sodass ein Element der Dimension die Fakten-Tabelle einschränken kann. Genau diese Filterwirkung wird bei der Berichtserstellung genutzt."
   },
   {
     "id": "EB29",
-    "topic": "Der Haupttreiber des Umsatzeinbruchs",
+    "topic": "Sichten als Grundlage des Datenmodells",
     "difficulty": "Schwer",
-    "question": "Welcher spezifische Abweichungstreiber (Produkt-Unterkategorie) wird durch die Treiberanalyse für den drastischen Umsatzeinbruch im September 2016 verantwortlich gemacht?",
+    "question": "Am Ende der Datenaufbereitung in der relationalen Datenbank werden über den Fakten- und Dimensionstabellen zusätzlich Sichten (Views) angelegt. Welche Funktion erfüllen sie im weiteren Vorgehen?",
     "options": [
-      "Machines (mit einem Einbruch von -16,9 Mio. $)",
-      "Phones",
-      "Bookcases",
-      "Tables"
+      "Sie führen Fakten- und Dimensionstabellen wieder zu einer einzigen breiten Tabelle zusammen und machen die zuvor gesetzten Schlüsselbeziehungen dadurch entbehrlich.",
+      "Sie bilden die Schicht, auf die die Entwicklungsumgebung zugreift und die dort zum analytischen Datenmodell verknüpft wird; angelegt werden sie unter anderem aus Performance- und Wartungsgründen.",
+      "Sie legen eine physische Kopie der bereits aggregierten Kennzahlen ab, damit die BI-Werkzeuge ihre Berichte ohne bestehende Verbindung zur Datenbank berechnen können.",
+      "Sie protokollieren, welche Anwenderinnen und Anwender welche Datensätze abgefragt haben, und dienen damit vorrangig der Nachvollziehbarkeit von Zugriffen."
     ],
-    "correctIndex": 0,
-    "explanation": "Der Drill-down und die automatisierte Treiberanalyse offenbaren, dass fast der gesamte Einbruch der Kategorie 'Technology' auf eine einzige Unterkategorie zurückzuführen ist: 'Machines' brach im September 2016 im Vergleich zum Vorjahr um -16,9 Mio. $ ein."
+    "correctIndex": 1,
+    "explanation": "Die Datenaufbereitung in der relationalen Datenbank endet damit, dass über den erzeugten Tabellen Sichten angelegt werden. Auf diese Sichten greift anschließend die Entwicklungsumgebung zu, um daraus das analytische Datenmodell zu verknüpfen und die Kennzahlen zu definieren. Angelegt werden sie auch aus Performance- und Wartungsgründen; ihre Benennung wäre für ein produktionsreifes Modell noch anzupassen."
   },
   {
     "id": "EB30",
     "topic": "Das Phänomen der Kompensation",
     "difficulty": "Schwer",
-    "question": "Warum ist es im BI-Berichtwesen möglich, dass eine einzelne Unterkategorie (wie 'Machines') eine größere negative Abweichung aufweist als die übergeordnete Gesamtkategorie ('Technology')?",
+    "question": "Warum kann eine einzelne Unterkategorie im Bericht eine größere negative Abweichung ausweisen als die übergeordnete Hauptkategorie, zu der sie gehört?",
     "options": [
-      "Weil andere Unterkategorien innerhalb derselben Hauptkategorie positive Abweichungen erzielen konnten und somit den extremen Einbruch der Problem-Unterkategorie teilweise kompensiert haben.",
-      "Weil die Daten der Hauptkategorie aus einem anderen Geschäftsjahr stammen.",
-      "Weil Unterkategorien eine andere Währungseinheit nutzen als Hauptkategorien.",
-      "Das deutet auf einen mathematischen Rundungsfehler im Datenmodell hin."
+      "Weil ein solcher Befund auf einen Rundungsfehler im Datenmodell hindeutet und rechnerisch nicht auftreten kann.",
+      "Weil Unterkategorien in einer anderen Währungseinheit geführt werden als die Hauptkategorien.",
+      "Weil andere Unterkategorien derselben Hauptkategorie im gleichen Zeitraum zulegen konnten und den Einbruch der auffälligen Unterkategorie damit teilweise ausgleichen.",
+      "Weil die Werte der Hauptkategorie aus einem anderen Geschäftsjahr stammen als die der Unterkategorien."
     ],
-    "correctIndex": 0,
-    "explanation": "Dies ist ein klassischer Aggrationseffekt (Kompensation): Während 'Machines' um -16,9 Mio. $ einbrach, konnten 'Copiers' (+2,1 Mio. $), 'Phones' (+1,2 Mio. $) und 'Accessories' (+243 Tsd. $) positive Ergebnisse erzielen. Dadurch fiel der Gesamteinbruch der Kategorie 'Technology' mit -13,4 Mio. $ etwas milder aus."
+    "correctIndex": 2,
+    "explanation": "Das ist ein Aggregationseffekt, oft Kompensation genannt: Innerhalb derselben Hauptkategorie können andere Unterkategorien im selben Zeitraum zulegen und den Einbruch der auffälligen Unterkategorie teilweise ausgleichen. Auf der Summenebene bleibt davon nur der Saldo sichtbar. Deshalb führt die Ursachensuche fast immer über das Aufbrechen der Hierarchie und nicht über den Summenwert."
   },
   {
     "id": "EB31",
-    "topic": "Hierarchie-Drill-down bis auf Produktebene",
+    "topic": "Technische Attribute für Clienttools ausblenden",
     "difficulty": "Mittel",
-    "question": "Bis zu welcher tiefsten Hierarchiestufe wird die Produkt-Dimension im Fallbeispiel des Skripts aufgebrochen, um die genauen Verursacher des September-Einbruchs zu identifizieren?",
+    "question": "Wie ist im fertigen analytischen Datenmodell mit rein technischen Attributen wie Surrogate- und Fremdschlüsseln zu verfahren, bevor Fachanwender damit Berichte bauen?",
     "options": [
-      "Product Name (Konkreter Produktname)",
-      "Product Sub-Category (Unterkategorie)",
-      "SKU (Lagerhaltungsnummer)",
-      "Product Category (Kategorie)"
+      "Sie werden in sprechende fachliche Bezeichnungen umbenannt, damit sie als reguläre Analysemerkmale neben Kategorie oder Segment verwendet werden können.",
+      "Sie bleiben im Modell erhalten, werden aber für Clienttools ausgeblendet, weil sie für die Berichtserstellung stören, technisch für die Beziehungen jedoch weiterhin gebraucht werden.",
+      "Sie werden in eine zusätzliche technische Dimensions-Tabelle ausgelagert, die den Fachanwendern als separater Einstiegspunkt für Detailanalysen dient.",
+      "Sie werden aus dem Modell gelöscht, da ihre Aufgabe mit dem Setzen der Beziehungen zwischen Fakten- und Dimensions-Tabellen abgeschlossen ist."
     ],
-    "correctIndex": 0,
-    "explanation": "Um die Abweichung restlos aufzuklären, wird die Produkthierarchie im BI-Werkzeug bis auf die unterste Blattebene, den 'Product Name', hinabgebrochen. Erst auf dieser Stufe wird sichtbar, welche konkreten Produkte den Einbruch im September 2016 verursacht haben."
+    "correctIndex": 1,
+    "explanation": "Ein analytisches Datenmodell soll für die Berichtserstellung so intuitiv wie möglich sein, ohne fachlich zu simplifizieren. Schlüsselattribute erfüllen einen rein technischen Zweck und würden die Auswahl in den BI-Werkzeugen nur überladen. Sie werden deshalb über die Option zum Ausblenden für Clienttools verborgen, bleiben im Modell aber als Träger der Beziehungen bestehen."
   },
   {
     "id": "EB32",
@@ -477,31 +477,31 @@
   },
   {
     "id": "EB35",
-    "topic": "Gegenstück zum Umsatzeinbruch (Januar 2016)",
+    "topic": "Dublettenfreie Dimensionstabellen",
     "difficulty": "Schwer",
-    "question": "Welches positive Gegenstück zum September-Umsatzeinbruch verzeichnen die Kontrollzahlen des Skripts für das Jahr 2016?",
+    "question": "Welche Eigenschaft müssen Dimensions-Tabellen aufweisen, wenn sie im Rahmen der Datenaufbereitung aus einer denormalisierten Tabelle herausgelöst werden?",
     "options": [
-      "Einen massiven Anstieg im Dezember 2016 von +35,2 Mio. $",
-      "Es gab im gesamten Jahr 2016 keine positive Abweichung.",
-      "Eine Verdoppelung der Margen im gesamten ersten Quartal.",
-      "Einen Umsatzsprung im Januar 2016 um +20,3 Mio. $ (unter Nutzung derselben Abweichungsmechanik nach oben)"
+      "Sie sind bewusst denormalisiert, aber dublettenfrei: Jeder Datensatz kommt nur einmal vor und ist einem eindeutigen Primärschlüssel zugeordnet.",
+      "Sie dürfen Dubletten enthalten, weil die spätere Aggregation im Modell mehrfach vorkommende Ausprägungen ohnehin automatisch zu einer Ausprägung zusammenfasst.",
+      "Sie müssen vollständig normalisiert sein, denn erst die Zerlegung in mehrere verbundene Teiltabellen kennzeichnet ein Stern-Schema gegenüber anderen Modellformen.",
+      "Sie benötigen keinen eigenen Primärschlüssel, da die Verknüpfung allein über die Fremdschlüssel-Spalten der Fakten-Tabelle hergestellt und gepflegt wird."
     ],
-    "correctIndex": 3,
-    "explanation": "Wie im SQL-Kapitel (Anhang/Kontrollzahlen) erwähnt, gab es neben dem September-Tief im Januar 2016 einen extremen Ausreißer nach oben: Eine positive Abweichung von +20,3 Mio. $ zum Vorjahr, die mit exakt derselben analytischen Mechanik untersucht werden kann."
+    "correctIndex": 0,
+    "explanation": "Bei der Aufbereitung werden zunächst die Dimensions-Tabellen aufgebaut und anschließend mehrfach vorkommende Datensätze entfernt. Entscheidend ist die Dublettenfreiheit: Jeder Datensatz existiert genau einmal und trägt einen eindeutigen Primärschlüssel, auf den die Fremdschlüssel der Fakten-Tabelle verweisen. Eine Zerlegung in weitere Teiltabellen wäre dagegen nicht nötig — sie würde zum Snowflake-Schema führen."
   },
   {
     "id": "EB36",
-    "topic": "Filterkontext 'Dez 2016' vs. 'Sep 2016'",
+    "topic": "Wirkung des Berichtsmonats als Filter",
     "difficulty": "Schwer",
-    "question": "Was passiert mit den Werten und Sparklines in einer grafischen Tabelle, wenn Sie den globalen Berichtsfilter von 'Dez 2016' auf 'Sep 2016' umstellen?",
+    "question": "Was geschieht mit Werten und Sparklines in einer grafischen Tabelle, wenn der globale Berichtsfilter von einem Berichtsmonat auf einen früheren Monat umgestellt wird?",
     "options": [
-      "Es werden überhaupt keine Daten mehr angezeigt, da der Filter ungültig ist.",
-      "Alle Werte in der Tabelle beziehen sich nun auf die Periode September 2016, und die Sparklines zeigen rückwirkend die 12 Monatswerte beginnend von September 2016 bis September 2015.",
-      "Die Tabelle springt automatisch in das Jahr 2015 zurück.",
-      "Die Werte bleiben identisch, nur die Farbe der Abweichungsbalken wechselt von Rot zu Blau."
+      "Alle Werte beziehen sich nun auf den neuen Berichtsmonat, und die Sparklines zeigen die zwölf Monatswerte rückwirkend ab diesem Monat.",
+      "Es werden überhaupt keine Daten mehr angezeigt, da der Filter dadurch ungültig wird.",
+      "Die Werte bleiben identisch, nur die Farbe der Abweichungsbalken wechselt von Rot zu Blau.",
+      "Die Tabelle springt automatisch in das Vorjahr zurück und zeigt dessen Werte an."
     ],
-    "correctIndex": 1,
-    "explanation": "Der Filter steuert den Kontext (Slice) der gesamten multidimensionalen Abfrage. Durch das Setzen auf 'Sep 2016' wird der Berichtsmonat verschoben. Die Sparklines passen sich dynamisch an und zeigen die 12 Monate rückwirkend ab dem neuen Stichtag."
+    "correctIndex": 0,
+    "explanation": "Der Filter steuert den Kontext der gesamten multidimensionalen Abfrage. Mit dem neuen Berichtsmonat verschiebt sich der Stichtag, und die Sparklines passen sich an: Sie zeigen die zwölf Monate rückwirkend ab diesem Stichtag. Genau deshalb muss der Berichtsmonat in der Tabelle ausgewiesen sein — sonst ist nicht erkennbar, worauf sich der letzte Punkt der Sparkline bezieht."
   },
   {
     "id": "EB37",
@@ -533,31 +533,31 @@
   },
   {
     "id": "EB39",
-    "topic": "Umsatz-Kontrollzahl 2015–2018",
-    "difficulty": "Schwer",
-    "question": "Wie hoch ist der Gesamtsummenwert für das Measure 'Sales' über den gesamten Zeitraum 2015–2018 in den Kontrollzahlen des Skripts (Datenwelt 'train_mod/orders')?",
+    "topic": "Drillthrough gegenüber Drilldown",
+    "difficulty": "Mittel",
+    "question": "Worin unterscheidet sich ein Drillthrough von einem Drilldown bei der Arbeit mit einem multidimensionalen Cube?",
     "options": [
-      "100.000.000 $",
-      "1.114.764.799 $",
-      "242.700.000 $",
-      "9.800 $"
+      "Der Drillthrough wechselt die betrachtete Kennzahl, während der Drilldown zwischen zwei Vergleichsperioden desselben Berichts hin- und herschaltet.",
+      "Der Drillthrough erzeugt eine neue Hierarchie-Ebene innerhalb einer Dimension, während der Drilldown eine bestehende Ebene aus dem Cube dauerhaft entfernt.",
+      "Der Drillthrough fasst mehrere Dimensionen zu einer gemeinsamen Sicht zusammen, während der Drilldown eine einzelne Dimension aus der laufenden Auswertung ausblendet.",
+      "Der Drillthrough greift direkt auf die dem Cube zugrunde liegende Datentabelle zu und zeigt den höchsten Detaillierungsgrad, während der Drilldown Hierarchie-Ebenen aufklappt und innerhalb des Cube bleibt."
     ],
-    "correctIndex": 1,
-    "explanation": "Die offizielle Kontrollzahl für die Gesamt-Sales im Zeitraum 2015–2018 (Datenwelt train_mod/orders) beträgt laut Anhang A1 exakt 1.114.764.799 $. Weicht eine Abfrage von diesem Wert ab, ist sie fachlich oder syntaktisch falsch."
+    "correctIndex": 3,
+    "explanation": "Beim Drilldown werden Hierarchie-Ebenen aufgeklappt: Zu einem Summenwert lassen sich die Summanden der nächsttieferen Ebene betrachten, die Analyse bleibt dabei im Cube. Der Drillthrough führt dagegen aus dem Cube heraus auf die zugrunde liegende Datentabelle und zeigt die feinste vorhandene Detailstufe. Diese Sicht ist besonders für Quervergleiche mit operativen Systemen nützlich."
   },
   {
     "id": "EB40",
-    "topic": "Zeilenanzahl der Übungsdatenwelt",
-    "difficulty": "Mittel",
-    "question": "Wie viele Zeilen (Bestellpositionen) umfasst die im Skript genutzte Übungsdatenbank 'train_mod/orders' laut Kontrollzahlen-Kanon?",
+    "topic": "Automatisch abgeleiteter Cube in Python",
+    "difficulty": "Schwer",
+    "question": "Ein multidimensionaler Cube wird in einer Python-Umgebung aus einem zuvor aufbereiteten DataFrame erzeugt. Wie ist dieses Vorgehen im Vergleich zur Modellierung in einer Entwicklungsumgebung einzuordnen?",
     "options": [
-      "9.800",
-      "1.000",
-      "4.922",
-      "793"
+      "Struktur und Measures werden automatisch aus der Tabelle abgeleitet, was einen Schnellstart bedeutet; der Cube beruht aber weiterhin auf einer einzigen denormalisierten Tabelle und wäre noch in Richtung Stern-Schema auszubauen.",
+      "Struktur und Measures werden erst beim Veröffentlichen des Dashboards festgelegt, sodass im Notebook selbst weder Hierarchien noch Kennzahlen definiert werden können.",
+      "Struktur und Measures müssen auch hier Tabelle für Tabelle von Hand konstruiert werden, weshalb sich der Aufwand gegenüber einer klassischen Modellierungsumgebung nicht verringert.",
+      "Struktur und Measures werden automatisch abgeleitet, wodurch das Ergebnis einem vollständig ausmodellierten Stern-Schema mit getrennten Fakten- und Dimensions-Tabellen bereits vollständig entspricht."
     ],
     "correctIndex": 0,
-    "explanation": "Der Kontrollzahlen-Kanon weist für die Tabelle 'orders' exakt 9.800 Zeilen (Bestellpositionen) aus, die sich auf 4.922 eigenständige Bestellungen von insgesamt 793 Kunden verteilen."
+    "explanation": "Die Datenaufbereitung übernimmt zunächst eine Bibliothek wie pandas, die die Daten einliest, Spalten herauslöst und Datentypen umwandelt. Der Cube samt Measures wird anschließend automatisch aus dieser Tabelle abgeleitet, das Modell muss also nicht Tabelle für Tabelle konstruiert werden. Das ist ein Schnellstart, aber noch kein fertiges Modell: Es beruht weiter auf einer denormalisierten Tabelle, und Hierarchien für die Dimensionen sind zusätzlich anzulegen, damit ein Drilldown überhaupt möglich wird."
   },
   {
     "id": "EB41",
@@ -647,15 +647,15 @@
     "id": "EB47",
     "topic": "Struktur einer Datenstory",
     "difficulty": "Schwer",
-    "question": "Aus welchen drei logischen Schritten baut sich die ideale Struktur einer 'Datenstory' (Data Storytelling) für Präsentationen und Berichte laut Vorlesungsskript auf?",
+    "question": "Aus welchen drei logischen Schritten baut sich die Struktur einer Datenstory für Präsentationen und Berichte auf?",
     "options": [
-      "1. Was ist passiert? (Situationsbeschreibung) -> 2. Warum ist es passiert? (Ursachenanalyse/Treiber) -> 3. Was können/sollten wir tun? (Handlungsempfehlung).",
-      "1. Syntaxprüfung -> 2. Code-Optimierung -> 3. Deployment.",
-      "1. Wer hat die Daten geladen? -> 2. Wie viel hat das BI-Tool gekostet? -> 3. Wann ist Feierabend?",
-      "1. Rohdatenimport -> 2. Tabellenverknüpfung -> 3. Dashboardschmuck."
+      "1. Datenquellen auflisten → 2. Kennzahlen definieren → 3. Berechtigungen vergeben.",
+      "1. Rohdatenimport → 2. Verknüpfung der Tabellen → 3. Gestaltung des Dashboards.",
+      "1. Syntaxprüfung des Abfragecodes → 2. Optimierung der Laufzeit → 3. Veröffentlichung im Portal.",
+      "1. Was ist passiert? (Situationsbeschreibung) → 2. Warum ist es passiert? (Ursachenanalyse) → 3. Was sollten wir tun? (Handlungsempfehlung)."
     ],
-    "correctIndex": 0,
-    "explanation": "Eine gute Präsentation folgt der klassischen kognitiven Kette: Zuerst wird der Status Quo/das Problem aufgezeigt (Was ist passiert?, z. B. Umsatzeinbruch im September). Dann folgt die logische Ursachensuche (Warum?, z. B. Einbruch bei Machines). Den krönenden Abschluss bilden konkrete Business-Aktionen (Was tun?)."
+    "correctIndex": 3,
+    "explanation": "Eine Datenstory folgt der kognitiven Kette: Zuerst wird der Status quo oder das Problem gezeigt (Was ist passiert?), dann folgt die Ursachensuche (Warum?), am Ende stehen konkrete Handlungsoptionen (Was tun?). Die übrigen Abfolgen beschreiben technische Arbeitsschritte der Berichtserstellung — sie sind nötig, tragen aber keine Aussage für das Publikum."
   },
   {
     "id": "EB48",

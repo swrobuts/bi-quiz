@@ -113,31 +113,31 @@
   },
   {
     "id": "K09",
-    "topic": "Fallstudie Megastore: Datengrundlage",
-    "difficulty": "Mittel",
-    "question": "Welche konkreten Datensätze von welcher Plattform dienen als empirisches Fundament für die durchgängige Fallstudie 'Megastore' im Kurs?",
+    "topic": "Die vier Stufen der Analytics-Treppe",
+    "difficulty": "Schwer",
+    "question": "Die vier Stufen der Analytics-Treppe — deskriptiv, diagnostisch, prädiktiv und präskriptiv — lassen sich auf ein und denselben Datenbestand anwenden. Worin unterscheiden sie sich?",
     "options": [
-      "Die Einzelhandels-Datensätze 'Global Superstore' und 'Superstore' der Data-Science-Plattform Kaggle.com.",
-      "Fiktive Banktransaktionen der EZB, die direkt aus GitHub importiert werden.",
-      "Echtzeit-Sensordaten eines regionalen Windparks, die über eine REST-API gestreamt werden.",
-      "Statistische Erhebungen des Statistischen Bundesamtes zur Bevölkerungsentwicklung."
+      "Sie unterscheiden sich im eingesetzten Werkzeug: Die unteren Stufen sind an ein BI-Frontend gebunden, die oberen lassen sich ausschließlich mit Programmierung in Python bearbeiten.",
+      "Sie unterscheiden sich in dem, was aus denselben Daten abgeleitet wird — beschreiben, erklären, schätzen, empfehlen; je Stufe steigen Aufwand und Qualitätsanforderungen, die Aussage rückt näher an eine Entscheidung.",
+      "Sie unterscheiden sich im benötigten Datenbestand: Jede Stufe erschließt eine zusätzliche Quelle, während die aus den Daten abgeleitete Aussage über alle Stufen hinweg unverändert bleibt.",
+      "Sie unterscheiden sich im Adressatenkreis: Die unteren beiden Stufen bedienen das operative Berichtswesen, die oberen beiden sind allein für externe Prüfer und Aufsichtsbehörden bestimmt."
     ],
-    "correctIndex": 0,
-    "explanation": "Die Fallstudie des Kurses basiert auf realitätsnahen, multidimensionalen Retail-Daten (Einzelhandel) namens 'Global Superstore' und 'Superstore', die von der Plattform Kaggle.com stammen. Diese Daten werden im Laufe des Kurses konsolidiert, modelliert und analysiert."
+    "correctIndex": 1,
+    "explanation": "Die vier Stufen greifen auf dieselbe Datengrundlage zu und unterscheiden sich in der Ableitung: beschreiben, erklären, schätzen, empfehlen. Mit jeder Stufe steigen der Aufwand und die Anforderungen an die Datenqualität, zugleich rückt das Ergebnis näher an eine Entscheidung. Die präskriptive Stufe verlangt zusätzlich Annahmen über Wirkungen, die in den Daten selbst gar nicht enthalten sind; ihr Ergebnis ist eine begründete Empfehlung, keine abgelesene Zahl."
   },
   {
     "id": "K10",
-    "topic": "Einstiegsszenario der Fallstudie Megastore",
-    "difficulty": "Mittel",
-    "question": "Welches fiktive Unternehmensszenario wird im Kickoff für die Fallstudie 'Megastore' etabliert, das die BI-Abteilung vor große architektonische Herausforderungen stellt?",
+    "topic": "Entstehung und betriebliche Verbreitung",
+    "difficulty": "Schwer",
+    "question": "Begriff und Architektur der Business Intelligence entstanden deutlich früher, als Unternehmen sie breit einsetzten. Welche Aussage gibt das Verhältnis von Entstehung und betrieblicher Verbreitung zutreffend wieder?",
     "options": [
-      "Die Insolvenz des Softwareanbieters Microsoft und der erzwungene Wechsel zu Linux-Systemen.",
-      "Die Akquisition des Unternehmens 'Superstore' durch 'Global Superstore' und die daraus resultierende Notwendigkeit, zwei ehemals getrennte, denormalisierte IT- und Datensysteme in einer 'Single Source of Truth' zu verschmelzen.",
-      "Der vollständige Systemabsturz aller lokalen Server durch eine Ransomware-Attacke.",
-      "Die Umstellung des gesamten Vertriebskanals von Online-Handel auf rein stationäre Filialen."
+      "Zwischen dem Entstehen eines Konzepts und seiner breiten betrieblichen Nutzung liegen meist ein bis zwei Jahrzehnte; Entstehungsjahre datieren daher nicht den Zeitpunkt, ab dem Unternehmen die Fähigkeit tatsächlich nutzen.",
+      "Entstehung und Verbreitung fallen zusammen, weil ein Konzept erst dann formuliert wird, wenn die Unternehmen die passende Infrastruktur bereits flächendeckend im Einsatz haben.",
+      "Die Entstehungsjahre markieren zugleich das Ende der jeweiligen Technik, weshalb Data Warehouse, OLAP und Data Mining heute nur noch begriffsgeschichtlich von Bedeutung sind.",
+      "Die Verbreitung geht der Entstehung stets voraus, weil Unternehmen die Verfahren zuerst praktisch anwenden und Wissenschaft und Analysten sie erst im Nachhinein benennen und beschreiben."
     ],
-    "correctIndex": 1,
-    "explanation": "Das Einstiegsszenario der Fallstudie beschreibt den Kauf von 'Superstore' durch 'Global Superstore' zur neuen Firma 'Megastore'. Die Herausforderung für die Studierenden (als BI-Analysten) besteht darin, die Datenbestände beider Firmen zusammenzuführen, Qualitätsmängel (Defekte) zu finden und ein stabiles, konsolidiertes Datenmodell aufzubauen."
+    "correctIndex": 0,
+    "explanation": "Der Begriff Business Intelligence geht auf Luhn (1958) zurück, die zugehörige Architektur auf die 1990er-Jahre mit Inmon (1992) und Kimball (1996) — die verbreitete betriebliche Nutzung folgte jeweils erst ein bis zwei Jahrzehnte später. Deshalb sind zwei Ordnungen zu trennen: die Datierung der Ursprünge und die Frage, wann Unternehmen die Fähigkeit tatsächlich einsetzten. Die Jahreszahlen bezeichnen zudem das Entstehen und nicht das Ende einer Technik."
   },
   {
     "id": "K11",
@@ -183,17 +183,17 @@
   },
   {
     "id": "K14",
-    "topic": "Die sechs Fallstudien-Schritte",
-    "difficulty": "Schwer",
-    "question": "Welche logische Kette an operativen Schritten durchlaufen die Studierenden in der Fallstudie, um aus den rohen Kaggle-Dateien ein fertiges Management-Dashboard zu entwickeln?",
+    "topic": "Werttreiber und Nutzenkategorien von BI",
+    "difficulty": "Mittel",
+    "question": "Der Nutzen von Business Intelligence lässt sich zu wenigen Kategorien von Werttreibern bündeln. Welche Zusammenstellung gibt diese Kategorien zutreffend wieder?",
     "options": [
-      "Daten visualisieren -> SQL-Code generieren -> Excel-Tabellen formatieren -> PDF per E-Mail versenden.",
-      "Anforderungen erheben -> KI-Prompt schreiben -> Dashboard kopieren -> Bericht präsentieren.",
-      "Daten importieren -> Daten transformieren -> Measures anlegen -> Tabellen verknüpfen -> Modell inspizieren -> Berichte erstellen.",
-      "Python-Code schreiben -> HTML-Frontend bauen -> SQLite-Datenbank löschen -> Cloud-Deployment starten."
+      "Verkürzung der Projektlaufzeiten, Erhöhung der Zahl erstellter Berichte, Steigerung der Nutzerzahl im Portal sowie Ausweitung der Datenmenge im Data Warehouse.",
+      "Optimierung des Geschäftsbetriebs, Erkennen geschäftlicher Risiken, Vorhersage neuer Geschäftschancen sowie Einhaltung gesetzlicher und regulatorischer Anforderungen.",
+      "Normalisierung der Quelltabellen, Verkürzung der Ladezeiten, Senkung des Speicherbedarfs sowie Vereinheitlichung der im Unternehmen eingesetzten Auswertungswerkzeuge.",
+      "Senkung der Lizenzkosten, Verkleinerung der IT-Abteilung, Verzicht auf externe Beratungsleistungen sowie Abbau der Berichtspflichten gegenüber dem Gesetzgeber."
     ],
-    "correctIndex": 2,
-    "explanation": "Der methodische Pfad der Fallstudie ist im Kickoff exakt vordefiniert: Im ersten Schritt werden die Rohdaten importiert (RDBMS), danach bereinigt und transformiert (z. B. Datumsformate via OpenRefine vereinheitlicht), fachliche Kennzahlen (Measures) definiert, Tabellen über Schlüssel verknüpft (Sternschema), das Modell inspiziert und am Ende im BI-Frontend interaktive Berichte/Dashboards erstellt."
+    "correctIndex": 1,
+    "explanation": "Die Werttreiber von BI lassen sich vier Feldern zuordnen: Optimierung des Geschäftsbetriebs (etwa Preisgestaltung, Effizienz, Kostensenkung, Qualität), Erkennen von Risiken (etwa Kundenabwanderung, Betrugserkennung, Kreditausfälle), Vorhersage neuer Chancen (etwa Cross- und Upselling, neue Produkte und Märkte) sowie Einhaltung rechtlicher Vorgaben. Lade- und Speicherkennzahlen oder Berichts- und Nutzerzahlen beschreiben dagegen Aufwands- und Aktivitätsgrößen, nicht den geschäftlichen Nutzen."
   },
   {
     "id": "K15",
@@ -451,7 +451,7 @@
     "id": "K33",
     "topic": "Das Problem unvollständiger Suchen (Treiberanalyse)",
     "difficulty": "Schwer",
-    "question": "Wie arbeiten moderne BI-Werkzeuge (wie DeltaMaster) bei einer Abweichung im September 2016 und wo liegt dabei die Grenze der KI laut Skript?",
+    "question": "Worin liegt der Vorteil einer automatisierten Treiberanalyse gegenüber dem manuellen Aufklappen von Hierarchien — und wo endet ihre Leistung?",
     "options": [
       "Das Tool macht Abweichungen sofort ohne langes Suchen sichtbar und rankt die größten Treiber automatisch; die kritische Bewertung, ob dieser Treiber die tatsächliche Ursache erklärt, bleibt jedoch zwingend beim Menschen.",
       "Das Tool berechnet den Lie Factor und lehnt die Visualisierung bei einem Wert über 1,0 ab.",
@@ -459,7 +459,7 @@
       "Das Tool korrigiert den Fehler vollautomatisch in der Datenbank; der Mensch ist überflüssig."
     ],
     "correctIndex": 0,
-    "explanation": "Automatisierte Treiberanalysen können mathematisch exakt bestimmen, welche Unterkategorie (z. B. 'Machines') die größte Abweichung verursacht hat. Aber die kausale Erklärung (z. B. 'Lieferengpass beim Vorlieferanten' oder 'Sondereffekt durch Rabattaktion') kann nur durch menschliches Domänen- und Kontextwissen erbracht werden."
+    "explanation": "Eine automatisierte Treiberanalyse durchsucht alle Dimensionen und Teilmengen und bestimmt rechnerisch, welches Element die größte Abweichung verursacht hat — auch dort, wo eine manuelle Suche längst abgebrochen hätte. Die kausale Erklärung, etwa ein Lieferengpass beim Vorlieferanten oder ein Sondereffekt durch eine Rabattaktion, folgt daraus nicht; sie verlangt Domänen- und Kontextwissen."
   },
   {
     "id": "K34",
