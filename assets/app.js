@@ -276,9 +276,9 @@ function kopfZeichnen() {
   const s = serieAktuell();
   setzeKinder(rechts,
     s > 0
-      ? h('span', { class: 'serie', title: `Längste Serie: ${stand.serie.laengste} Tage` },
+      ? h('span', { class: 'serie', title: `Längste Serie: ${stand.serie.laengste} ${stand.serie.laengste === 1 ? 'Tag' : 'Tage'}` },
           h('span', { class: 'serie-zahl' }, s),
-          h('span', { class: 'serie-wort' }, s === 1 ? 'Tag' : 'Tage in Folge'))
+          h('span', { class: 'serie-wort' }, s === 1 ? 'Tag in Folge' : 'Tage in Folge'))
       : null,
     h('button', { class: 'knopf leise', type: 'button', onclick: () => (location.hash = '#/fortschritt') }, 'Fortschritt'),
   );
@@ -323,7 +323,7 @@ function ansichtStart() {
       h('div', { class: 'intro-akzent' }),
       h('h1', {}, 'Selbstlernquiz Business Intelligence'),
       h('p', {},
-        `${fragenGesamt} Fragen aus ${einheiten.length} Lerneinheiten. Wähle eine Einheit, `
+        `${fragenGesamt} Fragen aus ${einheiten.length} ${einheiten.length === 1 ? 'Lerneinheit' : 'Lerneinheiten'}. Wähle eine Einheit, `
         + 'beantworte die Fragen in deinem Tempo und lies die Begründung — auch dann, wenn du richtig lagst.'),
     ),
 
@@ -777,7 +777,7 @@ function ansichtFortschritt() {
     h('section', { class: 'kennzahlen' },
       kennzahl(String(stand.gesamt.beantwortet), null, 'Antworten insgesamt'),
       kennzahl(String(prozent(gesamtQuote)), h('small', {}, ' %'), 'Trefferquote gesamt'),
-      kennzahl(String(serieAktuell()), null, 'Tage in Folge'),
+      kennzahl(String(serieAktuell()), null, serieAktuell() === 1 ? 'Tag in Folge' : 'Tage in Folge'),
       kennzahl(String(stand.serie.laengste || 0), null, 'längste Serie'),
     ),
 
